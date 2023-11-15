@@ -1,3 +1,5 @@
+set -e
+
 # build
 npm run src:build
 
