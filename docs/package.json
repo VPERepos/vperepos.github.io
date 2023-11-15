@@ -1,13 +1,13 @@
 {
-  "name": "GettingStarted",
+  "name": "Portfolio",
   "version": "0.0.1",
-  "description": "A simple project to get started with VuePress",
+  "description": "A portfolio static web page",
   "main": "index.js",
   "authors": {
     "name": "Vladimir Petukhov",
     "email": ""
   },
-  "repository": "/GettingStarted",
+  "repository": "/vperepos.github.io",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src"
