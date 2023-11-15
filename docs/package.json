@@ -1,0 +1,19 @@
+{
+  "name": "GettingStarted",
+  "version": "0.0.1",
+  "description": "A simple project to get started with VuePress",
+  "main": "index.js",
+  "authors": {
+    "name": "Vladimir Petukhov",
+    "email": ""
+  },
+  "repository": "/GettingStarted",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
