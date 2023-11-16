@@ -1,8 +1,8 @@
 ---
 created: 2023-11-16T05:34:52.672Z
-updated: 2023-11-16T05:35:05.816Z
+updated: 2023-11-16T12:56:19.728Z
 assigned: ""
-progress: 0
+progress: 0.3
 tags:
   - Feature
 started: 2023-11-16T00:00:00.000Z

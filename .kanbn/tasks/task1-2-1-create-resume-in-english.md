@@ -1,16 +1,18 @@
 ---
 created: 2023-11-16T05:36:49.888Z
-updated: 2023-11-16T05:38:46.685Z
+updated: 2023-11-16T12:56:00.926Z
 assigned: 'Vladimir Petukhov'
-progress: 0
+progress: 1
 tags:
   - Task
 started: 2023-11-16T00:00:00.000Z
+completed: 2023-11-16T00:00:00.000Z
 ---
 
 # Task1.2.1: Create resume in english
 
 ITE: 2h
+RTR: 6
 
 ## Relations
 
