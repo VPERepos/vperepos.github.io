@@ -9,11 +9,17 @@ completedColumns:
 
 ## Backlog
 
+- [task1-2-3-create-resume-in-russian](tasks/task1-2-3-create-resume-in-russian.md)
+
 ## Todo
+
+- [task1-2-2-create-resume-in-german](tasks/task1-2-2-create-resume-in-german.md)
 
 ## In Progress
 
 - [epic1-create-a-representative-portfolio-site-on-github-pages](tasks/epic1-create-a-representative-portfolio-site-on-github-pages.md)
+- [feature1-2-as-a-site-owner-i-want-the-next-increment-to-include-a-resume-in-three-languages-so-i-can-show-my-laguage-knowledges](tasks/feature1-2-as-a-site-owner-i-want-the-next-increment-to-include-a-resume-in-three-languages-so-i-can-show-my-laguage-knowledges.md)
+- [task1-2-1-create-resume-in-english](tasks/task1-2-1-create-resume-in-english.md)
 
 ## Done
 
