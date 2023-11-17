@@ -2,7 +2,7 @@
 home: true
 heroImage: /Harz2023.jpg
 tagline: 'A portfolio site as a general C++/Python/JavaScript programmer, general algorithms developer, industrial computer vision engineer, machine learning engineer, web apps developer, project manager and product owner.'
-actionText: Quick Start →
+actionText: Resume →
 actionLink: /Curriculum/
 features:
 - title: Blog Posts
