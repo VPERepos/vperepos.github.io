@@ -119,3 +119,51 @@ blockquote {
 |<strong>English</strong> <br />| Fliessend in Wort und Schrift |
 
 ## Версия на русском
+### Персональные данные
+|           |             |
+|---|---|
+|<strong>Ученная степень:  </strong> |Кандидат технических наук |
+|<strong>Имя:  </strong> |Владимир Петухов |
+|<strong>Дата рождения: </strong>| 09.05.1981|
+|<strong>Место рождения: </strong>| Алматы, Казахстан |
+|<strong>Место жительства: </strong>| Алматы, Казахстан |
+|<strong>Гражданство: </strong>| Германия|
+|<strong>Личный сайт: </strong>| vperepos.github.io |
+|<strong>Сайт с програмным кодом: </strong>| github.com/vperepos |
+
+### Опыт работы
+|           |             |
+|:---|:---|
+|<strong>начиная с 11.2023</strong> <br />|<strong>Фриланс </strong> <br /> Общее программирование на C++/Python/JavaScript, разработка классических алгоритмов, индустриальное компьютерное зрение с приминением классических алгоритмов и алгоритмов дип лернинг, реинфорсмент лернинг, фул-стек веб программист, менеджер проектов и продукт оунер.|
+|<strong>04.2022 – 10.2023</strong> <br />|<strong>LPKF Laser & Electronics SE </strong> <br /> Гарбсен, Германия <br /> Программист C++/Python/C# (для Виндоус), инженер компьютерного зрения, инженер машинного обучения: <br /> <ul> <li>Разработка алгоритмов распознавания объема и формы микрокапель по изображению их свободного падения в высокоточных диспенсионных системах с использованием Python/C++/C#. </li> <li>Имплементация процедуры калибровки объема и формы микрокапель в высокоточных диспенсионных системах с использованием C#. </li> <li> Разработка алгоритма в Python и C++ для распознавания и подсчета изолированных биологических клеток после процедуры диспенсирования. </li> <li>Разработка алгоритма в Python и C++ для распознавания различных маркировочных объектов, таких как элипсы, кресты и прямоугольники, используемых в индустриальных установках. Алгоритм был также интегрирован в основной код в C#. </li><li> Выбор, применение и оптимизация архитектур нейронных сетей для реализации процедуры семантической сегментации в применении к бинаризации специфических изображений маркировочных объектов для последующей детекции. Проект реализовывался в Python с применением библиотеки Pytorch. </li><li>Выбор и применение метода реинфорсмент лернинг, такого как Proximal-Policy-Optimization, для регуляции работы индустриальных установок. Проект реализовывался в Python с применением библиотеки Pytorch. </li><li>Интеграция интерфейса GenIcam для камер от различных производителей в основной программный код с использованием C++ и C#. </li><li> Реализация программного кода для процедуры калибрации камер с ортогональной проекцией с использованием C++ и C#. </li></ul> |
+|<strong>04.2021 – 04.2022</strong> <br />|<strong>FEV Norddeutschland GmbH </strong> <br /> Брауншвейг, Германия <br /> Программист C++ (под Виндоус и Линукс): <br /> <ul><li> Дизайн и реализация программного кода библиотеки С++ для симуляции коммуникации в автомобильных шинах данных ( CAN/FD, FlexRay, Ethernet и так далее ).  </li></ul>|
+|<strong>10.2020 – 12.2020</strong> <br />|<strong> Курсы повышения квалификации по архитектуре програмного обеспечения с дополнительной квалификацией менеджмента проектов с методикой Scrum (Scrum-Master, Scrum-Product-Owner) </strong> <br /> Брауншвейг, Германия |
+|<strong>04.2018 – 10.2020</strong> <br />|<strong> Aicon 3D Systems GmbH </strong> <br /> Брауншвейг, Германия <br /> Программист Python и C++ (под Виндоус и Линукс): <br /> <ul><li> Разработка алгоритмов аппроксимации математических моделей профилей изогнутых проводов и труб в облаке точек, измеренных по средствам лазерного сканирования, с использованием стандартных методов оптимизации, таких как метод Пауэла. </li> <li> Разработка алгоритмов высокоточной калибровки измерительных камер для классической фотограмметрии. </li><li> Обслуживание и дальнейшая разработка программного кода для объемных оптических измерительных систем в С++.</li> <li>Портирование программного кода, разработанного под Виндоус на систему Линукс в С++.</li> </ul>|
+|<strong>08.2017 – 02.2018</strong> <br />|<strong>NORDSYS GmbH </strong> <br /> Брауншвейг, Германия <br /> Программист C/C++/Python/C#: <br /> <ul><li> Портирование коммуникационной библиотеки С на универсальную платформу Виндодус (UWP) с использованием C#.</li><li> Реализация алгоритма Vehicle Path History с использованием языка программирования С. </li><li> Программирования в С++ под Виндоус и Линукс в проекте по автоматическому отслеживанию состояния водителя автомобиля. </li><li> Визуализация видеострима камер GoPro в автомобилях с использованием Python (прототип камеры контроля за ребенком). </li></ul>|
+|<strong>04.2017 – 06.2017</strong> <br />|<strong>Dr. Kudaschov Engineering GmbH </strong> <br /> Bad Vilbel, Germany<br /> Software developer C/C#: <br /> <ul><li>Programming of an STM32-F1 microcontroller in C in order to generate a Pulse-Width-Modulated Signal and to control it over UART- and CAN-Interfaces.</li><li>Reading and modifying the SREC-files (used for flash programming of microcontrollers) in C#. </li></ul>|
+|<strong>08.2015 – 04.2017</strong> <br />|<strong>Vitronic GmbH </strong> <br /> Wiesbaden, Germany<br /> Software developer in C++ (for Windows): <br /> <ul><li>Development of algorithms for optical 3D measurement systems.</li><li>Development of a multi-threaded measurement camera video stream simulator using UDP-Interface with Raw-Sockets. </li></ul>|
+|<strong>10.2012 – 08.2015</strong> <br />|<strong>Vitronic GmbH </strong> <br /> Wiesbaden, Germany<br /> Firmware developer in C/C++/Python/VHDL: <br /> <ul><li>Modification of custom computer vision algorithms written in C++ for applicability in Field-Programmable-Gate-Arrays (FPGA) using C/C++/Python. </li><li>Development of Bit-Precision-Models with Fixed-Comma-Representation of variables using C. </li><li>Implementation of Bit-Precision-Models in a Firmware for Xilinx FPGAs using VHDL and Vivado HLS. </li> </ul>|
+|<strong>06.2010 – 10.2012</strong> <br />|<strong>Braunschweig University of Technology, Institute of High Frequency Technology </strong> <br /> Braunschweig, Germany<br /> Scientific Researcher: <br /> <ul><li>Development of a Firmware in VHDL for a Software-Defined-Radio (SDR) prototype consisting of an FPGA and a Digital-Analog-Converter (DAC) connected over a Low-Voltage-Differential-Signaling Interface (LVDS).  </li><li>Design and layout of  a multilayer circuit for an SDR prototype in Eagle software. </li><li>Design and layout of different circuits for PIC32-microcontrollers. </li><li>Programming of PIC32-Microcontrollers in C utilizing SPI-, UART- and Ethernet-Interfaces.</li> <li>Design of Finite-Implse-Response-Filters (FIR-Filters) in Python (Digital Signal Processing). </li> <li>High-Frequncy-Circuits-Design in HFSS and ADS for a 120-GHz-Frequency-Multipliers.</li>  </ul>|
+|<strong>10.2006 – 05.2010</strong> <br />|<strong>Braunschweig University of Technology, Institute of Semiconductor Technology </strong> <br /> Braunschweig, Germany<br /> Scientific Researcher, Doctorate: <br /> <ul><li>Research in the field of p-Doping of ZnO thin films grown by Molecular-Beam-Epitaxy (MBE). </li><li>Electrical characterization of ZnO epitaxial layers (Hall Measurements and electrochemical Capacity-Voltage-Profiling). </li><li>Theoretical modeling of the temperature dependency of Hall-Measurements in Van-der-Pauw-Configuration (solution of transport equation). </li><li>Automation of measurement setups for electrical characterization of semiconductor structures using Python and LabView.</li> <li>Systematization of research results by writing scientific publications and making scientific presentations. </li> </ul>|
+|<strong>04.2006 – 10.2006</strong> <br />|<strong>Braunschweig University of Technology, Institute of High Frequency Technology </strong> <br /> Braunschweig, Germany<br /> Scientific Assistant: <br /> <ul><li>Setup and automation of optical measurement systems for time domain THz-Spectroscopy and Femtosecond-Pulse-Lasers. </li> </ul>|
+|<strong>07.2006 – 08.2006</strong> <br />|<strong>University of Southampton, School of Physics and Astronomy </strong> <br /> Southampton, England<br /> Visiting Scientific Assistant: <br /> <ul><li>Setup of a time domain THz-Spectrometer. </li><li> Construction of a VECSEL-Based-Ultrashort-Pulse-Laser.</li> </ul>|
+|<strong>04.2003 – 03.2006</strong> <br />|<strong>Braunschweig University of Technology </strong> <br /> Braunschweig, Germany<br /> Student Scientific Assistant: <br /> <ul><li>Setup of different scientific experiments systems and their automation with LabView. </li> <li> Programming simulations in Matlab and C++ for solution of a Wave-Equation in optical Fibers.</li> <li> 3D design and modeling of mechanical parts for scientific experiments systems using CAD-software. </li> </ul>|
+
+### University education
+|           |             |
+|:---|:---|
+|<strong>04.2006 – 09.2011</strong> <br />|<strong>Braunschweig University of Technology </strong> <br /> Braunschweig, Germany<br /> <strong> PhD (electrical engineering):</strong> "Electrical characterisation of ZnO thin films grown by molecular beam epitaxy" (thesis grade: cum laude) |
+|<strong>10.2003 – 03.2006</strong> <br />|<strong>Braunschweig University of Technology </strong> <br /> Braunschweig, Germany<br /> <strong> Dipl.-Ing (electrical engineering): </strong> <br /> Specialization: optical information systems and photonics (resulting grade: good).<br />  Thesis: “Fiber coupled THz-Antennas” (Thesis Grade: very good). |
+|<strong>09.1998 – 06.2002</strong> <br />|<strong>State Technical University </strong> <br /> Saint – Petersburg, Russia<br /> <strong> B.Sc. (applied physics): </strong> <br /> Specialization: quantum electronics (resulting grade: good).<br />  Thesis: “Investigation of coherence properties of semiconductor lasers” (Thesis Grade: very good). |
+
+### School education
+|           |             |
+|:---|:---|
+|<strong>09.1988 – 06.1998</strong> <br />|<strong>Physics and Mathematics School </strong> <br /> Almaty, Kazakhstan <br /> Resulting grade: good |
+
+### Languages
+|           |             |
+|:---|:---|
+|<strong>Russian</strong> <br />| Mother tongue |
+|<strong>German</strong> <br />| Fluent |
+|<strong>English</strong> <br />| Fluent |
