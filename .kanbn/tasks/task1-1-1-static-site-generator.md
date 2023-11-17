@@ -1,14 +1,15 @@
 ---
 created: 2023-11-17T03:46:33.909Z
-updated: 2023-11-17T03:47:43.518Z
+updated: 2023-11-17T03:52:35.371Z
 assigned: 'Vladimir Petukhov'
 progress: 1
-tags: []
+tags:
+  - Task
 started: 2023-11-14T00:00:00.000Z
 completed: 2023-11-14T00:00:00.000Z
 ---
 
-# Task1.1: Static site generator
+# Task1.1.1: Static site generator
 
 Choose a static site generator. 
 
@@ -21,3 +22,7 @@ DoD: One can generate and deploy static sites on github pages.
 RTR: 8 h
 
 RESULT: VuePress static site generator
+
+## Relations
+
+- [](.md)
