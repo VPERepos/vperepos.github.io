@@ -1,8 +1,8 @@
 ---
 created: 2023-11-17T04:34:58.064Z
-updated: 2023-11-17T04:39:38.672Z
+updated: 2023-11-17T11:08:00.534Z
 assigned: 'Vladimir Petukhov'
-progress: 0.3
+progress: 0.65
 tags:
   - Feature
 started: 2023-11-16T00:00:00.000Z

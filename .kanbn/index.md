@@ -16,14 +16,12 @@ completedColumns:
 
 ## Todo
 
-- [task1-2-3-resume-in-russian](tasks/task1-2-3-resume-in-russian.md)
-
 ## In Progress
 
-- [epic1-portfolio-site](tasks/epic1-portfolio-site.md)
-- [feature1-2-resume-in-three-languages](tasks/feature1-2-resume-in-three-languages.md)
 - [feature1-3-google-analytics-tracking](tasks/feature1-3-google-analytics-tracking.md)
-- [task1-2-2-resume-in-german](tasks/task1-2-2-resume-in-german.md)
+- [feature1-2-resume-in-three-languages](tasks/feature1-2-resume-in-three-languages.md)
+- [task1-2-3-resume-in-russian](tasks/task1-2-3-resume-in-russian.md)
+- [epic1-portfolio-site](tasks/epic1-portfolio-site.md)
 
 ## Done
 
@@ -32,3 +30,4 @@ completedColumns:
 - [task1-1-2-first-increment-of-the-site](tasks/task1-1-2-first-increment-of-the-site.md)
 - [task1-1-3-deploy-iteration](tasks/task1-1-3-deploy-iteration.md)
 - [task1-2-1-resume-in-english](tasks/task1-2-1-resume-in-english.md)
+- [task1-2-2-resume-in-german](tasks/task1-2-2-resume-in-german.md)

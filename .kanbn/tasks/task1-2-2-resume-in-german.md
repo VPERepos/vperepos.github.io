@@ -1,11 +1,12 @@
 ---
 created: 2023-11-17T04:46:29.502Z
-updated: 2023-11-17T05:08:40.579Z
+updated: 2023-11-17T11:07:22.983Z
 assigned: 'Vladimir Petukhov'
-progress: 0
+progress: 1
 tags:
   - Task
-started: 2023-11-17T05:08:36.210Z
+started: 2023-11-17T00:00:00.000Z
+completed: 2023-11-17T00:00:00.000Z
 ---
 
 # Task1.2.2: Resume in German
@@ -13,6 +14,8 @@ started: 2023-11-17T05:08:36.210Z
 Create resume in german
 
 ITE: 6 h
+
+RTR: 3 h
 
 ## Relations
 

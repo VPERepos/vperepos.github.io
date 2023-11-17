@@ -1,8 +1,8 @@
 ---
 created: 2023-11-17T03:38:21.738Z
-updated: 2023-11-17T03:41:56.530Z
+updated: 2023-11-17T11:10:05.623Z
 assigned: 'Vladimir Petukhov'
-progress: 0.1
+progress: 0.2
 tags:
   - Epic
 started: 2023-11-14T00:00:00.000Z
