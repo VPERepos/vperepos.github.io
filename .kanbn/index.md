@@ -20,8 +20,8 @@ completedColumns:
 
 - [feature1-3-google-analytics-tracking](tasks/feature1-3-google-analytics-tracking.md)
 - [feature1-2-resume-in-three-languages](tasks/feature1-2-resume-in-three-languages.md)
-- [task1-2-3-resume-in-russian](tasks/task1-2-3-resume-in-russian.md)
 - [epic1-portfolio-site](tasks/epic1-portfolio-site.md)
+- [task1-2-3-resume-in-russian](tasks/task1-2-3-resume-in-russian.md)
 
 ## Done
 

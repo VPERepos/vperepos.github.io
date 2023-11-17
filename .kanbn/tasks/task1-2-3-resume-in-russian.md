@@ -1,8 +1,8 @@
 ---
 created: 2023-11-17T04:50:13.230Z
-updated: 2023-11-17T11:09:46.035Z
+updated: 2023-11-17T12:55:27.379Z
 assigned: 'Vladimir Petukhov'
-progress: 0
+progress: 0.3
 tags:
   - Task
 started: 2023-11-17T00:00:00.000Z
@@ -13,6 +13,7 @@ started: 2023-11-17T00:00:00.000Z
 Create resume in russian
 
 ITE: 3h
+RTR: 1.5h +
 
 ## Relations
 
