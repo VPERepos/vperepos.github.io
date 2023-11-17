@@ -1,10 +1,11 @@
 ---
 created: 2023-11-17T04:46:29.502Z
-updated: 2023-11-17T04:48:21.046Z
+updated: 2023-11-17T05:08:40.579Z
 assigned: 'Vladimir Petukhov'
 progress: 0
 tags:
   - Task
+started: 2023-11-17T05:08:36.210Z
 ---
 
 # Task1.2.2: Resume in German
