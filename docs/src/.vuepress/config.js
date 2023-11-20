@@ -27,6 +27,10 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
+        text: 'Blogs',
+        link: '/Blogs/',
+      },
+      {
         text: 'Curriculum Vitae',
         link: '/Curriculum/',
       },
@@ -37,6 +41,14 @@ module.exports = {
       {
         text: 'Publications',
         link: '/Publications/',
+      },
+      {
+        text: 'Certifications',
+        link: '/Certifications/',
+      },
+      {
+        text: 'Readings',
+        link: '/Readings/',
       },
       {
         text: 'Contact and Availability',
