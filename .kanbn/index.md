@@ -14,13 +14,13 @@ completedColumns:
 
 ## Todo
 
-- [feature1-6-topic-publications](tasks/feature1-6-topic-publications.md)
+- [feature1-7-certifications-topic](tasks/feature1-7-certifications-topic.md)
 
 ## In Progress
 
 - [feature1-3-google-analytics-tracking](tasks/feature1-3-google-analytics-tracking.md)
+- [feature1-6-topic-publications](tasks/feature1-6-topic-publications.md)
 - [epic1-portfolio-site](tasks/epic1-portfolio-site.md)
-- [feature1-4-computer-skills-topic](tasks/feature1-4-computer-skills-topic.md)
 
 ## Done
 
@@ -32,3 +32,4 @@ completedColumns:
 - [task1-2-2-resume-in-german](tasks/task1-2-2-resume-in-german.md)
 - [task1-2-3-resume-in-russian](tasks/task1-2-3-resume-in-russian.md)
 - [feature1-2-resume-in-three-languages](tasks/feature1-2-resume-in-three-languages.md)
+- [feature1-4-computer-skills-topic](tasks/feature1-4-computer-skills-topic.md)
