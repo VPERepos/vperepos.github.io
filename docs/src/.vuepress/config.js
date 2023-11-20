@@ -31,6 +31,10 @@ module.exports = {
         link: '/Curriculum/',
       },
       {
+        text: 'Computer Science Skills',
+        link: '/ComputerScienceSkills/',
+      },
+      {
         text: 'Contact and Availability',
         link: '/Contact/'
       },
