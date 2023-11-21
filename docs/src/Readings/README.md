@@ -3,7 +3,7 @@ sidebar: auto
 ---
 
 # Readings
-In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. By some of the books I selected only some chapters, but the most of them were read completely. 
+In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely. 
 ## Computer Vision and Machine Learning
 ### Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications (English Edition)
 <img src="../../Pictures/ModernComputerVisionWithPytorch.jpg" alt="Image" width="400"/>
