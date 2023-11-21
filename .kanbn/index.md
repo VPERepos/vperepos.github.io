@@ -9,15 +9,14 @@ completedColumns:
 
 ## Backlog
 
-- [feature1-7-increase-number-of-visitors](tasks/feature1-7-increase-number-of-visitors.md)
-
 ## Todo
+
+- [feature1-7-increase-number-of-visitors](tasks/feature1-7-increase-number-of-visitors.md)
 
 ## In Progress
 
 - [feature1-3-google-analytics-tracking](tasks/feature1-3-google-analytics-tracking.md)
 - [epic1-portfolio-site](tasks/epic1-portfolio-site.md)
-- [feature1-5-topic-readings](tasks/feature1-5-topic-readings.md)
 
 ## Done
 
@@ -32,3 +31,4 @@ completedColumns:
 - [feature1-4-computer-skills-topic](tasks/feature1-4-computer-skills-topic.md)
 - [feature1-6-topic-publications](tasks/feature1-6-topic-publications.md)
 - [feature1-7-certifications-topic](tasks/feature1-7-certifications-topic.md)
+- [feature1-5-topic-readings](tasks/feature1-5-topic-readings.md)
