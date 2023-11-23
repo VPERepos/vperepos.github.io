@@ -15,7 +15,6 @@ completedColumns:
 
 ## In Progress
 
-- [feature1-3-google-analytics-tracking](tasks/feature1-3-google-analytics-tracking.md)
 - [epic1-portfolio-site](tasks/epic1-portfolio-site.md)
 
 ## Done
@@ -32,3 +31,4 @@ completedColumns:
 - [feature1-6-topic-publications](tasks/feature1-6-topic-publications.md)
 - [feature1-7-certifications-topic](tasks/feature1-7-certifications-topic.md)
 - [feature1-5-topic-readings](tasks/feature1-5-topic-readings.md)
+- [feature1-3-google-analytics-tracking](tasks/feature1-3-google-analytics-tracking.md)
