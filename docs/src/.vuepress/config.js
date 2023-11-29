@@ -31,8 +31,8 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Blogs',
-        link: '/Blogs/',
+        text: 'Projects',
+        link: '/Projects/',
       },
       {
         text: 'Curriculum Vitae',
