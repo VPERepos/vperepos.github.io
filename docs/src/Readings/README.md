@@ -116,3 +116,30 @@ In this section I present some selected books, that I read during the last years
 ### Mastering Spring 5: An effective guide to build enterprise applications using Java Spring and Spring Boot framework
 <img src="../../Pictures/JavaSpring.jpg" alt="Image" width="400"/>
 
+## Project Management
+
+### Die Scrum-Revolution: Management mit der bahnbrechenden Methode der erfolgreichsten Unternehmen
+<img src="../../Pictures/ScrumRevolution.jpg" alt="Image" width="400"/>
+
+### Professional Product Owner, The: Leveraging Scrum as a Competitive Advantage
+<img src="../../Pictures/ScrumPO.jpg" alt="Image" width="400"/>
+
+### Agiles Projektmanagement mit Scrum für Einsteiger
+<img src="../../Pictures/AgilesManagement.jpg" alt="Image" width="400"/>
+
+### Basiswissen für Softwareprojektmanager im klassischen und agilen Umfeld
+<img src="../../Pictures/BasiswissenPM.jpg" alt="Image" width="400"/>
+
+### Managing successful projects with PRINCE2
+<img src="../../Pictures/Prince2Book.jpg" alt="Image" width="400"/>
+
+## Soft Skills
+
+### Konflikte lösen - Verhandeln unter Stress: Tools für Führungskräfte und Teams
+<img src="../../Pictures/SolveConflicts.jpg" alt="Image" width="400"/>
+
+### RHETORIK | SMALLTALK | SCHLAGFERTIGKEIT | SELBSTBEWUSSTSEIN - Das Große 4 in 1 Buch!
+<img src="../../Pictures/Buch4in1.jpg" alt="Image" width="400"/>
+
+### Die 4-Stunden-Woche: Mehr Zeit, mehr Geld, mehr Leben
+<img src="../../Pictures/Die4StundenWoche.jpg" alt="Image" width="400"/>
