@@ -1,15 +1,16 @@
 ---
 sidebar: auto
 ---
+# Projects
 
-# C++ Projects
-## State machine design pattern in modern C++
+## C++ Projects
+### State machine design pattern in modern C++
 [Code on Github](https://github.com/VPERepos/StateMachineDesignPattern/tree/master)
-### Motivation
+#### Motivation
 
 Working several years as a firmware developer for FPGA-systems, where the whole business logic must be  implemented in the form of a state machine, I really got used to them and found it later on very practical also for C++ programming. A lot of algorithms, like for example text parsing, have this kind of non-linear flow with transitions and abortions, where the state machines are, may be, the best design choice. I adopted the idea of the class polymorphism (underlying in almost all design patterns, except for singleton as to my knowledge) to a state machine and implemented it in terms of the modern C++. This kind of software design was also applied for my real life programming problems, like non-XML text protocol parser.
 
-### Classes structure and functionality
+#### Classes structure and functionality
 
 ![UMLDiagram](../../Pictures/ClassDiagramSTM.svg)
 
@@ -19,13 +20,13 @@ The principal programe flow is described by the following sequence diagram.
 
 ![UMLDiagram](../../Pictures/SequenceDiagramSTM.svg)
 
-## Task queue design pattern in modern C++
-[Code on Github](https://github.com/VPERepos/TaskQueueDesignPattern/tree/master)
-### Motivation
+### Task queue design pattern in modern C++
+[Code on Github](https://github.com/VPERepos/TaskQueueDesignPattern/tree/main)
+#### Motivation
 
 Imagine, that you have some data that you would like to process, but the way to process it can be combined of a lot of simple steps, that, in general, can be mixed up with each other, giving different orders of computation. For example, you have many images and it is necessary to process them and get some information out of them. You have also a library that consists of different computer vision algorithms, but you still don't know which is the most optimal way to apply those algorithms. Developing the procedure is time consuming due to checking many combinations and tuning parameters of algorithms. It is also very helpfull to be able to control the results after each step. My solution would be to program a tool with user interface, that lists in one window all possible steps, which can be chosen and added to the next window describing the resulting procedure. This is exactly the case, where a task queue design pattern can be applied. The steps from the resulting procedure are put into a task queue and then processed one after another. The example in this project is much simpler and somehow abstract, because it is made just to represent the idea.
 
-### Classes structure and functionality
+#### Classes structure and functionality
 
 
 ![UMLDiagram](../../Pictures/ClassDiagramQueue.svg)
@@ -34,3 +35,13 @@ UML-diagram above represents the design of the example program. There is a class
 
 The principal programe flow is described by the following sequence diagram
 ![UMLDiagram](../../Pictures/SequenceDiagramQueue.svg)
+
+
+## Java Projects
+
+### Vector Field Widget
+[Code on Github](https://github.com/VPERepos/VectorFieldWidget/tree/main/VectorFieldWidget)
+#### Overview
+![image](../../Pictures/VectorFieldWidgetGui.png)
+
+## Python Projects
