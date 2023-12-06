@@ -16,7 +16,7 @@ Working several years as a firmware developer for FPGA-systems, where the whole 
 
 UML-diagram above represents the design of the example program. There is a class called StateMachine, which consists of shared pointers to the objects of the classes Data, Status and State1 to State4. The shared pointers of types Status and Data are passed by parameters of the constructor of the StateMachine class. The objects of State1 to State4 types are allocated on heap in this constructor. Objects of types Data, Status and StateMachine are allocated on heap in the main function. Transitions of the state machine, made possible by derivation from the base class State, are implemented in the function runSTM(). They are dependent on the results of the business logic of each state, but there is only one main loop, which runs until exit is initiated. In common, the states can be filled with custom business logic, but in this example a random number is generated, which represents the next state and main loop executes the next state in the next iteration. The execution stops ordinary in the 4-th state and with an error during transition from the 3-rd to the 4-th state. It is implemented this way only in order to show the principle. Generally, as mentioned above, this design can be configured to work in any way, depending on needs.
 
-The principal programe flow is described by the following sequence diagram.
+The principle programe flow is described by the following sequence diagram.
 
 ![UMLDiagram](../../Pictures/SequenceDiagramSTM.svg)
 
@@ -31,9 +31,9 @@ Imagine, that you have some data that you would like to process, but the way to 
 
 ![UMLDiagram](../../Pictures/ClassDiagramQueue.svg)
 
-UML-diagram above represents the design of the example program. There is a class called TaskQueue, which consists of shared pointers to the objects of the classes Data, Status and Task1 to Task4. The shared pointers of types Status and Data are passed by parameters of the constructor of the TaskQueue class. The objects of Task1 to Task4 types are allocated on heap in this constructor. The member variable containerTaskQueue is also filled out with randomly generated tasks in the constructor, but it can be done generally somewhere else in the program by using function addTask(). Objects of types Data, Status and TaskQueue are allocated on heap in the main function. Objects of types Task1 to Task4 have a function executeTask(). This function can be powered with any custom business logic that processes an object of the type Data. The loop in the function runTQ() takes the front element of the member variable containerTaskQue and calls the function executeTask(). Afterwards the front element is deleted from the queue. This proceeds until the queue is empty. 
+UML-diagram above represents a design of the example program. There is a class called TaskQueue, which consists of shared pointers to the objects of classes Data, Status and Task1 to Task4. The shared pointers of types Status and Data are passed by reference to the parameters of the constructor of the TaskQueue class. The objects of Task1 to Task4 types are allocated on heap in this constructor. During initialization of tasks, they are given unique names, which are contained in a sorted order in a vector. There is also a map with names as keys and pointers as values. This is needed in order to be able to clear and fill out the main queue in the necessary way from outside in the consumer function. Objects of types Data, Status and TaskQueue are allocated on heap in the main function. Objects of types Task1 to Task4 have a function executeTask(). This function can be powered with any custom business logic that processes an object of the type Data. The loop in the function runTQ() takes the front element of the constructed queue and calls the function executeTask(). Afterwards the front element is deleted from the queue. This proceeds until the queue is empty. 
 
-The principal programe flow is described by the following sequence diagram
+The principle program flow is described by the following sequence diagram
 ![UMLDiagram](../../Pictures/SequenceDiagramQueue.svg)
 
 
