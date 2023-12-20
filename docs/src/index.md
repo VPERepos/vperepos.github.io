@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /Harz2023.jpg
-tagline: 'A portfolio site as a general C++/Python/JavaScript programmer, general algorithms developer, industrial computer vision engineer, machine learning engineer, web apps developer, project manager and product owner.'
+tagline: 'A portfolio site as a software architect, general C++/Python/Java programmer, general algorithms developer, industrial computer vision engineer, machine learning engineer, project manager and product owner.'
 actionText: Resume →
 actionLink: /Curriculum/
 features:

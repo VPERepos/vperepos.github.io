@@ -62,6 +62,11 @@ In this section I present some selected books, that I read during the last years
 <img src="../../Pictures/CleanCode.jpg" alt="Image" width="400"/>
 
 ## C++ Programming Language
+### Professional C++
+<img src="../../Pictures/ProfessionalCpp.jpg" alt="Image" width="400"/>
+
+### Modern C++ Programming with Test-Driven Development: Code Better, Sleep Better
+<img src="../../Pictures/CppTDD.jpg" alt="Image" width="400"/>
 
 ### Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14
 <img src="../../Pictures/EffectiveModernCpp.jpg" alt="Image" width="400"/>
@@ -94,8 +99,6 @@ In this section I present some selected books, that I read during the last years
 
 ### NumPy Programming, In 8 Hours, For Beginners, Learn Coding Fast
 <img src="../../Pictures/Numpy.jpg" alt="Image" width="400"/>
-
-## JavaScript/TypeScript Programming Language
 
 ## C# Programming Language
 

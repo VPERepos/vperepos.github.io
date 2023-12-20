@@ -53,4 +53,3 @@ The application in general consists of a consumer App class and a VectorFieldWid
 
 A behaviour of the program can be seen in the following sequence diagram. Two use cases are described here: user starts an application with activating the initializations of all geometric components of the main application widget and the vector field widget and the second use case of toggling the generation mode by user. This lot of functions is produced intentionally according to "Clean Code" rules by Uncle Bob, like one function - one action. This way a code can be self documented by function names without comments.
 ![image](../../Pictures/SequenceDiagramVectorFieldWidget.svg)
-## Python General Programming
