@@ -62,8 +62,6 @@ In this section I present some selected books, that I read during the last years
 <img src="../../Pictures/CleanCode.jpg" alt="Image" width="400"/>
 
 ## C++ Programming Language
-### Professional C++
-<img src="../../Pictures/ProfessionalCpp.jpg" alt="Image" width="400"/>
 
 ### Modern C++ Programming with Test-Driven Development: Code Better, Sleep Better
 <img src="../../Pictures/CppTDD.jpg" alt="Image" width="400"/>
@@ -146,3 +144,29 @@ In this section I present some selected books, that I read during the last years
 
 ### Die 4-Stunden-Woche: Mehr Zeit, mehr Geld, mehr Leben
 <img src="../../Pictures/Die4StundenWoche.jpg" alt="Image" width="400"/>
+
+## Economy and Finances
+
+### Wie Wirtschaft funktioniert: Der anschauliche Navigator durch Wirtschaftstheorie, Wirtschaftspolitik und Wirtschaftspraxis
+<img src="../../Pictures/DudenWirtschaft.jpg" alt="Image" width="400"/>
+
+### Grundzüge der Spieltheorie: Ein Lehr- und Arbeitsbuch für das (Selbst-)Studium
+<img src="../../Pictures/Spieltheorie.jpg" alt="Image" width="400"/>
+
+### Trading für Dummies
+<img src="../../Pictures/TradingForDummies.jpg" alt="Image" width="400"/>
+
+### Technische Analyse der Finanzmärkte: Grundlagen, Strategien, Methoden, Anwendungen
+<img src="../../Pictures/TechnischeAnalyse.jpg" alt="Image" width="400"/>
+
+### How to Day Trade for a Living: A Beginner's Guide to Trading Tools and Tactics, Money Management, Discipline and Trading Psychology
+<img src="../../Pictures/DayTrading.jpg" alt="Image" width="400"/>
+
+### How To Swing Trade: A Beginner’s Guide to Trading Tools, Money Management, Rules, Routines and Strategies of a Swing Trader
+<img src="../../Pictures/SwingTrading.jpg" alt="Image" width="400"/>
+
+### Algorithmic Trading with Interactive Brokers
+<img src="../../Pictures/AlgoTrading.jpg" alt="Image" width="400"/>
+
+### Gaming the Market: Applying Game Theory to Create Winning Trading Strategies
+<img src="../../Pictures/GameTheoryTrading.jpg" alt="Image" width="400"/>
