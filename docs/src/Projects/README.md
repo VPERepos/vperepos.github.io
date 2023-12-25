@@ -36,6 +36,10 @@ UML-diagram above represents a design of the example program. There is a class c
 The principle program flow is described by the following sequence diagram
 ![UMLDiagram](../../Pictures/SequenceDiagramQueue.svg)
 
+### C++ Performance Study: Use CPU Cache Properties
+
+![UMLDiagram](../../Pictures/UseCacheClassDiagram.svg)
+![UMLDiagram](../../Pictures/UseCacheSequenceDiagram.svg)
 
 ## Java General Programming
 
