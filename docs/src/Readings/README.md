@@ -26,6 +26,9 @@ In this section I present some selected books, that I read during the last years
 ### Reinforcement Learning, second edition: An Introduction
 <img src="../../Pictures/ReinforcementLearning.jpg" alt="Image" width="400"/>
 
+### Machine Learning and Data Science Blueprints for Finance: From Building Trading Strategies to Robo-advisors using Python
+<img src="../../Pictures/ML_Blueprints.jpg" alt="Image" width="400"/>
+
 ## Computer Science
 
 ### The algorithm design manual
@@ -170,3 +173,5 @@ In this section I present some selected books, that I read during the last years
 
 ### Gaming the Market: Applying Game Theory to Create Winning Trading Strategies
 <img src="../../Pictures/GameTheoryTrading.jpg" alt="Image" width="400"/>
+
+
