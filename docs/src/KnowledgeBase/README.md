@@ -22,8 +22,9 @@ blockquote {
 
 ## Possible interview questions.
 **Sources:**<br>
-www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
 www.wikipedia.com <br>
+www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
+www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
 ### Interview questions for algorithms and data structures.
 #### 1. What is a data structure?
 In computer science, a data structure is a **data organization**, and storage format that is usually chosen **for efficient access** to data.<br>
@@ -168,6 +169,26 @@ The height of the node equals the number of edges in the longest path to the lea
 
 #### 23. Explain what Jagged Array is?
 It is an array whose elements themselves are arrays and may be of different dimensions and sizes.
+
+#### 24. What is an Algorithm?
+An algorithm is a step by step method of solving a problem or manipulating data. It defines a set of instructions to be executed in a certain order to get the desired output.
+
+#### 25. What is an asymptotic analysis of an algorithm?
+Asymptotic analysis is the technique of determining an algorithm's running time in mathematical units to determine the program's limits, also known as "run-time performance." The purpose is to identify the best case, worst case, and average-case times for completing a particular activity.
+
+#### 26. What are asymptotic notations?
+Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.
+
+#### 27. What are basic operations on Arrays?
+* **Traversing** - looping through each element in the array and processing each element one at a time.<br>
+* **Insertion** - the process of adding new elements into an existing array. This can be done by providing an index for where the insertion should occur and then shifting other elements in the array to make space for the insertion.<br>
+* **Deletion** - the opposite of insertion and involves removing elements from an existing array. After deleting an element, all other elements in the array must be shifted to fill any gaps left from deletion.
+* **Searching** - process of identifying an element from within an array by comparing it to your desired value until you find a match. 
+* **Sorting** - process of arranging elements of an array in either ascending or descending order.
+
+#### 28. What are the basic types of searching? Describe their worst case asymptotic behaviour.
+* **Linear Search** - compares each element one after another until a match is found, or all elements have been searched. It has O(n) time complexity, because in worst case the searched element is the last one, or there is no such elements and you go through whole array.
+* **Binary Search** - can be done in sorted arrays by comparing the middle element with the target and if they are not equal, the half where the target cannot lie is elemenated. The time complexity is O(log2(N)), because with each step you divide the number of elements N by 2, like N/2, N/4, N/8... until you reach 1. So N/2^k = 1 and thus k = log2(N).
 
 ### Interview questions for C++.
 ### Interview questions for Python.
