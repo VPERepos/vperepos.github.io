@@ -23,8 +23,10 @@ blockquote {
 ## Possible interview questions.
 **Sources:**<br>
 www.wikipedia.com <br>
+www.geeksforgeeks.org <br>
 www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
 www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
+
 ### Interview questions for algorithms and data structures.
 #### 1. What is a data structure?
 In computer science, a data structure is a **data organization**, and storage format that is usually chosen **for efficient access** to data.<br>
@@ -179,17 +181,45 @@ Asymptotic analysis is the technique of determining an algorithm's running time 
 #### 26. What are asymptotic notations?
 Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.
 
-#### 27. What are basic operations on Arrays?
+#### 27. What are the common algorithmic runtimes in big O notation?
+* **Constant** - O(1)<br>
+* **Logarithmic** - O(log(N))
+* **Linear** - O(N)
+* **Linear times Logarithm** - O(N*log(N))
+* **Polynomial** - O(N^b)
+* **Exponential** - O(b^N)
+* **Factorial** - O(N!)<br>
+
+#### 28. What are basic operations on Arrays?
 * **Traversing** - looping through each element in the array and processing each element one at a time.<br>
 * **Insertion** - the process of adding new elements into an existing array. This can be done by providing an index for where the insertion should occur and then shifting other elements in the array to make space for the insertion.<br>
 * **Deletion** - the opposite of insertion and involves removing elements from an existing array. After deleting an element, all other elements in the array must be shifted to fill any gaps left from deletion.
 * **Searching** - process of identifying an element from within an array by comparing it to your desired value until you find a match. 
 * **Sorting** - process of arranging elements of an array in either ascending or descending order.
 
-#### 28. What are the basic types of searching? Describe their worst case asymptotic behaviour.
+#### 29. What are the basic types of searching? Describe their worst case asymptotic behaviour.
 * **Linear Search** - compares each element one after another until a match is found, or all elements have been searched. It has O(n) time complexity, because in worst case the searched element is the last one, or there is no such elements and you go through whole array.
 * **Binary Search** - can be done in sorted arrays by comparing the middle element with the target and if they are not equal, the half where the target cannot lie is elemenated. The time complexity is O(log2(N)), because with each step you divide the number of elements N by 2, like N/2, N/4, N/8... until you reach 1. So N/2^k = 1 and thus k = log2(N).
 
+#### 30. What are some common array sorting algorithms?
+* **PermutationSort** - most ineffective sorting algorithm. It works by generating permutations of an array and checking if it is in the right sorted order. The worst case time complexity is O(?) undefined, since it has no upper bound and could run forever.
+* **BubbleSort** - simple and easy to understand sorting algorithm. Consists of two loops. In the case of sorting in ascending order, the inner loop goes over elements and if an element is bigger than the next one, they are swapped. The outer loop repeats the procedure. The time complexity is O(N^2). Still too slow for real life problems.
+* **QuickSort** - the fastest sorting algorithm based on divide and conquer principle. The key process in **QuickSort** is a **Partition**. The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot. Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array. The time complexity is O(N*log(N)).
+
+#### 31. Name the main properties of the basic operations on linked lists.
+* **Traversing** - this operation has a time complexity of O(N), the same as for arrays. But one can not access elemnts of a linked list by direct indexing.
+* **Insertion** - this operation has a constant time complexity in contrast to arrays, where the worst case time complexity of the operation is O(N). It needs only to modify pointers in the chain at the place of insertion.
+* **Deletion** - the mechanism is the same as for **Insertion**.
+* **Search** - the same as for an Array in the case of an unsorted list, the worst case time complexity of searching an element is O(N). Binary search can be done only for sorted lists.
+* **Sort** - the same algorithms as for Arrays can be applied for linked lists with the time complexity depending on the chosen algorithm.
+
+#### 32. How can one detect loops in a Linked Lists, name a few approaches?
+* **Floyd's Loop Detection Algorithm** - uses two pointers running over a linked list with different velocities, like first goes over each element, the second jumps over one element. If there are loops in the linked list, the two pointers will be equal at some point in the loop. Otherwise, the both reach the last element in the list. 
+* **Using Hashing** - traverse the linked list and save the calculated hash of each node's adress. If the current node's hash points to one of the previously calculated hashes, then the list has loops. If the last element is reached without pointing to the previous hashes, then there are no loops.
+
+#### 33. What are the basic operations on Hash Tables?
+
+### Interview questions for Databases.
 ### Interview questions for C++.
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
