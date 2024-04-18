@@ -333,12 +333,12 @@ When a Graph has a lot of edges, then it is better to represent it in the form o
     4. **Level-order** - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.
 * **Insertion** - incertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.
 * **Search** - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.
-* **Deletion** - during deletion there are 4 options to look at, the node is either:
+* **Deletion** - during deletion there are 4 options to look at, the node either:
     1. Is a leaf node (has no children).
     2. Has only one child, which then will take place of the deleted one.
     3. Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.
     4. Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.
-    
+
 ### Interview questions for Databases.
 ### Interview questions for C++.
 ### Interview questions for Python.
