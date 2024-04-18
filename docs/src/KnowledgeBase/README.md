@@ -55,6 +55,8 @@ www.geeksforgeeks.org <br>
 www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
 www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
 www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm <br>
+www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
+www.vinayakd.com/articles/delete-n-ary-tree-node <br>
 
 ### Interview questions for algorithms and data structures.
 #### What is a data structure?
@@ -195,8 +197,17 @@ An octree is a tree data structure in which each internal node has exactly eight
 * **Heap** <br>
 A heap is a tree-based data structure that satisfies the heap property: in a max heap, for any given node C, if P is a parent node of C, then the key (the value) of P is greater than or equal to the key of C. In a min heap, the key of P is less than or equal to the key of C.
 
-#### How is a node height in a Tree Data Structure determined?
-The height of the node equals the number of edges in the longest path to the leaf from the node, where the depth of a leaf node is 0.
+#### How is a Node Height in the Tree Data Structure determined?
+The height of a node is the number of edges from that node to the leaf node (the lowermost node in the hierarchy).
+
+#### How is a Node Depth in the Tree Data Structure determined?
+The depth of a node is the number of edges it takes from the root (the uppermost node in the hierarchy) node to that particular node.
+
+#### What is a Node Degree in the Tree Data Structure?
+The total number of branches coming out of a node is considered to be the degree of that node.
+
+#### What is a Forest in relation with the Tree Data Structure?
+A collection of disconnected trees is called a forest. If you cut the root of a tree, the disjoint trees hence formed make up a forest. 
 
 #### Explain what Jagged Array is?
 It is an array whose elements themselves are arrays and may be of different dimensions and sizes.
@@ -260,6 +271,24 @@ One could solve the problem of hash collisions by for example **Linear Probing**
 * **Insert** - compute the hash code of a passed key. Use cash code as an index in the array. If the cell is not empty use linear probing to get to the next empty cell.
 * **Delete** - the same as for previous operations hash code is used as an array index. If the cell is empty use linear probing to get to the element ahead. Once the lement is found store a dummy element there.
 
+#### What is a Bipartite Graph?
+A bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets U and V, that is, every edge connects a vertex in U to one in V . Vertex sets U and V are usually called the parts of the graph. Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles.
+
+#### What is a Weighted Graph?
+A graph whose vertices or edges have been assigned weights. A vertex-weighted graph has weights on its vertices and an edge-weighted graph has weights on its edges.
+
+#### What is a Directed Graph?
+A directed graph (or digraph) is a graph that is made up of a set of vertices connected by directed edges, often called arcs.
+
+#### What is a Transpose of a Directed Graph?
+Transpose of a directed graph G is another directed graph on the same set of vertices with all of the edges reversed compared to the orientation of the corresponding edges in G.
+
+#### What is a Strongly Connected Graph?
+A directed graph is called strongly connected if there is a path from each vertex in the graph to every other vertex.
+
+#### What is a Minimum Spanning Tree of a Graph?
+A minimum spanning tree (MST) is defined as a spanning tree that has the minimum weight among all the possible spanning trees. A **Spanning Tree** is a subset of the edges of the graph that forms a tree (acyclic) where every node of the graph is a part of the tree.
+
 #### Name the ways of representing and storing a Graph Data Structure.
 * **Adjacency Matrix** - in this method a graph is represented in the form of a 2D matrix, where rows and columns denote vertices. And the values in the cells describe reletionships (edges) between vertices.
 * **Adjacency List** - here a Graph is represented as a collection of linked lists. There is an array of pointers for all vertices. Each pointer shows connections to all other vertices in a chain that have edges to the reference vertice.
@@ -283,8 +312,33 @@ When a Graph has a lot of edges, then it is better to represent it in the form o
 * **Depth-First-Search** - the algorithm starts selecting some arbitrary node as the root node and explores as far as possible along each branch before backtracking. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.
 
 #### List the main applications of Breadth-First-Search.
+* **Shortest Path Finding** - Breadth-First-Search can be used to find the shortest path between two nodes in an unweighted graph. By keeping track of the parent of each node during the traversal, the shortest path can be reconstructed.
+* **Cycle Detection** - Breadth-First-Search can be used to detect cycles in a graph. If a node is visited twice during the traversal, it indicates the presence of a cycle.
+* **Connected Components** - Breadth-First-Search can be used to identify connected components in a graph. Each connected component is a set of nodes that can be reached from each other.
+* **Topological Sorting** - BFS can be used to perform topological sorting on a directed acyclic graph (DAG). Topological sorting arranges the nodes in a linear order such that for any edge (u, v), u appears before v in the order.
 
+#### List the main applications of Depth-First-Search.
+* **Detecting Cycle in a Graph** - A graph has a cycle if and only if we see a back edge during DFS. So we can run DFS for the graph and check for back edges.
+* **Path Finding** - Depth-First-Search can be used to find a path between any two vertices. Choose one vertex es a start. Use stack in order to save the path between starting and current vertex. As son as destination vertex is reached, return the path.
+* **Topological Sorting** - the same like for Breadth-First-Search, it is used mainly for jobs scheduling from the given dependencies among jobs. 
+* **Testing if a Graph is Bipartite** - when we first discover a new vertex, color it opposite its parents, and for each other edge, check it doesn’t link two vertices of the same color. The first vertex in any connected component can be red or black.
+* **Finding Strongly Connected Components in a Graph** - for example brute-force checking if the definition of a strongly connected component fits the vertices of a graph.
+* **Backtracking** - Depth-first search can be used in backtracking algorithms.
 
+#### What are the basic operations on Trees Data Structures?
+* **Traversal** - a hierarchical data structure like a tree can have different ways of traversal. Simplifying to a **Binary Tree**, one can distinguish between three types of traversal:
+    1. **In-order** - it starts with visiting all the nodes in the left subtree. Then visits the root node. And finally, all the nodes in the right subtree are visited.
+    2. **Pre-order** - first the root node is visited. Then all the nodes in the left subtree. And finally visits all the nodes in the right subtree.
+    3. **Post-order** - starts with the nodes in the left subtree. Visits the nodes in the right subtree. And then visits the root node.
+    4. **Level-order** - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.
+* **Insertion** - incertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.
+* **Search** - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.
+* **Deletion** - during deletion there are 4 options to look at, the node is either:
+    1. Is a leaf node (has no children).
+    2. Has only one child, which then will take place of the deleted one.
+    3. Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.
+    4. Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.
+    
 ### Interview questions for Databases.
 ### Interview questions for C++.
 ### Interview questions for Python.
