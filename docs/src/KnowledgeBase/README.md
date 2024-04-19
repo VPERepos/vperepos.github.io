@@ -49,6 +49,9 @@ content:   counter(h6counter) ".";
 # Knowledge Base
 
 ## Possible interview questions.
+
+
+### Interview questions for algorithms and data structures.
 **Sources:**<br>
 www.wikipedia.com <br>
 www.geeksforgeeks.org <br>
@@ -58,7 +61,6 @@ www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm <br>
 www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
 www.vinayakd.com/articles/delete-n-ary-tree-node <br>
 
-### Interview questions for algorithms and data structures.
 #### What is a Data Structure?
 In computer science, a data structure is a **data organization**, and storage format that is usually chosen **for efficient access** to data.<br>
 
@@ -413,6 +415,108 @@ Backtracking is a problem-solving algorithmic technique that involves finding a 
 Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.
 
 ### Interview questions for Databases.
+**Sources:** <br>
+www.softwaretestinghelp.com/database-interview-questions/ <br>
+www.mindmajix.com/nosql-interview-questions <br>
+www.ibm.com/docs/en/ida/9.1.1?topic=entities-primary-foreign-keys <br>
+
+#### How is a Database defined?
+Database is an organized collection of related data where the data is stored and organized to serve some specific purpose.
+
+#### Define DBMS.
+DBMS stands for Database Management System. It is a collection of application programs which allow the user to organize, restore and retrieve information about data as effectively as possible. Some of the popular DBMS’s are MySql, Oracle, PostgreSql, SqLite, etc.
+
+#### Define RDBMS.
+Relational Database Management System (RDBMS) is based on a relational model of data that is stored in databases in separate tables and they are related to the use of a common column. Data can be accessed easily from the relational database using Structured Query Language (SQL).
+
+#### Enlist the advantages of DBMS.
+The advantages of DBMS includes:
+* Data is stored in a structured way and hence redundancy is controlled.
+* Validates the data entered and provide restrictions on unauthorized access to the database.
+* Provides backup and recovery of the data when required.
+* It provides multiple user interfaces.
+
+#### What do you understand by Data Redundancy?
+Duplication of data in the database is known as data redundancy. As a result of data redundancy, duplicated data is present at multiple locations, hence it leads to wastage of the storage space and the integrity of the database is destroyed.
+
+####  What is a Primary Key in a Relational Database?
+A Primary Key is a column or a set of columns in a table whose values uniquely identify a row in the table. A relational database is designed to enforce the uniqueness of primary keys by allowing only one row with a given primary key value in a table.
+
+#### What is a Foreign Key in a Relational Database?
+A Foreign Key is a column or a set of columns in a table whose values correspond to the values of the primary key in another table. In order to add a row with a given foreign key value, there must exist a row in the related table with the same primary key value.
+
+#### What are Non-key Attributes?
+Non-key attributes are attributes that are not part of any key. Generally, most attributes are simply descriptive, and fall into this category. Consider an Employee entity type that has attributes for first name, last name, birth date; these attributes would serve to describe an employee but would not serve to uniquely identify employees.
+
+#### Categorize Data Modification Anomalies in a Database.
+* **Insertion Anomaly**: Insertion Anomaly refers to when one cannot insert a new tuple into a relationship due to lack of data.
+* **Deletion Anomaly**: The delete anomaly refers to the situation where the deletion of data results in the unintended loss of some other important data.
+* **Updatation Anomaly**: The update anomaly is when an update of a single data value requires multiple rows of data to be updated.
+
+#### What are the various types of relationships in Database? Define them.
+There are 3 types of relationships in Database:
+* **One-to-one**: One table has a relationship with another table having the similar kind of column. Each primary key relates to only one or no  record in the related table.
+* **One-to-many**: One table has a relationship with another table that has primary and foreign key relations. The primary key table contains only one record that relates to none, one or many records in the related table.
+* **Many-to-many**: Each record in both the tables can relate to many numbers of records in another table.
+
+#### Explain Normalization and De-Normalization.
+**Normalization** is the process of removing redundant data from the database by splitting the table in a well-defined manner in order to maintain data integrity. This process saves much of the storage space. It is also used to eliminate undesirable characteristics like Insertion, Update, and Deletion Anomalies.
+
+**De-normalization** is the process of adding up redundant data on the table in order to speed up the complex queries and thus achieve better performance.
+
+#### What are the different types of Normalization?
+Different types of Normalization are:
+* **First Normal Form (1NF)**: A relation is said to be in 1NF only when all the entities of the table contain unique or atomic values. It meens all rows must be unique, each cell must contain only single value (not a list) and each value should be non-divisible (can't be split down further).
+* **Second Normal Form (2NF)**: A relation is said to be in 2NF only if it is in 1NF and all the non-key attribute of the table is fully dependent on the primary key. For example we have a table with columns composed of Student ID, Course ID and Course Fee. Course Fee does not depend fully on the primary key represented by Student ID. In order to achieve 2NF on splits the table in one that contains Student ID and Course ID and another that contains Course ID and Course Fee.
+* **Third Normal Form (3NF)**: A relation is said to be in 3NF only if it is in 2NF and every non-key attribute of the table is not transitively dependent on the primary key. For example if we have a table containing Tournament Name, Year, Winner's Name and Winner's Date of Birth. Winners date of birth can be defined by winner's name and not by the primary key represented by tournament name and year, so the table must be split.
+
+#### What is BCNF?
+BCNF is the Boyce Code Normal form. It is the higher version of 3Nf which does not have any multiple overlapping candidate keys. For example if we have a table with Student ID, Corse ID and Professor ID, where the same course could be held by different professors, we have to split the table into table eith Student ID and professor ID and the table with professor ID and Course ID.
+
+#### What is SQL?
+Structured Query language, SQL is an ANSI (American National Standard Institute) standard programming language that is designed specifically for storing and managing the data in the relational database management system (RDBMS) using all kinds of data operations.
+
+#### How many SQL statements are used? Define them.
+SQL statements are basically divided into three categories, DDL, DML, and DCL. <br>
+They can be defined as:
+* **Data Definition Language (DDL)** commands are used to define the structure that holds the data. These commands are auto-committed i.e. changes done by the DDL commands on the database are saved permanently.
+* **Data Manipulation Language (DML)** commands are used to manipulate the data of the database. These commands are not auto-committed and can be rolled back.
+* **Data Control Language (DCL)** commands are used to control the visibility of the data in the database like revoke access permission for using data in the database.
+
+#### Enlist some commands of DDL, DML and DCL.
+* **Data Definition Language (DDL) commands:** <br>
+    CREATE to create a new table or database.<br>
+    ALTER for alteration.<br>
+    TRUNCATE to delete data from the table.<br>
+    DROP to drop a table.<br>
+    RENAME to rename a table.<br>
+
+* **Data Manipulation Language (DML) commands:**<br>
+    INSERT to insert a new row.<br>
+    UPDATE to update an existing row.<br>
+    DELETE to delete a row.<br>
+    MERGE for merging two rows or two tables.<br>
+
+* **Data Control Language (DCL) commands:**<br>
+    COMMIT to permanently save.<br>
+    ROLLBACK to undo the change.<br>
+    SAVEPOINT to save temporarily.<br>
+
+#### What is Quaery Processor in DBMS?
+The Query Processor receives the queries (requests) from the user and interprets them in the form of instructions. It has four components: **DML Compiler**, **DDL Interpreter**, **Query Optimizer** and **Embedded DML Pre-compiler**.
+
+#### Define DML Compiler.
+It converts the DML (Data Manipulation Language) Instructions into Machine Language (low-level language).
+
+#### What is DDL interpreter?
+It interprets the DDL (Data Definition Language) Instructions and stores the record in a data dictionary (in a table containing meta-data).
+
+#### What is Query Optimizer?
+It executes the DML Instructions and picks the lowest cost evaluation plan out of all the alternatives present.
+
+#### What is Embedded DML Pre-compiler?
+It translates the DML statements embedded in Application Programs into procedural function calls.
+
 ### Interview questions for C++.
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
