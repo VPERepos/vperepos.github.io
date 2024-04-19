@@ -59,10 +59,10 @@ www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
 www.vinayakd.com/articles/delete-n-ary-tree-node <br>
 
 ### Interview questions for algorithms and data structures.
-#### What is a data structure?
+#### What is a Data Structure?
 In computer science, a data structure is a **data organization**, and storage format that is usually chosen **for efficient access** to data.<br>
 
-#### Describe the types of data structures?
+#### Describe the types of Data Structures?
 * **Array** - an array is a number of elements in a specific order, typically all of the same type. Elements are accessed using an integer index to specify which element is required.<br>
 * **List** - a linked list is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays.<br>
 * **Record** - a record (also **called tuple** or **struct**) is an **aggregate data structure**. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. <br>
@@ -128,17 +128,17 @@ It is a complex type (double-ended LL) of a linked list in which a node has two 
 #### What are Dynamic Data Structures? Name a few.
 They are collections of data in memory that expand and contract to grow or shrink in size as a program runs. This enables the programmer to control exactly how much memory is to be utilized. Examples are the **dynamic array**, **linked list**, **stack**, **queue**, and **heap**.<br>
 
-#### What is a stack?
+#### What is a Stack?
 A stack is an abstract data type that specifies a linear data structure, as in a real physical stack or piles where you can only take the top item off the stack in order to remove things. Thus, insertion (push) and deletion (pop) of items take place only at one end called top of the stack, with a particular order: LIFO (Last In First Out) or FILO (First In Last Out).
 
-#### Where are stacks used?
+#### Where are Stacks used?
 * Expression, evaluation, or conversion of evaluating prefix, postfix, and infix expressions
 * Syntax parsing
 * String reversal
 * Parenthesis checking
 * Backtracking
 
-#### What are the operations that can be performed on a stack?
+#### What are the operations that can be performed on a Stack?
 A stack may perform three fundamental operations:
 * PUSH: The push action inserts a new element into the stack. The new feature is placed at the top of the stack. 
 * POP: The pop operation is performed to remove the stack's topmost element.
@@ -147,7 +147,7 @@ A stack may perform three fundamental operations:
 #### What is a queue Data Structure?
 A queue is an abstract data type that specifies a linear data structure or an ordered list,  using the First In First Out (FIFO) operation to access elements. Insert operations can be performed only at one end called REAR and delete operations can be performed only at the other end called FRONT.
 
-#### List some applications of queue Data Structure.
+#### List some applications of the Queue Data Structure.
 To prioritize jobs as in the following scenarios:
 * As waiting lists for a single shared resource (like printer, CPU, call center systems).
 * In the asynchronous transfer of data (file IO, sockets).
@@ -155,7 +155,7 @@ To prioritize jobs as in the following scenarios:
 #### What is a Dequeue?
 It is a double-ended queue, or a data structure, where the elements can be inserted or deleted at both ends (FRONT and REAR).
 
-#### What operations can be performed on queues?
+#### What operations can be performed on Queues?
 * enqueue() adds an element to the end of the queue
 * dequeue() removes an element from the front of the queue
 * init() is used for initializing the queue
@@ -163,16 +163,16 @@ It is a double-ended queue, or a data structure, where the elements can be inser
 * The front is used to get the value of the first data item but does not remove it
 * The rear is used to get the last item from a queue
 
-#### Define the graph Data Structure?
+#### Define the Graph Data Structure.
 It is a type of non-linear data structure that consists of vertices or nodes connected by edges or arcs to enable storage or retrieval of data. Edges may be directed or undirected.
 
-#### What are the applications of graph Data Structure?
+#### What are the applications of Graph Data Structures?
 * Transport grids where stations are represented as vertices and routes as the edges of the graph
 * Utility graphs of power or water, where vertices are connection points and edge the wires or pipes connecting them
 * Social network graphs to determine the flow of information and hotspots (edges and vertices)
 * Neural networks where vertices represent neurons and edge the synapses between them
 
-#### List the types of trees?
+#### List the types of Trees?
 * **The General Tree** <br>
 A tree is referred to as a generic tree if its hierarchy is not constrained. In the General Tree, each node can have an endless number of offspring, and all other trees are subsets of the tree.<br>
 
@@ -209,6 +209,15 @@ The total number of branches coming out of a node is considered to be the degree
 #### What is a Forest in relation with the Tree Data Structure?
 A collection of disconnected trees is called a forest. If you cut the root of a tree, the disjoint trees hence formed make up a forest. 
 
+#### How is a Balanced Binary Tree determined?
+A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
+
+#### What is a Self-balancing Binary Tree?
+Self-Balancing Binary Search Trees are height-balanced binary search trees that automatically keep the height as small as possible when insertion and deletion operations are performed on the tree. Most prominent examples are AVL Trees and Red-Black Trees.
+
+#### What is a B-Tree Data Structure?
+A B-tree is a sort of self-balancing search tree whereby each node could have more than two children and hold multiple keys.
+
 #### Explain what Jagged Array is?
 It is an array whose elements themselves are arrays and may be of different dimensions and sizes.
 
@@ -218,17 +227,16 @@ An algorithm is a step by step method of solving a problem or manipulating data.
 #### What is an asymptotic analysis of an algorithm?
 Asymptotic analysis is the technique of determining an algorithm's running time in mathematical units to determine the program's limits, also known as "run-time performance." The purpose is to identify the best case, worst case, and average-case times for completing a particular activity.
 
-#### What are asymptotic notations?
+#### What are Asymptotic Notations?
 Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.
 
 #### What are the common algorithmic runtimes in big O notation?
-* **Constant** - O(1)<br>
-* **Logarithmic** - O(log(N))
-* **Linear** - O(N)
-* **Linear times Logarithm** - O(N*log(N))
-* **Polynomial** - O(N^b)
-* **Exponential** - O(b^N)
-* **Factorial** - O(N!)<br>
+* **Constant** - O(1) (Insertion in a linked list)
+* **Logarithmic** - O(log(N)) (Binary Search)
+* **Linear** - O(N) (Linear Search)
+* **Polynomial** - O(N^b) (QuickSort with O(N*log(N)))
+* **Exponential** - O(b^N) (Fibonacci series (each element is a sum of previous two) without Dynamic Programming, (O(N) with dynamic programming))
+* **Factorial** - O(N!) (Generation of all possible permutations of N objects)
 
 #### What are basic operations on Arrays?
 * **Traversing** - looping through each element in the array and processing each element one at a time.<br>
@@ -331,13 +339,78 @@ When a Graph has a lot of edges, then it is better to represent it in the form o
     2. **Pre-order** - first the root node is visited. Then all the nodes in the left subtree. And finally visits all the nodes in the right subtree.
     3. **Post-order** - starts with the nodes in the left subtree. Visits the nodes in the right subtree. And then visits the root node.
     4. **Level-order** - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.
-* **Insertion** - incertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.
+* **Insertion** - insertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.
 * **Search** - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.
 * **Deletion** - during deletion there are 4 options to look at, the node either:
     1. Is a leaf node (has no children).
     2. Has only one child, which then will take place of the deleted one.
     3. Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.
     4. Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.
+
+#### Explain the mechanism of Self-Balancing in AVL Trees.
+First the **Balance Factor** of all nodes is calculated as a difference between the height of the left branch and the height of the right branch. If the balance factor is -1,0 or 1 then the tree is balanced, otherwise left and right rotations of the nodes must be done in order to shorten the height of branches with single nodes. During rotations the fundamental property of binary trees must be satisfied that the right child node is bigger than the parent and the left one is smaller. After rotations balance factors are calculated again and if they are -1,0 or 1 a new element can be inserted. Otherwise rotations are conducted further until balanced state is achieved.
+
+#### Explain the mechanism of Self-Balancing in Red-Black Trees.
+The fundamental rules of Red-Black Trees are:<br>
+    1. Every node has a color either red or black.<br>
+    2. The root of the tree is always black.<br>
+    3. There are no two adjacent red nodes (A red node cannot have a red parent or red child).<br>
+    4. Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.<br>
+    5. Every leaf (e.i. NULL node) must be colored BLACK.<br>
+After insertion two basic operations are used in order to ensure the balance: **Rotation and Recolouring**. First, an element is inserted like in general binary trees and coloured red. One tries first the recolouring during balancing and if it does not work, rotations are conducted. If the new node (**child**) appears to be the root it is recoloured in black (see properties). Check the colour of the parent (**father**) node. If it is black then left the colour of the child node as red. If the father is also red, check the colour of its opposite node (**uncle**) on the same level. If the color of this node is also red then change both father and uncle nodes to black and the **grandfather** (parent node of father and uncle) to red if its not the root node, otherwise do not change the grandfathers color. Repeat the procedure for grandfather upwards. But if the uncle's color is black then rotations in 4 possible ways are conducted untill one can recolour the new arrangement of the nodes.  
+
+#### What is Recursion?
+Recursion is defined as a process which calls itself directly or indirectly and the corresponding function is called a recursive function. As an example calculation of Fibonacci series can be formulated in the form of Recursion, like F(n) = F(n-1) + F(n-2), for n >= 2.
+
+#### What is Dynamic Programming?
+Dynamic Programming is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems. 
+
+#### What is Linear Programming?
+Linear programming is the technique used for optimizing a particular scenario. Using linear programming provides us with the best possible outcome in a given situation. It uses all the available resources in a manner such that they produce the optimum result. Problems like Transportation, manufacturing and diet can be solved by this approach. <br>
+A linear programming problem consits of **Decision Variables**, **Objective Function**, **Constraints** and **Non-negative Restrictions**.
+Decision variables are the variables x, and y, which decide the output of the linear programming problem and represent the final solution. 
+The objective function, generally represented by Z, is the linear function that needs to be optimized according to the given condition to get the final solution. The restrictions imposed on decision variables that limit their values are called constraints.
+Now, the general formula of a linear programming problem is:<br>
+Objective Function: Z = ax + by <br>
+Constraints: cx + dy ≥ e, px + qy ≤ r <br>
+Non-Negative restrictions: x ≥ 0, y ≥ 0 <br>
+The methods of solving linear programming problems are **Simplex** and **Graphical**.
+
+Steps for the **Simplex Method** are:
+
+Step 1: Formulate the linear programming problems based on the given constraints.
+
+Step 2: Convert all the given inequalities to equations or equalities of the linear programming problems by adding the slack variable to each inequality where ever required.
+
+Step 3: Construct the initial simplex table. By representing each constraint equation in a row and writing the objective function at the bottom row. The table so obtained is called the Simplex table.
+
+Step 4: Identify the greatest negative entry in the bottom row the column of the element with the highest negative entry is called the pivot column
+
+Step 5: Divide the entries of the right-most column with the entries of the respective pivot column, excluding the entries of the bottommost row. Now the row containing the least entry is called the pivot row. The pivot element is obtained by the intersection of the pivot row and the pivot column.
+
+Step 6: Using matrix operation and with the help of the pivot element make all the entries in the pivot column to be zero.
+
+Step 7: Check for the non-negative entries in the bottommost row if there are no negative entries in the bottom row, end the process else start the process again from step 4.
+
+Step 8: The final simplex table so obtained gives the solution to our problem.
+
+Steps for the **Graphical Method** are:
+
+Step 1: First convert the inequations into normal equations.
+
+Step 2: Find the points at which equations cut the x-axis and y-axis. To find the point of intersection of the x-axis put y = 0 in the respective equation and find the point. Similarly for y-axis intersection points put x = 0 in the respective equation.
+
+Step 3: Draw the lines cutting the x-axis and y-axis.
+
+Step 4: The region will include an area region enclosed by two axes and all lines including the origin. 
+
+Step 5: Find Z for each intersection point and thus maxima and minima.
+
+#### What is Backtracking?
+Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku.
+
+#### What is a Greedy Algorithm?
+Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.
 
 ### Interview questions for Databases.
 ### Interview questions for C++.
