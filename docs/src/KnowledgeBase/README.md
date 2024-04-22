@@ -436,6 +436,21 @@ The advantages of DBMS includes:
 * Provides backup and recovery of the data when required.
 * It provides multiple user interfaces.
 
+#### What is the Database Transaction?
+Sequence of operation performed which changes the consistent state of the database to another is known as the database transaction. After the completion of the transaction, either the successful completion is reflected in the system or the transaction fails and no change is reflected.
+
+#### Enlist four fundamental Properties of Transactions in RDBMS.
+Four crucial properties define relational database transactions: atomicity, consistency, isolation, and durability—typically referred to as ACID.
+* **Atomicity** defines all the elements that make up a complete database transaction.
+* **Consistency** defines the rules for maintaining data points in a correct state after a transaction.
+* **Isolation** keeps the effect of a transaction invisible to others until it is committed, to avoid confusion.
+* **Durability** ensures that data changes become permanent once the transaction is committed.
+
+#### Explain the terms ‘Record’, ‘Field’ and ‘Table’ in terms of database.
+**Record:** Record is a collection of values or fields of a specific entity. For Example, An employee, Salary account, etc. <br>
+**Field:** A field refers to an area within a record that is reserved for specific data. For Example, Employee ID.<br>
+**Table:** Table is the collection of records of specific types. For Example, the Employee table is a collection of records related to all the employees.<br>
+
 #### What do you understand by Data Redundancy?
 Duplication of data in the database is known as data redundancy. As a result of data redundancy, duplicated data is present at multiple locations, hence it leads to wastage of the storage space and the integrity of the database is destroyed.
 
@@ -516,6 +531,96 @@ It executes the DML Instructions and picks the lowest cost evaluation plan out o
 
 #### What is Embedded DML Pre-compiler?
 It translates the DML statements embedded in Application Programs into procedural function calls.
+
+#### Enlist the advantages of SQL.
+* Simple SQL queries can be used to retrieve a large amount of data from the database very quickly and efficiently.
+* SQL is easy to learn and almost every DBMS supports SQL.
+* It is easier to manage the database using SQL as no large amount of coding is required.
+
+#### What is a Relational Database Schema?
+A database schema refers to the logical and visual configuration of the entire relational database. The database objects are often grouped and displayed as tables, functions, and relations. A schema describes the organization and storage of data in a database and defines the relationship between various tables.
+
+#### What is a Physical Level in a Relational Database.
+The concept of Physical Level in a database refers to the lowest level of organization and representation of data in a database management system. At the physical level, data is represented in the form of bits, bytes, and blocks of data stored on a storage device (such as a hard drive or solid-state drive).
+
+#### What is a Conceptual (Logical) Level in a Relational Database.
+The conceptual level is a way of describing what data is stored within the whole database and how the data is inter-related. The conceptual level does not specify how the data is physically stored.
+
+#### What is a View Level in a Relational Database?
+Views are virtual tables. They are only a structure, and contain no data. Their purpose is to allow a user to see a subset of the actual data. A view can consist of a subset of one table. A View can be considered as a template query.
+
+#### What are the advantages and disadvantages of views in the database?
+**Advantages of Views:**
+* As there is no physical location where the data in the view is stored, it generates output without wasting resources.
+* Data access is restricted as it does not allow commands like insertion, updation, and deletion.<br>
+
+**Disadvantages of Views:**
+* The view becomes irrelevant if we drop a table related to that view.
+* Much memory space is occupied when the view is created for large tables.
+
+
+#### What do you understand by Data Independence? What are its two types?
+Data Independence refers to the ability to modify the schema definition in one level in such a way that it does not affect the schema definition in the next higher level.<br>
+The 2 types of Data Independence are:
+* **Physical Data Independence:** It modifies the schema at the physical level without affecting the schema at the conceptual level.
+* **Logical Data Independence:** It modifies the schema at the conceptual level without affecting or causing changes in the schema at the view level.
+
+#### What do you understand by Functional dependency?
+A relation is said to be in functional dependency when one attribute uniquely defines another attribute. For Example, R is a Relation, X and Y are two attributes. T1 and T2 are two tuples. Then,<br>
+T1[X]=T2[X] and T1[Y]=T2[Y] <br>
+Means, the value of component X uniquely define the value of component Y. Also, X->Y means Y is functionally dependent on X.
+
+#### What is a Fully Functional Dependancy?
+To fulfill the criteria of fully functional dependency, the relation must meet the requirement of functional dependency. A functional dependency ‘A’ and ‘B’ are said to be fully functional dependent when removal of any attribute say ‘X’ from ‘A’ means the dependency does not hold anymore.
+
+#### What do you understand by the E-R model?
+E-R model is an Entity-Relationship model which defines the Conceptual View of the database. The E-R model basically shows the real-world entities and their association/relations. Entities here represent the set of attributes in the database.
+
+#### Define Entity, Entity type, and Entity set.
+**Entity** can be anything, be it a place, class or object which has an independent existence in the real world. <br>
+**Entity Type** represents a set of entities that have similar attributes.<br>
+**Entity Set** in the database represents a collection of entities having a particular entity type.<br>
+
+#### What is a Weak Entity?
+In a relational database, a weak entity is an entity that cannot be uniquely identified by its attributes alone; therefore, it must use a foreign key in conjunction with its attributes to create a primary key. The foreign key is typically a primary key of an entity it is related to. 
+
+#### Explain the terms ‘Attribute’ and ‘Relations’.
+**Attribute** is described as the properties or characteristics of an entity. For Example, Employee ID, Employee Name, Age, etc., can be attributes of the entity Employee. <br>
+**Relation** is a two-dimensional table containing a number of rows and columns where every row represents a record of the relation. Here, rows are also known as ‘Tuples’ and columns are known as ‘Attributes’. <br>
+
+#### What are VDL and SDL?
+**VDL** is **View Definition Language** which represents user views and their mapping to the conceptual schema. <br>
+**SDL** is **Storage Definition Language** which specifies the mapping between two schemas.<br>
+
+#### Define Cursor and its types. 
+Cursor is a temporary work area that stores the data, as well as the result set, occurred after manipulation of data retrieved. A cursor can hold only one row at a time. <br>
+The 2 types of Cursor are:
+* **Implicit cursors** are declared automatically when DML statements like INSERT, UPDATE, DELETE is executed.
+* **Explicit cursors** have to be declared when SELECT statements that are returning more than one row are executed.
+
+#### Define Database Lock and its types.
+Database lock basically signifies the transaction about the current status of the data item i.e. whether that data is being used by other transactions or not at the present point of time. <br>
+There are two types of Database lock: **Shared Lock** and **Exclusive Lock**. <br>
+**Shared Lock** exist when two transactions are granted read access. One transaction gets the shared lock on data and when the second transaction requests the same data it is also given a shared lock. Both transactions are in a read-only mode, updating the data is not allowed until the shared lock is released. <br>
+An **Exclusive Lock** means that no other users can update or delete the item until the database server removes the lock.
+
+#### What is Data Warehousing?
+The storage as well as access to data, that is being derived from the transactions and other sources, from a central location in order to perform the analysis is called **Data Warehousing**.
+
+#### What do you understand by Join?
+Join is the process of deriving the relationship between different tables by combining columns from one or more tables having common values in each. When a table joins with itself, it is known as Self Join.
+
+#### What do you understand by Index Hunting?
+Index hunting is the process of boosting the collection of indexes which helps in improving the query performance as well as the speed of the database (in analogy with direct access by index in a lookup table).
+
+#### How to improve query performance using Index hunting?
+Index hunting help in improving query performance by: <br>
+* Using a query optimizer to coordinate queries with the workload.
+* Observing the performance and effect of index and query distribution.
+
+#### Differentiate between ‘Cluster’ and ‘Non-cluster’ index.
+**Clustered Index** alters the table and re-order the way in which the records are stored in the table. Data retrieval is made faster by using the clustered index. SQL Server clustered index creates a physical sorted data structure of the table rows according to the defined index key. This sorted data structure is called a B-tree (balanced tree). B-tree structure enables us to find the queried rows faster to using the sorted key value(s). <br>
+A **Non-clustered Index** does alter the records that are stored in the table but creates a completely different object within the table.
 
 ### Interview questions for C++.
 ### Interview questions for Python.
