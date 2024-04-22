@@ -622,6 +622,236 @@ Index hunting help in improving query performance by: <br>
 **Clustered Index** alters the table and re-order the way in which the records are stored in the table. Data retrieval is made faster by using the clustered index. SQL Server clustered index creates a physical sorted data structure of the table rows according to the defined index key. This sorted data structure is called a B-tree (balanced tree). B-tree structure enables us to find the queried rows faster to using the sorted key value(s). <br>
 A **Non-clustered Index** does alter the records that are stored in the table but creates a completely different object within the table.
 
+#### What do you understand by Fragmentation?
+Fragmentation is a feature that controls the logical data units, also known as fragments that are stored at different sites of a distributed database system.
+
+#### Define Join types.
+Given below are the types of Join, which are explained with respect to the tables as an example. <br>
+
+**employee Table** 
+| | |
+|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|
+|1000| Kolya |
+|1001| Tolya |
+|1002| Sasha |
+|1003| Alexey |
+
+
+**employee_info Table**
+| | |
+|:---|:---|
+|<strong>EmpID</strong>|<strong>Adress</strong>|
+|1000| Moscow |
+|1001| Spb |
+|1002| Nijniy |
+|1003| Novosib |
+
+* **Inner JOIN:** Inner JOIN is also known as a simple JOIN. This SQL query returns results from both the tables having a common value in rows.
+**SQLQuery:**
+``` sql
+SELECT * from employee, employee_info WHERE employee.EmpID = employee_info.EmpID 
+```
+**Result:** <br>
+| | | | |
+|:---|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>EmpID</strong>|<strong>Adress</strong>|
+|1000| Kolya |1000| Moscow |
+|1001| Tolya |1001| Spb |
+|1002| Sasha |1002| Nijniy |
+|1003| Alexey |1003| Novosib |
+
+* **Natural JOIN** This is a type of Inner JOIN that returns results from both the tables having the same data values in the columns of both the tables to be joined.
+**SQLQuery:**
+``` sql
+SELECT * from employee NATURAL JOIN employee_info
+```
+**Result:** <br>
+| | | |
+|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>Adress</strong>|
+|1000| Kolya | Moscow |
+|1001| Tolya | Spb |
+|1002| Sasha | Nijniy |
+|1003| Alexey | Novosib |
+
+* **Cross JOIN:** Cross JOIN returns the result as all the records where each row from the first table is combined with each row of the second table.<br>
+**SQLQuery:**
+``` sql
+SELECT * from employee CROSS JOIN employee_info;
+```	
+* **Right JOIN:** Right JOIN is also known as Right Outer JOIN. This returns all the rows as a result from the right table even if the JOIN condition does not match any records in the left table.<br>
+
+**employee Table** 
+| | |
+|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|
+|1000| Kolya |
+|1001| Tolya |
+|1002| Sasha |
+|1003| Alexey |
+|1004| Masha |
+|1005| Dasha |
+
+**employee_info Table**
+| | |
+|:---|:---|
+|<strong>EmpID</strong>|<strong>Adress</strong>|
+|1000| Moscow |
+|1001| Spb |
+|1002| Nijniy |
+|1003| Novosib |
+|1006| Tomsk |
+|1007| Almaty |
+
+**SQLQuery:**
+``` sql
+SELECT * from employee RIGHT OUTER JOIN employee_info on (employee.EmpID = employee_info.EmpID);
+```
+**Result:** <br>
+| | | | |
+|:---|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>EmpID</strong>|<strong>Adress</strong>|
+|1000| Kolya |1000| Moscow |
+|1001| Tolya |1001| Spb |
+|1002| Sasha |1002| Nijniy |
+|1003| Alexey |1003| Novosib |
+|Null| Null |1006| Tomsk |
+|Null| Null |1007| Almaty |
+
+* **Left JOIN:** Left JOIN is also known as Left Outer JOIN. This returns all the rows as a result of the left table even if the JOIN condition does not match any records in the right table. This is exactly the opposite of Right JOIN.
+
+**SQLQuery:**
+``` sql
+SELECT * from employee LEFT OUTER JOIN employee_info on (employee.EmpID = employee_info.EmpID);
+```
+**Result:** <br>
+| | | | |
+|:---|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>EmpID</strong>|<strong>Adress</strong>|
+|1000| Kolya |1000| Moscow |
+|1001| Tolya |1001| Spb |
+|1002| Sasha |1002| Nijniy |
+|1003| Alexey |1003| Novosib |
+|1004| Masha |Null| Null |
+|1005| Dasha |Null| Null |
+
+* **Outer/Full JOIN:** Full JOIN return results in combining the result of both the Left JOIN and Right JOIN.
+
+**SQLQuery:**
+``` sql
+SELECT * from employee FULL OUTER JOIN employee_info on (employee.EmpID = employee_info.EmpID);
+```
+**Result:** <br>
+| | | | |
+|:---|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>EmpID</strong>|<strong>Adress</strong>|
+|1000| Kolya |1000| Moscow |
+|1001| Tolya |1001| Spb |
+|1002| Sasha |1002| Nijniy |
+|1003| Alexey |1003| Novosib |
+|1004| Masha |Null| Null |
+|1005| Dasha |Null| Null |
+|Null| Null |1006| Tomsk |
+|Null| Null |1007| Almaty |
+
+#### What do you understand by ‘Atomicity’ and ‘Aggregation’?
+**Atomicity** is the condition where either all the actions of the transaction are performed or none. This means, when there is an incomplete transaction, the database management system itself will undo the effects done by the incomplete transaction. <br>
+**Aggregation** is the concept of expressing the relationship with the collection of entities and their relationships.
+
+#### Define Phantom Deadlock.
+Phantom deadlock detection is the condition where the deadlock does not actually exist but due to a delay in propagating local information, deadlock detection algorithms identify the deadlocks.
+
+#### Define Checkpoint.
+Checkpoint declares a point before which all the logs are stored permanently in the storage disk and the database is in consistent state. In the case of crashes, the amount of work and time is saved as the system can restart from the checkpoint.
+
+#### What is Database Partitioning?
+Database partitioning is the process of partitioning tables, indexes into smaller pieces in order to manage and access the data at a finer level. This process of partitioning reduces the cost of storing a large amount of data as well as enhances the performance and manageability.
+
+####  Explain the importance of Database Partitioning.
+* Improves query performance and manageability.
+* Simplifies common administration tasks.
+* Acts as a key tool for building systems with extremely high availability requirements.
+* Allows accessing a large part of a single partition.
+
+#### Explain the Data Dictionary.
+Data Dictionary is a set of information describing the content and structure of the tables and database objects. The job of the information stored in the data dictionary is to control, manipulate and access the relationship between database elements.
+
+#### Explain the Primary Key and Composite Key.
+**Primary Key** is that column of the table whose every row data is uniquely identified. Every row in the table must have a primary key and no two rows can have the same primary key. Primary key value can never be null nor can it be modified or updated. <br>
+**Composite Key** is a form of the candidate key where a set of columns will uniquely identify every row in the table.
+
+#### What do you understand by the Unique key?
+A Unique key is the same as the primary key whose every row data is uniquely identified with a difference of null value i.e. Unique key allows one value as a NULL value.
+
+#### What do you understand by Database Triggers?
+A set of commands that automatically get executed when an event like Before Insert, After Insert, On Update, On Delete of row occurs in a table is called a Database Trigger.
+
+#### Define Stored Procedures.
+A Stored procedure is a collection of pre-compiled SQL Queries, which when executed denotes a program taking input, process and gives the output.
+
+#### What do you understand by B-Trees?
+B-Tree represents the data structure in the form of a tree for external memory that reads and writes large blocks of data. It is commonly used in databases and file systems where all the insertions, deletions, sorting, etc., are done in logarithmic time.
+
+#### Name the different Data Models that are available for database systems.
+* Relational model
+* Network model
+* Hierarchical model
+
+#### Differentiate between ‘DELETE’, ‘TRUNCATE’ and ‘DROP’ commands.
+After the execution of **DELETE** operation, **COMMIT** and **ROLLBACK** statements can be performed to retrieve the lost data. <br>
+After the execution of **TRUNCATE** operation, **COMMIT**, and **ROLLBACK** statements cannot be performed to retrieve the lost data. <br>
+**DROP** command is used to drop the table or key like the primary key/foreign key.
+
+#### Based on the given table, solve the following queries.
+**employee Table** <br>
+| | | | |
+|:---|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>Age</strong>|<strong>Adress</strong>|
+|1000| Kolya |26| Moscow |
+|1001| Tolya |30| Spb |
+|1002| Sasha |22| Nijniy |
+|1003| Alexey |50| Novosib |
+|1004| Masha |28| Kaliningrad |
+
+**a)** Write the SELECT command to display the details of the employee with empid as 1004.
+**SQLQuery:**
+``` sql
+SELECT EmpId, EmpName, Age, Adress from Employee WHERE empId = 1004;
+```
+
+**Result:** <br>
+| | | | |
+|:---|:---|:---|:---|
+|<strong>EmpID</strong>|<strong>EmpName</strong>|<strong>Age</strong>|<strong>Adress</strong>|
+|1004| Masha |28| Kaliningrad |
+
+**b)** Write the SELECT command to display all the records of table Employees.
+
+**SQLQuery:**
+``` sql
+SELECT * from Employee;
+```
+
+**c)** Write the SELECT command to display all the records of the employee whose name starts with the character ‘T’.
+
+**SQLQuery:**
+``` sql
+SELECT * from Employee WHERE EmpName LIKE ‘T%’;
+```
+
+**d)** Write a SELECT command to display id, age and name of the employees with their age in both ascending and descending order.
+
+**SQLQuery:**
+``` sql
+SELECT EmpId, EmpName, Age from Employee&amp;nbsp; ORDER BY Age;
+```
+
+**SQLQuery:**
+``` sql
+SELECT EmpId, EmpName, Age from Employee&amp;nbsp; ORDER BY Age Desc;
+```
+
 ### Interview questions for C++.
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
