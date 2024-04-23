@@ -605,7 +605,7 @@ There are two types of Database lock: **Shared Lock** and **Exclusive Lock**. <b
 An **Exclusive Lock** means that no other users can update or delete the item until the database server removes the lock.
 
 #### What is Data Warehousing?
-The storage as well as access to data, that is being derived from the transactions and other sources, from a central location in order to perform the analysis is called **Data Warehousing**.
+Data Warehousing integrates data and information collected from various sources into one comprehensive database. For example, a data warehouse might combine customer information from an organization's point-of-sale systems, its mailing lists, website, and comment cards.
 
 #### What do you understand by Join?
 Join is the process of deriving the relationship between different tables by combining columns from one or more tables having common values in each. When a table joins with itself, it is known as Self Join.
@@ -851,6 +851,61 @@ SELECT EmpId, EmpName, Age from Employee&amp;nbsp; ORDER BY Age;
 ``` sql
 SELECT EmpId, EmpName, Age from Employee&amp;nbsp; ORDER BY Age Desc;
 ```
+#### What do you understand by NoSQL?
+Nowadays, developers are dealing with a large volume of data which is called Big Data. So naturally, big complexity and big issues will be there. Once most of the systems are getting online, so data load increases. NoSQL helps to manage unstructured, messy, and complicated data. This is not a traditional database or relational database management.
+
+#### How many types of NoSQL Databases are there?
+* **Graph Database** - stores nodes and relationships instead of tables or documents. Data is stored just like you might sketch ideas on a whiteboard. Your data is stored without restricting it to a pre-defined model, allowing a very flexible way of thinking about and using it. For example **Neo4j** is a Graph Database.
+* **Key Value Calculation** - stores data as a collection of key-value pairs in which a key serves as a unique identifier. Both keys and values can be anything, ranging from simple objects to complex compound objects. Key-value databases (or key-value stores) are highly partitionable and allow horizontal scaling at a level that other types of databases cannot achieve. Examples are DynamoDB, Cassandra, Redis, etc.
+* **Document Oriented** - a special type of Key-Value Store where keys can only be Strings. Moreover, the document is encoded using standards like JSON or related languages like XML (Semi-Structured Data). You can also store PDFs, image files, or text documents directly as values. Examples are CouchDB, MongoDB, etc.
+* **Column View Presentation** - represents data in columnar form reducing the number of I/O operations on hardrives. Used in warehouses for big data analytics.
+
+#### Write down the difference between vertical and horizontal databases.
+**Horizontal Scaling** means that you scale by adding more machines into your pool of resources whereas **Vertical Scaling** means that you scale by adding more power (CPU, RAM) to an existing machine.<br>
+An easy way to remember this is to think of a machine on a server rack, we add **more machines** across the **horizontal direction** and add **more resources** to a machine in the **vertical direction**. <br>
+In the database world, horizontal-scaling is often based on the partitioning of the data i.e. each node contains only part of the data, in vertical-scaling the data resides on a single node and scaling is done through multi-core i.e. spreading the load between the CPU and RAM resources of that machine.
+
+#### When should one use NoSQL in place of the normal database?
+If you are looking for key-value stores with massive high-speed performances, you can use NoSQL. Because in the relational databases, we use ACID transactions. Once we use this kind of transaction, the schema-based process will slow down the database performance. 
+
+Suggestive possible situations to use NoSQL are:
+* If you use multiple JOIN queries.
+* If the client wants high traffic site.
+* If you are using denormalized data.
+
+#### What do you know about polyglot persistence in NoSQL?
+Polyglot persistence is a hybrid approach enabling usage of multiple databases in a single application/software. A Software that is capable of using more than one type of data storage is referred to as Polyglot-persistent software.
+
+#### Clarify the Key-Value Approach in a NoSQL Database.
+Key-Value Approach implies storing data in a **Hash Table**. Searching data in a hash table is of constant time complexity, which makes it very fast.
+
+#### Explain the CAP theorem in NoSQL.
+CAP theorem or Eric Brewers theorem states that we can only achieve at most two out of three guarantees for a database: Consistency, Availability, and Partition Tolerance.
+
+#### What is Sharding an a NoSQL Database?
+Sharding is a method of storing data records across many server instances. This is done through storage area networks to make hardware perform like a single server. The NoSQL framework is natively designed to support automatic distribution of the data across multiple servers including the query load.
+
+#### What is Big SQL?
+IBM Db2 Big SQL is a high performance massively parallel processing (MPP) SQL engine for Hadoop (software framework for distributed storage and processing of big data) that makes querying enterprise data from across the organization an easy and secure experience. A Db2 Big SQL query can quickly access a variety of data sources including HDFS (Hadoop Distributed File Scheme), GPFS (General Parallel File System), RDBMS, NoSQL databases, object stores, and WebHDFS by using a single database connection or single query for best-in-class analytic capabilities.
+
+#### How does Impedance Mismatch Happening in a Database?
+A Programming Impedance Mismatch occurs when data needs to be transformed into a different architectural paradigm. The most prominent example involves object-oriented codebases and relational databases.
+An impedance mismatch arises when data is fetched from or inserted into a database. The properties of objects or classes within the codebase need to be mapped to their corresponding database table fields. 
+
+#### What is an Aggregate-Oriented Database
+Typical Aggregate-Oriented NoSQL databases will store an aggregation in the form of strings or entire documents. That is usually in plain text, often in a specific format or notation, such as JSON or XML. In the case of document NoSQL databases, the “value” portion of the entry can get much larger.
+
+#### What is eventual consistency in the context of NoSQL?
+Eventual consistency is a data modeling concept that ensures that updates made to distributed NoSQL databases will eventually be reflected across all nodes. This ensures that identical database queries will return the same results after some period of time.
+
+#### What are the BASE Properties in NoSQL?
+BASE Properties aim to handle large volumes of data and enable scalability and flexibility in distributed systems. Here is a breakdown of what each property means:
+* **Basically Available:** BASE systems prioritize availability over strong consistency. This means that even in the face of failures or concurrent updates, the system remains operational and accessible to users.
+* **Soft State:** BASE systems allow for temporary inconsistency or partial updates. The state of the system can be transiently inconsistent during concurrent updates, but the system is eventually brought back to a consistent state.
+* **Eventual Consistency:** BASE systems guarantee that updates will eventually propagate and reach a consistent state across all replicas or nodes. However, immediate consistency is not a requirement, and there may be a delay in achieving consistency.
+
+#### Can Normalization be used in a NoSQL Database?
+Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields. All these fields will be given true value in the table.
 
 ### Interview questions for C++.
 ### Interview questions for Python.
