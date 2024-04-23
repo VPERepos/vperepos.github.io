@@ -905,9 +905,15 @@ BASE Properties aim to handle large volumes of data and enable scalability and f
 * **Eventual Consistency:** BASE systems guarantee that updates will eventually propagate and reach a consistent state across all replicas or nodes. However, immediate consistency is not a requirement, and there may be a delay in achieving consistency.
 
 #### Can Normalization be used in a NoSQL Database?
-Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields. All these fields will be given true value in the table.
+Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields.
 
 ### Interview questions for C++.
+**Sources:** <br>
+www.geeksforgeeks.org/cpp-interview-questions/ <br>
+www.interviewbit.com/cpp-interview-questions/ <br>
+www.simplilearn.com/tutorials/cpp-tutorial/cpp-interview-questions <br>
+
+
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
 ### Interview questions for Machine Learning.

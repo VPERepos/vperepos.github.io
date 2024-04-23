@@ -19,7 +19,7 @@ blockquote {
 # Computer Science Skills
 |           |             |
 |---|---|
-|<strong>Foundation </strong> |Data Structures and Algorithms, Operating Systems and Computer Networks, Object Oriented Software Design (The Gang of Four Design Patterns), Software Architecture and Engineering, Software Modeling with UML, Neural Networks, Machine and Deep Learning for common problems and Computer Vision, Reinforcement Learning for controlling problems, Classical Algorithms for Computer Vision, Effective Modern C++, C and C++ for Microcontrollers, Java and Spring Boot 5, Effective Python, Basics of C#, Digital Circuits Design with VHDL. |
+|<strong>Foundation </strong> |Data Structures and Algorithms, Databases, Operating Systems and Computer Networks, Object Oriented Software Design (The Gang of Four Design Patterns), Software Architecture and Engineering, Software Modeling with UML, Neural Networks, Machine and Deep Learning for common problems and Computer Vision, Reinforcement Learning for controlling problems, Classical Algorithms for Computer Vision, Effective Modern C++, C and C++ for Microcontrollers, Java and Spring Boot 5, Effective Python, Basics of C#, Digital Circuits Design with VHDL. |
 |<strong>Operating systems </strong>| Windows, Linux|
 |<strong>Office applications </strong>| Word, Excel, PowerPoint, Outlook, Latex, Libre Office,  Thunderbird |
 |<strong>Grafical applications </strong>| Inkscape, Gimp, Blender |
