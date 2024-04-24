@@ -913,6 +913,109 @@ www.geeksforgeeks.org/cpp-interview-questions/ <br>
 www.interviewbit.com/cpp-interview-questions/ <br>
 www.simplilearn.com/tutorials/cpp-tutorial/cpp-interview-questions <br>
 
+#### What is C++? What are the advantages of C++?
+C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
+**Advantages of C++:**
+* C++ is an OOPs language that means the data is considered as objects.
+* C++ is a multi-paradigm language; In simple terms, it means that we can program the logic, structure, and procedure of the program.
+* Memory management is a key feature in C++ as it enables dynamic memory allocation.
+* It is a Mid-Level programming language which means it can develop games, desktop applications, drivers, and kernels
+
+#### What are the differences between C and C++?
+| | |
+|:---|:---|
+|<strong>C</strong>|<strong>C++</strong>|
+|It is a procedural programming language. In simple words, it does not support classes and objects| It is a mixture of both procedural and object-oriented programming languages. In simple words, it supports classes and objects. |
+|It does not support any OOPs concepts like polymorphism, data abstraction, encapsulation, classes, and objects.|It supports all concepts of data |
+|It does not support Function and Operator Overloading|It supports Function and Operator Overloading respectively|
+|It is a function-driven language|It is an object-driven language|
+
+
+#### What are the different data types present in C++?
+* **Primary**
+    * Integer
+    * Character
+    * Boolean
+    * Floating Point
+    * Double Floating Point
+    * Void
+    * Wide Character
+* **Derived**
+    * Function
+    * Array
+    * Pointer
+    * Reference
+* **User Defined**
+    * Class
+    * Structure
+    * Union
+    * Enum
+    * Typedef
+
+#### Define ‘std’?
+‘std’ is also known as Standard or it can be interpreted as a namespace. The command “using namespace std” informs the compiler to add everything under the std namespace and inculcate them in the global namespace. This all inculcation of global namespace benefits us to use “cout” and “cin” without using “std::_operator_”.
+
+#### What is a Pointer in C++?
+A Pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes: 
+* To allocate new objects on the heap.
+* To pass functions to other functions.
+* To iterate over elements in arrays or other data structures.
+
+#### What are references in C++?
+When a variable is described as a reference it becomes an alias of the already existing variable. In simple terms, a referenced variable is another named variable of an existing variable keeping in mind that changes made in the reference variable will be reflected in the already existing variable. A reference variable is preceded with a ‘&’ symbol.
+
+#### What are the differences between References and Pointers?
+* You cannot have NULL references. You must always be able to assume that a reference is connected to a legitimate piece of storage.
+* Once a reference is initialized to an object, it cannot be changed to refer to another object. Pointers can be pointed to another object at any time.
+* A reference must be initialized when it is created. Pointers can be initialized at any time.
+* To access the members of class/struct it uses a References use '.' and Pointers '->'.
+
+#### What is meant by Call by Value and Call by Reference?
+| | |
+|:---|:---|
+|<strong>Call by Value</strong>|<strong>Call by Reference</strong>|
+|A copy of a variable is passed.|A variable itself is passed fundamentally.|
+|Calling a function by sending the values by copying variables.|Calling a function by sending the address of the passed variable.|
+|The changes made in the function are never reflected outside the function on the variable. In short, the original value is never altered in Call by Value.|The changes made in the functions can be seen outside the function on the passed function. In short, the original value is altered in Call by reference.|
+|Passed actual and formal parameters are stored in different memory locations. Therefore, making Call by Value a little memory insufficient. |Passed actual and formal parameters are stored in the same memory location. Therefore, making Call by Reference a little more memory efficient.|
+
+#### Define token in C++.
+A token is the smallest individual element of a program that is understood by a compiler. A token comprises the following:
+* **Keywords** – That contain a special meaning to the compiler
+* **Identifiers** – That hold a unique value/identity 
+* **Constants** – That never change their value throughout the program 
+* **Strings** – That contains the homogenous sequence of data 
+* **Special Symbols** – They have some special meaning and cannot be used for another purpose; eg: [] () {}, ; * = # 
+* **Operators** – Who perform operations on the operand
+
+#### What are the differences between Structures and Classes?
+| | |
+|:---|:---|
+|<strong>Structures</strong>|<strong>Classes</strong>|
+|Members of the struct are always by default public mode|Members of the class can be in private, protected, and public modes.|
+|Structures are of the value type. They only hold value in memory.|Classes are of reference type. It holds a reference of an object in memory.|
+|The memory in structures is stored as stacks.|The memory in classes is stored as heaps.|
+
+#### Discuss prefix and postfix operators.
+In the prefix version (i.e., ++i), the value of i is incremented, and the value of the expression is the new value of i.
+In the postfix version (i.e., i++), the value of i is incremented, but the value of the expression is the original value of i.
+
+#### What is the difference between new and malloc()?
+| | |
+|:---|:---|
+|<strong>new</strong>|<strong>malloc()</strong>|
+|new is an operator which performs an operation |malloc is a function that returns and accepts values|
+|new calls the constructors|malloc cannot call a constructor|
+|new is faster than malloc as it is an operator|malloc is slower than new as it is a function|
+|new returns the exact data type|malloc returns void*|
+
+#### What is the difference between function overloading and operator overloading?
+| | |
+|:---|:---|
+|<strong>Function Overloading</strong>|<strong>Operator Overloading</strong>|
+|It is basically defining a function in numerous ways such that there are many ways to call it or in simple terms you have multiple versions of the same function|It is basically giving practice of giving a special meaning to the existing meaning of an operator or in simple terms redefining the pre-redefined meaning|
+|Parameterized Functions are a good example of Function Overloading as just by changing the argument or parameter of a function you make it useful for different purposes |Polymorphism is a good example of an operator overloading as an object of allocations class can be used and called by different classes for different purposes|
+|Example of Function Overloading:<br>int GFG(int X, int Y);<br>int GFG(char X, char Y);<br>|Example of Operator Overloading:<br> int GFG() = X() + Y();<br> int GFG() = X() – Y();<br>|
 
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
