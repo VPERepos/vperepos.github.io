@@ -912,6 +912,7 @@ Yes, normalization can be used by a NoSQL database. One of the famous NoSQL name
 www.geeksforgeeks.org/cpp-interview-questions/ <br>
 www.interviewbit.com/cpp-interview-questions/ <br>
 www.simplilearn.com/tutorials/cpp-tutorial/cpp-interview-questions <br>
+www.linkedin.com/pulse/value-categories-c-amit-nadiger <br>
 
 #### What is C++? What are the advantages of C++?
 C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
@@ -997,7 +998,7 @@ A token is the smallest individual element of a program that is understood by a 
 |The memory in structures is stored as stacks.|The memory in classes is stored as heaps.|
 
 #### Discuss prefix and postfix operators.
-In the prefix version (i.e., ++i), the value of i is incremented, and the value of the expression is the new value of i.
+In the prefix version (i.e., ++i), the value of i is incremented, and the value of the expression is the new value of i. Prefix operator returns the reference to the incremented variable.
 In the postfix version (i.e., i++), the value of i is incremented, but the value of the expression is the original value of i.
 
 #### What is the difference between new and malloc()?
@@ -1016,6 +1017,118 @@ In the postfix version (i.e., i++), the value of i is incremented, but the value
 |It is basically defining a function in numerous ways such that there are many ways to call it or in simple terms you have multiple versions of the same function|It is basically giving practice of giving a special meaning to the existing meaning of an operator or in simple terms redefining the pre-redefined meaning|
 |Parameterized Functions are a good example of Function Overloading as just by changing the argument or parameter of a function you make it useful for different purposes |Polymorphism is a good example of an operator overloading as an object of allocations class can be used and called by different classes for different purposes|
 |Example of Function Overloading:<br>int GFG(int X, int Y);<br>int GFG(char X, char Y);<br>|Example of Operator Overloading:<br> int GFG() = X() + Y();<br> int GFG() = X() – Y();<br>|
+
+#### Define the spicifier 'auto'.
+The 'auto' keyword in C++ automatically detects and assigns a data type to the variable with which it is used. The compiler analyses the variable's data type by looking at its initialization.
+``` cpp
+auto integerNumber = 20;
+auto floatNumber = 1.2;
+
+auto sum(const int& integerNumber, const float& floatNumber2)
+{
+    return (integerNumber+floatNumber);
+}
+```
+
+#### Define the specifier 'decltype'.
+The decltype type specifier yields the type of a specified expression. The decltype type specifier, together with the auto keyword, is useful primarily to developers who write template libraries.
+```cpp
+struct A { double x; };
+const A* a;
+ 
+decltype(a->x) y;       // type of y is double (declared type)
+decltype((a->x)) z = y; // type of z is const double& (lvalue expression)
+ 
+template<typename T, typename U>
+auto add(T t, U u) -> decltype(t + u) // return type depends on template parameters. Return type can be deduced since C++14
+{
+    return t + u;
+}
+```
+#### Define the specifier 'constexpr'.
+The 'constexpr' specifier declares that it is possible to evaluate the value of the function or variable at compile time. Such variables and functions can then be used where only compile time constant expressions are allowed (e.g. template meta-programming).
+
+#### Enlist Value Categories.
+* A **glvalue** (“generalized” lvalue) is an expression whose evaluation determines the identity of an object or function. It includes both lvalues and certain rvalues. Examples of glvalues include variables, references, and functions. <br>
+    **Characteristics:**<br>
+        **-** Can have an identifiable memory address.<br>
+        **-** Can be used on the left-hand side of an assignment.<br>
+        **-** Can have their address taken using the "&" operator.<br>
+        **-** Have a lifetime that extends beyond the current expression. <br>
+    **Advantages:**<br>
+        **-** Can be used as both lvalues and rvalues, providing flexibility in expression usage.<br>
+        **-** Allows modifying the value it refers to. <br>
+    **Disadvantages:**<br>
+        **-** Requires identifiable memory addresses, which may limit certain optimizations. <br>
+    **Usecases:**<br>
+        **-** Passing arguments to functions by reference.<br>
+        **-** Assigning values to variables.<br>
+        **-** Using objects as operands in expressions. <br>
+    **Examples:** <br>
+    ```cpp
+
+        int x = 10;
+        int& ref = x;
+
+        //As an lvalue
+
+        // assigning a new value
+        x = 20;
+        ref = 30;
+
+        // taking the adress
+        int* ptr = &x;
+        int* ptr = &ref;
+
+        // As an rvalue
+
+        // using in an expression
+        int sum = x + 5;
+        int sum = ref + 5;
+
+        // Passing to a function expecting an rvalue
+        void printValue(int value){};
+        printValue(x); 
+        printValue(ref);
+
+    ```
+* An **lvalue** is a subset of **glvalue** and represents an object or function that has a persistent identity. It refers to a specific memory location and can be used to retrieve or modify the value stored at that location. Examples of lvalues include variables and named objects.<br>
+    **Characteristics:**<br>
+        **-** Has an identifiable memory address.<br>
+        **-** Can be assigned a value.<br>
+        **-** Can be used on the left-hand side of an assignment.<br>
+        **-** Can have their address taken.<br>
+    **Advantages:**<br>
+        **-** Provides a reference to an existing object, allowing direct modification.<br>
+        **-** Enables aliasing and referencing of objects.<br>
+    **Disadvantages:**<br>
+        **-** May introduce aliasing issues if not used carefully.<br>
+        **-** Cannot be bound to rvalue references.<br>
+    **Usecases:**<br>
+        **-** Assigning values to variables.<br>
+        **-** Passing arguments or values to functions by reference.<br>
+        **-** Accessing and modifying object properties.<br>
+    **Examples:** <br>
+    ```cpp
+
+        int x = 10;
+        int& ref = x;
+
+        // assigning a new value
+        x = 20;
+        ref = 30;
+
+        // taking the adress
+        int* ptr = &x;
+        int* ptr = &ref;
+
+        // Passing to a function by reference
+        void printValue(int& value){};
+        printValue(x); 
+        printValue(ref);
+
+    ```
+* A **prvalue**
 
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
