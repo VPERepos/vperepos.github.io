@@ -913,6 +913,7 @@ www.geeksforgeeks.org/cpp-interview-questions/ <br>
 www.interviewbit.com/cpp-interview-questions/ <br>
 www.simplilearn.com/tutorials/cpp-tutorial/cpp-interview-questions <br>
 www.linkedin.com/pulse/value-categories-c-amit-nadiger <br>
+www.scaler.com/topics/c/difference-between-if-else-and-switch/ <br>
 
 #### What is C++? What are the advantages of C++?
 C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
@@ -1009,6 +1010,15 @@ In the postfix version (i.e., i++), the value of i is incremented, but the value
 |new calls the constructors|malloc cannot call a constructor|
 |new is faster than malloc as it is an operator|malloc is slower than new as it is a function|
 |new returns the exact data type|malloc returns void*|
+
+#### What are the differences between Program Stack and Heap memory types?
+* Stack is a linear data structure whereas Heap is a hierarchical data structure.
+* Stack memory will never become fragmented whereas Heap memory can become fragmented as blocks of memory are first allocated and then freed.
+* Stack accesses local variables only while Heap allows you to access variables globally.
+* Stack variables can’t be resized whereas Heap variables can be resized.
+* Stack memory is allocated in a contiguous block whereas Heap memory is allocated in any random order.
+* Stack doesn’t require to de-allocate variables whereas in Heap de-allocation is needed.
+* Stack allocation and deallocation are done by compiler instructions whereas Heap allocation and deallocation is done by the programmer.
 
 #### What is the difference between function overloading and operator overloading?
 | | |
@@ -1128,7 +1138,281 @@ The 'constexpr' specifier declares that it is possible to evaluate the value of 
         printValue(ref);
 
     ```
-* A **prvalue**
+* A **prvalue** (pure rvalue) represents a temporary or literal value. It does not have an identifiable memory address and is typically used as a source for initialization or computation. Examples of prvalues include literals, temporary objects, and expressions that generate a value directly.<br>
+    **Characteristics:**<br>
+        **-** Cannot have their address taken.<br>
+        **-** Can be implicitly converted to rvalues.<br>
+        **-** Often used in initializations and computations.<br>
+    **Advantages:**<br>
+        **-** Efficient for temporary values that don't need to be modified.<br>
+        **-** Can be moved instead of copied, improving performance.<br>
+    **Disadvantages:**<br>
+        **-** Cannot be modified directly.<br>
+        **-** Does not have an identifiable memory address.<br>
+    **Usecases:**<br>
+        **-** Initializing variables with literals or temporary objects.<br>
+        **-** Creating temporary objects.<br>
+        **-** Calculating intermediate values in expressions.<br>
+        **-** Performing arithmetic or logical operations.<br>
+    **Examples:** <br>
+    ```cpp
+
+        int result = 2 + 3; // here the expression '2+3' is a prvalue
+
+    ```
+* An **xvalue** (eXpiring Values) represents a value that is about to expire, typically because it is bound to a soon-to-be-destroyed object. It is a subset of rvalues and is used to enable efficient resource management through move semantics. Examples of xvalues include the result of std::move() or a cast to an rvalue reference.<br>
+    **Characteristics:**<br>
+        **-** Represents a value that can be moved from.<br>
+        **-** Typically used in move operations or transferring ownership.<br>
+        **-** Can be used to efficiently transfer resources.<br>
+    **Advantages:**<br>
+        **-** Allows the transfer of resources from one object to another, improving efficiency.<br>
+        **-** Enables move semantics for better performance.<br>
+    **Disadvantages:**<br>
+        **-** Requires careful handling to avoid using an expired or invalidated object.<br>
+    **Usecases:**<br>
+        **-** Implementing move constructors and move assignments operator.<br>
+        **-** Transferring ownership of resources between objects.<br>
+    **Examples:** <br>
+    ```cpp
+
+        #include <iostream>
+        #include <string>
+
+        std::string createString() {
+            return "Hello, World!";
+        }
+
+        int main() {
+            std::string&& x = createString(); // x is an xvalue
+
+            std::cout << x << std::endl; // Accessing x before it expires
+
+            return 0;
+        }        
+
+    ```
+* An **rvalue** represents a temporary or disposable value that does not have a persistent identity. It is typically used as a source of data or a target for move operations. Examples of rvalues include literals, temporary objects, and the result of certain expressions.<br>
+    **Characteristics:**<br>
+        **-** Typically short-lived and disposable.<br>
+        **-** Cannot be used on the left-hand side of an assignment.<br>
+        **-** Can be moved from or copied.<br>
+    **Advantages:**<br>
+        **-** Allows efficient use of temporary values.<br>
+        **-** Enables move semantics for better performance.<br>
+    **Disadvantages:**<br>
+        **-** Cannot be modified directly.<br>
+        **-** Does not have an identifiable memory address.<br>
+    **Usecases:**<br>
+        **-** Initializing variables with literals or temporary objects.<br>
+        **-** Passing arguments to functions by value.<br>
+        **-** Returning values from functions by value.<br>
+        **-** Using temporary values in expressions.<br>
+    **Examples:** <br>
+    ```cpp
+
+        int result = getX() + getY(); // the expression getX() + getY() is an rvalue
+
+    ```
+
+#### Explain 'move()' semantics.
+It was designed to move objects, whose lifetime expires, instead of copying them. The data is transferred from one object to another. In most cases, the data transfer does not move this data physically in memory.
+```cpp
+    #include <iomanip>
+    #include <iostream>
+    #include <string>
+    #include <utility>
+    #include <vector>
+    
+    int main()
+    {
+        std::string str = "Salut";
+        std::vector<std::string> v;
+    
+        // uses the push_back(const T&) overload, which means
+        // we'll incur the cost of copying str
+        v.push_back(str);
+        std::cout << "After copy, str is " << std::quoted(str) << '\n';
+    
+        // uses the rvalue reference push_back(T&&) overload,
+        // which means no strings will be copied; instead, the contents
+        // of str will be moved into the vector. This is less
+        // expensive, but also means str might now be empty.
+        v.push_back(std::move(str));
+        std::cout << "After move, str is " << std::quoted(str) << '\n';
+    
+        std::cout << "The contents of the vector are {" << std::quoted(v[0])
+                << ", " << std::quoted(v[1]) << "}\n";
+    }
+
+```
+
+#### Explain Perfect Forwarding.
+Perfect forwarding is there to ensure that the argument provided to a function is forwarded (passed) to another function with the same value category (basically r-value vs l-value) as originally provided. It is typically used with template functions where reference collapsing may have taken place.
+```cpp
+    #include <iostream>
+    #include <memory>
+    #include <utility>
+    
+    struct A
+    {
+        A(int&& n) { std::cout << "rvalue overload, n=" << n << '\n'; }
+        A(int& n)  { std::cout << "lvalue overload, n=" << n << '\n'; }
+    };
+    
+    class B
+    {
+    public:
+        template<class T1, class T2, class T3>
+        B(T1&& t1, T2&& t2, T3&& t3) :
+            a1_{std::forward<T1>(t1)},
+            a2_{std::forward<T2>(t2)},
+            a3_{std::forward<T3>(t3)}
+        {}
+    
+    private:
+        A a1_, a2_, a3_;
+    };
+    
+    template<class T, class U>
+    std::unique_ptr<T> make_unique1(U&& u)
+    {
+        return std::unique_ptr<T>(new T(std::forward<U>(u)));
+    }
+    
+    template<class T, class... U>
+    std::unique_ptr<T> make_unique2(U&&... u)
+    {
+        return std::unique_ptr<T>(new T(std::forward<U>(u)...));
+    }
+    
+    auto make_B(auto&&... args) // since C++20
+    {
+        return B(std::forward<decltype(args)>(args)...);
+    }
+    
+    int main()
+    {
+        auto p1 = make_unique1<A>(2); // rvalue
+        int i = 1;
+        auto p2 = make_unique1<A>(i); // lvalue
+    
+        std::cout << "B\n";
+        auto t = make_unique2<B>(2, i, 3);
+    
+        std::cout << "make_B\n";
+        [[maybe_unused]] B b = make_B(4, i, 5);
+    }
+```
+**Output:**<br>
+rvalue overload, n=2<br>
+lvalue overload, n=1<br>
+B<br>
+rvalue overload, n=2<br>
+lvalue overload, n=1<br>
+rvalue overload, n=3<br>
+make_B<br>
+rvalue overload, n=4<br>
+lvalue overload, n=1<br>
+rvalue overload, n=5<br>
+
+#### What are Range Based For Loops?
+Range-based for loop in C++ has been added since C++ 11. It executes a for loop over a range. Used as a more readable equivalent to the traditional for loop operating over a range of values, such as all elements in a container.
+```cpp
+    #include <iostream>
+    #include <map>
+    #include <string>
+    #include <vector>
+    using namespace std;
+
+    // Driver
+    int main()
+    {
+        // Iterating over whole array
+        vector<int> v = { 0, 1, 2, 3, 4, 5 };
+        for (auto i : v)
+            cout << i << ' ';
+
+        cout << '\n';
+
+        // Iterating over whole array by reference
+        for (auto& i : v)
+            cout << i << ' ';
+
+        cout << '\n';
+
+        // the initializer may be a braced-init-list
+        for (int n : { 0, 1, 2, 3, 4, 5 })
+            cout << n << ' ';
+
+        cout << '\n';
+
+        // Iterating over array
+        int a[] = { 0, 1, 2, 3, 4, 5 };
+        for (int n : a)
+            cout << n << ' ';
+
+        cout << '\n';
+
+        // Just running a loop for every array
+        // element
+        for (int n : a)
+            cout << "In loop" << ' ';
+
+        cout << '\n';
+
+        // Printing string characters
+        string str = "Geeks";
+        for (char c : str)
+            cout << c << ' ';
+
+        cout << '\n';
+
+        // Printing keys and values of a map
+        map<int, int> MAP({ { 1, 1 }, { 2, 2 }, { 3, 3 } });
+        for (auto i : MAP)
+            cout << '{' << i.first << ", " << i.second << "}\n";
+    }
+```
+
+#### Enlist some key advantages of 'switch' over 'if-else' ladders.
+* A switch statement is significantly faster than an if-else ladder if there are many nested if-else's involved. This is due to the creation of a jump table for switch during compilation. As a result, instead of checking which case is satisfied throughout execution, it just decides which case must be completed. The number of comparisons made is lesser hence, reducing the compile time. Hence, the switch would work better while selecting from a large set of values.
+* When compared to if-else statements, it is more readable. You can also see this in the examples given below. In the if-else code, you can't clearly see the months which have 30 days; however, in switch, it's easily highlighted.
+```cpp
+    // Example of an if-else ladder
+    if (month == 'January' || month == 'March' || month == 'May' || month == 'July' || month == 'August' || month == 'October' || month == 'December') {
+        cout << '31';
+    } else if (month == 'February') {
+        cout << '28 or 29';
+    } else {
+        cout << '30';
+    }
+
+    // Example of the same logic implemented by switch construct
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            cout << "31";
+            break;
+        case 2:
+            cout << "28 or 29";
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            cout << "30";
+            break;
+        default:
+            cout << "Not a valid month!"; 
+            break
+    }
+```
 
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
