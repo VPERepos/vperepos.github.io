@@ -1664,6 +1664,16 @@ One can resolve it by virtual inheritence:
 ``Hello from A``<br>
 Now class B and class C use the virtual base class A and no duplication of member function is done; Classes B and C share a single copy of the members in the virtual base class A.
 
+#### Explain Constructors in C++.
+
+#### What is the sequnce of calling Constructors in a Class Hierarhcy?
+
+#### Explain Destructors in C++.
+
+#### When is a Destructor in a Base Class should be virtual?
+
+#### Can a Destructor have parameters?
+
 #### What is polymorphism in C++?
 
 
