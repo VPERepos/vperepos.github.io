@@ -1030,6 +1030,58 @@ In the postfix version (i.e., i++), the value of i is incremented, but the value
 |Parameterized Functions are a good example of Function Overloading as just by changing the argument or parameter of a function you make it useful for different purposes |Polymorphism is a good example of an operator overloading as an object of allocations class can be used and called by different classes for different purposes|
 |Example of Function Overloading:<br>int GFG(int X, int Y);<br>int GFG(char X, char Y);<br>|Example of Operator Overloading:<br> int GFG() = X() + Y();<br> int GFG() = X() – Y();<br>|
 
+#### What does the Scope Resolution operator do?
+A scope resolution operator is denoted by a **‘::‘** symbol. Just like its name this operator resolves the barrier of scope in a program. A scope resolution operator is used to reference a member function or a global variable out of their scope furthermore to which it can also access the concealed variable or function in a program. <br>
+Scope Resolution is used for numerous amounts of tasks:
+* To access a global variable when there is a local variable with the same name.
+* To define the function outside the class.
+* In case of multiple inheritances.
+* For namespace.
+
+#### What is the difference between shallow copy and deep copy?
+| | |
+|:---|:---|
+|<strong>Shallow Copy</strong>|<strong>Deep Copy</strong>|
+|Shallow Copy stores the references of objects to the original memory address. |Deep copy stores copies of the object’s value.|
+|Shallow Copy reflects changes made to the new/copied object in the original object.|Deep copy doesn’t reflect changes made to the new/copied object in the original object.|
+|Shallow Copy stores the copy of the original object and points the references to the objects.|Deep copy stores the copy of the original object and recursively copies the objects as well.|
+|A shallow copy is faster.|Deep copy is comparatively slower.|
+#### Can you compile a program without the main function?
+Yes, it is absolutely possible to compile a program without a main(). For example Use Macros that defines the main.
+```cpp
+    #include <iostream>
+    #define fun main 
+    int fun(void) 
+    { 
+        std::cout << "Compiling without main()" << std::endl;
+        return 0; 
+    }
+```
+Using Token-Pasting Operator:<br>
+```cpp
+    #include <iostream> 
+    #define fun m##a##i##n  
+    int fun()  
+    {  
+        std::cout << "Compiling without main()" << std::endl; 
+        return 0; 
+    }
+```
+Using Argumented Macro:<br>
+```cpp
+    #include <iostream> 
+    #define begin(m,a,i,n) m##a##i##n  
+    #define start begin(m,a,i,n)   
+    int fun()  
+    {  
+        std::cout << "Compiling without main()" << std::endl; 
+        return 0; 
+    }
+```
+#### Define inline function. Can we have a recursive inline function in C++?
+An inline function cannot be recursive because in the case of an inline function the code is merely placed into the position from where it is called and does not maintain a piece of information on the stack which is necessary for recursion.<br>
+Plus, if you write an **inline** keyword in front of a **recursive function**, the compiler will automatically ignore it because the inline is only taken as a suggestion by the compiler.
+
 #### Define the spicifier 'auto'.
 The 'auto' keyword in C++ automatically detects and assigns a data type to the variable with which it is used. The compiler analyses the variable's data type by looking at its initialization.
 ``` cpp
@@ -1059,6 +1111,18 @@ auto add(T t, U u) -> decltype(t + u) // return type depends on template paramet
 ```
 #### Define the specifier 'constexpr'.
 The 'constexpr' specifier declares that it is possible to evaluate the value of the function or variable at compile time. Such variables and functions can then be used where only compile time constant expressions are allowed (e.g. template meta-programming).
+
+#### What is the main use of the keyword 'volatile'?
+It is used to inform the compiler that the value may change anytime. Also, the volatile keyword prevents the compiler from performing optimization on the code. It was intended to be used when interfacing with memory-mapped hardware, signal handlers, and machine code instruction.
+
+#### Define storage class in C++ and name some.
+Storage class is used to define the features(lifetime and visibility) of a variable or function. These features usually help in tracing the existence of a variable during the runtime of a program.
+* **auto** - type of a variable is defined automatically after initialization.<br>
+* **register** - has the same functionality as that of the auto variables, the only difference is that the compiler tries to store these variables in the register of the microprocessor if a free register is available. This makes the use of register variables to be much faster than that of the variables stored in the memory during the runtime of the program. If a free register is not available, these are then stored in the memory only. An important and interesting point to be noted here is that we cannot obtain the address of a register variable using pointers. <br>
+* **extern** - tells us that the variable is defined elsewhere and not within the same block where it is used.<br>
+* **static** - static variables have the property of preserving their value even after they are out of their scope. One can say that they are initialized only once and exist until the termination of the program.<br>
+* **mutable** - the keyword mutable is mainly used to allow a particular data member of a const object to be modified. 
+* **thread_local** - allows each thread in a multi-threaded program to have its own separate instance of a variable.
 
 #### Enlist Value Categories.
 * A **glvalue** (“generalized” lvalue) is an expression whose evaluation determines the identity of an object or function. It includes both lvalues and certain rvalues. Examples of glvalues include variables, references, and functions. <br>
@@ -1415,6 +1479,12 @@ Range-based for loop in C++ has been added since C++ 11. It executes a for loop 
             break
     }
 ```
+#### Which operations are permitted on pointers?
+Pointers are the variables that are used to store the address location of another variable. Operations that are permitted to a pointer are:
+* Increment/Decrement of a Pointer.
+* Addition and Subtraction of integer to a pointer.
+* Comparison of pointers of the same type.
+
 #### What are Smart Pointers? Enlist their types.
 Smart pointers are defined in the std namespace in the memory.h header file. They are crucial to the RAII or Resource Acquisition Is Initialization programming idiom. The main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code. A smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.<br>
 * **unique_ptr** - Allows exactly one owner of the underlying pointer. Can be moved to a new owner, but not copied or shared. This type of smart pointers is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections.
@@ -1488,9 +1558,114 @@ Only the reference counting part of the shared_ptr is atomic and thus thread saf
 * **The same** std::shared_ptr instance can be read by multiple threads simultaneously.
 * **The same** std::shared_ptr instance cannot be directly modified by multiple threads without additional synchronization. But can be done by means of mutex and atomics.
 
-#### What are classes and objects in C++?
+#### What are the various OOPs concepts in C++?
+* **Classes:** It is a user-defined datatype
+* **Objects:** It is an instance of a class
+* **Abstraction:** It is a technique of showing only necessary details
+* **Encapsulation:** Wrapping of data in a single unit
+* **Inheritance:** The capability of a class to derive properties and characteristics from another class
+* **Polymorphism:** Polymorphism is known as many forms of the same thing
+
+#### What are Classes and Objects in C++?
+A **class** is a user-defined data type where all the member functions and data members are tailor-made according to demands and requirements in addition to which these all can be accessed with the help of an object. To declare a user-defined data type we use a keyword class. <br>
+An **object** is an instance of a class and an entity with value and state; In simple terms, it is used as a catalyst or to represent a class member. It may contain different parameters or none.
+
+#### What are the C++ access modifiers?
+The access restriction specified to the class members( whether it is member function or data member) is known as access modifiers/specifiers. <br>
+Access Modifiers are of 3 types:
+* **private** – It can neither be accessed nor be viewed from outside the class.
+* **protected** – It can be accessed if and only if the accessor is the derived class.
+* **public** – It can be accessed or be viewed from outside the class. 
 
 #### What is the difference between 'struct' and 'class'?
+The two constructs are identical in C++ except that in structs the default accessibility is public, whereas in classes the default is private. One can even use inheritence for structures, but the acessibility by default is public.
+
+#### What is the difference between C and C++ structures?
+C++ structures can have not only data members, but also functions. The C++ structures can have inheritance as well, what is not possible for C structures.
+
+#### What is an Abstract Class and when do you use it?
+An abstract class is a class that is specifically designed to be used as a base class. An abstract class contains at least one pure virtual function. You declare a pure virtual function by using a **pure specifier (= 0)** in the declaration of a virtual member function in the class declaration.<br>
+You cannot use an abstract class as a parameter type, a function return type, or the type of an explicit conversion, nor can you declare an object of an abstract class. However, it can be used to declare pointers and references to an abstract class.<br>
+An abstract class is used if you want to provide a common, implemented functionality among all the implementations of the component. Abstract classes will allow you to partially implement your class, whereas interfaces would have no implementation for any members whatsoever. In simple words, Abstract Classes are a good fit if you want to provide implementation details to your children but don’t want to allow an instance of your class to be directly instantiated.
+
+#### What are the static data members and static member functions?
+Static data member in C++ are declared inside the class but they are initialized outside of the class. Static member functions can be accessed using class name and scope resolution operator. Also, we can call the static member function without creating any object of the class.
+
+#### Explain inheritance.
+The capability or ability of a class to derive properties and characteristics from another class is known as inheritance. In simple terms, it is a system or technique of reusing and extending existing classes without modifying them.
+
+#### When should we use multiple inheritance?
+Multiple inheritances mean that a derived class can inherit two or more base/parent classes. It is useful when a derived class needs to combine numerous attributes/contracts and inherit some, or all, of the implementation from these attributes/contracts.
+
+#### What is virtual inheritance?
+Virtual inheritance is a technique that ensures only one copy of a base class’s member variables is inherited by grandchild-derived classes. Or in simple terms, virtual inheritance is used when we are dealing with a situation of multiple inheritances but want to prevent multiple instances of the same class from appearing in the inheritance hierarchy.
+```cpp
+    #include <iostream> 
+    using namespace std; 
+    
+    class A { 
+    public: 
+        void show() 
+        { 
+            cout << "Hello form A \n"; 
+        } 
+    }; 
+    
+    class B : public A { 
+    }; 
+    
+    class C : public A { 
+    }; 
+    
+    class D : public B, public C { 
+    }; 
+    
+    int main() 
+    { 
+        D object; 
+        object.show(); 
+    } 
+
+```
+**Output:**<br>
+``error: request for member 'show' is ambiguous`` <br>
+``object.show();`` <br>
+As we can see from above, data members/function of class A are inherited twice to class D. One through class B and second through class C. When any data / function member of class A is accessed by an object of class D, ambiguity arises as to which data/function member would be called? One inherited through B or the other inherited through C. This confuses compiler and it displays error.<br>
+One can resolve it by virtual inheritence:
+```cpp
+    #include <iostream> 
+    using namespace std; 
+    
+    class A { 
+    public: 
+        void show() 
+        { 
+            cout << "Hello form A \n"; 
+        } 
+    }; 
+    
+    class B : public virtual A { 
+    }; 
+    
+    class C : public virtual A { 
+    }; 
+    
+    class D : public B, public C { 
+    }; 
+    
+    int main() 
+    { 
+        D object; 
+        object.show(); 
+    } 
+
+```
+**Output:**<br>
+``Hello from A``<br>
+Now class B and class C use the virtual base class A and no duplication of member function is done; Classes B and C share a single copy of the members in the virtual base class A.
+
+#### What is polymorphism in C++?
+
 
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
