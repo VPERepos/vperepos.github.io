@@ -914,6 +914,8 @@ www.interviewbit.com/cpp-interview-questions/ <br>
 www.simplilearn.com/tutorials/cpp-tutorial/cpp-interview-questions <br>
 www.linkedin.com/pulse/value-categories-c-amit-nadiger <br>
 www.scaler.com/topics/c/difference-between-if-else-and-switch/ <br>
+learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170 <br>
+www.learncpp.com/cpp-tutorial/circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr/ <br>
 
 #### What is C++? What are the advantages of C++?
 C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
@@ -1413,6 +1415,82 @@ Range-based for loop in C++ has been added since C++ 11. It executes a for loop 
             break
     }
 ```
+#### What are Smart Pointers? Enlist their types.
+Smart pointers are defined in the std namespace in the memory.h header file. They are crucial to the RAII or Resource Acquisition Is Initialization programming idiom. The main principle of RAII is to give ownership of any heap-allocated resource—for example, dynamically-allocated memory or system object handles to a stack-allocated object whose destructor contains the code to delete or free the resource and also any associated cleanup code. A smart pointer is a class template that you declare on the stack, and initialize by using a raw pointer that points to a heap-allocated object. After the smart pointer is initialized, it owns the raw pointer. This means that the smart pointer is responsible for deleting the memory that the raw pointer specifies. The smart pointer destructor contains the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.<br>
+* **unique_ptr** - Allows exactly one owner of the underlying pointer. Can be moved to a new owner, but not copied or shared. This type of smart pointers is small and efficient; the size is one pointer and it supports rvalue references for fast insertion and retrieval from C++ Standard Library collections.
+* **shared_ptr** - is a reference-counted smart pointer. Use when you want to assign one raw pointer to multiple owners, for example, when you return a copy of a pointer from a container but want to keep the original. The raw pointer is not deleted until all shared_ptr owners have gone out of scope or have otherwise given up ownership. The size is two pointers; one for the object and one for the shared control block that contains the reference count.
+* **weak_ptr** - is a special-case smart pointer for use in conjunction with shared_ptr. A weak_ptr provides access to an object that is owned by one or more shared_ptr instances, but does not participate in reference counting and thus has no ownership of the object. Use when you want to observe an object, but do not require it to remain alive. Required in some cases to break circular references, which can cause memory leaks in structures such as doubly-linked lists or graphs where two objects reference each other using std::shared_ptr. A weak pointer can be created only from a shared pointer.
+
+#### Give an example of Circular Dependency issues with std::shared_ptr, and how to resolve it with std::weak_ptr.
+ Consider the following case, where the shared pointers in two separate objects each point at the other object:
+```cpp
+    #include <iostream>
+    #include <memory> // for std::shared_ptr
+    #include <string>
+
+    class Person
+    {
+        std::string m_name;
+        std::shared_ptr<Person> m_partner; // initially created empty
+
+    public:
+
+        Person(const std::string &name): m_name(name)
+        {
+            std::cout << m_name << " created\n";
+        }
+        ~Person()
+        {
+            std::cout << m_name << " destroyed\n";
+        }
+
+        friend bool partnerUp(std::shared_ptr<Person> &p1, std::shared_ptr<Person> &p2)
+        {
+            if (!p1 || !p2)
+                return false;
+
+            p1->m_partner = p2;
+            p2->m_partner = p1;
+
+            std::cout << p1->m_name << " is now partnered with " << p2->m_name << '\n';
+
+            return true;
+        }
+    };
+
+    int main()
+    {
+        auto lucy { std::make_shared<Person>("Lucy") }; // create a Person named "Lucy"
+        auto ricky { std::make_shared<Person>("Ricky") }; // create a Person named "Ricky"
+
+        partnerUp(lucy, ricky); // Make "Lucy" point to "Ricky" and vice-versa
+
+        return 0;
+    }
+
+```
+**Output:** <br>
+``Lucy created`` <br>
+``Ricky created``<br>
+``Lucy is now partnered with Ricky``<br>
+
+No deallocations took place. It happend because while calling the distructor of *ricky* object there was still another pointer to *ricky* in *lucy* object and vice versa. This situation can even happen with a single object pointing to itself. In order to solve the problem for the example given above, let's change the type of **m_partner** from **shared_ptr** to **weak_ptr**. <br>
+**Output:** <br>
+``Lucy created`` <br>
+``Ricky created`` <br>
+``Lucy is now partnered with Ricky`` <br>
+``Ricky destroyed`` <br>
+``Lucy destroyed`` <br>
+
+#### Are Shared Pointers thread safe?
+Only the reference counting part of the shared_ptr is atomic and thus thread safe. The shared_ptr itself is not thread safe. 
+* **Different** std::shared_ptr instances can be read from and modified by multiple threads at the same time, even if these instances are copies and share ownership of the same object.
+* **The same** std::shared_ptr instance can be read by multiple threads simultaneously.
+* **The same** std::shared_ptr instance cannot be directly modified by multiple threads without additional synchronization. But can be done by means of mutex and atomics.
+
+#### What are classes and objects in C++?
+
+#### What is the difference between 'struct' and 'class'?
 
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
