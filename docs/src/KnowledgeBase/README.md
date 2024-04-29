@@ -916,6 +916,10 @@ www.linkedin.com/pulse/value-categories-c-amit-nadiger <br>
 www.scaler.com/topics/c/difference-between-if-else-and-switch/ <br>
 learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170 <br>
 www.learncpp.com/cpp-tutorial/circular-dependency-issues-with-stdshared_ptr-and-stdweak_ptr/ <br>
+interviewprep.org/templates-programming-interview-questions/ <br>
+www.studyplan.dev/pro-cpp/type-traits <br>
+www.linkedin.com/pulse/things-learn-c-template-metaprogramming-from-basic-advanced-dong <br>
+www.cppstories.com/2021/concepts-intro/?trk=article-ssr-frontend-pulse_little-text-block <br>
 
 #### What is C++? What are the advantages of C++?
 C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
@@ -1664,18 +1668,311 @@ One can resolve it by virtual inheritence:
 ``Hello from A``<br>
 Now class B and class C use the virtual base class A and no duplication of member function is done; Classes B and C share a single copy of the members in the virtual base class A.
 
-#### Explain Constructors in C++.
+#### What is polymorphism in C++?
+Polymorphism is known as many forms of the same thing. In simple terms, we can say that Polymorphism is the ability to display a member function in multiple forms depending on the type of object that calls it. 
+There is 2 type of polymorphism:<br>
+**Compile Time Polymorphism or Static Binding:**<br>
+* Function Overloading
+* Operator Overloading <br>
 
-#### What is the sequnce of calling Constructors in a Class Hierarhcy?
+**Run Time Polymorphism or Late Binding:**
+* Function Overriding
+* Virtual Function
+
+#### What is Function Overriding?
+When a function of the same name, same arguments or parameters, and same return type already present/declared in the base class is used in a derived class is known as Function Overriding. It is an example of Runtime Polymorphism or Late Binding which means the overridden function will be executed at the run time.
+
+#### What is the difference between Virtual Functions and Pure Virtual Functions?
+A **Virtual Function** is a member function of a base class which can be **redefined** by derived class. A **Pure Virtual Function** is a member function of a base class only with a declaration provided in the base class and it should be **defined in a derived class** otherwise derived class also becomes abstract.
+
+#### Explain Constructors in C++.
+A constructor is a special type of member function of a class, whose name is the same as that of the class by whom it is invoked. It initializes value to the object of a class. <br>
+There are 4 types of constructors:
+* **Default constructor:** It is the most basic type of constructor which accepts no arguments or parameters. Even if it is not called the compiler calls it automatically when an object is created.
+* **Parameterized constructor:** It is a type of constructor which accepts arguments or parameters. It has to be called explicitly by passing values in the arguments as these arguments help initialize an object when it is created. It also has the same name as that of the class. 
+* **Copy Constructor:** A copy constructor is a member function that initializes an object using another object of the same class. Also, the Copy constructor takes a reference to an object of the same class as an argument.
+* **Move Constructore:** A move constructor is a special member function that moves ownership of an existing object's data to a new variable without copying the original data.
+
+#### What is the sequence of calling Constructors in a Class Hierarhcy?
+A constructor performs its work in this order:
+* It calls base class and member constructors in the order of declaration.
+* If the class is derived from virtual base classes, it initializes the object's virtual base pointers.
+* If the class has or inherits virtual functions, it initializes the object's virtual function pointers. Virtual function pointers point to the class's virtual function table to enable correct binding of virtual function calls to code.
+* It executes any code in its function body.
 
 #### Explain Destructors in C++.
+Destructors are member functions in a class that delete an object when an object of the class goes out of scope. Destructors have the same name as the class preceded by a tilde (~) sign. Also, destructors follow a down-to-top approach, unlike constructors which follow a top-to-down.
 
 #### When is a Destructor in a Base Class should be virtual?
+When destroying instances or objects of a derived class using a base class pointer object, a virtual destructor is invoked to free up memory space allocated by the derived class object or instance. <br>
+**Virtual destructor guarantees that first the derived class’ destructor is called.** Then the base class’s destructor is called to release the space occupied by both destructors in the inheritance class which saves us from the memory leak. It is advised to make your destructor virtual whenever your class is polymorphic.
+
+#### Is Destructor Overloading possible?
+The simple answer is no we cannot overload a destructor. It is mandatory to have only one destructor per class in C++.
 
 #### Can a Destructor have parameters?
+Destructors neither take any arguments nor they have a parameter that might help to overload.
 
-#### What is polymorphism in C++?
+#### What is a Template in programming and why it is useful?
+A template in programming is a tool that allows developers to write generic code, making it reusable and adaptable for any types and classes.
 
+#### What is the difference between a Template Function and Function Overloading in C++?
+You use the function overloading when you want to perform similar operations. On the other hand, templates in C++ are used to perform precisely identical operations on different data types. A good indicator to choose between these two techniques is to verify that no Code Duplication is generated.
+
+#### How does Template Specialization in C++ work?
+Template specialization in C++ allows for different code to be executed depending on the data type used. It’s a way of customizing template classes or functions for specific types or values, enhancing flexibility and efficiency.<br>
+Consider a simple template function that returns the larger of two inputs:
+```cpp
+    template <typename T>
+    T max(T a, T b) {
+        return (a > b)? a : b;
+    }
+```
+We can specialize it for ``char*`` type where it compares strings lexicographically instead:
+```cpp
+    template <>
+    const char* max<const char*>(const char* a, const char* b) {
+        return (strcmp(a, b) > 0)? a : b;
+    }
+```
+
+#### What is a Class Template in C++ and how is it different from Function Templates?
+A class template in C++ is a blueprint for creating generic classes. It allows the same class to accommodate different data types without rewriting code, enhancing reusability and efficiency. A function template creates a family of functions with different argument types.
+
+#### Explain how template metaprogramming works.
+Template metaprogramming (TMP) is a technique in C++ where templates are used to perform compile-time computations. TMP leverages the compiler’s ability to interpret template parameters as types or values, enabling computation at compile time rather than runtime. This results in more efficient code execution.<br>
+In TMP, templates act as both containers of generic algorithms and generators of specific implementations for different data types. The process begins when a programmer defines a template with one or more parameters. During compilation, the compiler generates an appropriate function or class based on the provided arguments.<br>
+A key feature of TMP is its recursive nature. A template can call itself with modified parameters until a base case is reached. This recursion happens during compilation, not execution, leading to highly optimized code.<br>
+However, TMP has drawbacks such as increased complexity and longer compile times. It also requires deep understanding of C++ syntax and semantics. Despite these challenges, it remains a powerful tool for optimizing performance-critical applications.
+
+#### Can you discuss some of the potential problems or challenges that can occur when working with templates?
+Templates, while powerful tools in programming, can present several challenges. <br>
+* One common issue is **Code Bloat**, where each template instantiation generates a new set of functions or classes, leading to increased binary size. This can also cause **longer compilation times**.<br>
+* Another problem is **Debugging Difficulty** due to complex error messages. Templates are instantiated at compile-time and any errors that occur during this process result in verbose and often confusing compiler diagnostics.<br>
+* **Type Checking Issues** may arise as well. Since templates work with generic types, it’s possible for the programmer to use an inappropriate type, causing unexpected behavior or runtime errors.<br>
+* Lastly, there’s the risk of **Poor Abstraction**. If not used carefully, templates can lead to tightly coupled code, reducing modularity and making maintenance more difficult.<br>
+
+#### Enlist Types of Template Parameters.
+There are 3 basic types of template parameters:<br>
+* **Type Parameters.**
+* **Non-type Parameters.**
+* **Template-template Parameters.**<br>
+Examples for them are:<br>
+```cpp
+    template<class T, std::size_t N> // T is a type parameter and N is non-type parameter.
+    struct array;
+
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};  // example of initialization.
+
+    template<class T, class Container = std::deque<T>> // Container is a template-template parameter.
+    class stack;
+
+```
+
+#### Explain the difference between Template Classes and Class Templates.
+Template classes and class templates, while sounding similar, serve different purposes in programming. A class template is a blueprint for creating classes. It allows the programmer to define generic types, making it possible to create a class that can work with different data types. For instance, you could have a class template for an array that works with integers, floats, or any other type.<br>
+On the other hand, a template class is a specific instance of a class template. When we instantiate a class template with a particular data type, we get a template class. Using our previous example, if we use our array class template to create an array of integers, the resulting class is a template class.
+
+#### How can you create a templated function within a class in C++?
+To create a templated function within a class in C++, you first declare the template above your class. This is done using the ‘template’ keyword followed by ‘T‘ where T is a placeholder for any data type. Inside the class, you can then define your function as usual but use T instead of a specific data type.
+```cpp
+    template <typename T>
+    class MyClass {
+    public:
+        T myFunction(T param) {
+            // Function body here
+        }
+    };
+```
+
+#### Can you explain the term Template Instantiation?
+Template instantiation in programming refers to the process of creating a specific function or class from a template. This is done by the compiler, which replaces the generic types in the template with the specified types provided by the programmer.
+
+#### What is meant by Template Argument Deduction in C++?
+Template argument deduction in C++ is a compiler process that determines the types of template arguments from function or class template calls. It allows developers to omit explicit template arguments while calling these templates, enhancing code readability and maintainability. The compiler deduces the type based on the provided arguments. For instance, if we have a function template ‘void func(T arg)’ and call it as ‘func(5)’, the compiler deduces T as int. However, this process has limitations. If the deduction leads to ambiguity or no valid match, it fails, causing a compile-time error.
+
+#### Can you explain the difference between Complete and Incomplete Template Specialization?
+Complete template specialization refers to the process where all template parameters are provided, resulting in a specific type or function. This allows for unique behavior when certain types are used as arguments.<br>
+On the other hand, incomplete (or partial) template specialization involves specifying some but not all template parameters. It’s useful when we want to define different behaviors for a subset of types, while still maintaining general behavior for others.<br>
+
+```cpp
+    #include <iostream> 
+    using namespace std; 
+    
+    // Primary template 
+    template <typename T, typename X> 
+    class Person { 
+    public: 
+        void Print() { cout << "Primary Template" << endl; } 
+    }; 
+    
+    // Partial specialization for X as int 
+    template <typename T> class
+    Person<T, int> { 
+    public: 
+        void Print() 
+        { 
+            cout << "Partial Specialization for int" << endl; 
+        } 
+    }; 
+    
+    // driver code 
+    int main() 
+    { 
+        Person<bool, double> person1; 
+        Person<bool, int> person2; 
+    
+        person1.Print(); 
+        person2.Print(); 
+        return 0; 
+    }
+```
+
+#### What are Variadic Templates in C++ and how are they useful?
+Variadic templates in C++, introduced in C++11, allow a function or class to accept an indefinite number of arguments. This is achieved by using the ellipsis operator (…) in template parameters. They are useful for creating generic functions or classes that can handle any number and type of arguments, enhancing code reusability and efficiency. <br>
+For instance, consider a simple print function. Without variadic templates, we would need separate versions for different argument counts/types. With variadic templates, one version suffices:
+```cpp
+    template<typename... Args>
+    void print(Args... args) {
+        (std::cout << ... << args);
+    }
+```
+
+#### Can you discuss a situation when it would be more beneficial to use a virtual function rather than a template?
+In object-oriented programming, a situation where it would be more beneficial to use a virtual function rather than a template is when dealing with dynamic polymorphism. Dynamic polymorphism allows objects of different types to be treated at run-time as objects of a common parent type. This is useful in scenarios where we have an array or list of objects of the base class type but each needs to execute their version of a function.<br>
+Templates wouldn’t work here because they’re resolved at compile-time, while virtual functions are dynamically bound at runtime. Thus, templates can’t provide the dynamic dispatch needed for this kind of polymorphism.
+
+#### How can you prevent the instantiation of a template for a particular data type?
+To prevent the instantiation of a template for a specific data type, you can use explicit specialization or SFINAE (Substitution Failure Is Not An Error). Explicit specialization allows you to define a different implementation for a particular data type. If this specialized version is not suitable for the given arguments, it won’t be used and will result in a compile error. SFINAE technique involves creating a condition that causes substitution failure if a certain type is used. This can be achieved using std::enable_if or similar meta-programming techniques. For instance:
+```cpp
+    template <class T , typename = std::enable_if <!std::is_same<T,Foo>::value,T>::type >
+    class MyClass{
+    //...
+    };
+```
+#### Explain the potential challenges of debugging a templated code and how would you overcome them?
+Debugging templated code can be challenging due to **Type Independence**, **Compiler Errors**, and **Instantiation Issues**.<br>
+**Type Independence** means that a template function or class works with any data type. This flexibility can lead to unexpected behavior if the types used don’t support all operations in the template.<br>
+**Compiler Errors** are another challenge. They often become complex and difficult to understand when templates are involved because compilers generate them based on instantiated templates, not the template definition itself.<br>
+Lastly, debugging is complicated by the fact that **templates aren’t fully instantiated until they’re used**. Errors may only appear at this point, making it hard to isolate their source.<br>
+To overcome these challenges, use **static assertions** to enforce type requirements. This helps catch errors early and provides clearer messages than those generated by the compiler. Also, consider using **concept checks** (if your language supports them) to specify what operations a type must support to be used with a particular template.<br>
+When dealing with **compiler errors**, try **instantiating the problematic template with a specific type**. This can make error messages more understandable.<br>
+Finally, for instantiation issues, ensure you **thoroughly test each template with various types**.
+
+#### What are Template Type Traits in C++?
+Type traits are a feature of C++ that allows performing compile-time analysis of types. Common use cases of type traits are:
+* **Template type safety and documentation:** ensuring that template functions are only called with the expected types, thereby preventing runtime errors, and improving the developer experience.
+* **Compile-Time if statements:** enabling or disabling lines of code based on the properties of a type, or other compile-time factors.
+* **Template metaprogramming:** writing code to change how templates are generated and used at compile time.
+* **Conditional type selection:** changing the data types we use based on boolean expressions.
+* **Custom types:** how our own user-defined types can interact with any of these systems.
+For example, the std::is_arithmetic type trait tells us if a type is numeric:
+```cpp
+#include <type_traits>
+#include <iostream>
+
+int main() {
+  if (std::is_arithmetic<int>::value) {
+    std::cout << "int is arithmetic";
+  }
+  if (!std::is_arithmetic<std::string>::value) {
+    std::cout << "\n but std::string isn't";
+  }
+}
+```
+Some more examples of type traits:<br>
+* **std::is_pointer** lets us determine if a type is a pointer.
+* **std::is_class** lets us determine if a type is a class or struct, excluding enums and unions.
+* **std::is_same** lets us determine if a type is the same as another type.
+* **std::is_base_of** lets us determine if a type is the same as another type, or derived from that type through inheritance.
+
+#### How to check a Trait at Compile-Time in a Template?
+By using **if constexpr** statements. These are evaluated at compile time and, if the expression we pass to if constexpr evaluates to false, the block of code is removed from our function entirely.
+```cpp
+    #include <iostream>
+    #include <type_traits>
+
+    template <typename T>
+    void LogDouble(T Param) {
+        if constexpr (std::is_arithmetic_v<T>) {  
+            std::cout << "Double: " << Param * 2;
+        }
+    }
+
+    int main() {
+        LogDouble(42);
+        LogDouble(std::string("Hello World"));
+    }
+```
+The instantiated functions from above look like this:
+```cpp
+    void LogDouble(int Param) {
+        std::cout << "Double: " << Param * 2;
+    }
+
+    void LogDouble(std::string Param) {}
+```
+String type has no operator '*'.
+
+#### Define a Metafunction.
+A metafunction is not a function but a class/struct. But like regular functions, it can also 'return' something, such as a value or a type. See the following examples:
+```cpp
+    // Return a value from a metafunction
+    template <int NUM>
+    struct PlusOne
+    {
+        static constexpr int value = NUM + 1;
+    };
+
+    PlusOne<1>::value; // returns 2
+
+    // Return a type from a metafunction
+    template <typename T>
+    struct Echo
+    {
+        using type = T; // returns type
+    };
+    constexpr Echo<int>::type i = 5; 
+```
+#### What is a Concept for Templates?
+A concept is a set of constraints on template parameters evaluated at compile time. They can be use for class templates and function templates to control function overloads and partial specialization. <br>
+C++20 gives a language support (new keywords - **requires**, **concept**) and a set of predefined concepts from the Standard Library.
+Here are some examples:<br>
+```cpp
+    // a simple concept called integral
+    template <class T>
+    concept integral = std::is_integral_v<T>; 
+
+    /* 
+    We defined a concept that requires that an object of type T has a member function called buildHtml(), 
+    which returns something convertible to std::string.
+    */
+    template <typename T>
+    concept ILabel = requires(T v)
+    {
+        {v.buildHtml()} -> std::convertible_to<std::string>;
+    };
+```
+And another more complex example:<br>
+```cpp
+    #include <numeric>
+    #include <vector>
+    #include <iostream>
+    #include <concepts>
+
+    template <typename T> 
+    requires std::integral<T> || std::floating_point<T>
+    constexpr double Average(std::vector<T> const &vec) {
+        const double sum = std::accumulate(vec.begin(), vec.end(), 0.0);        
+        return sum / vec.size();
+    }
+
+    int main() {
+        std::vector ints { 1, 2, 3, 4, 5};
+        std::cout << Average(ints) << '\n';                                      
+    }
+
+```
 
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
