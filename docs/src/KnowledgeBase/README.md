@@ -1974,6 +1974,42 @@ And another more complex example:<br>
 
 ```
 
+#### What is the main advantage of Concepts?
+The main advantage is more readable and understandable compiler errors.
+
+#### What is C++ STL?
+The Standard Template Library (STL) is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. It is a generalized library and so, its components are parameterized.<br>
+STL has 4 components:
+* **Containers**
+* **Iterators**
+* **Algorithms**
+* **Functors**
+
+#### Enlist Container Types in STL.
+* **Sequence Containers:** implement data structures that can be accessed in a sequential manner.
+    * **vector** - is the same as dynamic arrays with the ability to resize itselve automatically when an element is inserted or deleted, with its storage being handled automatically by the container. Vector elements are placed in contiguous storage so that they can be accessed and traversed using iterators. In vectors, data is inserted at the end. Inserting at the end takes differential time, as sometimes the array may need to be extended. Removing the last element takes only constant time because no resizing happens. Inserting and erasing at the beginning or in the middle is linear in time.
+    * **list** - is a sequence container that allows non-contiguous memory allocation. As compared to the vector, the list has slow traversal, but once a position has been found, insertion and deletion are quick (constant time). Normally, when we say a List, we talk about a **doubly linked list**.
+    * **deque** - Double-ended queues are sequence containers with the feature of expansion and contraction on both ends. They are similar to vectors, but are more efficient in case of insertion and deletion of elements. Unlike vectors, contiguous storage allocation may not be guaranteed.
+    * **array** - is a class based alternative to common arrays from C-language. It knows its size and cannot decay into a pointer.
+    * **forward_list** - implements **singly linked list**. The drawback of a forward list is that it cannot be iterated backward and its individual elements cannot be accessed directly.
+* **Container Adaptors:** provide a different interface for sequential containers.
+    * **queue** - Queues are a type of container adaptors that operate in a first in first out (FIFO) type of arrangement. Elements are inserted at the back (end) and are deleted from the front. Queues use an encapsulated object of deque or list (sequential container class) as its underlying container, providing a specific set of member functions to access its elements.
+    * **priority_queue** - A C++ priority queue is a type of container adapter, specifically designed such that the first element of the queue is either the greatest or the smallest of all elements in the queue, and elements are in non-increasing or non-decreasing order (hence we can see that each element of the queue has a priority). In C++ STL, the top element is always the greatest by default. We can also change it to the smallest element at the top. Priority queues are built on the top of the max heap and use an array or vector as an internal structure. In simple terms, STL Priority Queue is the implementation of the **Heap Data Structure**. Heaps are used in **graph algorithms** like Dijkstra’s algorithm and Prim’s algorithm for finding the **shortest paths** and **minimum spanning trees**.
+    * **stack** - Stacks are a type of container adaptors with LIFO(Last In First Out) type of working, where a new element is added at one end (top) and an element is removed from that end only.  Stack uses an encapsulated object of either vector or deque (by default) or list (sequential container class) as its underlying container, providing a specific set of member functions to access its elements.
+* **Associative Containers:** implement sorted data structures that can be quickly searched (O(log n) complexity).
+    * **set** - Sets are a type of associative container in which each element has to be unique because the value of the element identifies it (the value is a key). The values are stored in a specific sorted order i.e. either ascending or descending. They are implemented as **BST (Binary Search Trees)**.
+    * **multiset** - A multiset is a container in C++ that allows you to store multiple occurrences of the same value in a sorted order. It is part of the C++ Standard Template Library (STL) and is implemented as a **Balanced Binary Search Tree**.
+    * **map** - Maps are associative containers that store elements in a mapped fashion. Each element has a key value and a mapped value. No two mapped values can have the same key values. Maps are implemented by self-balancing search trees. In C++ STL it uses **Red-Black Tree**.
+    * **multimap** - Multimap is similar to a map with the addition that multiple elements can have the same keys. Also, it is NOT required that the key-value and mapped value pair have to be unique in this case. One important thing to note about multimap is that multimap keeps all the keys in sorted order always.
+* **Unordered Associative Containers:** implement unordered data structures that can be quickly searched
+    * **unordered_set** - An unordered_set is an unordered associative container implemented using a **Hash Table** where keys are hashed into indices of a hash table so that the insertion is always randomized.
+    * **unordered_multiset** - The unordered_multiset in C++ STL is an unordered associative container that works similarly to an unordered_set. The only difference is that we can store multiple copies of the same key in this container. It is also implemented using a **Hash Table** so the time complexity of the operations is O(1) on average which can go up to linear time O(n) in the worst case. Internally when an existing value is inserted, the data structure increases its count which is associated with each value. A count of each value is stored in unordered_multiset, it takes more space than unordered_set (if all values are distinct).
+    * **unordered_map** - is an associated container that stores elements formed by the combination of a key value and a mapped value. The key value is used to uniquely identify the element and the mapped value is the content associated with the key. Both key and value can be of any type predefined or user-defined. In simple terms, an unordered_map is like a data structure of dictionary type that stores elements in itself. It contains successive pairs (key, value), which allows fast retrieval of an individual element based on its unique key. Internally unordered_map is implemented using **Hash Table**, the key provided to map is hashed into indices of a hash table which is why the performance of data structure depends on the hash function a lot but on average, the cost of search, insert, and delete from the hash table is O(1). 
+    * **unordered_multimap** - the same as **unordered_map**, but allows duplicates of key-value pairs.
+
+
+
+
 ### Interview questions for Python.
 ### Interview questions for Computer Vision.
 ### Interview questions for Machine Learning.
