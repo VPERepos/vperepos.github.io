@@ -255,6 +255,14 @@ Asymptotic Notation represents an algorithm's running time - how long an algorit
 * **PermutationSort** - most ineffective sorting algorithm. It works by generating permutations of an array and checking if it is in the right sorted order. The worst case time complexity is O(?) undefined, since it has no upper bound and could run forever.
 * **BubbleSort** - simple and easy to understand sorting algorithm. Consists of two loops. In the case of sorting in ascending order, the inner loop goes over elements and if an element is bigger than the next one, they are swapped. The outer loop repeats the procedure. The time complexity is O(N^2). Still too slow for real life problems.
 * **QuickSort** - the fastest sorting algorithm based on divide and conquer principle. The key process in **QuickSort** is a **Partition**. The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot. Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array. The time complexity is O(N*log(N)).
+* **InsertionSort** - is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output. Insertion sort is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. Then, you pick a card from the unsorted group and put it in the right place in the sorted group. It has the worst-case time-complexity of O(N^2).
+* **HeapSort** - is a comparison-based sorting technique based on **Binary Heap** data structure.
+    * Build a heap from the given input array.
+    * Repeat the following steps until the heap contains only one element:
+        * Swap the root element of the heap (which is the largest element) with the last element of the heap.
+        * Remove the last element of the heap (which is now in the correct position).
+        * Heapify the remaining elements of the heap in top-down order.
+    * The sorted array is obtained by reversing the order of the elements in the input array.
 
 #### Name the main properties of the basic operations on linked lists.
 * **Traversing** - this operation has a time complexity of O(N), the same as for arrays. But one can not access elemnts of a linked list by direct indexing.
@@ -920,6 +928,8 @@ interviewprep.org/templates-programming-interview-questions/ <br>
 www.studyplan.dev/pro-cpp/type-traits <br>
 www.linkedin.com/pulse/things-learn-c-template-metaprogramming-from-basic-advanced-dong <br>
 www.cppstories.com/2021/concepts-intro/?trk=article-ssr-frontend-pulse_little-text-block <br>
+github.com/mpavezb/cpp_concurrency?tab=readme-ov-file <br>
+en.cppreference.com/w/cpp/language/coroutines <br>
 
 #### What is C++? What are the advantages of C++?
 C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
@@ -2007,7 +2017,140 @@ STL has 4 components:
     * **unordered_map** - is an associated container that stores elements formed by the combination of a key value and a mapped value. The key value is used to uniquely identify the element and the mapped value is the content associated with the key. Both key and value can be of any type predefined or user-defined. In simple terms, an unordered_map is like a data structure of dictionary type that stores elements in itself. It contains successive pairs (key, value), which allows fast retrieval of an individual element based on its unique key. Internally unordered_map is implemented using **Hash Table**, the key provided to map is hashed into indices of a hash table which is why the performance of data structure depends on the hash function a lot but on average, the cost of search, insert, and delete from the hash table is O(1). 
     * **unordered_multimap** - the same as **unordered_map**, but allows duplicates of key-value pairs.
 
+#### What is an Iterator in STL?
+An iterator is an object (like a pointer) that points to an element inside the container. We can use iterators to move through the contents of the container. They can be visualized as something similar to a pointer pointing to some location and we can access the content at that particular location using them.<br>
+There are 5 types of iterators:
+* **Input Iterators:** They are the weakest of all the iterators and have very limited functionality. They can only be used in a single-pass algorithms, i.e., those algorithms which process the container sequentially, such that no element is accessed more than once.
+* **Output Iterators:** Just like input iterators, they are also very limited in their functionality and can only be used in single-pass algorithm to modify the elements.
+* **Forward Iterators:** They are higher in the hierarchy than input and output iterators, and contain all the features present in these two iterators. But, as the name suggests, they also can only move in a forward direction one step at a time.
+* **Bidirectional Iterators:** They have all the features of forward iterators along with the fact that they overcome the drawback of forward iterators, as they can move in both the directions, that is why their name is bidirectional.
+* **Random-Access Iterators:** They are the most powerful iterators. They are not limited to moving sequentially, as their name suggests, they can randomly access any element inside the container. They are the ones whose functionality are same as pointers.
 
+| | |
+|:---|:---|
+|<strong>STL Container</strong>|<strong>Types of iterators supported</strong>|
+|Vector|Random-Access|
+|List|Bidirectional|
+|Deque|Random-Access|
+|Map|Bidirectional|
+|Multimap|Bidirectional|
+|Set|Bidirectional|
+|Multiset|Bidirectional|
+|Unordered-Map|Forward|
+|Unordered-Multimap|Forward|
+|Unordered-Set|Forward|
+|Unordered-Multiset|Forward|
+
+#### Give an overview of Algorithms in STL.
+The header algorithm defines a collection of functions specially designed to be used on a range of elements. They act on containers and provide means for various operations for the contents of the containers. <br>
+* **Sorting** - There is a built-in function in C++ STL by the name of **sort()**. This function internally uses IntroSort. In more details it is implemented using hybrid of QuickSort, HeapSort and InsertionSort. By default, it uses QuickSort but if QuickSort is doing unfair partitioning, it switches to HeapSort and when the array size becomes really small, it switches to InsertionSort. 
+* **Searching** - **Binary Search** in a sorted array **binary_search(startaddress, endaddress, valuetofind)**.
+* **Partition Operations** - C++ has a class in its STL algorithms library which allows us easy partition algorithms using certain built-in functions. Partition refers to act of dividing elements of containers depending upon a given condition.<br> 
+Partition operations :
+    * **partition(beg, end, condition)** - This function is used to partition the elements on basis of condition mentioned in its arguments.
+    * **is_partitioned(beg, end, condition)** - This function returns boolean true if container is partitioned else returns false.
+* Some other important STL algorithms:
+    * **reverse(first_iterator, last_iterator)** – To reverse a sequencial container. ( if ascending -> descending  OR  if descending -> ascending)
+    * ***max_element (first_iterator, last_iterator)** – to find the maximum element of a container.
+    * ***min_element (first_iterator, last_iterator)** – to find the minimum element of a container.
+    * **accumulate(first_iterator, last_iterator, initial value of sum)** – does the summation of container elements.
+    * **count(first_iterator, last_iterator,x)** – To count the occurrences of x in a container.
+    * **find(first_iterator, last_iterator, x)** – Returns an iterator to the first occurrence of x in a container and points to end of the container ((name_of_vector).end()) if element is not present in it.
+    * **lower_bound(first_iterator, last_iterator, x)** – returns an iterator pointing to the first element in the range [first,last) which has a value not less than ‘x’.
+    * **upper_bound(first_iterator, last_iterator, x)** – returns an iterator pointing to the first element in the range [first,last) which has a value greater than ‘x’.
+    * **next_permutation(first_iterator, last_iterator)** – modifies the container to its next permutation.
+    * **prev_permutation(first_iterator, last_iterator)** – modifies the container to its previous permutation. 
+    * **distance(first_iterator,desired_position)** – It returns the distance of desired position from the first iterator.This function is very useful while finding the index. 
+
+#### What is Concurrency in Programming?
+In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the outcome.
+
+#### Whatis the difference between Concurrency and Parallelism?
+Concurrency is about multiple tasks which start, run, and complete in overlapping time periods, in no specific order. Parallelism is about multiple tasks or subtasks of the same task that literally run at the same time on a hardware with multiple computing resources like multi-core processor.
+
+#### Elist Errors and Risks associated with Concurency.
+Concurrent multithreading applications need to be carefully designed as it is prone to many errors leading to undefined behaviour. Some of these errors are:
+* **Race Conditions** - happen when two or more threads access shared data concurrently leading to the undefined behaviour.
+* **Deadlocks** - refer to the situation where two or more threads are blocked forever waiting for each other. The careful synchronization is essential to prevent deadlocks.
+* **Starvation** - is the condition where a thread is unable to gain regular access to the shared resources.
+
+#### Enlist Libraries and Instruments for realizing Concurrency in C++.
+In C++, the support for concurrency was first added in C++ 11 to improve the performance of the program and enable multitasking. The components such as thread, mutex, memory model, and various synchronization primitives were added as the part of Concurrency Support Library.
+* **Threads** - Threads are the basic unit of multitasking. The concurrent execution of the tasks is done by creating multiple threads in a multithreaded environment. The C++ provides a ``thread`` library for creating and managing threads.
+* **Thread Synchronization** - Thread synchronization can be done using the following components provided in C++:
+    * **Mutex and Locks** - The Mutual Exclusion and Locks are used to protect shared resources. Ensures that only one thread accesses critical sections at a time. C++ have ``mutex`` header file which contains the ``std::mutex`` classes.
+    * **Condition Variables** - are used for thread synchronization by acting as a flag that notifies the threads when the shared resources are free. C++ have ``condition_variable`` header that contains the ``condition_variable`` object.
+    * **Futures and Promises** - ``future`` and ``promise`` are used for asynchronous task execution. This method is only viable when thread tasks are independent of each other.
+    * **Semaphores** - are also a synchronization primitive that counts the number of threads accessing the shared resource. If this count exceeds the number of accesses available, the semaphore will block the access till the count is freed.
+* **Thread Pool** - normal threads have to be manually managed regarding their lifecycle and the associated functions. Thread Pools contain automatically managed threads with an API that allows adding tasks into a work queue of pending tasks. The pool feeds from the queue as soon as slot is available. ``std::future`` can be used to wait for tasks to be completed. 
+* **Atomic Operation** - indivisible operation. It cannot be observed half-done from any thread in the system. If one thread writes to an atomic object while another thread reads from it, the behavior is well-defined. Atomics allow writting lock-free multithreading, meaning there is no need to use any synchronization primitive.
+* **Coroutines** - A coroutine is a function that can suspend execution to be resumed later. Coroutines are stackless: they suspend execution by returning to the caller and the data that is required to resume execution is stored separately from the stack. This allows for sequential code that executes asynchronously (e.g. to handle non-blocking I/O without explicit callbacks), and also supports algorithms on lazy-computed infinite sequences and other uses.
+
+#### Give an example of a Race Condition in C++.
+Following code shows a situation of race condition if thread synchronization by locking mutex is not present:
+```cpp
+    #include <iostream>
+    #include <thread>
+    #include <mutex>
+
+    void sharedPrint(char c, int v, std::mutex& theMutex) {
+        //theMutex.lock(); // if uncommented, synchronises the access from different threads
+        std::cout << c << v << "\n";
+        //theMutex.unlock(); 
+    }
+
+    // function for sequence
+    void printingLoop(char d, int a, std::mutex& theMutex) {
+        for (int i = 1; i <= a; i++) {
+            sharedPrint(d, i, theMutex);
+        }
+    }
+
+    int main()
+    {
+        std::mutex localMutex;
+
+        std::thread threadA(printingLoop, 'A', 10, std::ref(localMutex));
+        std::thread threadB(printingLoop, 'B', 10, std::ref(localMutex));
+        std::thread threadC(printingLoop, 'C', 10, std::ref(localMutex));
+
+        threadA.join();
+        threadB.join();
+        threadC.join();
+        return 0;
+    }
+```
+#### Enlist types of Mutexes.
+There are three basic types of mutual exclusion:
+* ``std::mutex`` – is a synchronization primitive that can be used to protect shared data from being simultaneously accessed by multiple threads. Mutex offers exclusive, non-recursive ownership semantics:
+    * A calling thread owns a mutex from the time that it successfully calls either ``lock`` or ``try_lock`` until it calls ``unlock``.
+    * When a thread owns a mutex, all other threads will block (for calls to ``lock``) or receive a false return value (for ``try_lock``) if they attempt to claim ownership of the mutex.
+    * A calling thread must not own the mutex prior to calling lock or try_lock. 
+
+    The behavior of a program is undefined if a mutex is destroyed while still owned by any threads, or a thread terminates while owning a mutex. This type of mutex can be locked only once even by an owning thread, otherwise Deadlock condition arises. 
+* ``std::recursive_mutex`` – is a synchronization primitive that can be used to protect shared data from being simultaneously accessed by multiple threads. ``recursive_mutex`` offers exclusive, recursive ownership semantics:
+    * A calling thread owns a ``recursive_mutex`` for a period of time that starts when it successfully calls either ``lock`` or ``try_lock``. During this period, the thread may make additional calls to ``lock`` or ``try_lock``. The period of ownership ends when the thread makes a matching number of calls to ``unlock``.
+    * When a thread owns a ``recursive_mutex``, all other threads will block (for calls to ``lock``) or receive a false return value (for ``try_lock``) if they attempt to claim ownership of the ``recursive_mutex``.
+    * The maximum number of times that a ``recursive_mutex`` may be locked is unspecified, but after that number is reached, calls to lock will throw ``std::system_error`` and calls to ``try_lock`` will return false. 
+
+    The behavior of a program is undefined if a recursive_mutex is destroyed while still owned by some thread. 
+* ``std::shared_mutex`` - is a synchronization primitive that can be used to protect shared data from being simultaneously accessed by multiple threads. In contrast to other mutex types which facilitate exclusive access, a shared_mutex has two levels of access:
+    * shared - several threads can share ownership of the same mutex. 
+    * exclusive - only one thread can own the mutex. 
+
+    If one thread has acquired the exclusive lock (through ``lock``, ``try_lock``), no other threads can acquire the lock (including the shared).<br>
+If one thread has acquired the shared lock (through ``lock_shared``, ``try_lock_shared``), no other thread can acquire the exclusive lock, but can acquire the shared lock.<br>
+Only when the exclusive lock has not been acquired by any thread, the shared lock can be acquired by multiple threads.<br>
+Within one thread, only one lock (shared or exclusive) can be acquired at the same time.<br>
+Shared mutexes are especially useful when shared data can be safely read by any number of threads simultaneously, but a thread may only write the same data when no other thread is reading or writing at the same time. 
+
+#### Enlist types of RAII(Resource Acquisition Is Initialization) Wrappers of Mutex Locks.
+There are two types of such wrappers:
+* ``std::unique_lock`` - is a general-purpose mutex ownership wrapper allowing deferred locking, time-constrained attempts at locking, recursive locking, transfer of lock ownership, and use with condition variables. The class ``unique_lock`` is movable, but not copyable.
+* ``std::shared_lock`` - is a general-purpose shared mutex ownership wrapper allowing deferred locking, timed locking and transfer of lock ownership. Locking a ``shared_lock`` locks the associated shared mutex in shared mode (to lock it in exclusive mode, ``std::unique_lock`` can be used). The shared_lock class is movable, but not copyable.
+
+
+#### Give some examples of Deadlocks and how to avoid them.
 
 
 ### Interview questions for Python.
