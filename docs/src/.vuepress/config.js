@@ -36,10 +36,6 @@ module.exports = {
                 link: '/Projects/',
             },
             {
-                text: 'Knowledge Base',
-                link: '/KnowledgeBase/',
-            },
-            {
                 text: 'Curriculum Vitae',
                 link: '/Curriculum/',
             },
