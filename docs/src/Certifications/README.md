@@ -3,15 +3,17 @@ sidebar: auto
 ---
 # Certificates
 ## Digital marketing
-![Image](../../Pictures/FundamentalsOfDigitalMarketingCertificate.png)
+<img src="../../Pictures/FundamentalsOfDigitalMarketingCertificate.jpg" alt="Image" width="400"/>
 
 ## Project management with PRINCE2
-![Image](../../Pictures/Prince2Foundation.png)
+<img src="../../Pictures/Prince2Foundation.jpg" alt="Image" width="400"/>
 
 ## Project management with Scrum
-![Image](../../Pictures/PSM1.png)
-![Image](../../Pictures/PSPO1.png)
-![Image](../../Pictures/Zertifikat_Scrum_Master1.png)
+<img src="../../Pictures/PSM1.jpg" alt="Image" width="400"/><br>
+
+<img src="../../Pictures/PSPO1.jpg" alt="Image" width="400"/><br>
+
+<img src="../../Pictures/Zertifikat_Scrum_Master1.jpg" alt="Image" width="400"/><br>
 
 ## Software architecture
-![Image](../../Pictures/Zertifikat_Softwarearchitekt1.png)
+<img src="../../Pictures/Zertifikat_Softwarearchitekt1.jpg" alt="Image" width="400"/>
