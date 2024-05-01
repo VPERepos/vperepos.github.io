@@ -930,6 +930,7 @@ www.linkedin.com/pulse/things-learn-c-template-metaprogramming-from-basic-advanc
 www.cppstories.com/2021/concepts-intro/?trk=article-ssr-frontend-pulse_little-text-block <br>
 github.com/mpavezb/cpp_concurrency?tab=readme-ov-file <br>
 en.cppreference.com/w/cpp/language/coroutines <br>
+medium.com/@litombeg/concurrency-in-c-passing-data-between-threads-promise-future-e22fb672736f <br>
 
 #### What is C++? What are the advantages of C++?
 C++ is an object-oriented programming language that was introduced to overcome the jurisdictions where C was lacking. By object-oriented we mean that it works with the concept of polymorphism, inheritance, abstraction, encapsulation, object, and class. <br>
@@ -2065,7 +2066,7 @@ Partition operations :
 #### What is Concurrency in Programming?
 In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the outcome.
 
-#### Whatis the difference between Concurrency and Parallelism?
+#### What is the difference between Concurrency and Parallelism?
 Concurrency is about multiple tasks which start, run, and complete in overlapping time periods, in no specific order. Parallelism is about multiple tasks or subtasks of the same task that literally run at the same time on a hardware with multiple computing resources like multi-core processor.
 
 #### Elist Errors and Risks associated with Concurency.
@@ -2145,15 +2146,158 @@ Within one thread, only one lock (shared or exclusive) can be acquired at the sa
 Shared mutexes are especially useful when shared data can be safely read by any number of threads simultaneously, but a thread may only write the same data when no other thread is reading or writing at the same time. 
 
 #### Enlist types of RAII(Resource Acquisition Is Initialization) Wrappers of Mutex Locks.
-There are two types of such wrappers:
+There are mainly three types of such wrappers:
 * ``std::unique_lock`` - is a general-purpose mutex ownership wrapper allowing deferred locking, time-constrained attempts at locking, recursive locking, transfer of lock ownership, and use with condition variables. The class ``unique_lock`` is movable, but not copyable.
 * ``std::shared_lock`` - is a general-purpose shared mutex ownership wrapper allowing deferred locking, timed locking and transfer of lock ownership. Locking a ``shared_lock`` locks the associated shared mutex in shared mode (to lock it in exclusive mode, ``std::unique_lock`` can be used). The shared_lock class is movable, but not copyable.
-
+* ``std::scoped_lock`` - is a mutex wrapper that provides a convenient RAII-style mechanism for owning zero or more mutexes for the duration of a scoped block.<br>
+When a ``scoped_lock`` object is created, it attempts to take ownership of the mutexes it is given. When control leaves the scope in which the ``scoped_lock`` object was created, the ``scoped_lock`` is destructed and the mutexes are released. If several mutexes are given, deadlock avoidance algorithm is used as if by ``std::lock``.<br>
+The ``scoped_lock`` class is non-copyable.
 
 #### Give some examples of Deadlocks and how to avoid them.
+The following code will deadlock since ``std::mutex`` can be locked at most once:
+```cpp
+    #include <mutex>
+    std::mutex globalMutex;
+    void function1() {
+        std::unique_lock localLock(globalMutex);
+        // bussiness logic...
+    }
+    void function2() {
+        std::unique_lock localLock(globalMutex);
+        // bussiness logic...
+        function1(); // here will be a DEADLOCK
+    }
+```
+One can avoid the deadlock in the code above by using ``std::recursive_mutex`` instead of ``std::mutex``.
+Another possible scenario of a Deadlock is as follows:
+```cpp
+    std::mutex localMutex1, localMutex2, localMutex3;
+    void threadA() {
+        // this thread acquires locks on localMutex1 and localMutex2 and waits for ThreadB to release localMutex3
+        std::unique_lock localLock1{localMutex1}, localLock2{localMutex2}, localLock3{localMutex3};
+    }
+    void threadB() {
+        // this thread acquires lock on localMutex3 and waits for the ThreadA to release localMutex2
+        std::unique_lock localLock3{localMutex3}, localLock2{localMutex2}, localLock1{localMutex1};
+    }
+```
+In this kind of situation deadlocks can be avoided by maintaning a globaly consistent order, so that one thread always wins, like in the following example:
+```cpp
+    std::mutex localMutex1, localMutex2, localMutex3;
+    void threadA() {
+        // no deadlocks
+        std::unique_lock localLock1{localMutex1}, localLock2{localMutex2}, localLock3{localMutex3};
+    }
+    void threadB() {
+        // no deadlocks
+        std::unique_lock localLock1{localMutex1}, localLock2{localMutex2}, localLock3{localMutex3};
+    }
+```
+Or alternatively, if globaly consistent order is not possible, one can use ``std::scoped_lock`` as follows:
+```cpp
+    std::mutex localMutex1, localMutex2, localMutex3;
+    void threadA() {
+        // no deadlocks
+        std::scoped_lock localLock{localMutex1, localMutex2, localMutex3};
+    }
+    void threadB() {
+        // no deadlocks
+        std::scoped_lock localLock{localMutex3, localMutex2, localMutex1};
+    }
+```
 
+#### What is a Condition Variable in C++?
+A condition variable is a synchronization primitive that allows multiple threads to wait until an (arbitrary) condition becomes true.
+The standard library defines the class ``std::condition_variable`` in the header ``condition_variable`` which has the following member functions:
+* **wait():** takes a reference to a ``std::unique_lock`` that must be locked by the caller as an argument, unlocks the mutex and waits for the condition variable.
+* **notify_one():** notify a single waiting thread, mutex does not need to be held by the caller.
+* **notify_all():** notify all waiting threads, mutex does not need to be held by the caller.<br>
+An example of application of condition variables are worker queues:
+```cpp
+    // here a function that fills the worker queue is defined
+    std::mutex globalMutex;
+    std::condition_variable conditionVar;
+    std::vector<int> taskQueue;
+    void pushWork(int task) {
+        {
+            std::unique_lock localLock{globalMutex};
+            taskQueue.push_back(task);
+        }
+        conditionVar.notify_one(); // a condition variable notifies working thread that the queue has a new task
+    }
+
+    // here a function of a working thread is defined
+    void workerThread() {
+        std::unique_lock localLock{globalMutex};
+        while (true) {
+            while (!taskQueue.empty()) {
+                int task = taskQueue.back();
+                taskQueue.pop_back();
+                localLock.unlock();
+                // bussiness logic here ...
+                localLock.lock();
+            }
+            conditionVar.wait(localLock); // wait for notification here
+        }
+    }
+```
+
+#### Give an example of using an Atomic Variable in Concurrency.
+The following code represents a possible use case for an Atomic Variable:
+```cpp
+    #include <atomic>
+    #include <thread>
+
+    int main() {
+        std::atomic<unsigned> atomicValue = 0;
+        thread threadA([]() {
+            for (size_t i = 0; i < 10; ++i)
+                atomicValue.fetch_add(1); // thread safe atomic increment
+        });
+        for (size_t i = 0; i < 10; ++i)
+            atomicValue.fetch_add(1); // thread safe atomic increment
+        threadA.join();
+        // atomicValue will contain 20
+    }
+```
+
+#### Give an example of a Use Case for Futures and Promises.
+A possible Use Case for Futures and Promises would be passing of data between threads (an alternative to wait-notify pattern implemented by condition variables):
+```cpp
+    #include <iostream>
+    #include <thread>
+    #include <future>
+
+    void modifyMessage(std::promise<std::string> && thePromise, std::string theMessage)
+    {
+        std::this_thread::sleep_for(std::chrono::milliseconds(4000)); // simulate work
+        std::string modifiedMessage = theMessage + " has been modified"; 
+        thePromise.set_value(modifiedMessage);
+    }
+
+    int main()
+    {
+        std::string messageToThread = "My Message";
+
+        std::promise<std::string> promise;
+        std::future<std::string> future = promise.get_future();
+
+        // start thread and pass promise as argument
+        std::thread threadA(modifyMessage, std::move(promise), messageToThread);
+
+        std::cout << "Original message from main(): " << messageToThread << std::endl;
+
+        std::string messageFromThread = future.get();
+        std::cout << "Modified message from thread(): " << messageFromThread << std::endl;
+
+        threadA.join();
+
+        return 0;
+    }
+```
 
 ### Interview questions for Python.
-### Interview questions for Computer Vision.
 ### Interview questions for Machine Learning.
+### Interview questions for Deep Learning.
+### Interview questions for Computer Vision.
 ### Interview questions for Software Engineering, Architecture and Design.
