@@ -4,9 +4,6 @@ module.exports = {
     title: 'Dr. Vladimir Petukhov',
     description: 'A portfolio site as a general C++/Python programmer, general algorithms developer, industrial computer vision engineer, machine learning engineer and web apps developer.',
     head: [
-        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
         [
             'script',
             {
@@ -21,6 +18,9 @@ module.exports = {
                 "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-6HX7S00F14');",
             ],
         ],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
     ],
 
     themeConfig: {
@@ -32,16 +32,20 @@ module.exports = {
         sidebarDepth: 2,
         nav: [
             {
-                text: 'Projects',
-                link: '/Projects/',
+                text: 'Blog',
+                link: '/Blog/',
             },
             {
-                text: 'Knowledge Base',
-                link: '/KnowledgeBase/',
+                text: 'Github',
+                link: 'https://github.com/vperepos'
             },
             {
-                text: 'Curriculum Vitae',
-                link: '/Curriculum/',
+                text: 'Resume',
+                link: '/Resume/',
+            },
+            {
+                text: 'Contact and Availability',
+                link: '/Contact/'
             },
             {
                 text: 'Computer Science Skills',
@@ -60,13 +64,10 @@ module.exports = {
                 link: '/Readings/',
             },
             {
-                text: 'Contact and Availability',
-                link: '/Contact/'
+                text: 'Knowledge Base',
+                link: '/KnowledgeBase/',
             },
-            {
-                text: 'Github',
-                link: 'https://github.com/vperepos'
-            }
+            
         ],
 
     },

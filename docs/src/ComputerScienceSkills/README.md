@@ -30,7 +30,7 @@ blockquote {
 |<strong>Modeling Languages </strong>| UML/SysML(advanced) |
 |<strong>Build Systems </strong>| MSBuild, CMake, Maven, Conan |
 |<strong>Software Versioning Systems </strong>| Subversion, Git, Mercurial |
-|<strong>Selected Libraries in C++ </strong>| Standard Library, Boost, wxWidgets, Qt, VTK, Dlib, OpenCV, libTorch |
-|<strong>Selected Libraries in Python </strong>| Numpy, SciPy, Pandas, Kivy, OpenCV, Matplotlib, PyTorch, Cython |
+|<strong>Selected Libraries in C++ </strong>| libTorch, mlpack, Standard Library, Boost, wxWidgets, Qt, VTK, Dlib, OpenCV  |
+|<strong>Selected Libraries in Python </strong>| PyTorch, ScikitLearn, Numpy, SciPy, Pandas, OpenCV, Matplotlib,  Cython |
 |<strong>Selected Libraries in Java </strong>| Standard Library, Spring Boot 5, ApacheMath3, JavaFX, OpenCV |
 |<strong>Selected Libraries in C# </strong>| Standard Library, WPF |

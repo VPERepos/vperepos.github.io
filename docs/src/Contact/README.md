@@ -4,4 +4,4 @@ sidebar: auto
 
 # Contact
 
-[Contact Me](mailto:v.petukhov@mail.de).
+[Contact Me](mailto:vladimir@petukhov.de).
