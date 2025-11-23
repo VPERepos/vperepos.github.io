@@ -31,6 +31,6 @@ A comparative benchmark of 2D data structures and cache-friendly memory traversa
 
 ### [Vector Field Widget in JavaFX](/Blog/java-vector-field-widget.md)
 A custom JavaFX widget for visualizing vector fields for computer vision and calibration tasks.  
-**Tags:** java · visualization · computer-vision
+**Tags:** java · visualization · visualization for camera calibration  · visualization in javafx
 
 ---
