@@ -31,5 +31,20 @@ There is a parent class called Containers2d that has common functionality and va
 The containers are initialized randomly and the program measures execution time of accessing each element calculating squared value and saving it in the initial container. This is done 1000 times in order to measure average execution time.
 <img src="/assets/img/UseCacheSequenceDiagram.f88d3bb3.svg" alt="UMLDiagram"></p> <h2 id="results-and-discussion"><a href="#results-and-discussion" class="header-anchor">#</a> Results and discussion</h2> <p>The results of several runs for different array sizes are presented in the file results.txt in the repository. Here some excerpt for an array 1000x1000 is presented in the table.</p> <table><thead><tr><th style="text-align:left"></th> <th style="text-align:left"></th> <th style="text-align:left"></th> <th style="text-align:left"></th></tr></thead> <tbody><tr><td style="text-align:left"><strong>Processing type</strong></td> <td style="text-align:left"><strong>Execution time (microseconds) Array1d</strong></td> <td style="text-align:left"><strong>Execution time (microseconds) Array2d</strong></td> <td style="text-align:left"><strong>Execution time (microseconds) Vector2d</strong></td></tr> <tr><td style="text-align:left">Processed by rows</td> <td style="text-align:left">2732.27</td> <td style="text-align:left">2622.73</td> <td style="text-align:left">7236.22</td></tr> <tr><td style="text-align:left">Processed by columns</td> <td style="text-align:left">3098.9</td> <td style="text-align:left">2879.58</td> <td style="text-align:left">7669.81</td></tr> <tr><td style="text-align:left">Ratio (%)</td> <td style="text-align:left">13</td> <td style="text-align:left">10</td> <td style="text-align:left">6</td></tr></tbody></table> <p>One can see that the slowest container is STL vector - around 3 times slower than the fastest one - dynamic 2D array. But the biggest performance increase has the 1D dynamic array. The results range a little bit from experiment to experiment, but the tendency remains the same. There are only several weird measurements braking the tendency, but recompilation of the project eliminated the behaviour, when STL vector processing by columns was a lot faster than by rows (please see the results.txt in the repository).</p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
     <script src="/assets/js/app.b39825a5.js" defer></script><script src="/assets/js/6.1b352ab0.js" defer></script>
+    <script src="https://giscus.app/client.js"
+        data-repo="VPERepos/vperepos.github.io"
+        data-repo-id="R_kgDOKtQbYA"
+        data-category="General"
+        data-category-id="DIC_kwDOKtQbYM4Cb9og"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
   </body>
 </html>
