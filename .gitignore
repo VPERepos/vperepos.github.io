@@ -1,0 +1,4 @@
+# exclude everything
+docs/node_modules/*
+docs/node_modules
+docs/src/.vuepress/dist/*

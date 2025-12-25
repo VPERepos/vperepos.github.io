@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio",
+  "version": "0.0.1",
+  "description": "A portfolio static web page",
+  "main": "index.js",
+  "authors": {
+    "name": "Vladimir Petukhov",
+    "email": ""
+  },
+  "repository": "/vperepos.github.io",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.10",
+    "@vuepress/plugin-seo": "^2.0.0-rc.3",
+    "vuepress": "^0.14.11"
+  }
+}
