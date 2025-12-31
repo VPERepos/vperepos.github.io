@@ -43,13 +43,30 @@ counter-increment: h6counter;
 content:   counter(h6counter) ".";
 }
 
+
 </style>
+
+
 
 
 # Knowledge Base
 
 ## Possible interview questions.
 
+### Interview questions for probability theory.
+
+#### Can you give an intuitive definition of probability of an event?
+Intuitively, probability is the measure of how likely an event is to happen, a value between 0 (impossible) and 1 (certain), often expressed as a fraction or percentage, representing the proportion of times an outcome occurs over many repetitions of an experiment, like a coin landing on heads roughly half the time in many flips.
+
+#### What is the absolute necessery condition for the intuitive definition of probability to be true?
+The intuitive definition of probability (classical/frequentist) says it's the ratio of favorable outcomes to total possible outcomes (P(E) = Favorable/Total). The crucial condition for this simple formula to work is that all possible outcomes must be equally likely (equally probable).
+
+#### What is the difference between probability and statistics?
+Probability tells you how to go from a population to a sample, and statistics tells you how to go from a sample to a population. So if one has a bin with red and blue balls and takes a number of balls from it, statistics estimates how many blue and red balls there could be in the bin. The probability estimates how likely it is that you take specific number of blue and red balls knowing the number of it in the bin. 
+
+#### Enlist and explain the formulas of calculating number of ways to sample a number of elements r taken with the number of choices n.
+There are <strong>permutations</strong>, which represent r samples taken with n choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.
+$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
 
 ### Interview questions for algorithms and data structures.
 **Sources:**<br>
