@@ -3,7 +3,6 @@ import { defaultTheme } from '@vuepress/theme-default'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { markdownMathPlugin } from '@vuepress/plugin-markdown-math'
 import { seoPlugin } from '@vuepress/plugin-seo'
-import sidebar from '../../sidebar.config.js'
 
 export default defineUserConfig({
   // Site title & description
@@ -46,10 +45,10 @@ export default defineUserConfig({
     // Manual sidebar
     sidebar: {
       '/Blog/': [
-        '/Blog/cpp-performance-cache-study',
-        '/Blog/java-vector-field-widget',
         '/Blog/state-machine-design-pattern',
         '/Blog/task-queue-design-pattern',
+        '/Blog/cpp-performance-cache-study',
+        '/Blog/java-vector-field-widget',
         '/Blog/knowledge_base',
         '/Blog/readings',
       ],
