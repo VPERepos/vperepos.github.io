@@ -1,6 +1,6 @@
 ---
 title: Blog
-sidebar: auto
+sidebarDepth: 2
 description: "Articles on data science and software engineering."
 ---
 

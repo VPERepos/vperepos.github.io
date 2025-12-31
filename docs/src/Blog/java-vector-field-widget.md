@@ -1,6 +1,6 @@
 ---
 title: Vector Field Widget in JavaFX
-sidebar: auto
+sidebarDepth: 2
 tags:
   - java
   - javafx

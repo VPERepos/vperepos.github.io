@@ -1,6 +1,6 @@
 ---
 title: C++ Performance Study — Using CPU Cache Properties
-sidebar: auto
+sidebarDepth: 2
 tags:
   - cpp
   - performance
@@ -26,4 +26,5 @@ The results of several runs for different array sizes are presented in the file 
 |Processed by rows| 2732.27 | 2622.73 | 7236.22 |
 |Processed by columns| 3098.9 | 2879.58 | 7669.81 |
 |Ratio (%)| 13 | 10 | 6 |
+
 One can see that the slowest container is STL vector - around 3 times slower than the fastest one - dynamic 2D array. But the biggest performance increase has the 1D dynamic array. The results range a little bit from experiment to experiment, but the tendency remains the same. There are only several weird measurements braking the tendency, but recompilation of the project eliminated the behaviour, when STL vector processing by columns was a lot faster than by rows (please see the results.txt in the repository). 

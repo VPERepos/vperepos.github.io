@@ -1,0 +1,16 @@
+import comp from "C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Blog/java-vector-field-widget.html.vue"
+const data = JSON.parse("{\"path\":\"/Blog/java-vector-field-widget.html\",\"title\":\"Vector Field Widget in JavaFX\",\"lang\":\"en-US\",\"frontmatter\":{\"title\":\"Vector Field Widget in JavaFX\",\"sidebarDepth\":2,\"tags\":[\"java\",\"javafx\",\"visualization\",\"visualization for camera calibration\"],\"description\":\"Vector Field Widget Code on Github Motivation Vector field plotting is a very usefull approach to representing spacial distribution of data errors or deviation from some \\\"golden...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Vector Field Widget in JavaFX\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":\\\"2025-12-25T16:22:12.000Z\\\",\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Dr. Vladimir Petukhov\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vperepos.github.io/Blog/java-vector-field-widget.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Dr. Vladimir Petukhov\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Vector Field Widget in JavaFX\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Vector Field Widget Code on Github Motivation Vector field plotting is a very usefull approach to representing spacial distribution of data errors or deviation from some \\\"golden...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2025-12-25T16:22:12.000Z\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"visualization for camera calibration\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"visualization\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"javafx\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"java\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2025-12-25T16:22:12.000Z\"}]]},\"git\":{\"updatedTime\":1766679732000,\"contributors\":[{\"name\":\"Vladimir Petukhov\",\"username\":\"\",\"email\":\"v.petukhov@mail.de\",\"commits\":1}],\"changelog\":[{\"hash\":\"0b1b33559df802af3d993e140b0127033fe2f2e5\",\"time\":1766679732000,\"email\":\"v.petukhov@mail.de\",\"author\":\"Vladimir Petukhov\",\"message\":\"Initial commit\"}]},\"filePathRelative\":\"Blog/java-vector-field-widget.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

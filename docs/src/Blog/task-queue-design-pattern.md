@@ -1,6 +1,6 @@
 ---
 title: Task Queue Design Pattern in Modern C++
-sidebar: auto
+sidebarDepth: 2
 tags:
   - cpp
   - design-patterns

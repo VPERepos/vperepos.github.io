@@ -1,0 +1,16 @@
+<template><div><h1 id="vector-field-widget" tabindex="-1"><a class="header-anchor" href="#vector-field-widget"><span>Vector Field Widget</span></a></h1>
+<p><a href="https://github.com/VPERepos/VectorFieldWidget/tree/main/VectorFieldWidget" target="_blank" rel="noopener noreferrer">Code on Github</a></p>
+<h2 id="motivation" tabindex="-1"><a class="header-anchor" href="#motivation"><span>Motivation</span></a></h2>
+<p>Vector field plotting is a very usefull approach to representing spacial distribution of data errors or deviation from some &quot;golden data&quot;. This is widely applied for example to analysis of camera calibration results. When I started working on plumb line camera calibration procedure in Java, I realized that there were no such a widget in JavaFX by that time, so I decided to program it myself.</p>
+<h2 id="overview" tabindex="-1"><a class="header-anchor" href="#overview"><span>Overview</span></a></h2>
+<p>As one can see from the following picture the main application consists of two parts: vector field widget and parameters part. The parameters control a random data generator, that can be driven in a single shot and continuous modes. The ranges for the data and corresponding arrows can be controlled from the GUI as well. In order to adjust the representation lengths of the vectors, one can tune the scaling factor parameter. The refreshing rate controls the frequency of the timer that runs in the separated thread when in continuous mode.
+<img src="@source/../Pictures/VectorFieldWidgetGui.png" alt="image"></p>
+<h2 id="classes-structure-and-functionality" tabindex="-1"><a class="header-anchor" href="#classes-structure-and-functionality"><span>Classes structure and functionality</span></a></h2>
+<p>Lately I have been adjusting my approach of using UML diagrams for documenting program code. Once I do not use UML code generators, diagrams do not have to be that detailed as UML standard prescribes. So I decided to hide the information about private variables, function return types and function parameters. All this information can be retreived from the code itself. This way I can describe the structure of a code and function calls dynamics. This kind of simplyfied UML diagramming approach can be seen in the following pictures.<br>
+<img src="@source/../Pictures/ClassDiagramVectorFieldWidget.svg" alt="image">
+The application in general consists of a consumer App class and a VectorFieldWidget class. They are related in a form of a composition. There are also two small supporting classes: a PeriodicDataGenerator class, declared inside of the App class, and an Arrow class representing a geometric object and declared inside the VectorFieldWidget class.</p>
+<p>A behaviour of the program can be seen in the following sequence diagram. Two use cases are described here: user starts an application with activating the initializations of all geometric components of the main application widget and the vector field widget and the second use case of toggling the generation mode by user. This lot of functions is produced intentionally according to &quot;Clean Code&quot; rules by Uncle Bob, like one function - one action. This way a code can be self documented by function names without comments.
+<img src="@source/../Pictures/SequenceDiagramVectorFieldWidget.svg" alt="image"></p>
+</div></template>
+
+

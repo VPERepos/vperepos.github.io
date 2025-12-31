@@ -1,6 +1,5 @@
 ---
-sidebar: auto
-sidebar depth: 2
+sidebarDepth: 2
 ---
 <style>
 
