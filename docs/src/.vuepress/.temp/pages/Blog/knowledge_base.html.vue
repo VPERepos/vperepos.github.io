@@ -7,424 +7,28 @@
 <p>The intuitive definition of probability (classical/frequentist) says it's the ratio of favorable outcomes to total possible outcomes (P(E) = Favorable/Total). The crucial condition for this simple formula to work is that all possible outcomes must be equally likely (equally probable).</p>
 <h4 id="what-is-the-difference-between-probability-and-statistics" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-probability-and-statistics"><span>What is the difference between probability and statistics?</span></a></h4>
 <p>Probability tells you how to go from a population to a sample, and statistics tells you how to go from a sample to a population. So if one has a bin with red and blue balls and takes a number of balls from it, statistics estimates how many blue and red balls there could be in the bin. The probability estimates how likely it is that you take specific number of blue and red balls knowing the number of it in the bin.</p>
-<h4 id="enlist-and-explain-the-formulas-of-calculating-number-of-ways-to-sample-a-number-of-elements-r-taken-with-the-number-of-choices-n" tabindex="-1"><a class="header-anchor" href="#enlist-and-explain-the-formulas-of-calculating-number-of-ways-to-sample-a-number-of-elements-r-taken-with-the-number-of-choices-n"><span>Enlist and explain the formulas of calculating number of ways to sample a number of elements r taken with the number of choices n.</span></a></h4>
-<p>There are <strong>permutations</strong>, which represent r samples taken with n choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.</p>
-<p v-pre class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>x</mi><mo>=</mo><mfrac><mrow><mo>−</mo><mi>b</mi><mo>±</mo><msqrt><mrow><msup><mi>b</mi><mn>2</mn></msup><mo>−</mo><mn>4</mn><mi>a</mi><mi>c</mi></mrow></msqrt></mrow><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2764em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5904em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal">a</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">±</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9134em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord"><span class="mord mathnormal">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">4</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span></span></span><span style="top:-2.8734em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
-c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
-c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
-c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
-s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
-c69,-144,104.5,-217.7,106.5,-221
-l0 -0
-c5.3,-9.3,12,-14,20,-14
-H400000v40H845.2724
-s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
-c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
-M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1266em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<h3 id="interview-questions-for-algorithms-and-data-structures" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-algorithms-and-data-structures"><span>Interview questions for algorithms and data structures.</span></a></h3>
-<p><strong>Sources:</strong><br>
-www.wikipedia.com <br>
-www.geeksforgeeks.org <br>
-www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
-www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
-www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm <br>
-www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
-www.vinayakd.com/articles/delete-n-ary-tree-node <br></p>
-<h4 id="what-is-a-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-data-structure"><span>What is a Data Structure?</span></a></h4>
-<p>In computer science, a data structure is a <strong>data organization</strong>, and storage format that is usually chosen <strong>for efficient access</strong> to data.<br></p>
-<h4 id="describe-the-types-of-data-structures" tabindex="-1"><a class="header-anchor" href="#describe-the-types-of-data-structures"><span>Describe the types of Data Structures?</span></a></h4>
+<h4 id="enlist-and-explain-the-formulas-of-calculating-number-of-ways-to-sample-a-number-of-elements-r-taken-with-the-number-of-choices-n" tabindex="-1"><a class="header-anchor" href="#enlist-and-explain-the-formulas-of-calculating-number-of-ways-to-sample-a-number-of-elements-r-taken-with-the-number-of-choices-n"><span>Enlist and explain the formulas of calculating number of ways to sample a number of elements 'r' taken with the number of choices 'n'.</span></a></h4>
+<p>There are <strong>permutations</strong>, which represent 'r' samples taken with 'n' choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.</p>
 <ul>
-<li><strong>Array</strong> - an array is a number of elements in a specific order, typically all of the same type. Elements are accessed using an integer index to specify which element is required.<br></li>
-<li><strong>List</strong> - a linked list is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays.<br></li>
-<li><strong>Record</strong> - a record (also <strong>called tuple</strong> or <strong>struct</strong>) is an <strong>aggregate data structure</strong>. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. <br></li>
-<li><strong>Hash tables</strong> -  also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions.<br></li>
-<li><strong>Graphs</strong> - collections of nodes connected by edges, representing relationships between entities. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic.<br></li>
-<li><strong>Stacks and queues</strong> - abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle.<br></li>
-<li><strong>Trees</strong> - represent a hierarchical organization of elements. A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. <strong>Binary trees</strong> (particularly heaps), <strong>AVL trees</strong>, and <strong>B-trees</strong> are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data.</li>
-<li><strong>Trie</strong> - also known as a <strong>prefix tree</strong>, is a specialized tree data structure used for the efficient retrieval of strings. Tries store characters of a string as nodes, with each edge representing a character. They are particularly useful in text processing scenarios like autocomplete, spell-checking, and dictionary implementations. Tries enable fast searching and prefix-based operations on strings.<br></li>
+<li><strong> Permutations with replacement: </strong></li>
 </ul>
-<h4 id="what-is-a-linear-data-structure-name-a-few-examples" tabindex="-1"><a class="header-anchor" href="#what-is-a-linear-data-structure-name-a-few-examples"><span>What is a Linear Data Structure? Name a few examples.</span></a></h4>
-<p>A data structure is linear if all its elements or data items are arranged in a sequence or a linear order. The elements are stored in a <strong>non-hierarchical way</strong> so that each item has successors and predecessors except the first and last element in the list.
-Examples of linear data structures are <strong>Array</strong>, <strong>Stack</strong>, <strong>Queue</strong>, and <strong>Linked List</strong>.<br></p>
-<h4 id="how-are-the-elements-of-a-2d-array-stored-in-the-memory" tabindex="-1"><a class="header-anchor" href="#how-are-the-elements-of-a-2d-array-stored-in-the-memory"><span>How are the elements of a 2D Array stored in the memory.</span></a></h4>
+<p v-pre class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>n</mi><mi>r</mi></msup></mrow><annotation encoding="application/x-tex">P(n,r) = n^r
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7144em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></p>
 <ul>
-<li><strong>Row-Major Order</strong>: In row-major ordering, the first row of a 2D array is entirely stored in memory, followed by the second row of the array, and so on until the final row.</li>
-<li><strong>Column-Major Order</strong>: In column-major ordering, the first column of the array is entirely saved in memory, followed by the second row of the array, and so on until the last column of the array is fully recorded in the memory.</li>
+<li><strong> Permutations without replacement: </strong></li>
 </ul>
-<h4 id="what-are-some-use-cases-for-row-major-and-column-major-storing-of-2d-arrays" tabindex="-1"><a class="header-anchor" href="#what-are-some-use-cases-for-row-major-and-column-major-storing-of-2d-arrays"><span>What are some use cases for Row-Major and Column-Major storing of 2D Arrays?</span></a></h4>
-<p><strong>Row-Major</strong> stored arrays are more efficient for row-wise access like in <strong>Image Processing</strong>. <strong>Column-Major</strong> stored arrays are more efficient for column-wise access like for <strong>Matrix Multiplication</strong>.<br></p>
-<h4 id="how-can-you-possibly-choose-between-row-major-and-column-major-2d-arrays-storing-implementations" tabindex="-1"><a class="header-anchor" href="#how-can-you-possibly-choose-between-row-major-and-column-major-2d-arrays-storing-implementations"><span>How can you possibly choose between Row-Major and Column-Major 2D Arrays storing implementations?</span></a></h4>
-<p>By choosing a <strong>programming language</strong>. <strong>Row-Major</strong> is implemented in languages like C/C++ and <strong>Column-Major</strong> - in Fortran.</p>
-<h4 id="what-is-a-linked-list-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-linked-list-data-structure"><span>What is a Linked List Data Structure?</span></a></h4>
-<p>It’s a both <strong>linear and non-linear Data Structure</strong>, depending on application, or a sequence of data objects where <strong>elements are not stored in adjacent memory locations</strong>. The elements are linked using pointers to form a chain. Each element is a separate object, called a node.  Each node has two items: a data field and a reference to the next node. The entry point in a linked list is called the head. Where the list is empty, the head is a null reference and the last node has a reference to null. A linked list is a dynamic data structure, where the number of nodes is not fixed, and the list has the ability to grow and shrink on demand.
-It is applied in cases where:</p>
+<p v-pre class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">!</mo></mrow><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mi>r</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">P(n,r) = \frac{n!}{(n-r)!}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3074em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <ul>
-<li>We deal with an unknown number of objects or don’t know how many items are in the list</li>
-<li>We need constant-time insertions/deletions from the list, as in real-time computing where time predictability is critical</li>
-<li>Random access to any elements is not needed</li>
-<li>The algorithm requires a data structure where objects need to be stored irrespective of their physical address in memory</li>
-<li>We need to insert items in the middle of the list as in a priority queue
-<br></li>
+<li><strong> Combinations with replacement: </strong></li>
 </ul>
-<h4 id="are-linked-lists-considered-linear-or-non-linear-data-structures" tabindex="-1"><a class="header-anchor" href="#are-linked-lists-considered-linear-or-non-linear-data-structures"><span>Are Linked Lists considered Linear or Non-linear Data Structures?</span></a></h4>
-<p>Linked lists are considered both linear and non-linear data structures depending upon the application they are used for. When used for access strategies, it is considered as a linear data-structure. When used for data storage, it is considered a non-linear data structure.</p>
-<h4 id="what-are-the-advantages-of-a-linked-list-over-an-array-in-which-scenarios-do-we-use-linked-list-and-when-array" tabindex="-1"><a class="header-anchor" href="#what-are-the-advantages-of-a-linked-list-over-an-array-in-which-scenarios-do-we-use-linked-list-and-when-array"><span>What are the advantages of a Linked List over an Array? In which scenarios do we use Linked List and when Array?</span></a></h4>
-<p>Advantages of a linked list over an array are:</p>
+<p v-pre class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>r</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow><mrow><mi>r</mi><mo stretchy="false">!</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C(n,r) = \frac{(n+r-1)!}{r!(n-1)!}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.363em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">!</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <ul>
-<li>
-<p><strong>Insertion and Deletion</strong><br>
-Insertion and deletion of nodes is an easier process, as we only update the address present in the next pointer of a node. It’s expensive to do the same in an array as the room has to be created for the new elements and existing elements must be shifted.<br></p>
-</li>
-<li>
-<p><strong>Dynamic Data Structure</strong><br>
-As a linked list is a dynamic data structure, there is no need to give an initial size as it can grow and shrink at runtime by allocating and deallocating memory. However, the size is limited in an array as the number of elements is statically stored in the main memory.<br></p>
-</li>
-<li>
-<p><strong>No wastage of Memory</strong><br>
-As the size of a linked list can increase or decrease depending on the demands of the program, and memory is allocated only when required, there is no memory wasted. In the case of an array, there is memory wastage. For instance, if we declare an array of size 10 and store only five elements in it, then the space for five elements is wasted.<br></p>
-</li>
-<li>
-<p><strong>Implementation</strong><br>
-Data structures like stack and queues are more easily implemented using a linked list than an array.<br></p>
-</li>
-<li>
-<p><strong>Some scenarios where we use linked list over array are</strong>:</p>
-<ul>
-<li>When we do not know the upper limit on the number of elements in advance</li>
-<li>When there are a large number of add or remove operations</li>
-<li>When there are no large number of random access to elements</li>
-<li>When we want to insert items in the middle of the list, such as when implementing a priority queue<br></li>
+<li><strong> Combinations without replacement: </strong></li>
 </ul>
-</li>
-<li>
-<p><strong>Some scenarios in which we use array over the linked list are</strong>:</p>
-<ul>
-<li>When we need to index or randomly access elements</li>
-<li>When we know the number of elements in the array beforehand, so we can allocate the correct amount of memory</li>
-<li>When we need speed when iterating through all the elements in the sequence</li>
-<li>When memory is a concern; filled arrays use less memory than linked lists, as each element in the array is the data but each linked list node requires the data as well as one or more pointers to the other elements in the linked list
-<br></li>
-</ul>
-</li>
-</ul>
-<h4 id="what-is-a-doubly-linked-list" tabindex="-1"><a class="header-anchor" href="#what-is-a-doubly-linked-list"><span>What is a Doubly-Linked List?</span></a></h4>
-<p>It is a complex type (double-ended LL) of a linked list in which a node has two links, one that connects to the next node in the sequence and another that connects to the previous node. This allows traversal across the data elements in both directions.<br></p>
-<h4 id="what-are-dynamic-data-structures-name-a-few" tabindex="-1"><a class="header-anchor" href="#what-are-dynamic-data-structures-name-a-few"><span>What are Dynamic Data Structures? Name a few.</span></a></h4>
-<p>They are collections of data in memory that expand and contract to grow or shrink in size as a program runs. This enables the programmer to control exactly how much memory is to be utilized. Examples are the <strong>dynamic array</strong>, <strong>linked list</strong>, <strong>stack</strong>, <strong>queue</strong>, and <strong>heap</strong>.<br></p>
-<h4 id="what-is-a-stack" tabindex="-1"><a class="header-anchor" href="#what-is-a-stack"><span>What is a Stack?</span></a></h4>
-<p>A stack is an abstract data type that specifies a linear data structure, as in a real physical stack or piles where you can only take the top item off the stack in order to remove things. Thus, insertion (push) and deletion (pop) of items take place only at one end called top of the stack, with a particular order: LIFO (Last In First Out) or FILO (First In Last Out).</p>
-<h4 id="where-are-stacks-used" tabindex="-1"><a class="header-anchor" href="#where-are-stacks-used"><span>Where are Stacks used?</span></a></h4>
-<ul>
-<li>Expression, evaluation, or conversion of evaluating prefix, postfix, and infix expressions</li>
-<li>Syntax parsing</li>
-<li>String reversal</li>
-<li>Parenthesis checking</li>
-<li>Backtracking</li>
-</ul>
-<h4 id="what-are-the-operations-that-can-be-performed-on-a-stack" tabindex="-1"><a class="header-anchor" href="#what-are-the-operations-that-can-be-performed-on-a-stack"><span>What are the operations that can be performed on a Stack?</span></a></h4>
-<p>A stack may perform three fundamental operations:</p>
-<ul>
-<li>PUSH: The push action inserts a new element into the stack. The new feature is placed at the top of the stack.</li>
-<li>POP: The pop operation is performed to remove the stack's topmost element.</li>
-<li>PEEK: A peek action returns the value of the stack's topmost element without removing it from the stack.</li>
-</ul>
-<h4 id="what-is-a-queue-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-queue-data-structure"><span>What is a queue Data Structure?</span></a></h4>
-<p>A queue is an abstract data type that specifies a linear data structure or an ordered list,  using the First In First Out (FIFO) operation to access elements. Insert operations can be performed only at one end called REAR and delete operations can be performed only at the other end called FRONT.</p>
-<h4 id="list-some-applications-of-the-queue-data-structure" tabindex="-1"><a class="header-anchor" href="#list-some-applications-of-the-queue-data-structure"><span>List some applications of the Queue Data Structure.</span></a></h4>
-<p>To prioritize jobs as in the following scenarios:</p>
-<ul>
-<li>As waiting lists for a single shared resource (like printer, CPU, call center systems).</li>
-<li>In the asynchronous transfer of data (file IO, sockets).</li>
-</ul>
-<h4 id="what-is-a-dequeue" tabindex="-1"><a class="header-anchor" href="#what-is-a-dequeue"><span>What is a Dequeue?</span></a></h4>
-<p>It is a double-ended queue, or a data structure, where the elements can be inserted or deleted at both ends (FRONT and REAR).</p>
-<h4 id="what-operations-can-be-performed-on-queues" tabindex="-1"><a class="header-anchor" href="#what-operations-can-be-performed-on-queues"><span>What operations can be performed on Queues?</span></a></h4>
-<ul>
-<li>enqueue() adds an element to the end of the queue</li>
-<li>dequeue() removes an element from the front of the queue</li>
-<li>init() is used for initializing the queue</li>
-<li>isEmpty() tests for whether or not the queue is empty</li>
-<li>The front is used to get the value of the first data item but does not remove it</li>
-<li>The rear is used to get the last item from a queue</li>
-</ul>
-<h4 id="define-the-graph-data-structure" tabindex="-1"><a class="header-anchor" href="#define-the-graph-data-structure"><span>Define the Graph Data Structure.</span></a></h4>
-<p>It is a type of non-linear data structure that consists of vertices or nodes connected by edges or arcs to enable storage or retrieval of data. Edges may be directed or undirected.</p>
-<h4 id="what-are-the-applications-of-graph-data-structures" tabindex="-1"><a class="header-anchor" href="#what-are-the-applications-of-graph-data-structures"><span>What are the applications of Graph Data Structures?</span></a></h4>
-<ul>
-<li>Transport grids where stations are represented as vertices and routes as the edges of the graph</li>
-<li>Utility graphs of power or water, where vertices are connection points and edge the wires or pipes connecting them</li>
-<li>Social network graphs to determine the flow of information and hotspots (edges and vertices)</li>
-<li>Neural networks where vertices represent neurons and edge the synapses between them</li>
-</ul>
-<h4 id="list-the-types-of-trees" tabindex="-1"><a class="header-anchor" href="#list-the-types-of-trees"><span>List the types of Trees?</span></a></h4>
-<ul>
-<li>
-<p><strong>The General Tree</strong> <br>
-A tree is referred to as a generic tree if its hierarchy is not constrained. In the General Tree, each node can have an endless number of offspring, and all other trees are subsets of the tree.<br></p>
-</li>
-<li>
-<p><strong>The Binary Tree</strong> <br>
-The binary tree is a type of tree in which each parent has at least two offspring. The children are referred to as the left and right youngsters. This tree is more popular than most others. When specific limitations and features are given to a Binary tree, various trees such as AVL tree, BST (Binary Search Tree), RBT tree, and so on are also utilized. <br></p>
-</li>
-<li>
-<p><strong>Binary Search Tree</strong> <br>
-Binary Search Tree (BST) is a binary tree extension that includes numerous optional constraints. In BST, a node's left child value should be less than or equal to the parent value, while the right child value should always be higher than the parent's value.<br></p>
-</li>
-<li>
-<p><strong>The AVL Tree</strong> <br>
-The AVL tree is a self-balancing binary search tree (automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions). The term AVL is given in honor of the inventors Adelson-Velshi and Landis. This was the first tree to achieve dynamic equilibrium. Each node in the AVL tree is assigned a balancing factor based on whether the tree is balanced or not. The node kids have a maximum height of one AVL vine. Search, insert, delete operations have O(log n) complexity.<br></p>
-</li>
-<li>
-<p><strong>Red and Black Tree</strong> <br>
-Red-black trees are another type of auto-balancing tree. The red-black term is derived from the qualities of the red-black tree, which has either red or black painted on each node. It helps to keep the forest in balance. Even though this tree is not perfectly balanced, the searching process takes just O(log n) time. <br></p>
-</li>
-<li>
-<p><strong>The N-ary Tree</strong> <br>
-In this sort of tree with a node, N is the maximum number of children. A binary tree is a two-year tree since each binary tree node has no more than two offsprings. A full N-ary tree is one in which the children of each node are either 0 or N. <br></p>
-</li>
-<li>
-<p><strong>Octree</strong> <br>
-An octree is a tree data structure in which each internal node has exactly eight children. Octrees are most often used to partition a three-dimensional space by recursively subdividing it into eight octants.</p>
-</li>
-<li>
-<p><strong>Heap</strong> <br>
-A heap is a tree-based data structure that satisfies the heap property: in a max heap, for any given node C, if P is a parent node of C, then the key (the value) of P is greater than or equal to the key of C. In a min heap, the key of P is less than or equal to the key of C.</p>
-</li>
-</ul>
-<h4 id="how-is-a-node-height-in-the-tree-data-structure-determined" tabindex="-1"><a class="header-anchor" href="#how-is-a-node-height-in-the-tree-data-structure-determined"><span>How is a Node Height in the Tree Data Structure determined?</span></a></h4>
-<p>The height of a node is the number of edges from that node to the leaf node (the lowermost node in the hierarchy).</p>
-<h4 id="how-is-a-node-depth-in-the-tree-data-structure-determined" tabindex="-1"><a class="header-anchor" href="#how-is-a-node-depth-in-the-tree-data-structure-determined"><span>How is a Node Depth in the Tree Data Structure determined?</span></a></h4>
-<p>The depth of a node is the number of edges it takes from the root (the uppermost node in the hierarchy) node to that particular node.</p>
-<h4 id="what-is-a-node-degree-in-the-tree-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-node-degree-in-the-tree-data-structure"><span>What is a Node Degree in the Tree Data Structure?</span></a></h4>
-<p>The total number of branches coming out of a node is considered to be the degree of that node.</p>
-<h4 id="what-is-a-forest-in-relation-with-the-tree-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-forest-in-relation-with-the-tree-data-structure"><span>What is a Forest in relation with the Tree Data Structure?</span></a></h4>
-<p>A collection of disconnected trees is called a forest. If you cut the root of a tree, the disjoint trees hence formed make up a forest.</p>
-<h4 id="how-is-a-balanced-binary-tree-determined" tabindex="-1"><a class="header-anchor" href="#how-is-a-balanced-binary-tree-determined"><span>How is a Balanced Binary Tree determined?</span></a></h4>
-<p>A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.</p>
-<h4 id="what-is-a-self-balancing-binary-tree" tabindex="-1"><a class="header-anchor" href="#what-is-a-self-balancing-binary-tree"><span>What is a Self-balancing Binary Tree?</span></a></h4>
-<p>Self-Balancing Binary Search Trees are height-balanced binary search trees that automatically keep the height as small as possible when insertion and deletion operations are performed on the tree. Most prominent examples are AVL Trees and Red-Black Trees.</p>
-<h4 id="what-is-a-b-tree-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-b-tree-data-structure"><span>What is a B-Tree Data Structure?</span></a></h4>
-<p>A B-tree is a sort of self-balancing search tree whereby each node could have more than two children and hold multiple keys.</p>
-<h4 id="explain-what-jagged-array-is" tabindex="-1"><a class="header-anchor" href="#explain-what-jagged-array-is"><span>Explain what Jagged Array is?</span></a></h4>
-<p>It is an array whose elements themselves are arrays and may be of different dimensions and sizes.</p>
-<h4 id="what-is-an-algorithm" tabindex="-1"><a class="header-anchor" href="#what-is-an-algorithm"><span>What is an Algorithm?</span></a></h4>
-<p>An algorithm is a step by step method of solving a problem or manipulating data. It defines a set of instructions to be executed in a certain order to get the desired output.</p>
-<h4 id="what-is-an-asymptotic-analysis-of-an-algorithm" tabindex="-1"><a class="header-anchor" href="#what-is-an-asymptotic-analysis-of-an-algorithm"><span>What is an asymptotic analysis of an algorithm?</span></a></h4>
-<p>Asymptotic analysis is the technique of determining an algorithm's running time in mathematical units to determine the program's limits, also known as &quot;run-time performance.&quot; The purpose is to identify the best case, worst case, and average-case times for completing a particular activity.</p>
-<h4 id="what-are-asymptotic-notations" tabindex="-1"><a class="header-anchor" href="#what-are-asymptotic-notations"><span>What are Asymptotic Notations?</span></a></h4>
-<p>Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.</p>
-<h4 id="what-are-the-common-algorithmic-runtimes-in-big-o-notation" tabindex="-1"><a class="header-anchor" href="#what-are-the-common-algorithmic-runtimes-in-big-o-notation"><span>What are the common algorithmic runtimes in big O notation?</span></a></h4>
-<ul>
-<li><strong>Constant</strong> - O(1) (Insertion in a linked list)</li>
-<li><strong>Logarithmic</strong> - O(log(N)) (Binary Search)</li>
-<li><strong>Linear</strong> - O(N) (Linear Search)</li>
-<li><strong>Polynomial</strong> - O(N^b) (QuickSort with O(N*log(N)))</li>
-<li><strong>Exponential</strong> - O(b^N) (Fibonacci series (each element is a sum of previous two) without Dynamic Programming, (O(N) with dynamic programming))</li>
-<li><strong>Factorial</strong> - O(N!) (Generation of all possible permutations of N objects)</li>
-</ul>
-<h4 id="what-are-basic-operations-on-arrays" tabindex="-1"><a class="header-anchor" href="#what-are-basic-operations-on-arrays"><span>What are basic operations on Arrays?</span></a></h4>
-<ul>
-<li><strong>Traversing</strong> - looping through each element in the array and processing each element one at a time.<br></li>
-<li><strong>Insertion</strong> - the process of adding new elements into an existing array. This can be done by providing an index for where the insertion should occur and then shifting other elements in the array to make space for the insertion.<br></li>
-<li><strong>Deletion</strong> - the opposite of insertion and involves removing elements from an existing array. After deleting an element, all other elements in the array must be shifted to fill any gaps left from deletion.</li>
-<li><strong>Searching</strong> - process of identifying an element from within an array by comparing it to your desired value until you find a match.</li>
-<li><strong>Sorting</strong> - process of arranging elements of an array in either ascending or descending order.</li>
-</ul>
-<h4 id="what-are-the-basic-types-of-searching-describe-their-worst-case-asymptotic-behaviour" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-types-of-searching-describe-their-worst-case-asymptotic-behaviour"><span>What are the basic types of searching? Describe their worst case asymptotic behaviour.</span></a></h4>
-<ul>
-<li><strong>Linear Search</strong> - compares each element one after another until a match is found, or all elements have been searched. It has O(n) time complexity, because in worst case the searched element is the last one, or there is no such elements and you go through whole array.</li>
-<li><strong>Binary Search</strong> - can be done in sorted arrays by comparing the middle element with the target and if they are not equal, the half where the target cannot lie is elemenated. The time complexity is O(log2(N)), because with each step you divide the number of elements N by 2, like N/2, N/4, N/8... until you reach 1. So N/2^k = 1 and thus k = log2(N).</li>
-</ul>
-<h4 id="what-are-some-common-array-sorting-algorithms" tabindex="-1"><a class="header-anchor" href="#what-are-some-common-array-sorting-algorithms"><span>What are some common array sorting algorithms?</span></a></h4>
-<ul>
-<li><strong>PermutationSort</strong> - most ineffective sorting algorithm. It works by generating permutations of an array and checking if it is in the right sorted order. The worst case time complexity is O(?) undefined, since it has no upper bound and could run forever.</li>
-<li><strong>BubbleSort</strong> - simple and easy to understand sorting algorithm. Consists of two loops. In the case of sorting in ascending order, the inner loop goes over elements and if an element is bigger than the next one, they are swapped. The outer loop repeats the procedure. The time complexity is O(N^2). Still too slow for real life problems.</li>
-<li><strong>QuickSort</strong> - the fastest sorting algorithm based on divide and conquer principle. The key process in <strong>QuickSort</strong> is a <strong>Partition</strong>. The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot. Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array. The time complexity is O(N*log(N)).</li>
-<li><strong>InsertionSort</strong> - is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output. Insertion sort is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. Then, you pick a card from the unsorted group and put it in the right place in the sorted group. It has the worst-case time-complexity of O(N^2).</li>
-<li><strong>HeapSort</strong> - is a comparison-based sorting technique based on <strong>Binary Heap</strong> data structure.
-<ul>
-<li>Build a heap from the given input array.</li>
-<li>Repeat the following steps until the heap contains only one element:
-<ul>
-<li>Swap the root element of the heap (which is the largest element) with the last element of the heap.</li>
-<li>Remove the last element of the heap (which is now in the correct position).</li>
-<li>Heapify the remaining elements of the heap in top-down order.</li>
-</ul>
-</li>
-<li>The sorted array is obtained by reversing the order of the elements in the input array.</li>
-</ul>
-</li>
-</ul>
-<h4 id="name-the-main-properties-of-the-basic-operations-on-linked-lists" tabindex="-1"><a class="header-anchor" href="#name-the-main-properties-of-the-basic-operations-on-linked-lists"><span>Name the main properties of the basic operations on linked lists.</span></a></h4>
-<ul>
-<li><strong>Traversing</strong> - this operation has a time complexity of O(N), the same as for arrays. But one can not access elemnts of a linked list by direct indexing.</li>
-<li><strong>Insertion</strong> - this operation has a constant time complexity in contrast to arrays, where the worst case time complexity of the operation is O(N). It needs only to modify pointers in the chain at the place of insertion.</li>
-<li><strong>Deletion</strong> - the mechanism is the same as for <strong>Insertion</strong>.</li>
-<li><strong>Search</strong> - the same as for an Array in the case of an unsorted list, the worst case time complexity of searching an element is O(N). Binary search can be done only for sorted lists.</li>
-<li><strong>Sort</strong> - the same algorithms as for Arrays can be applied for linked lists with the time complexity depending on the chosen algorithm.</li>
-</ul>
-<h4 id="how-can-one-detect-loops-in-a-linked-lists-name-a-few-approaches" tabindex="-1"><a class="header-anchor" href="#how-can-one-detect-loops-in-a-linked-lists-name-a-few-approaches"><span>How can one detect loops in a Linked Lists, name a few approaches?</span></a></h4>
-<ul>
-<li><strong>Floyd's Loop Detection Algorithm</strong> - uses two pointers running over a linked list with different velocities, like first goes over each element, the second jumps over one element. If there are loops in the linked list, the two pointers will be equal at some point in the loop. Otherwise, the both reach the last element in the list.</li>
-<li><strong>Using Hashing</strong> - traverse the linked list and save the calculated hash of each node's adress. If the current node's hash points to one of the previously calculated hashes, then the list has loops. If the last element is reached without pointing to the previous hashes, then there are no loops.</li>
-</ul>
-<h4 id="give-some-examples-of-basic-hash-functions-that-can-be-used-in-hash-table-data-structure" tabindex="-1"><a class="header-anchor" href="#give-some-examples-of-basic-hash-functions-that-can-be-used-in-hash-table-data-structure"><span>Give some examples of basic Hash Functions that can be used in Hash Table Data Structure?</span></a></h4>
-<ul>
-<li><strong>Division</strong> - a modulus function that returns the division remainder is used in this case. A key value is divided by the table length and the remainder is used as an index in the table.</li>
-<li><strong>Mid Square</strong> - in this case the key value is squared and the middle N digits are extracted as a hash value.</li>
-<li><strong>Digit Folding</strong> - divide the key value into a number of parts, where each part has the same number of digits, except for the last one. Addition of the parts gives a hash number.</li>
-<li><strong>Multiplication</strong> - choose a constant value between 0 and 1. Multiply it with the key value. Extract the fractional part of the multiplication product. Multiply it by the hash table length and take the floor of the result. This produces the hash.</li>
-</ul>
-<h4 id="how-can-one-possibly-avoid-hash-collisions-in-hash-tables" tabindex="-1"><a class="header-anchor" href="#how-can-one-possibly-avoid-hash-collisions-in-hash-tables"><span>How can one possibly avoid Hash Collisions in Hash Tables?</span></a></h4>
-<p>One could solve the problem of hash collisions by for example <strong>Linear Probing</strong>. If the calculated index in a hash table is already in use, one just searches for the next empty cell in the table.</p>
-<h4 id="what-are-the-basic-operations-on-hash-tables" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-operations-on-hash-tables"><span>What are the basic operations on Hash Tables?</span></a></h4>
-<ul>
-<li><strong>Search</strong> - compute the hash of a passed key and locate the value by hash code as an array index. If the element is not found use linear probing to get the element ahead.</li>
-<li><strong>Insert</strong> - compute the hash code of a passed key. Use cash code as an index in the array. If the cell is not empty use linear probing to get to the next empty cell.</li>
-<li><strong>Delete</strong> - the same as for previous operations hash code is used as an array index. If the cell is empty use linear probing to get to the element ahead. Once the lement is found store a dummy element there.</li>
-</ul>
-<h4 id="what-is-a-bipartite-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-bipartite-graph"><span>What is a Bipartite Graph?</span></a></h4>
-<p>A bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets U and V, that is, every edge connects a vertex in U to one in V . Vertex sets U and V are usually called the parts of the graph. Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles.</p>
-<h4 id="what-is-a-weighted-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-weighted-graph"><span>What is a Weighted Graph?</span></a></h4>
-<p>A graph whose vertices or edges have been assigned weights. A vertex-weighted graph has weights on its vertices and an edge-weighted graph has weights on its edges.</p>
-<h4 id="what-is-a-directed-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-directed-graph"><span>What is a Directed Graph?</span></a></h4>
-<p>A directed graph (or digraph) is a graph that is made up of a set of vertices connected by directed edges, often called arcs.</p>
-<h4 id="what-is-a-transpose-of-a-directed-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-transpose-of-a-directed-graph"><span>What is a Transpose of a Directed Graph?</span></a></h4>
-<p>Transpose of a directed graph G is another directed graph on the same set of vertices with all of the edges reversed compared to the orientation of the corresponding edges in G.</p>
-<h4 id="what-is-a-strongly-connected-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-strongly-connected-graph"><span>What is a Strongly Connected Graph?</span></a></h4>
-<p>A directed graph is called strongly connected if there is a path from each vertex in the graph to every other vertex.</p>
-<h4 id="what-is-a-minimum-spanning-tree-of-a-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-minimum-spanning-tree-of-a-graph"><span>What is a Minimum Spanning Tree of a Graph?</span></a></h4>
-<p>A minimum spanning tree (MST) is defined as a spanning tree that has the minimum weight among all the possible spanning trees. A <strong>Spanning Tree</strong> is a subset of the edges of the graph that forms a tree (acyclic) where every node of the graph is a part of the tree.</p>
-<h4 id="name-the-ways-of-representing-and-storing-a-graph-data-structure" tabindex="-1"><a class="header-anchor" href="#name-the-ways-of-representing-and-storing-a-graph-data-structure"><span>Name the ways of representing and storing a Graph Data Structure.</span></a></h4>
-<ul>
-<li><strong>Adjacency Matrix</strong> - in this method a graph is represented in the form of a 2D matrix, where rows and columns denote vertices. And the values in the cells describe reletionships (edges) between vertices.</li>
-<li><strong>Adjacency List</strong> - here a Graph is represented as a collection of linked lists. There is an array of pointers for all vertices. Each pointer shows connections to all other vertices in a chain that have edges to the reference vertice.
-When a Graph has a lot of edges, then it is better to represent it in the form of Adjacency Matrix.<br></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"></th>
-<th style="text-align:left"></th>
-<th style="text-align:left"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Action</strong></td>
-<td style="text-align:left"><strong>Adjacency Matrix</strong></td>
-<td style="text-align:left"><strong>Adjacency List</strong></td>
-</tr>
-<tr>
-<td style="text-align:left">Adding Edge</td>
-<td style="text-align:left">O(1)</td>
-<td style="text-align:left">O(1)</td>
-</tr>
-<tr>
-<td style="text-align:left">Removing Edge</td>
-<td style="text-align:left">O(1)</td>
-<td style="text-align:left">O(N)</td>
-</tr>
-<tr>
-<td style="text-align:left">Initializing</td>
-<td style="text-align:left">O(N*N)</td>
-<td style="text-align:left">O(N)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="what-are-the-basic-operations-on-graphs" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-operations-on-graphs"><span>What are the basic operations on Graphs?</span></a></h4>
-<ul>
-<li><strong>Insertion of Nodes/Edges</strong> in the graph.</li>
-<li><strong>Deletion of Nodes/Edges</strong> in the graph.</li>
-<li><strong>Searching on Graphs</strong> – Search an entity in the graph.</li>
-<li><strong>Traversal of Graphs</strong> – Traversing all the nodes in the graph.</li>
-</ul>
-<h4 id="list-the-ways-of-traversing-a-graph" tabindex="-1"><a class="header-anchor" href="#list-the-ways-of-traversing-a-graph"><span>List the ways of Traversing a Graph.</span></a></h4>
-<ul>
-<li><strong>Breadth-First-Search</strong> - is a graph traversal algorithm that explores all the vertices in a graph at the current depth before moving on to the vertices at the next depth level. It starts at a specified vertex and visits all its neighbors before moving on to the next level of neighbors. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.</li>
-<li><strong>Depth-First-Search</strong> - the algorithm starts selecting some arbitrary node as the root node and explores as far as possible along each branch before backtracking. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.</li>
-</ul>
-<h4 id="list-the-main-applications-of-breadth-first-search" tabindex="-1"><a class="header-anchor" href="#list-the-main-applications-of-breadth-first-search"><span>List the main applications of Breadth-First-Search.</span></a></h4>
-<ul>
-<li><strong>Shortest Path Finding</strong> - Breadth-First-Search can be used to find the shortest path between two nodes in an unweighted graph. By keeping track of the parent of each node during the traversal, the shortest path can be reconstructed.</li>
-<li><strong>Cycle Detection</strong> - Breadth-First-Search can be used to detect cycles in a graph. If a node is visited twice during the traversal, it indicates the presence of a cycle.</li>
-<li><strong>Connected Components</strong> - Breadth-First-Search can be used to identify connected components in a graph. Each connected component is a set of nodes that can be reached from each other.</li>
-<li><strong>Topological Sorting</strong> - BFS can be used to perform topological sorting on a directed acyclic graph (DAG). Topological sorting arranges the nodes in a linear order such that for any edge (u, v), u appears before v in the order.</li>
-</ul>
-<h4 id="list-the-main-applications-of-depth-first-search" tabindex="-1"><a class="header-anchor" href="#list-the-main-applications-of-depth-first-search"><span>List the main applications of Depth-First-Search.</span></a></h4>
-<ul>
-<li><strong>Detecting Cycle in a Graph</strong> - A graph has a cycle if and only if we see a back edge during DFS. So we can run DFS for the graph and check for back edges.</li>
-<li><strong>Path Finding</strong> - Depth-First-Search can be used to find a path between any two vertices. Choose one vertex es a start. Use stack in order to save the path between starting and current vertex. As son as destination vertex is reached, return the path.</li>
-<li><strong>Topological Sorting</strong> - the same like for Breadth-First-Search, it is used mainly for jobs scheduling from the given dependencies among jobs.</li>
-<li><strong>Testing if a Graph is Bipartite</strong> - when we first discover a new vertex, color it opposite its parents, and for each other edge, check it doesn’t link two vertices of the same color. The first vertex in any connected component can be red or black.</li>
-<li><strong>Finding Strongly Connected Components in a Graph</strong> - for example brute-force checking if the definition of a strongly connected component fits the vertices of a graph.</li>
-<li><strong>Backtracking</strong> - Depth-first search can be used in backtracking algorithms.</li>
-</ul>
-<h4 id="what-are-the-basic-operations-on-trees-data-structures" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-operations-on-trees-data-structures"><span>What are the basic operations on Trees Data Structures?</span></a></h4>
-<ul>
-<li><strong>Traversal</strong> - a hierarchical data structure like a tree can have different ways of traversal. Simplifying to a <strong>Binary Tree</strong>, one can distinguish between three types of traversal:
-<ol>
-<li><strong>In-order</strong> - it starts with visiting all the nodes in the left subtree. Then visits the root node. And finally, all the nodes in the right subtree are visited.</li>
-<li><strong>Pre-order</strong> - first the root node is visited. Then all the nodes in the left subtree. And finally visits all the nodes in the right subtree.</li>
-<li><strong>Post-order</strong> - starts with the nodes in the left subtree. Visits the nodes in the right subtree. And then visits the root node.</li>
-<li><strong>Level-order</strong> - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.</li>
-</ol>
-</li>
-<li><strong>Insertion</strong> - insertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.</li>
-<li><strong>Search</strong> - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.</li>
-<li><strong>Deletion</strong> - during deletion there are 4 options to look at, the node either:
-<ol>
-<li>Is a leaf node (has no children).</li>
-<li>Has only one child, which then will take place of the deleted one.</li>
-<li>Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.</li>
-<li>Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.</li>
-</ol>
-</li>
-</ul>
-<h4 id="explain-the-mechanism-of-self-balancing-in-avl-trees" tabindex="-1"><a class="header-anchor" href="#explain-the-mechanism-of-self-balancing-in-avl-trees"><span>Explain the mechanism of Self-Balancing in AVL Trees.</span></a></h4>
-<p>First the <strong>Balance Factor</strong> of all nodes is calculated as a difference between the height of the left branch and the height of the right branch. If the balance factor is -1,0 or 1 then the tree is balanced, otherwise left and right rotations of the nodes must be done in order to shorten the height of branches with single nodes. During rotations the fundamental property of binary trees must be satisfied that the right child node is bigger than the parent and the left one is smaller. After rotations balance factors are calculated again and if they are -1,0 or 1 a new element can be inserted. Otherwise rotations are conducted further until balanced state is achieved.</p>
-<h4 id="explain-the-mechanism-of-self-balancing-in-red-black-trees" tabindex="-1"><a class="header-anchor" href="#explain-the-mechanism-of-self-balancing-in-red-black-trees"><span>Explain the mechanism of Self-Balancing in Red-Black Trees.</span></a></h4>
-<p>The fundamental rules of Red-Black Trees are:<br>
-1. Every node has a color either red or black.<br>
-2. The root of the tree is always black.<br>
-3. There are no two adjacent red nodes (A red node cannot have a red parent or red child).<br>
-4. Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.<br>
-5. Every leaf (e.i. NULL node) must be colored BLACK.<br>
-After insertion two basic operations are used in order to ensure the balance: <strong>Rotation and Recolouring</strong>. First, an element is inserted like in general binary trees and coloured red. One tries first the recolouring during balancing and if it does not work, rotations are conducted. If the new node (<strong>child</strong>) appears to be the root it is recoloured in black (see properties). Check the colour of the parent (<strong>father</strong>) node. If it is black then left the colour of the child node as red. If the father is also red, check the colour of its opposite node (<strong>uncle</strong>) on the same level. If the color of this node is also red then change both father and uncle nodes to black and the <strong>grandfather</strong> (parent node of father and uncle) to red if its not the root node, otherwise do not change the grandfathers color. Repeat the procedure for grandfather upwards. But if the uncle's color is black then rotations in 4 possible ways are conducted untill one can recolour the new arrangement of the nodes.</p>
-<h4 id="what-is-recursion" tabindex="-1"><a class="header-anchor" href="#what-is-recursion"><span>What is Recursion?</span></a></h4>
-<p>Recursion is defined as a process which calls itself directly or indirectly and the corresponding function is called a recursive function. As an example calculation of Fibonacci series can be formulated in the form of Recursion, like F(n) = F(n-1) + F(n-2), for n &gt;= 2.</p>
-<h4 id="what-is-dynamic-programming" tabindex="-1"><a class="header-anchor" href="#what-is-dynamic-programming"><span>What is Dynamic Programming?</span></a></h4>
-<p>Dynamic Programming is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems.</p>
-<h4 id="what-is-linear-programming" tabindex="-1"><a class="header-anchor" href="#what-is-linear-programming"><span>What is Linear Programming?</span></a></h4>
-<p>Linear programming is the technique used for optimizing a particular scenario. Using linear programming provides us with the best possible outcome in a given situation. It uses all the available resources in a manner such that they produce the optimum result. Problems like Transportation, manufacturing and diet can be solved by this approach. <br>
-A linear programming problem consits of <strong>Decision Variables</strong>, <strong>Objective Function</strong>, <strong>Constraints</strong> and <strong>Non-negative Restrictions</strong>.
-Decision variables are the variables x, and y, which decide the output of the linear programming problem and represent the final solution.
-The objective function, generally represented by Z, is the linear function that needs to be optimized according to the given condition to get the final solution. The restrictions imposed on decision variables that limit their values are called constraints.
-Now, the general formula of a linear programming problem is:<br>
-Objective Function: Z = ax + by <br>
-Constraints: cx + dy ≥ e, px + qy ≤ r <br>
-Non-Negative restrictions: x ≥ 0, y ≥ 0 <br>
-The methods of solving linear programming problems are <strong>Simplex</strong> and <strong>Graphical</strong>.</p>
-<p>Steps for the <strong>Simplex Method</strong> are:</p>
-<p>Step 1: Formulate the linear programming problems based on the given constraints.</p>
-<p>Step 2: Convert all the given inequalities to equations or equalities of the linear programming problems by adding the slack variable to each inequality where ever required.</p>
-<p>Step 3: Construct the initial simplex table. By representing each constraint equation in a row and writing the objective function at the bottom row. The table so obtained is called the Simplex table.</p>
-<p>Step 4: Identify the greatest negative entry in the bottom row the column of the element with the highest negative entry is called the pivot column</p>
-<p>Step 5: Divide the entries of the right-most column with the entries of the respective pivot column, excluding the entries of the bottommost row. Now the row containing the least entry is called the pivot row. The pivot element is obtained by the intersection of the pivot row and the pivot column.</p>
-<p>Step 6: Using matrix operation and with the help of the pivot element make all the entries in the pivot column to be zero.</p>
-<p>Step 7: Check for the non-negative entries in the bottommost row if there are no negative entries in the bottom row, end the process else start the process again from step 4.</p>
-<p>Step 8: The final simplex table so obtained gives the solution to our problem.</p>
-<p>Steps for the <strong>Graphical Method</strong> are:</p>
-<p>Step 1: First convert the inequations into normal equations.</p>
-<p>Step 2: Find the points at which equations cut the x-axis and y-axis. To find the point of intersection of the x-axis put y = 0 in the respective equation and find the point. Similarly for y-axis intersection points put x = 0 in the respective equation.</p>
-<p>Step 3: Draw the lines cutting the x-axis and y-axis.</p>
-<p>Step 4: The region will include an area region enclosed by two axes and all lines including the origin.</p>
-<p>Step 5: Find Z for each intersection point and thus maxima and minima.</p>
-<h4 id="what-is-backtracking" tabindex="-1"><a class="header-anchor" href="#what-is-backtracking"><span>What is Backtracking?</span></a></h4>
-<p>Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku.</p>
-<h4 id="what-is-a-greedy-algorithm" tabindex="-1"><a class="header-anchor" href="#what-is-a-greedy-algorithm"><span>What is a Greedy Algorithm?</span></a></h4>
-<p>Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.</p>
+<p v-pre class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>C</mi><mo stretchy="false">(</mo><mi>n</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">!</mo></mrow><mrow><mi>r</mi><mo stretchy="false">!</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mi>r</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C(n,r) = \frac{n!}{r!(n-r)!}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3074em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">!</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">)!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
 <h3 id="interview-questions-for-databases" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-databases"><span>Interview questions for Databases.</span></a></h3>
 <p><strong>Sources:</strong> <br>
 www.softwaretestinghelp.com/database-interview-questions/ <br>
@@ -1231,6 +835,1079 @@ An impedance mismatch arises when data is fetched from or inserted into a databa
 </ul>
 <h4 id="can-normalization-be-used-in-a-nosql-database" tabindex="-1"><a class="header-anchor" href="#can-normalization-be-used-in-a-nosql-database"><span>Can Normalization be used in a NoSQL Database?</span></a></h4>
 <p>Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields.</p>
+<h3 id="interview-questions-for-python" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-python"><span>Interview questions for Python.</span></a></h3>
+<p><strong>Sources:</strong><br>
+www.interviewbit.com/python-interview-questions/ <br>
+www.geeksforgeeks.org/python-interview-questions/ <br></p>
+<h4 id="what-is-python-what-are-the-benfits-of-using-it" tabindex="-1"><a class="header-anchor" href="#what-is-python-what-are-the-benfits-of-using-it"><span>What is Python? What are the benfits of using it?</span></a></h4>
+<p>Python is a high-level, interpreted, dynamically typed, general-purpose programming language. It can be used to build almost any type of application with the right tools/libraries. Python supports objects, modules, threads, exception-handling, and automatic memory management which help in modelling real-world problems and building applications to solve these problems.<br>
+Benefits of using Python:</p>
+<ul>
+<li>Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes readability and therefore reduces the cost of program maintenance. Moreover, the language is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.</li>
+<li>Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community of developers for Rapid Application Development and deployment.</li>
+</ul>
+<h4 id="explain-interpreted-programming-language" tabindex="-1"><a class="header-anchor" href="#explain-interpreted-programming-language"><span>Explain Interpreted Programming Language.</span></a></h4>
+<p>An interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.</p>
+<h4 id="what-is-a-dynamically-typed-language" tabindex="-1"><a class="header-anchor" href="#what-is-a-dynamically-typed-language"><span>What is a dynamically typed language?</span></a></h4>
+<p>Typing refers to type-checking in programming languages. In a strongly-typed language, such as Python, &quot;1&quot; + 2 will result in a type error since these languages don't allow for &quot;type-coercion&quot; (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output &quot;12&quot; as a result.<br>
+Type-checking can be done at two stages:</p>
+<ul>
+<li>Static - Data Types are checked before execution.</li>
+<li>Dynamic - Data Types are checked during execution.<br></li>
+</ul>
+<p>Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.</p>
+<h4 id="what-is-pep-8-and-why-is-it-important" tabindex="-1"><a class="header-anchor" href="#what-is-pep-8-and-why-is-it-important"><span>What is PEP 8 and why is it important?</span></a></h4>
+<p>PEP stands for <strong>Python Enhancement Proposal</strong>. A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes. PEP 8 is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.</p>
+<h4 id="what-is-scope-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-scope-in-python"><span>What is Scope in Python?</span></a></h4>
+<p>Every object in Python functions within a scope. A scope is a block of code where an object in Python remains relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have a scope defined for them where you could use their objects without any prefix. A few examples of scope created during code execution in Python are as follows:</p>
+<ul>
+<li>A <strong>Local Scope</strong> refers to the local objects available in the current function.</li>
+<li>A <strong>Global Scope</strong> refers to the objects available throughout the code execution since their inception.</li>
+<li>A <strong>Module-level Scope</strong> refers to the global objects of the current module accessible in the program.</li>
+<li>An <strong>Outermost Scope</strong> refers to all the built-in names callable in the program. The objects in this scope are searched last to find the name referenced.</li>
+</ul>
+<h4 id="what-is-the-difference-between-mutable-and-immutable-data-types-in-pyhon" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-mutable-and-immutable-data-types-in-pyhon"><span>What is the difference between Mutable and Immutable Data Types in Pyhon?</span></a></h4>
+<p>Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc. Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, Byte and all single value built-in types.</p>
+<h4 id="what-are-lists-and-tuples-what-is-the-key-difference-between-the-two" tabindex="-1"><a class="header-anchor" href="#what-are-lists-and-tuples-what-is-the-key-difference-between-the-two"><span>What are lists and tuples? What is the key difference between the two?</span></a></h4>
+<p>Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects stored in both sequences can have different data types. Lists are represented with square brackets ['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97). The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner.</p>
+<h4 id="what-are-the-common-built-in-data-types-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-the-common-built-in-data-types-in-python"><span>What are the common built-in data types in Python?</span></a></h4>
+<p>There are several built-in data types in Python. Although, Python doesn't require data types to be defined explicitly during variable declarations type errors are likely to occur if the knowledge of data types and their compatibility with each other are neglected. Python provides <code v-pre>type()</code> and <code v-pre>isinstance()</code> functions to check the type of these variables. These data types can be grouped into the following categories:</p>
+<ul>
+<li><strong>None Type:</strong> represents the null values in Python. Boolean equality operation can be performed using these NoneType objects.</li>
+<li><strong>Numeric Types:</strong> there are three distinct numeric types - <strong>integers</strong>, <strong>floating-point numbers</strong>, and <strong>complex numbers</strong>. Additionally, <strong>booleans</strong> are a sub-type of integers.</li>
+<li><strong>Sequence Types:</strong> there are four kinds of sequence data types: <strong>list</strong> (matable), <strong>tuple</strong> (immutable), <strong>range</strong> (immutable) and <strong>str</strong>(immutable).</li>
+<li><strong>Mapping Types:</strong> <strong>dict</strong> (dictionary) is mutable data type that stores key-value pairs. Implemented as a <strong>Hash Map</strong>.</li>
+<li><strong>Set Types:</strong> Currently, Python has two built-in types - <strong>set</strong> and <strong>frozenset</strong>. <strong>set</strong> type is mutable and supports methods like add() and remove(). <strong>frozenset</strong> type is immutable and can't be modified after creation.</li>
+<li><strong>Modules:</strong> is an additional built-in type supported by the Python Interpreter. It supports one special operation, i.e., attribute access: <code v-pre>mymod.myobj</code>, where <code v-pre>mymod</code> is a module and <code v-pre>myobj</code> references a name defined in m's symbol table. The module's symbol table resides in a very special attribute of the module <strong>dict</strong>, but direct assignment to this module is neither possible nor recommended.</li>
+<li><strong>Callable Types:</strong> Callable types are the types to which function call can be applied. They can be <strong>user-defined functions</strong>, <strong>instance methods</strong>, <strong>generator functions</strong> and some other built-in functions, methods and classes.</li>
+</ul>
+<h4 id="what-is-pass-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-pass-in-python"><span>What is <code v-pre>pass</code> in Python?</span></a></h4>
+<p>The <code v-pre>pass</code> keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may execute during runtime but has yet to be written.</p>
+<h4 id="how-are-arguments-passed-by-value-or-by-reference-in-python" tabindex="-1"><a class="header-anchor" href="#how-are-arguments-passed-by-value-or-by-reference-in-python"><span>How are arguments passed by value or by reference in Python?</span></a></h4>
+<p>Everything in Python is an object and all variables hold references to the objects. The reference values are according to the functions; as a result, you cannot change the value of the references. However, you can change the objects if it is mutable.</p>
+<h4 id="what-is-list-comprehension-give-an-example" tabindex="-1"><a class="header-anchor" href="#what-is-list-comprehension-give-an-example"><span>What is List Comprehension? Give an Example.</span></a></h4>
+<p>List comprehension is a syntax construction to ease the creation of a list based on existing iterable.<br>
+For Example:<br></p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">my_list <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h4 id="what-is-a-lambda-function" tabindex="-1"><a class="header-anchor" href="#what-is-a-lambda-function"><span>What is a lambda function?</span></a></h4>
+<p>A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement. <br>
+For Example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">a <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y <span class="token punctuation">:</span> x<span class="token operator">*</span>y</span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-is-the-difference-between-and-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-and-in-python"><span>What is the difference between / and // in Python?</span></a></h4>
+<p><code v-pre>/</code> represents precise division (result is a floating point number) whereas <code v-pre>//</code> represents floor division (result is an integer).<br>
+For Example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token number">5</span><span class="token operator">//</span><span class="token number">2</span> <span class="token operator">=</span> <span class="token number">2</span></span>
+<span class="line"><span class="token number">5</span><span class="token operator">/</span><span class="token number">2</span> <span class="token operator">=</span> <span class="token number">2.5</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-is-exceptional-handling-done-in-python" tabindex="-1"><a class="header-anchor" href="#how-is-exceptional-handling-done-in-python"><span>How is Exceptional handling done in Python?</span></a></h4>
+<p>There are 3 main keywords i.e. <code v-pre>try</code>, <code v-pre>except</code>, and <code v-pre>finally</code> which are used to catch exceptions and handle the recovering mechanism accordingly. <code v-pre>try</code> is the block of a code that is monitored for errors. Except block gets executed when an error occurs.<br>
+The beauty of the <code v-pre>final</code> block is to execute the code after trying for an error. This block gets executed irrespective of whether an error occurred or not. <code v-pre>final</code> block is used to do the required cleanup activities of objects/variables.</p>
+<h4 id="what-is-swapcase-function-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-swapcase-function-in-python"><span>What is swapcase function in Python?</span></a></h4>
+<p>It is a string’s function that converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. <br>
+For Example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">string <span class="token operator">=</span> <span class="token string">"PythonRules"</span></span>
+<span class="line">string<span class="token punctuation">.</span>swapcase<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> <span class="token string">"pYTHONrULES"</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="can-we-pass-a-function-as-an-argument-in-python" tabindex="-1"><a class="header-anchor" href="#can-we-pass-a-function-as-an-argument-in-python"><span>Can we pass a function as an argument in Python?</span></a></h4>
+<p>Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments.</p>
+<h4 id="what-are-args-and-kwargs" tabindex="-1"><a class="header-anchor" href="#what-are-args-and-kwargs"><span>What are <code v-pre>*args</code> and <code v-pre>*kwargs</code>?</span></a></h4>
+<p>To pass a variable number of arguments to a function in Python, use the special syntax <code v-pre>*args</code> and <code v-pre>**kwargs</code> in the function specification. It is used to pass a variable-length, keyword-free argument list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations on it such as iterating over it and using higher-order operations like map and filter.</p>
+<h4 id="is-indentation-required-in-python" tabindex="-1"><a class="header-anchor" href="#is-indentation-required-in-python"><span>Is Indentation Required in Python?</span></a></h4>
+<p>Yes, indentation is required in Python. A Python interpreter can be informed that a group of statements belongs to a specific block of code by using Python indentation. Indentations make the code easy to read for developers in all programming languages but in Python, it is very important to indent the code in a specific order.</p>
+<h4 id="what-is-docstring-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-docstring-in-python"><span>What is docstring in Python?</span></a></h4>
+<p>Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods.</p>
+<ul>
+<li><strong>Declaring Docstrings:</strong> The docstrings are declared using ”’triple single quotes”’ or “””triple double quotes””” just below the class, method, or function declaration. All functions should have a docstring.</li>
+<li><strong>Accessing Docstrings:</strong> The docstrings can be accessed using the <code v-pre>__doc__</code> method of the object or using the help function.</li>
+</ul>
+<h4 id="what-is-a-break-continue-and-pass-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-a-break-continue-and-pass-in-python"><span>What is a <code v-pre>break</code>, <code v-pre>continue</code>, and <code v-pre>pass</code> in Python?</span></a></h4>
+<p>The <code v-pre>break</code> statement is used to terminate the loop or statement in which it is present. After that, the control will pass to the statements that are present after the break statement, if available.<br>
+<code v-pre>continue</code> is also a loop control statement just like the break statement. <code v-pre>continue</code> statement is opposite to that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the loop.<br>
+<code v-pre>pass</code> means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there.</p>
+<h4 id="how-do-you-floor-a-number-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-floor-a-number-in-python"><span>How do you floor a number in Python?</span></a></h4>
+<p>The Python math module includes a method that can be used to calculate the floor of a number.</p>
+<ul>
+<li><code v-pre>floor()</code> method in Python returns the floor of x i.e., the largest integer not greater than x.</li>
+<li>Also, The method <code v-pre>ceil(x)</code> in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x.</li>
+</ul>
+<h4 id="what-are-global-protected-and-private-attributes-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-global-protected-and-private-attributes-in-python"><span>What are global, protected and private attributes in Python?</span></a></h4>
+<ul>
+<li><strong>Global</strong> variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.</li>
+<li><strong>Protected</strong> attributes are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.</li>
+<li><strong>Private</strong> attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made.</li>
+</ul>
+<h4 id="what-is-the-use-of-self-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-the-use-of-self-in-python"><span>What is the use of <code v-pre>self</code> in Python?</span></a></h4>
+<p><code v-pre>self</code> is used to represent the instance of the class. With this keyword, you can access the attributes and methods of an object inside the class definition in Python.</p>
+<h4 id="what-is-init-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-init-in-python"><span>What is <code v-pre>__init__</code> in Python?</span></a></h4>
+<p><code v-pre>__init__</code> is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a <code v-pre>__init__</code> method associated with them. It helps in distinguishing methods and attributes of a class from local variables.</p>
+<h4 id="what-is-slicing-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-slicing-in-python"><span>What is slicing in Python?</span></a></h4>
+<ul>
+<li>As the name suggests, ‘slicing’ is taking parts of a container.</li>
+<li>Syntax for slicing is <code v-pre>[start : stop : step]</code></li>
+<li><code v-pre>start</code> is the starting index from where to slice a list or tuple</li>
+<li><code v-pre>stop</code> is the ending index or where to stop.</li>
+<li><code v-pre>step</code> is the number of steps to jump.</li>
+<li>Default value for start is 0, stop is number of items, step is 1.</li>
+<li>Slicing can be done on strings, arrays, lists, and tuples.</li>
+</ul>
+<h4 id="what-is-the-difference-between-python-arrays-and-lists" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-python-arrays-and-lists"><span>What is the difference between Python Arrays and Lists?</span></a></h4>
+<ul>
+<li><strong>Arrays</strong> in Python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.</li>
+<li><strong>Lists</strong> in Python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.<br>
+Example:</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> array</span>
+<span class="line">a <span class="token operator">=</span> array<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span></span>
+<span class="line">    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">)</span>    <span class="token comment">#OUTPUT: 1 2 3</span></span>
+<span class="line">a <span class="token operator">=</span> array<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'string'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token comment">#OUTPUT: TypeError: an integer is required (got type str)</span></span>
+<span class="line">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'string'</span><span class="token punctuation">]</span></span>
+<span class="line"><span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">)</span>    <span class="token comment">#OUTPUT: 1 2 string</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-is-memory-managed-in-python" tabindex="-1"><a class="header-anchor" href="#how-is-memory-managed-in-python"><span>How is memory managed in Python?</span></a></h4>
+<ul>
+<li>Memory management in Python is handled by the Python Memory Manager. The memory allocated by the manager is in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being private, it is inaccessible to the programmer. Though, python does provide some core API functions to work upon the private heap space.</li>
+<li>Additionally, Python has an in-built garbage collection to recycle the unused memory for the private heap space.</li>
+</ul>
+<h4 id="what-are-python-namespaces-why-are-they-used" tabindex="-1"><a class="header-anchor" href="#what-are-python-namespaces-why-are-they-used"><span>What are Python namespaces? Why are they used?</span></a></h4>
+<p>A namespace in Python ensures that object names in a program are unique and can be used without any conflict. Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding 'object as value'. This allows for multiple namespaces to use the same name and map it to a separate object. A few examples of namespaces are as follows:</p>
+<ul>
+<li><strong>Local Namespace</strong> includes local names inside a function. The namespace is temporarily created for a function call and gets cleared when the function returns.</li>
+<li><strong>Global Namespace</strong> includes names from various imported packages/ modules that are being used in the current project. This namespace is created when the package is imported in the script and lasts until the execution of the script.</li>
+<li><strong>Built-in Namespace</strong> includes built-in functions of core Python and built-in names for various types of exceptions.</li>
+</ul>
+<p>The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.</p>
+<h4 id="what-are-decorators-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-decorators-in-python"><span>What are Decorators in Python?</span></a></h4>
+<p>Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. They are represented the <code v-pre>@decorator_name</code> in Python and are called in a bottom-up fashion. <br>
+For example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># decorator function to convert to lowercase</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">lowercase_decorator</span><span class="token punctuation">(</span>function<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       func <span class="token operator">=</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       string_lowercase <span class="token operator">=</span> func<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       <span class="token keyword">return</span> string_lowercase</span>
+<span class="line">   <span class="token keyword">return</span> wrapper</span>
+<span class="line"><span class="token comment"># decorator function to split words</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">splitter_decorator</span><span class="token punctuation">(</span>function<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       func <span class="token operator">=</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       string_split <span class="token operator">=</span> func<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       <span class="token keyword">return</span> string_split</span>
+<span class="line">   <span class="token keyword">return</span> wrapper</span>
+<span class="line"><span class="token decorator annotation punctuation">@splitter_decorator</span> <span class="token comment"># this is executed next</span></span>
+<span class="line"><span class="token decorator annotation punctuation">@lowercase_decorator</span> <span class="token comment"># this is executed first</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">return</span> <span class="token string">'Hello World'</span></span>
+<span class="line">hello<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment"># output => [ 'hello' , 'world' ]</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope.</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># decorator function to capitalize names</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">names_decorator</span><span class="token punctuation">(</span>function<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       arg1 <span class="token operator">=</span> arg1<span class="token punctuation">.</span>capitalize<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       arg2 <span class="token operator">=</span> arg2<span class="token punctuation">.</span>capitalize<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       string_hello <span class="token operator">=</span> function<span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span></span>
+<span class="line">       <span class="token keyword">return</span> string_hello</span>
+<span class="line">   <span class="token keyword">return</span> wrapper</span>
+<span class="line"><span class="token decorator annotation punctuation">@names_decorator</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">say_hello</span><span class="token punctuation">(</span>name1<span class="token punctuation">,</span> name2<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">return</span> <span class="token string">'Hello '</span> <span class="token operator">+</span> name1 <span class="token operator">+</span> <span class="token string">'! Hello '</span> <span class="token operator">+</span> name2 <span class="token operator">+</span> <span class="token string">'!'</span></span>
+<span class="line">say_hello<span class="token punctuation">(</span><span class="token string">'sara'</span><span class="token punctuation">,</span> <span class="token string">'ansh'</span><span class="token punctuation">)</span>   <span class="token comment"># output => 'Hello Sara! Hello Ansh!'</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-do-you-copy-an-object-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-copy-an-object-in-python"><span>How do you copy an object in Python?</span></a></h4>
+<p>In Python, the assignment statement (<code v-pre>=</code> operator) does not copy objects. Instead, it creates a binding between the existing object and the target variable name. To create copies of an object in Python, we need to use the copy module. Moreover, there are two ways of creating copies for the given object using the <code v-pre>copy</code> module:</p>
+<ul>
+<li><strong>Shallow Copy</strong> is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.</li>
+<li><strong>Deep Copy</strong> copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.<br>
+Examples:</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">from</span> copy <span class="token keyword">import</span> copy<span class="token punctuation">,</span> deepcopy</span>
+<span class="line">list_1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span></span>
+<span class="line"><span class="token comment">## shallow copy</span></span>
+<span class="line">list_2 <span class="token operator">=</span> copy<span class="token punctuation">(</span>list_1<span class="token punctuation">)</span> </span>
+<span class="line">list_2<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">7</span></span>
+<span class="line">list_2<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span></span>
+<span class="line">list_2    <span class="token comment"># output => [1, 2, [3, 5, 6], 7]</span></span>
+<span class="line">list_1    <span class="token comment"># output => [1, 2, [3, 5, 6], 4]</span></span>
+<span class="line"><span class="token comment">## deep copy</span></span>
+<span class="line">list_3 <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>list_1<span class="token punctuation">)</span></span>
+<span class="line">list_3<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">8</span></span>
+<span class="line">list_3<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span></span>
+<span class="line">list_3    <span class="token comment"># output => [1, 2, [3, 5, 6, 7], 8]</span></span>
+<span class="line">list_1    <span class="token comment"># output => [1, 2, [3, 5, 6], 4]</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-is-pickling-and-unpickling" tabindex="-1"><a class="header-anchor" href="#what-is-pickling-and-unpickling"><span>What is pickling and unpickling?</span></a></h4>
+<p>Python library <code v-pre>pickle</code> offers a feature - serialization out of the box. Serializing an object refers to transforming it into a format that can be stored, so as to be able to deserialize it, later on, to obtain the original object. Here, the pickle module comes into play.</p>
+<h4 id="what-are-generators-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-generators-in-python"><span>What are Generators in Python?</span></a></h4>
+<p>Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of ´´yield´´ keyword rather than ´´return`` to return a generator object.<br>
+Let's try and build a generator for fibonacci numbers:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment">## generate fibonacci numbers upto n</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   p<span class="token punctuation">,</span> q <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span></span>
+<span class="line">   <span class="token keyword">while</span><span class="token punctuation">(</span>p <span class="token operator">&lt;</span> n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">yield</span> p</span>
+<span class="line">       p<span class="token punctuation">,</span> q <span class="token operator">=</span> q<span class="token punctuation">,</span> p <span class="token operator">+</span> q</span>
+<span class="line">x <span class="token operator">=</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>    <span class="token comment"># create generator object </span></span>
+<span class="line"> </span>
+<span class="line"><span class="token comment">## iterating using __next__(), for Python2, use next()</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 0</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 1</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 1</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 2</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 3</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 5</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 8</span></span>
+<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># error</span></span>
+<span class="line"> </span>
+<span class="line"><span class="token comment">## iterating using loop</span></span>
+<span class="line"><span class="token keyword">for</span> i <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>    <span class="token comment"># output => 0 1 1 2 3 5 8</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-is-the-difference-between-py-and-pyc-files" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-py-and-pyc-files"><span>What is the difference between .py and .pyc files?</span></a></h4>
+<ul>
+<li>.py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program. We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.</li>
+<li>Before executing a python program python interpreter checks for the compiled files. If the file is present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles it to .pyc file and then python virtual machine executes it.</li>
+<li>Having .pyc file saves you the compilation time.</li>
+</ul>
+<h4 id="how-python-is-interpreted" tabindex="-1"><a class="header-anchor" href="#how-python-is-interpreted"><span>How Python is interpreted?</span></a></h4>
+<ul>
+<li>Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation. Python is a bytecode(set of interpreter readable instructions) interpreted generally.</li>
+<li>Source code is a file with .py extension.</li>
+<li>Python compiles the source code to a set of instructions for a virtual machine. The Python interpreter is an implementation of that virtual machine. This intermediate format is called “bytecode”.</li>
+<li>.py source code is first compiled to give .pyc which is bytecode. This bytecode can be then interpreted by the official CPython or JIT(Just in Time compiler) compiled by PyPy.</li>
+</ul>
+<h4 id="what-are-iterators-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-iterators-in-python"><span>What are iterators in Python?</span></a></h4>
+<ul>
+<li>An iterator is an object.</li>
+<li>It remembers its state i.e., where it is during iteration (see code below to see how)</li>
+<li><code v-pre>__iter__()</code> method initializes an iterator.</li>
+<li>It has a <code v-pre>__next__()</code> method which returns the next item in iteration and points to the next element. Upon reaching the end of iterable object <code v-pre>__next__()</code> must return StopIteration exception.</li>
+<li>It is also self-iterable.</li>
+<li>Iterators are objects with which we can iterate over iterable objects like lists, strings, etc.<br></li>
+</ul>
+<p>Example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">ArrayList</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> number_list<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>numbers <span class="token operator">=</span> number_list</span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__iter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token number">0</span></span>
+<span class="line">       <span class="token keyword">return</span> self</span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__next__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">if</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>pos <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>numbers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">           self<span class="token punctuation">.</span>pos <span class="token operator">+=</span> <span class="token number">1</span></span>
+<span class="line">           <span class="token keyword">return</span> self<span class="token punctuation">.</span>numbers<span class="token punctuation">[</span>self<span class="token punctuation">.</span>pos <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span></span>
+<span class="line">       <span class="token keyword">else</span><span class="token punctuation">:</span></span>
+<span class="line">           <span class="token keyword">raise</span> StopIteration</span>
+<span class="line">array_obj <span class="token operator">=</span> ArrayList<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span></span>
+<span class="line">it <span class="token operator">=</span> <span class="token builtin">iter</span><span class="token punctuation">(</span>array_obj<span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#output: 2</span></span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#output: 3</span></span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line"><span class="token comment">#Throws Exception</span></span>
+<span class="line"><span class="token comment">#Traceback (most recent call last):</span></span>
+<span class="line"><span class="token comment">#...</span></span>
+<span class="line"><span class="token comment">#StopIteration</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-are-negative-indexes-and-why-are-they-used" tabindex="-1"><a class="header-anchor" href="#what-are-negative-indexes-and-why-are-they-used"><span>What are negative indexes and why are they used?</span></a></h4>
+<ul>
+<li>Negative indexes are the indexes from the end of the list or tuple or string.</li>
+<li>Arr[-1] means the last element of array Arr[]. <br></li>
+</ul>
+<p>Example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span></span>
+<span class="line"><span class="token comment">#get the last element</span></span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#output 6</span></span>
+<span class="line"><span class="token comment">#get the second last element</span></span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#output 5</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="which-sorting-technique-is-used-by-sort-and-sorted-functions-of-python" tabindex="-1"><a class="header-anchor" href="#which-sorting-technique-is-used-by-sort-and-sorted-functions-of-python"><span>Which sorting technique is used by <code v-pre>sort()</code> and <code v-pre>sorted()</code> functions of python?</span></a></h4>
+<p>Python uses the TimSort algorithm for sorting. It’s a stable sorting whose worst case is O(N log N). It’s a hybrid sorting algorithm, derived from MergeSort and InsertionSort, designed to perform well on many kinds of real-world data.</p>
+<h4 id="how-do-you-create-a-class-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-create-a-class-in-python"><span>How do you create a class in Python?</span></a></h4>
+<p>To create a class in python, we use the keyword “class” as shown in the example below:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> emp_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>emp_name <span class="token operator">=</span> emp_name</span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>To instantiate or create an object from the class created above, we do the following:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">emp_1<span class="token operator">=</span>Employee<span class="token punctuation">(</span><span class="token string">"Mr. Employee"</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>To access the name attribute, we just call the attribute using the dot operator as shown below:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>emp_1<span class="token punctuation">.</span>emp_name<span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>To create methods inside the class, we include the methods under the scope of the class as shown below:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> emp_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>emp_name <span class="token operator">=</span> emp_name</span>
+<span class="line">       </span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">introduce</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello I am "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>emp_name<span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>The <code v-pre>self</code> parameter has to be the first parameter of any method defined inside the class. The method of the class <code v-pre>Employee</code> can be accessed as shown below:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">emp_1<span class="token punctuation">.</span>introduce<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h4 id="how-does-inheritance-work-in-python-explain-it-with-an-example" tabindex="-1"><a class="header-anchor" href="#how-does-inheritance-work-in-python-explain-it-with-an-example"><span>How does inheritance work in python? Explain it with an example.</span></a></h4>
+<p>Inheritance gives the power to a class to access all attributes and methods of another class. It aids in code reusability and helps the developer to maintain applications without redundant code. The class inheriting from another class is a child class or also called a derived class. The class from which a child class derives the members are called parent class or superclass.<br>
+Python supports different kinds of inheritance, they are:</p>
+<ul>
+<li><strong>Single Inheritance:</strong> Child class derives members of one parent class.</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Parent class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">ParentClass</span><span class="token punctuation">:</span></span>
+<span class="line">    <span class="token keyword">def</span> <span class="token function">par_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am parent class function"</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Child class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">ChildClass</span><span class="token punctuation">(</span>ParentClass<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">    <span class="token keyword">def</span> <span class="token function">child_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am child class function"</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Driver code</span></span>
+<span class="line">obj1 <span class="token operator">=</span> ChildClass<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj1<span class="token punctuation">.</span>par_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj1<span class="token punctuation">.</span>child_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><strong>Multi-level Inheritance:</strong> The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Parent class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>a_name <span class="token operator">=</span> a_name</span>
+<span class="line">   </span>
+<span class="line"><span class="token comment"># Intermediate class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> b_name<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>b_name <span class="token operator">=</span> b_name</span>
+<span class="line">       <span class="token comment"># invoke constructor of class A</span></span>
+<span class="line">       A<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Child class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">C</span><span class="token punctuation">(</span>B<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>c_name<span class="token punctuation">,</span> b_name<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>c_name <span class="token operator">=</span> c_name</span>
+<span class="line">       <span class="token comment"># invoke constructor of class B</span></span>
+<span class="line">       B<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span> b_name<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span></span>
+<span class="line">       </span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">display_names</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"A name : "</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>a_name<span class="token punctuation">)</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"B name : "</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>b_name<span class="token punctuation">)</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"C name : "</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>c_name<span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment">#  Driver code</span></span>
+<span class="line">obj1 <span class="token operator">=</span> C<span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">,</span> <span class="token string">'intermediate'</span><span class="token punctuation">,</span> <span class="token string">'parent'</span><span class="token punctuation">)</span></span>
+<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>a_name<span class="token punctuation">)</span></span>
+<span class="line">obj1<span class="token punctuation">.</span>display_names<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><strong>Multiple Inheritance:</strong> This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Parent class1</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent1</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">parent1_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hi I am first Parent"</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Parent class2</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent2</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">parent2_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hi I am second Parent"</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Child class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent1<span class="token punctuation">,</span> Parent2<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">child_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>parent1_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">       self<span class="token punctuation">.</span>parent2_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Driver's code</span></span>
+<span class="line">obj1 <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj1<span class="token punctuation">.</span>child_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><strong>Hierarchical Inheritance:</strong> When a parent class is derived by more than one child class, it is called hierarchical inheritance.</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Base class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span></span>
+<span class="line">     <span class="token keyword">def</span> <span class="token function">a_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am from the parent class."</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 1st Derived class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">     <span class="token keyword">def</span> <span class="token function">b_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am from the first child."</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># 2nd Derived class</span></span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">C</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">     <span class="token keyword">def</span> <span class="token function">c_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am from the second child."</span><span class="token punctuation">)</span></span>
+<span class="line"> </span>
+<span class="line"><span class="token comment"># Driver's code</span></span>
+<span class="line">obj1 <span class="token operator">=</span> B<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj2 <span class="token operator">=</span> C<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj1<span class="token punctuation">.</span>a_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj1<span class="token punctuation">.</span>b_func<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">#child 1 method</span></span>
+<span class="line">obj2<span class="token punctuation">.</span>a_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">obj2<span class="token punctuation">.</span>c_func<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">#child 2 method</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-do-you-access-parent-members-in-the-child-class" tabindex="-1"><a class="header-anchor" href="#how-do-you-access-parent-members-in-the-child-class"><span>How do you access parent members in the child class?</span></a></h4>
+<p>Following are the ways using which you can access parent class members within a child class:</p>
+<ul>
+<li><strong>By using Parent class name:</strong> You can use the name of the parent class to access the attributes as shown in the example below:</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  </span>
+<span class="line">   <span class="token comment"># Constructor</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>name <span class="token operator">=</span> name    </span>
+<span class="line"> </span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
+<span class="line">   <span class="token comment"># Constructor</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       Parent<span class="token punctuation">.</span>name <span class="token operator">=</span> name</span>
+<span class="line">       self<span class="token punctuation">.</span>age <span class="token operator">=</span> age</span>
+<span class="line"> </span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">display</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span>Parent<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">)</span></span>
+<span class="line"> </span>
+<span class="line"><span class="token comment"># Driver Code</span></span>
+<span class="line">obj <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token string">"Interviewbit"</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></span>
+<span class="line">obj<span class="token punctuation">.</span>display<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><strong>By using <code v-pre>super()</code>:</strong> The parent class members can be accessed in child class using the <code v-pre>super</code> keyword.</li>
+</ul>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token comment"># Constructor</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">       self<span class="token punctuation">.</span>name <span class="token operator">=</span> name    </span>
+<span class="line"> </span>
+<span class="line"><span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">   <span class="token comment"># Constructor</span></span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>         </span>
+<span class="line">       <span class="token triple-quoted-string string">''' </span>
+<span class="line">       In Python 3.x, we can also use super().__init__(name)</span>
+<span class="line">       '''</span> </span>
+<span class="line">       <span class="token builtin">super</span><span class="token punctuation">(</span>Child<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">)</span></span>
+<span class="line">       self<span class="token punctuation">.</span>age <span class="token operator">=</span> age</span>
+<span class="line"> </span>
+<span class="line">   <span class="token keyword">def</span> <span class="token function">display</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">      <span class="token comment"># Note that Parent.name cant be used </span></span>
+<span class="line">      <span class="token comment"># here since super() is used in the constructor</span></span>
+<span class="line">      <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">)</span></span>
+<span class="line">  </span>
+<span class="line"><span class="token comment"># Driver Code</span></span>
+<span class="line">obj <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token string">"Interviewbit"</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></span>
+<span class="line">obj<span class="token punctuation">.</span>display<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="are-access-specifiers-used-in-python" tabindex="-1"><a class="header-anchor" href="#are-access-specifiers-used-in-python"><span>Are access specifiers used in python?</span></a></h4>
+<p>Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.</p>
+<h4 id="is-it-possible-to-call-parent-class-without-its-instance-creation" tabindex="-1"><a class="header-anchor" href="#is-it-possible-to-call-parent-class-without-its-instance-creation"><span>Is it possible to call parent class without its instance creation?</span></a></h4>
+<p>Yes, it is possible if the base class is instantiated by other child classes or if the base class is a static method.</p>
+<h4 id="how-is-an-empty-class-created-in-python" tabindex="-1"><a class="header-anchor" href="#how-is-an-empty-class-created-in-python"><span>How is an empty class created in python?</span></a></h4>
+<p>An empty class does not have any members defined in it. It is created by using the <code v-pre>pass</code> keyword (the pass command does nothing in python). We can create objects for this class outside the class.</p>
+<h4 id="what-is-polymorphism-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-polymorphism-in-python"><span>What is Polymorphism in Python?</span></a></h4>
+<p>Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism.</p>
+<h4 id="differentiate-between-new-and-override-modifiers" tabindex="-1"><a class="header-anchor" href="#differentiate-between-new-and-override-modifiers"><span>Differentiate between new and override modifiers.</span></a></h4>
+<p>The <code v-pre>new</code> modifier is used to instruct the compiler to use the new implementation and not the base class function. The <code v-pre>override</code> modifier is useful for overriding a base class function inside the child class.</p>
+<h4 id="how-will-you-check-if-a-class-is-a-child-of-another-class" tabindex="-1"><a class="header-anchor" href="#how-will-you-check-if-a-class-is-a-child-of-another-class"><span>How will you check if a class is a child of another class?</span></a></h4>
+<p>This is done by using a method called <code v-pre>issubclass()</code> provided by python. The method tells us if any class is a child of another class by returning true or false accordingly.</p>
+<h4 id="define-encapsulation-in-python" tabindex="-1"><a class="header-anchor" href="#define-encapsulation-in-python"><span>Define encapsulation in Python?</span></a></h4>
+<p>Encapsulation means binding the code and the data together. A Python class is an example of encapsulation.</p>
+<h4 id="how-do-you-do-data-abstraction-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-do-data-abstraction-in-python"><span>How do you do data abstraction in Python?</span></a></h4>
+<p>Data Abstraction is providing only the required details and hides the implementation from the world. It can be achieved in Python by using interfaces and abstract classes.</p>
+<h4 id="give-an-example-of-multithreading-with-threads-synchronization-in-python" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-multithreading-with-threads-synchronization-in-python"><span>Give an example of Multithreading with Threads Synchronization in Python.</span></a></h4>
+<p>The following code gives an example of threads synchronaization in Python:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"></span>
+<span class="line"><span class="token keyword">import</span> threading </span>
+<span class="line">  </span>
+<span class="line"><span class="token comment"># global variable x </span></span>
+<span class="line">x <span class="token operator">=</span> <span class="token number">0</span></span>
+<span class="line">  </span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
+<span class="line">    <span class="token triple-quoted-string string">""" </span>
+<span class="line">    function to increment global variable x </span>
+<span class="line">    """</span></span>
+<span class="line">    <span class="token keyword">global</span> x </span>
+<span class="line">    x <span class="token operator">+=</span> <span class="token number">1</span></span>
+<span class="line">  </span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">thread_task</span><span class="token punctuation">(</span>lock<span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
+<span class="line">    <span class="token triple-quoted-string string">""" </span>
+<span class="line">    task for thread </span>
+<span class="line">    calls increment function 100000 times. </span>
+<span class="line">    """</span></span>
+<span class="line">    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100000</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
+<span class="line">        lock<span class="token punctuation">.</span>acquire<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">        increment<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">        lock<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">  </span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">main_task</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
+<span class="line">    <span class="token keyword">global</span> x </span>
+<span class="line">    <span class="token comment"># setting global variable x as 0 </span></span>
+<span class="line">    x <span class="token operator">=</span> <span class="token number">0</span></span>
+<span class="line">  </span>
+<span class="line">    <span class="token comment"># creating a lock </span></span>
+<span class="line">    lock <span class="token operator">=</span> threading<span class="token punctuation">.</span>Lock<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">  </span>
+<span class="line">    <span class="token comment"># creating threads </span></span>
+<span class="line">    t1 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>thread_task<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>lock<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </span>
+<span class="line">    t2 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>thread_task<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>lock<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </span>
+<span class="line">  </span>
+<span class="line">    <span class="token comment"># start threads </span></span>
+<span class="line">    t1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">    t2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">  </span>
+<span class="line">    <span class="token comment"># wait until threads finish their job </span></span>
+<span class="line">    t1<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">    t2<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">  </span>
+<span class="line"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span> </span>
+<span class="line">    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
+<span class="line">        main_task<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
+<span class="line">        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Iteration {0}: x = {1}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> </span>
+<span class="line"></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Output:</strong><br>
+Iteration 0: x = 200000<br>
+Iteration 1: x = 200000<br>
+Iteration 2: x = 200000<br>
+Iteration 3: x = 200000<br>
+Iteration 4: x = 200000<br>
+Iteration 5: x = 200000<br>
+Iteration 6: x = 200000<br>
+Iteration 7: x = 200000<br>
+Iteration 8: x = 200000<br>
+Iteration 9: x = 200000<br></p>
+<h4 id="give-an-example-of-threads-synchronization-with-condition-variables" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-threads-synchronization-with-condition-variables"><span>Give an example of Threads Synchronization with Condition Variables.</span></a></h4>
+<p>Consider the following example:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> threading</span>
+<span class="line"><span class="token keyword">import</span> time</span>
+<span class="line"><span class="token keyword">import</span> logging</span>
+<span class="line"></span>
+<span class="line">logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>level<span class="token operator">=</span>logging<span class="token punctuation">.</span>DEBUG<span class="token punctuation">,</span></span>
+<span class="line">                    <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'(%(threadName)-9s) %(message)s'</span><span class="token punctuation">,</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">consumer</span><span class="token punctuation">(</span>cv<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">    logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Consumer thread started ...'</span><span class="token punctuation">)</span></span>
+<span class="line">    <span class="token keyword">with</span> cv<span class="token punctuation">:</span></span>
+<span class="line">    	logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Consumer waiting ...'</span><span class="token punctuation">)</span></span>
+<span class="line">        cv<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">        logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Consumer consumed the resource'</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">producer</span><span class="token punctuation">(</span>cv<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">    logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Producer thread started ...'</span><span class="token punctuation">)</span></span>
+<span class="line">    <span class="token keyword">with</span> cv<span class="token punctuation">:</span></span>
+<span class="line">        logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Making resource available'</span><span class="token punctuation">)</span></span>
+<span class="line">        logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Notifying to all consumers'</span><span class="token punctuation">)</span></span>
+<span class="line">        cv<span class="token punctuation">.</span>notifyAll<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span></span>
+<span class="line">    condition <span class="token operator">=</span> threading<span class="token punctuation">.</span>Condition<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">    cs1 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'consumer1'</span><span class="token punctuation">,</span> target<span class="token operator">=</span>consumer<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>condition<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line">    cs2 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'consumer2'</span><span class="token punctuation">,</span> target<span class="token operator">=</span>consumer<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>condition<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line">    pd <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'producer'</span><span class="token punctuation">,</span> target<span class="token operator">=</span>producer<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>condition<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line">    cs1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span></span>
+<span class="line">    cs2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span></span>
+<span class="line">    pd<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Output:</strong><br>
+(consumer1) Consumer thread started ...<br>
+(consumer1) Consumer waiting ...<br>
+(consumer2) Consumer thread started ...<br>
+(consumer2) Consumer waiting ...<br>
+(producer ) Producer thread started ...<br>
+(producer ) Making resource available<br>
+(producer ) Notifying to all consumers<br>
+(consumer1) Consumer consumed the resource<br>
+(consumer2) Consumer consumed the resource<br></p>
+<h4 id="give-an-example-of-using-threadpoolexecuter-in-python" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-using-threadpoolexecuter-in-python"><span>Give an example of using ThreadPoolExecuter in Python.</span></a></h4>
+<p>Consider the following:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> concurrent<span class="token punctuation">.</span>futures</span>
+<span class="line"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request</span>
+<span class="line"></span>
+<span class="line">URLS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'http://www.foxnews.com/'</span><span class="token punctuation">,</span></span>
+<span class="line">        <span class="token string">'http://www.cnn.com/'</span><span class="token punctuation">,</span></span>
+<span class="line">        <span class="token string">'http://europe.wsj.com/'</span><span class="token punctuation">,</span></span>
+<span class="line">        <span class="token string">'http://www.bbc.co.uk/'</span><span class="token punctuation">,</span></span>
+<span class="line">        <span class="token string">'http://nonexistant-subdomain.python.org/'</span><span class="token punctuation">]</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># Retrieve a single page and report the URL and contents</span></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">load_url</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">    <span class="token keyword">with</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>url<span class="token punctuation">,</span> timeout<span class="token operator">=</span>timeout<span class="token punctuation">)</span> <span class="token keyword">as</span> conn<span class="token punctuation">:</span></span>
+<span class="line">        <span class="token keyword">return</span> conn<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token comment"># We can use a with statement to ensure threads are cleaned up promptly</span></span>
+<span class="line"><span class="token keyword">with</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>ThreadPoolExecutor<span class="token punctuation">(</span>max_workers<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token keyword">as</span> executor<span class="token punctuation">:</span></span>
+<span class="line">    <span class="token comment"># Start the load operations and mark each future with its URL</span></span>
+<span class="line">    future_to_url <span class="token operator">=</span> <span class="token punctuation">{</span>executor<span class="token punctuation">.</span>submit<span class="token punctuation">(</span>load_url<span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">:</span> url <span class="token keyword">for</span> url <span class="token keyword">in</span> URLS<span class="token punctuation">}</span></span>
+<span class="line">    <span class="token keyword">for</span> future <span class="token keyword">in</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>as_completed<span class="token punctuation">(</span>future_to_url<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">        url <span class="token operator">=</span> future_to_url<span class="token punctuation">[</span>future<span class="token punctuation">]</span></span>
+<span class="line">        <span class="token keyword">try</span><span class="token punctuation">:</span></span>
+<span class="line">            data <span class="token operator">=</span> future<span class="token punctuation">.</span>result<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line">        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> exc<span class="token punctuation">:</span></span>
+<span class="line">            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%r generated an exception: %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>url<span class="token punctuation">,</span> exc<span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line">        <span class="token keyword">else</span><span class="token punctuation">:</span></span>
+<span class="line">            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%r page is %d bytes'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="give-an-example-of-using-processpoolexecuter" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-using-processpoolexecuter"><span>Give an example of using ProcessPoolExecuter.</span></a></h4>
+<p>The following code describes such a use case:</p>
+<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> concurrent<span class="token punctuation">.</span>futures</span>
+<span class="line"><span class="token keyword">import</span> math</span>
+<span class="line"></span>
+<span class="line">PRIMES <span class="token operator">=</span> <span class="token punctuation">[</span></span>
+<span class="line">    <span class="token number">112272535095293</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token number">112582705942171</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token number">112272535095293</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token number">115280095190773</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token number">115797848077099</span><span class="token punctuation">,</span></span>
+<span class="line">    <span class="token number">1099726899285419</span><span class="token punctuation">]</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">is_prime</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">    <span class="token keyword">if</span> n <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span></span>
+<span class="line">        <span class="token keyword">return</span> <span class="token boolean">False</span></span>
+<span class="line">    <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span></span>
+<span class="line">        <span class="token keyword">return</span> <span class="token boolean">True</span></span>
+<span class="line">    <span class="token keyword">if</span> n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span></span>
+<span class="line">        <span class="token keyword">return</span> <span class="token boolean">False</span></span>
+<span class="line"></span>
+<span class="line">    sqrt_n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line">    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> sqrt_n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">        <span class="token keyword">if</span> n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span></span>
+<span class="line">            <span class="token keyword">return</span> <span class="token boolean">False</span></span>
+<span class="line">    <span class="token keyword">return</span> <span class="token boolean">True</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">    <span class="token keyword">with</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>ProcessPoolExecutor<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> executor<span class="token punctuation">:</span></span>
+<span class="line">        <span class="token keyword">for</span> number<span class="token punctuation">,</span> prime <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>PRIMES<span class="token punctuation">,</span> executor<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>is_prime<span class="token punctuation">,</span> PRIMES<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
+<span class="line">            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%d is prime: %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>number<span class="token punctuation">,</span> prime<span class="token punctuation">)</span><span class="token punctuation">)</span></span>
+<span class="line"></span>
+<span class="line"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span></span>
+<span class="line">    main<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
+<span class="line"></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="explain-the-difference-between-thread-and-process-in-python" tabindex="-1"><a class="header-anchor" href="#explain-the-difference-between-thread-and-process-in-python"><span>Explain the difference between Thread and Process in Python.</span></a></h4>
+<p>A <strong>Process</strong> is an instance of a program, e.g. a Python interpreter. They are independent from each other and do not share the same memory.<br>
+<strong>Key facts:</strong> - A new process is started independently from the first process - Takes advantage of multiple CPUs and cores - Separate memory space - Memory is not shared between processes - One GIL (Global interpreter lock) for each process, i.e. avoids GIL limitation - Great for CPU-bound processing - Child processes are interruptable/killable</p>
+<ul>
+<li>Starting a process is slower that starting a thread</li>
+<li>Larger memory footprint</li>
+<li>IPC (inter-process communication) is more complicated</li>
+</ul>
+<p>A <strong>Thread</strong> is an entity within a process that can be scheduled for execution (Also known as &quot;leightweight process&quot;). A Process can spawn multiple threads. The main difference is that all threads within a process share the same memory.<br>
+<strong>Key facts:</strong> - Multiple threads can be spawned within one process - Memory is shared between all threads - Starting a thread is faster than starting a process - Great for I/O-bound tasks - Leightweight - low memory footprint</p>
+<ul>
+<li>One GIL for all threads, i.e. threads are limited by GIL.</li>
+<li>Multithreading has no effect for CPU-bound tasks due to the GIL.</li>
+<li>Not interruptible/killable -&gt; be careful with memory leaks.</li>
+<li>Increased potential for race conditions.</li>
+</ul>
+<h4 id="what-is-the-python-global-interpreter-lock-gil" tabindex="-1"><a class="header-anchor" href="#what-is-the-python-global-interpreter-lock-gil"><span>What is the Python Global Interpreter Lock (GIL)?</span></a></h4>
+<p>Python Global Interpreter Lock (GIL) is a type of process lock which is used by python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. This means that in python only one thread will be executed at a time. The performance of the single-threaded process and the multi-threaded process will be the same in python and this is because of GIL in python. We can not achieve multithreading in python because we have global interpreter lock which restricts the threads and works as a single thread.</p>
+<h3 id="interview-questions-for-algorithms-and-data-structures" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-algorithms-and-data-structures"><span>Interview questions for algorithms and data structures.</span></a></h3>
+<p><strong>Sources:</strong><br>
+www.wikipedia.com <br>
+www.geeksforgeeks.org <br>
+www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
+www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
+www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm <br>
+www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
+www.vinayakd.com/articles/delete-n-ary-tree-node <br></p>
+<h4 id="what-is-a-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-data-structure"><span>What is a Data Structure?</span></a></h4>
+<p>In computer science, a data structure is a <strong>data organization</strong>, and storage format that is usually chosen <strong>for efficient access</strong> to data.<br></p>
+<h4 id="describe-the-types-of-data-structures" tabindex="-1"><a class="header-anchor" href="#describe-the-types-of-data-structures"><span>Describe the types of Data Structures?</span></a></h4>
+<ul>
+<li><strong>Array</strong> - an array is a number of elements in a specific order, typically all of the same type. Elements are accessed using an integer index to specify which element is required.<br></li>
+<li><strong>List</strong> - a linked list is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays.<br></li>
+<li><strong>Record</strong> - a record (also <strong>called tuple</strong> or <strong>struct</strong>) is an <strong>aggregate data structure</strong>. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. <br></li>
+<li><strong>Hash tables</strong> -  also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions.<br></li>
+<li><strong>Graphs</strong> - collections of nodes connected by edges, representing relationships between entities. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic.<br></li>
+<li><strong>Stacks and queues</strong> - abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle.<br></li>
+<li><strong>Trees</strong> - represent a hierarchical organization of elements. A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. <strong>Binary trees</strong> (particularly heaps), <strong>AVL trees</strong>, and <strong>B-trees</strong> are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data.</li>
+<li><strong>Trie</strong> - also known as a <strong>prefix tree</strong>, is a specialized tree data structure used for the efficient retrieval of strings. Tries store characters of a string as nodes, with each edge representing a character. They are particularly useful in text processing scenarios like autocomplete, spell-checking, and dictionary implementations. Tries enable fast searching and prefix-based operations on strings.<br></li>
+</ul>
+<h4 id="what-is-a-linear-data-structure-name-a-few-examples" tabindex="-1"><a class="header-anchor" href="#what-is-a-linear-data-structure-name-a-few-examples"><span>What is a Linear Data Structure? Name a few examples.</span></a></h4>
+<p>A data structure is linear if all its elements or data items are arranged in a sequence or a linear order. The elements are stored in a <strong>non-hierarchical way</strong> so that each item has successors and predecessors except the first and last element in the list.
+Examples of linear data structures are <strong>Array</strong>, <strong>Stack</strong>, <strong>Queue</strong>, and <strong>Linked List</strong>.<br></p>
+<h4 id="how-are-the-elements-of-a-2d-array-stored-in-the-memory" tabindex="-1"><a class="header-anchor" href="#how-are-the-elements-of-a-2d-array-stored-in-the-memory"><span>How are the elements of a 2D Array stored in the memory.</span></a></h4>
+<ul>
+<li><strong>Row-Major Order</strong>: In row-major ordering, the first row of a 2D array is entirely stored in memory, followed by the second row of the array, and so on until the final row.</li>
+<li><strong>Column-Major Order</strong>: In column-major ordering, the first column of the array is entirely saved in memory, followed by the second row of the array, and so on until the last column of the array is fully recorded in the memory.</li>
+</ul>
+<h4 id="what-are-some-use-cases-for-row-major-and-column-major-storing-of-2d-arrays" tabindex="-1"><a class="header-anchor" href="#what-are-some-use-cases-for-row-major-and-column-major-storing-of-2d-arrays"><span>What are some use cases for Row-Major and Column-Major storing of 2D Arrays?</span></a></h4>
+<p><strong>Row-Major</strong> stored arrays are more efficient for row-wise access like in <strong>Image Processing</strong>. <strong>Column-Major</strong> stored arrays are more efficient for column-wise access like for <strong>Matrix Multiplication</strong>.<br></p>
+<h4 id="how-can-you-possibly-choose-between-row-major-and-column-major-2d-arrays-storing-implementations" tabindex="-1"><a class="header-anchor" href="#how-can-you-possibly-choose-between-row-major-and-column-major-2d-arrays-storing-implementations"><span>How can you possibly choose between Row-Major and Column-Major 2D Arrays storing implementations?</span></a></h4>
+<p>By choosing a <strong>programming language</strong>. <strong>Row-Major</strong> is implemented in languages like C/C++ and <strong>Column-Major</strong> - in Fortran.</p>
+<h4 id="what-is-a-linked-list-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-linked-list-data-structure"><span>What is a Linked List Data Structure?</span></a></h4>
+<p>It’s a both <strong>linear and non-linear Data Structure</strong>, depending on application, or a sequence of data objects where <strong>elements are not stored in adjacent memory locations</strong>. The elements are linked using pointers to form a chain. Each element is a separate object, called a node.  Each node has two items: a data field and a reference to the next node. The entry point in a linked list is called the head. Where the list is empty, the head is a null reference and the last node has a reference to null. A linked list is a dynamic data structure, where the number of nodes is not fixed, and the list has the ability to grow and shrink on demand.
+It is applied in cases where:</p>
+<ul>
+<li>We deal with an unknown number of objects or don’t know how many items are in the list</li>
+<li>We need constant-time insertions/deletions from the list, as in real-time computing where time predictability is critical</li>
+<li>Random access to any elements is not needed</li>
+<li>The algorithm requires a data structure where objects need to be stored irrespective of their physical address in memory</li>
+<li>We need to insert items in the middle of the list as in a priority queue
+<br></li>
+</ul>
+<h4 id="are-linked-lists-considered-linear-or-non-linear-data-structures" tabindex="-1"><a class="header-anchor" href="#are-linked-lists-considered-linear-or-non-linear-data-structures"><span>Are Linked Lists considered Linear or Non-linear Data Structures?</span></a></h4>
+<p>Linked lists are considered both linear and non-linear data structures depending upon the application they are used for. When used for access strategies, it is considered as a linear data-structure. When used for data storage, it is considered a non-linear data structure.</p>
+<h4 id="what-are-the-advantages-of-a-linked-list-over-an-array-in-which-scenarios-do-we-use-linked-list-and-when-array" tabindex="-1"><a class="header-anchor" href="#what-are-the-advantages-of-a-linked-list-over-an-array-in-which-scenarios-do-we-use-linked-list-and-when-array"><span>What are the advantages of a Linked List over an Array? In which scenarios do we use Linked List and when Array?</span></a></h4>
+<p>Advantages of a linked list over an array are:</p>
+<ul>
+<li>
+<p><strong>Insertion and Deletion</strong><br>
+Insertion and deletion of nodes is an easier process, as we only update the address present in the next pointer of a node. It’s expensive to do the same in an array as the room has to be created for the new elements and existing elements must be shifted.<br></p>
+</li>
+<li>
+<p><strong>Dynamic Data Structure</strong><br>
+As a linked list is a dynamic data structure, there is no need to give an initial size as it can grow and shrink at runtime by allocating and deallocating memory. However, the size is limited in an array as the number of elements is statically stored in the main memory.<br></p>
+</li>
+<li>
+<p><strong>No wastage of Memory</strong><br>
+As the size of a linked list can increase or decrease depending on the demands of the program, and memory is allocated only when required, there is no memory wasted. In the case of an array, there is memory wastage. For instance, if we declare an array of size 10 and store only five elements in it, then the space for five elements is wasted.<br></p>
+</li>
+<li>
+<p><strong>Implementation</strong><br>
+Data structures like stack and queues are more easily implemented using a linked list than an array.<br></p>
+</li>
+<li>
+<p><strong>Some scenarios where we use linked list over array are</strong>:</p>
+<ul>
+<li>When we do not know the upper limit on the number of elements in advance</li>
+<li>When there are a large number of add or remove operations</li>
+<li>When there are no large number of random access to elements</li>
+<li>When we want to insert items in the middle of the list, such as when implementing a priority queue<br></li>
+</ul>
+</li>
+<li>
+<p><strong>Some scenarios in which we use array over the linked list are</strong>:</p>
+<ul>
+<li>When we need to index or randomly access elements</li>
+<li>When we know the number of elements in the array beforehand, so we can allocate the correct amount of memory</li>
+<li>When we need speed when iterating through all the elements in the sequence</li>
+<li>When memory is a concern; filled arrays use less memory than linked lists, as each element in the array is the data but each linked list node requires the data as well as one or more pointers to the other elements in the linked list
+<br></li>
+</ul>
+</li>
+</ul>
+<h4 id="what-is-a-doubly-linked-list" tabindex="-1"><a class="header-anchor" href="#what-is-a-doubly-linked-list"><span>What is a Doubly-Linked List?</span></a></h4>
+<p>It is a complex type (double-ended LL) of a linked list in which a node has two links, one that connects to the next node in the sequence and another that connects to the previous node. This allows traversal across the data elements in both directions.<br></p>
+<h4 id="what-are-dynamic-data-structures-name-a-few" tabindex="-1"><a class="header-anchor" href="#what-are-dynamic-data-structures-name-a-few"><span>What are Dynamic Data Structures? Name a few.</span></a></h4>
+<p>They are collections of data in memory that expand and contract to grow or shrink in size as a program runs. This enables the programmer to control exactly how much memory is to be utilized. Examples are the <strong>dynamic array</strong>, <strong>linked list</strong>, <strong>stack</strong>, <strong>queue</strong>, and <strong>heap</strong>.<br></p>
+<h4 id="what-is-a-stack" tabindex="-1"><a class="header-anchor" href="#what-is-a-stack"><span>What is a Stack?</span></a></h4>
+<p>A stack is an abstract data type that specifies a linear data structure, as in a real physical stack or piles where you can only take the top item off the stack in order to remove things. Thus, insertion (push) and deletion (pop) of items take place only at one end called top of the stack, with a particular order: LIFO (Last In First Out) or FILO (First In Last Out).</p>
+<h4 id="where-are-stacks-used" tabindex="-1"><a class="header-anchor" href="#where-are-stacks-used"><span>Where are Stacks used?</span></a></h4>
+<ul>
+<li>Expression, evaluation, or conversion of evaluating prefix, postfix, and infix expressions</li>
+<li>Syntax parsing</li>
+<li>String reversal</li>
+<li>Parenthesis checking</li>
+<li>Backtracking</li>
+</ul>
+<h4 id="what-are-the-operations-that-can-be-performed-on-a-stack" tabindex="-1"><a class="header-anchor" href="#what-are-the-operations-that-can-be-performed-on-a-stack"><span>What are the operations that can be performed on a Stack?</span></a></h4>
+<p>A stack may perform three fundamental operations:</p>
+<ul>
+<li>PUSH: The push action inserts a new element into the stack. The new feature is placed at the top of the stack.</li>
+<li>POP: The pop operation is performed to remove the stack's topmost element.</li>
+<li>PEEK: A peek action returns the value of the stack's topmost element without removing it from the stack.</li>
+</ul>
+<h4 id="what-is-a-queue-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-queue-data-structure"><span>What is a queue Data Structure?</span></a></h4>
+<p>A queue is an abstract data type that specifies a linear data structure or an ordered list,  using the First In First Out (FIFO) operation to access elements. Insert operations can be performed only at one end called REAR and delete operations can be performed only at the other end called FRONT.</p>
+<h4 id="list-some-applications-of-the-queue-data-structure" tabindex="-1"><a class="header-anchor" href="#list-some-applications-of-the-queue-data-structure"><span>List some applications of the Queue Data Structure.</span></a></h4>
+<p>To prioritize jobs as in the following scenarios:</p>
+<ul>
+<li>As waiting lists for a single shared resource (like printer, CPU, call center systems).</li>
+<li>In the asynchronous transfer of data (file IO, sockets).</li>
+</ul>
+<h4 id="what-is-a-dequeue" tabindex="-1"><a class="header-anchor" href="#what-is-a-dequeue"><span>What is a Dequeue?</span></a></h4>
+<p>It is a double-ended queue, or a data structure, where the elements can be inserted or deleted at both ends (FRONT and REAR).</p>
+<h4 id="what-operations-can-be-performed-on-queues" tabindex="-1"><a class="header-anchor" href="#what-operations-can-be-performed-on-queues"><span>What operations can be performed on Queues?</span></a></h4>
+<ul>
+<li>enqueue() adds an element to the end of the queue</li>
+<li>dequeue() removes an element from the front of the queue</li>
+<li>init() is used for initializing the queue</li>
+<li>isEmpty() tests for whether or not the queue is empty</li>
+<li>The front is used to get the value of the first data item but does not remove it</li>
+<li>The rear is used to get the last item from a queue</li>
+</ul>
+<h4 id="define-the-graph-data-structure" tabindex="-1"><a class="header-anchor" href="#define-the-graph-data-structure"><span>Define the Graph Data Structure.</span></a></h4>
+<p>It is a type of non-linear data structure that consists of vertices or nodes connected by edges or arcs to enable storage or retrieval of data. Edges may be directed or undirected.</p>
+<h4 id="what-are-the-applications-of-graph-data-structures" tabindex="-1"><a class="header-anchor" href="#what-are-the-applications-of-graph-data-structures"><span>What are the applications of Graph Data Structures?</span></a></h4>
+<ul>
+<li>Transport grids where stations are represented as vertices and routes as the edges of the graph</li>
+<li>Utility graphs of power or water, where vertices are connection points and edge the wires or pipes connecting them</li>
+<li>Social network graphs to determine the flow of information and hotspots (edges and vertices)</li>
+<li>Neural networks where vertices represent neurons and edge the synapses between them</li>
+</ul>
+<h4 id="list-the-types-of-trees" tabindex="-1"><a class="header-anchor" href="#list-the-types-of-trees"><span>List the types of Trees?</span></a></h4>
+<ul>
+<li>
+<p><strong>The General Tree</strong> <br>
+A tree is referred to as a generic tree if its hierarchy is not constrained. In the General Tree, each node can have an endless number of offspring, and all other trees are subsets of the tree.<br></p>
+</li>
+<li>
+<p><strong>The Binary Tree</strong> <br>
+The binary tree is a type of tree in which each parent has at least two offspring. The children are referred to as the left and right youngsters. This tree is more popular than most others. When specific limitations and features are given to a Binary tree, various trees such as AVL tree, BST (Binary Search Tree), RBT tree, and so on are also utilized. <br></p>
+</li>
+<li>
+<p><strong>Binary Search Tree</strong> <br>
+Binary Search Tree (BST) is a binary tree extension that includes numerous optional constraints. In BST, a node's left child value should be less than or equal to the parent value, while the right child value should always be higher than the parent's value.<br></p>
+</li>
+<li>
+<p><strong>The AVL Tree</strong> <br>
+The AVL tree is a self-balancing binary search tree (automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions). The term AVL is given in honor of the inventors Adelson-Velshi and Landis. This was the first tree to achieve dynamic equilibrium. Each node in the AVL tree is assigned a balancing factor based on whether the tree is balanced or not. The node kids have a maximum height of one AVL vine. Search, insert, delete operations have O(log n) complexity.<br></p>
+</li>
+<li>
+<p><strong>Red and Black Tree</strong> <br>
+Red-black trees are another type of auto-balancing tree. The red-black term is derived from the qualities of the red-black tree, which has either red or black painted on each node. It helps to keep the forest in balance. Even though this tree is not perfectly balanced, the searching process takes just O(log n) time. <br></p>
+</li>
+<li>
+<p><strong>The N-ary Tree</strong> <br>
+In this sort of tree with a node, N is the maximum number of children. A binary tree is a two-year tree since each binary tree node has no more than two offsprings. A full N-ary tree is one in which the children of each node are either 0 or N. <br></p>
+</li>
+<li>
+<p><strong>Octree</strong> <br>
+An octree is a tree data structure in which each internal node has exactly eight children. Octrees are most often used to partition a three-dimensional space by recursively subdividing it into eight octants.</p>
+</li>
+<li>
+<p><strong>Heap</strong> <br>
+A heap is a tree-based data structure that satisfies the heap property: in a max heap, for any given node C, if P is a parent node of C, then the key (the value) of P is greater than or equal to the key of C. In a min heap, the key of P is less than or equal to the key of C.</p>
+</li>
+</ul>
+<h4 id="how-is-a-node-height-in-the-tree-data-structure-determined" tabindex="-1"><a class="header-anchor" href="#how-is-a-node-height-in-the-tree-data-structure-determined"><span>How is a Node Height in the Tree Data Structure determined?</span></a></h4>
+<p>The height of a node is the number of edges from that node to the leaf node (the lowermost node in the hierarchy).</p>
+<h4 id="how-is-a-node-depth-in-the-tree-data-structure-determined" tabindex="-1"><a class="header-anchor" href="#how-is-a-node-depth-in-the-tree-data-structure-determined"><span>How is a Node Depth in the Tree Data Structure determined?</span></a></h4>
+<p>The depth of a node is the number of edges it takes from the root (the uppermost node in the hierarchy) node to that particular node.</p>
+<h4 id="what-is-a-node-degree-in-the-tree-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-node-degree-in-the-tree-data-structure"><span>What is a Node Degree in the Tree Data Structure?</span></a></h4>
+<p>The total number of branches coming out of a node is considered to be the degree of that node.</p>
+<h4 id="what-is-a-forest-in-relation-with-the-tree-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-forest-in-relation-with-the-tree-data-structure"><span>What is a Forest in relation with the Tree Data Structure?</span></a></h4>
+<p>A collection of disconnected trees is called a forest. If you cut the root of a tree, the disjoint trees hence formed make up a forest.</p>
+<h4 id="how-is-a-balanced-binary-tree-determined" tabindex="-1"><a class="header-anchor" href="#how-is-a-balanced-binary-tree-determined"><span>How is a Balanced Binary Tree determined?</span></a></h4>
+<p>A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.</p>
+<h4 id="what-is-a-self-balancing-binary-tree" tabindex="-1"><a class="header-anchor" href="#what-is-a-self-balancing-binary-tree"><span>What is a Self-balancing Binary Tree?</span></a></h4>
+<p>Self-Balancing Binary Search Trees are height-balanced binary search trees that automatically keep the height as small as possible when insertion and deletion operations are performed on the tree. Most prominent examples are AVL Trees and Red-Black Trees.</p>
+<h4 id="what-is-a-b-tree-data-structure" tabindex="-1"><a class="header-anchor" href="#what-is-a-b-tree-data-structure"><span>What is a B-Tree Data Structure?</span></a></h4>
+<p>A B-tree is a sort of self-balancing search tree whereby each node could have more than two children and hold multiple keys.</p>
+<h4 id="explain-what-jagged-array-is" tabindex="-1"><a class="header-anchor" href="#explain-what-jagged-array-is"><span>Explain what Jagged Array is?</span></a></h4>
+<p>It is an array whose elements themselves are arrays and may be of different dimensions and sizes.</p>
+<h4 id="what-is-an-algorithm" tabindex="-1"><a class="header-anchor" href="#what-is-an-algorithm"><span>What is an Algorithm?</span></a></h4>
+<p>An algorithm is a step by step method of solving a problem or manipulating data. It defines a set of instructions to be executed in a certain order to get the desired output.</p>
+<h4 id="what-is-an-asymptotic-analysis-of-an-algorithm" tabindex="-1"><a class="header-anchor" href="#what-is-an-asymptotic-analysis-of-an-algorithm"><span>What is an asymptotic analysis of an algorithm?</span></a></h4>
+<p>Asymptotic analysis is the technique of determining an algorithm's running time in mathematical units to determine the program's limits, also known as &quot;run-time performance.&quot; The purpose is to identify the best case, worst case, and average-case times for completing a particular activity.</p>
+<h4 id="what-are-asymptotic-notations" tabindex="-1"><a class="header-anchor" href="#what-are-asymptotic-notations"><span>What are Asymptotic Notations?</span></a></h4>
+<p>Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.</p>
+<h4 id="what-are-the-common-algorithmic-runtimes-in-big-o-notation" tabindex="-1"><a class="header-anchor" href="#what-are-the-common-algorithmic-runtimes-in-big-o-notation"><span>What are the common algorithmic runtimes in big O notation?</span></a></h4>
+<ul>
+<li><strong>Constant</strong> - O(1) (Insertion in a linked list)</li>
+<li><strong>Logarithmic</strong> - O(log(N)) (Binary Search)</li>
+<li><strong>Linear</strong> - O(N) (Linear Search)</li>
+<li><strong>Polynomial</strong> - O(N^b) (QuickSort with O(N*log(N)))</li>
+<li><strong>Exponential</strong> - O(b^N) (Fibonacci series (each element is a sum of previous two) without Dynamic Programming, (O(N) with dynamic programming))</li>
+<li><strong>Factorial</strong> - O(N!) (Generation of all possible permutations of N objects)</li>
+</ul>
+<h4 id="what-are-basic-operations-on-arrays" tabindex="-1"><a class="header-anchor" href="#what-are-basic-operations-on-arrays"><span>What are basic operations on Arrays?</span></a></h4>
+<ul>
+<li><strong>Traversing</strong> - looping through each element in the array and processing each element one at a time.<br></li>
+<li><strong>Insertion</strong> - the process of adding new elements into an existing array. This can be done by providing an index for where the insertion should occur and then shifting other elements in the array to make space for the insertion.<br></li>
+<li><strong>Deletion</strong> - the opposite of insertion and involves removing elements from an existing array. After deleting an element, all other elements in the array must be shifted to fill any gaps left from deletion.</li>
+<li><strong>Searching</strong> - process of identifying an element from within an array by comparing it to your desired value until you find a match.</li>
+<li><strong>Sorting</strong> - process of arranging elements of an array in either ascending or descending order.</li>
+</ul>
+<h4 id="what-are-the-basic-types-of-searching-describe-their-worst-case-asymptotic-behaviour" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-types-of-searching-describe-their-worst-case-asymptotic-behaviour"><span>What are the basic types of searching? Describe their worst case asymptotic behaviour.</span></a></h4>
+<ul>
+<li><strong>Linear Search</strong> - compares each element one after another until a match is found, or all elements have been searched. It has O(n) time complexity, because in worst case the searched element is the last one, or there is no such elements and you go through whole array.</li>
+<li><strong>Binary Search</strong> - can be done in sorted arrays by comparing the middle element with the target and if they are not equal, the half where the target cannot lie is elemenated. The time complexity is O(log2(N)), because with each step you divide the number of elements N by 2, like N/2, N/4, N/8... until you reach 1. So N/2^k = 1 and thus k = log2(N).</li>
+</ul>
+<h4 id="what-are-some-common-array-sorting-algorithms" tabindex="-1"><a class="header-anchor" href="#what-are-some-common-array-sorting-algorithms"><span>What are some common array sorting algorithms?</span></a></h4>
+<ul>
+<li><strong>PermutationSort</strong> - most ineffective sorting algorithm. It works by generating permutations of an array and checking if it is in the right sorted order. The worst case time complexity is O(?) undefined, since it has no upper bound and could run forever.</li>
+<li><strong>BubbleSort</strong> - simple and easy to understand sorting algorithm. Consists of two loops. In the case of sorting in ascending order, the inner loop goes over elements and if an element is bigger than the next one, they are swapped. The outer loop repeats the procedure. The time complexity is O(N^2). Still too slow for real life problems.</li>
+<li><strong>QuickSort</strong> - the fastest sorting algorithm based on divide and conquer principle. The key process in <strong>QuickSort</strong> is a <strong>Partition</strong>. The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot. Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array. The time complexity is O(N*log(N)).</li>
+<li><strong>InsertionSort</strong> - is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output. Insertion sort is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. Then, you pick a card from the unsorted group and put it in the right place in the sorted group. It has the worst-case time-complexity of O(N^2).</li>
+<li><strong>HeapSort</strong> - is a comparison-based sorting technique based on <strong>Binary Heap</strong> data structure.
+<ul>
+<li>Build a heap from the given input array.</li>
+<li>Repeat the following steps until the heap contains only one element:
+<ul>
+<li>Swap the root element of the heap (which is the largest element) with the last element of the heap.</li>
+<li>Remove the last element of the heap (which is now in the correct position).</li>
+<li>Heapify the remaining elements of the heap in top-down order.</li>
+</ul>
+</li>
+<li>The sorted array is obtained by reversing the order of the elements in the input array.</li>
+</ul>
+</li>
+</ul>
+<h4 id="name-the-main-properties-of-the-basic-operations-on-linked-lists" tabindex="-1"><a class="header-anchor" href="#name-the-main-properties-of-the-basic-operations-on-linked-lists"><span>Name the main properties of the basic operations on linked lists.</span></a></h4>
+<ul>
+<li><strong>Traversing</strong> - this operation has a time complexity of O(N), the same as for arrays. But one can not access elemnts of a linked list by direct indexing.</li>
+<li><strong>Insertion</strong> - this operation has a constant time complexity in contrast to arrays, where the worst case time complexity of the operation is O(N). It needs only to modify pointers in the chain at the place of insertion.</li>
+<li><strong>Deletion</strong> - the mechanism is the same as for <strong>Insertion</strong>.</li>
+<li><strong>Search</strong> - the same as for an Array in the case of an unsorted list, the worst case time complexity of searching an element is O(N). Binary search can be done only for sorted lists.</li>
+<li><strong>Sort</strong> - the same algorithms as for Arrays can be applied for linked lists with the time complexity depending on the chosen algorithm.</li>
+</ul>
+<h4 id="how-can-one-detect-loops-in-a-linked-lists-name-a-few-approaches" tabindex="-1"><a class="header-anchor" href="#how-can-one-detect-loops-in-a-linked-lists-name-a-few-approaches"><span>How can one detect loops in a Linked Lists, name a few approaches?</span></a></h4>
+<ul>
+<li><strong>Floyd's Loop Detection Algorithm</strong> - uses two pointers running over a linked list with different velocities, like first goes over each element, the second jumps over one element. If there are loops in the linked list, the two pointers will be equal at some point in the loop. Otherwise, the both reach the last element in the list.</li>
+<li><strong>Using Hashing</strong> - traverse the linked list and save the calculated hash of each node's adress. If the current node's hash points to one of the previously calculated hashes, then the list has loops. If the last element is reached without pointing to the previous hashes, then there are no loops.</li>
+</ul>
+<h4 id="give-some-examples-of-basic-hash-functions-that-can-be-used-in-hash-table-data-structure" tabindex="-1"><a class="header-anchor" href="#give-some-examples-of-basic-hash-functions-that-can-be-used-in-hash-table-data-structure"><span>Give some examples of basic Hash Functions that can be used in Hash Table Data Structure?</span></a></h4>
+<ul>
+<li><strong>Division</strong> - a modulus function that returns the division remainder is used in this case. A key value is divided by the table length and the remainder is used as an index in the table.</li>
+<li><strong>Mid Square</strong> - in this case the key value is squared and the middle N digits are extracted as a hash value.</li>
+<li><strong>Digit Folding</strong> - divide the key value into a number of parts, where each part has the same number of digits, except for the last one. Addition of the parts gives a hash number.</li>
+<li><strong>Multiplication</strong> - choose a constant value between 0 and 1. Multiply it with the key value. Extract the fractional part of the multiplication product. Multiply it by the hash table length and take the floor of the result. This produces the hash.</li>
+</ul>
+<h4 id="how-can-one-possibly-avoid-hash-collisions-in-hash-tables" tabindex="-1"><a class="header-anchor" href="#how-can-one-possibly-avoid-hash-collisions-in-hash-tables"><span>How can one possibly avoid Hash Collisions in Hash Tables?</span></a></h4>
+<p>One could solve the problem of hash collisions by for example <strong>Linear Probing</strong>. If the calculated index in a hash table is already in use, one just searches for the next empty cell in the table.</p>
+<h4 id="what-are-the-basic-operations-on-hash-tables" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-operations-on-hash-tables"><span>What are the basic operations on Hash Tables?</span></a></h4>
+<ul>
+<li><strong>Search</strong> - compute the hash of a passed key and locate the value by hash code as an array index. If the element is not found use linear probing to get the element ahead.</li>
+<li><strong>Insert</strong> - compute the hash code of a passed key. Use cash code as an index in the array. If the cell is not empty use linear probing to get to the next empty cell.</li>
+<li><strong>Delete</strong> - the same as for previous operations hash code is used as an array index. If the cell is empty use linear probing to get to the element ahead. Once the lement is found store a dummy element there.</li>
+</ul>
+<h4 id="what-is-a-bipartite-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-bipartite-graph"><span>What is a Bipartite Graph?</span></a></h4>
+<p>A bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets U and V, that is, every edge connects a vertex in U to one in V . Vertex sets U and V are usually called the parts of the graph. Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles.</p>
+<h4 id="what-is-a-weighted-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-weighted-graph"><span>What is a Weighted Graph?</span></a></h4>
+<p>A graph whose vertices or edges have been assigned weights. A vertex-weighted graph has weights on its vertices and an edge-weighted graph has weights on its edges.</p>
+<h4 id="what-is-a-directed-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-directed-graph"><span>What is a Directed Graph?</span></a></h4>
+<p>A directed graph (or digraph) is a graph that is made up of a set of vertices connected by directed edges, often called arcs.</p>
+<h4 id="what-is-a-transpose-of-a-directed-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-transpose-of-a-directed-graph"><span>What is a Transpose of a Directed Graph?</span></a></h4>
+<p>Transpose of a directed graph G is another directed graph on the same set of vertices with all of the edges reversed compared to the orientation of the corresponding edges in G.</p>
+<h4 id="what-is-a-strongly-connected-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-strongly-connected-graph"><span>What is a Strongly Connected Graph?</span></a></h4>
+<p>A directed graph is called strongly connected if there is a path from each vertex in the graph to every other vertex.</p>
+<h4 id="what-is-a-minimum-spanning-tree-of-a-graph" tabindex="-1"><a class="header-anchor" href="#what-is-a-minimum-spanning-tree-of-a-graph"><span>What is a Minimum Spanning Tree of a Graph?</span></a></h4>
+<p>A minimum spanning tree (MST) is defined as a spanning tree that has the minimum weight among all the possible spanning trees. A <strong>Spanning Tree</strong> is a subset of the edges of the graph that forms a tree (acyclic) where every node of the graph is a part of the tree.</p>
+<h4 id="name-the-ways-of-representing-and-storing-a-graph-data-structure" tabindex="-1"><a class="header-anchor" href="#name-the-ways-of-representing-and-storing-a-graph-data-structure"><span>Name the ways of representing and storing a Graph Data Structure.</span></a></h4>
+<ul>
+<li><strong>Adjacency Matrix</strong> - in this method a graph is represented in the form of a 2D matrix, where rows and columns denote vertices. And the values in the cells describe reletionships (edges) between vertices.</li>
+<li><strong>Adjacency List</strong> - here a Graph is represented as a collection of linked lists. There is an array of pointers for all vertices. Each pointer shows connections to all other vertices in a chain that have edges to the reference vertice.
+When a Graph has a lot of edges, then it is better to represent it in the form of Adjacency Matrix.<br></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Action</strong></td>
+<td style="text-align:left"><strong>Adjacency Matrix</strong></td>
+<td style="text-align:left"><strong>Adjacency List</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Adding Edge</td>
+<td style="text-align:left">O(1)</td>
+<td style="text-align:left">O(1)</td>
+</tr>
+<tr>
+<td style="text-align:left">Removing Edge</td>
+<td style="text-align:left">O(1)</td>
+<td style="text-align:left">O(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">Initializing</td>
+<td style="text-align:left">O(N*N)</td>
+<td style="text-align:left">O(N)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="what-are-the-basic-operations-on-graphs" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-operations-on-graphs"><span>What are the basic operations on Graphs?</span></a></h4>
+<ul>
+<li><strong>Insertion of Nodes/Edges</strong> in the graph.</li>
+<li><strong>Deletion of Nodes/Edges</strong> in the graph.</li>
+<li><strong>Searching on Graphs</strong> – Search an entity in the graph.</li>
+<li><strong>Traversal of Graphs</strong> – Traversing all the nodes in the graph.</li>
+</ul>
+<h4 id="list-the-ways-of-traversing-a-graph" tabindex="-1"><a class="header-anchor" href="#list-the-ways-of-traversing-a-graph"><span>List the ways of Traversing a Graph.</span></a></h4>
+<ul>
+<li><strong>Breadth-First-Search</strong> - is a graph traversal algorithm that explores all the vertices in a graph at the current depth before moving on to the vertices at the next depth level. It starts at a specified vertex and visits all its neighbors before moving on to the next level of neighbors. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.</li>
+<li><strong>Depth-First-Search</strong> - the algorithm starts selecting some arbitrary node as the root node and explores as far as possible along each branch before backtracking. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.</li>
+</ul>
+<h4 id="list-the-main-applications-of-breadth-first-search" tabindex="-1"><a class="header-anchor" href="#list-the-main-applications-of-breadth-first-search"><span>List the main applications of Breadth-First-Search.</span></a></h4>
+<ul>
+<li><strong>Shortest Path Finding</strong> - Breadth-First-Search can be used to find the shortest path between two nodes in an unweighted graph. By keeping track of the parent of each node during the traversal, the shortest path can be reconstructed.</li>
+<li><strong>Cycle Detection</strong> - Breadth-First-Search can be used to detect cycles in a graph. If a node is visited twice during the traversal, it indicates the presence of a cycle.</li>
+<li><strong>Connected Components</strong> - Breadth-First-Search can be used to identify connected components in a graph. Each connected component is a set of nodes that can be reached from each other.</li>
+<li><strong>Topological Sorting</strong> - BFS can be used to perform topological sorting on a directed acyclic graph (DAG). Topological sorting arranges the nodes in a linear order such that for any edge (u, v), u appears before v in the order.</li>
+</ul>
+<h4 id="list-the-main-applications-of-depth-first-search" tabindex="-1"><a class="header-anchor" href="#list-the-main-applications-of-depth-first-search"><span>List the main applications of Depth-First-Search.</span></a></h4>
+<ul>
+<li><strong>Detecting Cycle in a Graph</strong> - A graph has a cycle if and only if we see a back edge during DFS. So we can run DFS for the graph and check for back edges.</li>
+<li><strong>Path Finding</strong> - Depth-First-Search can be used to find a path between any two vertices. Choose one vertex es a start. Use stack in order to save the path between starting and current vertex. As son as destination vertex is reached, return the path.</li>
+<li><strong>Topological Sorting</strong> - the same like for Breadth-First-Search, it is used mainly for jobs scheduling from the given dependencies among jobs.</li>
+<li><strong>Testing if a Graph is Bipartite</strong> - when we first discover a new vertex, color it opposite its parents, and for each other edge, check it doesn’t link two vertices of the same color. The first vertex in any connected component can be red or black.</li>
+<li><strong>Finding Strongly Connected Components in a Graph</strong> - for example brute-force checking if the definition of a strongly connected component fits the vertices of a graph.</li>
+<li><strong>Backtracking</strong> - Depth-first search can be used in backtracking algorithms.</li>
+</ul>
+<h4 id="what-are-the-basic-operations-on-trees-data-structures" tabindex="-1"><a class="header-anchor" href="#what-are-the-basic-operations-on-trees-data-structures"><span>What are the basic operations on Trees Data Structures?</span></a></h4>
+<ul>
+<li><strong>Traversal</strong> - a hierarchical data structure like a tree can have different ways of traversal. Simplifying to a <strong>Binary Tree</strong>, one can distinguish between three types of traversal:
+<ol>
+<li><strong>In-order</strong> - it starts with visiting all the nodes in the left subtree. Then visits the root node. And finally, all the nodes in the right subtree are visited.</li>
+<li><strong>Pre-order</strong> - first the root node is visited. Then all the nodes in the left subtree. And finally visits all the nodes in the right subtree.</li>
+<li><strong>Post-order</strong> - starts with the nodes in the left subtree. Visits the nodes in the right subtree. And then visits the root node.</li>
+<li><strong>Level-order</strong> - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.</li>
+</ol>
+</li>
+<li><strong>Insertion</strong> - insertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.</li>
+<li><strong>Search</strong> - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.</li>
+<li><strong>Deletion</strong> - during deletion there are 4 options to look at, the node either:
+<ol>
+<li>Is a leaf node (has no children).</li>
+<li>Has only one child, which then will take place of the deleted one.</li>
+<li>Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.</li>
+<li>Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.</li>
+</ol>
+</li>
+</ul>
+<h4 id="explain-the-mechanism-of-self-balancing-in-avl-trees" tabindex="-1"><a class="header-anchor" href="#explain-the-mechanism-of-self-balancing-in-avl-trees"><span>Explain the mechanism of Self-Balancing in AVL Trees.</span></a></h4>
+<p>First the <strong>Balance Factor</strong> of all nodes is calculated as a difference between the height of the left branch and the height of the right branch. If the balance factor is -1,0 or 1 then the tree is balanced, otherwise left and right rotations of the nodes must be done in order to shorten the height of branches with single nodes. During rotations the fundamental property of binary trees must be satisfied that the right child node is bigger than the parent and the left one is smaller. After rotations balance factors are calculated again and if they are -1,0 or 1 a new element can be inserted. Otherwise rotations are conducted further until balanced state is achieved.</p>
+<h4 id="explain-the-mechanism-of-self-balancing-in-red-black-trees" tabindex="-1"><a class="header-anchor" href="#explain-the-mechanism-of-self-balancing-in-red-black-trees"><span>Explain the mechanism of Self-Balancing in Red-Black Trees.</span></a></h4>
+<p>The fundamental rules of Red-Black Trees are:<br>
+1. Every node has a color either red or black.<br>
+2. The root of the tree is always black.<br>
+3. There are no two adjacent red nodes (A red node cannot have a red parent or red child).<br>
+4. Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.<br>
+5. Every leaf (e.i. NULL node) must be colored BLACK.<br>
+After insertion two basic operations are used in order to ensure the balance: <strong>Rotation and Recolouring</strong>. First, an element is inserted like in general binary trees and coloured red. One tries first the recolouring during balancing and if it does not work, rotations are conducted. If the new node (<strong>child</strong>) appears to be the root it is recoloured in black (see properties). Check the colour of the parent (<strong>father</strong>) node. If it is black then left the colour of the child node as red. If the father is also red, check the colour of its opposite node (<strong>uncle</strong>) on the same level. If the color of this node is also red then change both father and uncle nodes to black and the <strong>grandfather</strong> (parent node of father and uncle) to red if its not the root node, otherwise do not change the grandfathers color. Repeat the procedure for grandfather upwards. But if the uncle's color is black then rotations in 4 possible ways are conducted untill one can recolour the new arrangement of the nodes.</p>
+<h4 id="what-is-recursion" tabindex="-1"><a class="header-anchor" href="#what-is-recursion"><span>What is Recursion?</span></a></h4>
+<p>Recursion is defined as a process which calls itself directly or indirectly and the corresponding function is called a recursive function. As an example calculation of Fibonacci series can be formulated in the form of Recursion, like F(n) = F(n-1) + F(n-2), for n &gt;= 2.</p>
+<h4 id="what-is-dynamic-programming" tabindex="-1"><a class="header-anchor" href="#what-is-dynamic-programming"><span>What is Dynamic Programming?</span></a></h4>
+<p>Dynamic Programming is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems.</p>
+<h4 id="what-is-linear-programming" tabindex="-1"><a class="header-anchor" href="#what-is-linear-programming"><span>What is Linear Programming?</span></a></h4>
+<p>Linear programming is the technique used for optimizing a particular scenario. Using linear programming provides us with the best possible outcome in a given situation. It uses all the available resources in a manner such that they produce the optimum result. Problems like Transportation, manufacturing and diet can be solved by this approach. <br>
+A linear programming problem consits of <strong>Decision Variables</strong>, <strong>Objective Function</strong>, <strong>Constraints</strong> and <strong>Non-negative Restrictions</strong>.
+Decision variables are the variables x, and y, which decide the output of the linear programming problem and represent the final solution.
+The objective function, generally represented by Z, is the linear function that needs to be optimized according to the given condition to get the final solution. The restrictions imposed on decision variables that limit their values are called constraints.
+Now, the general formula of a linear programming problem is:<br>
+Objective Function: Z = ax + by <br>
+Constraints: cx + dy ≥ e, px + qy ≤ r <br>
+Non-Negative restrictions: x ≥ 0, y ≥ 0 <br>
+The methods of solving linear programming problems are <strong>Simplex</strong> and <strong>Graphical</strong>.</p>
+<p>Steps for the <strong>Simplex Method</strong> are:</p>
+<p>Step 1: Formulate the linear programming problems based on the given constraints.</p>
+<p>Step 2: Convert all the given inequalities to equations or equalities of the linear programming problems by adding the slack variable to each inequality where ever required.</p>
+<p>Step 3: Construct the initial simplex table. By representing each constraint equation in a row and writing the objective function at the bottom row. The table so obtained is called the Simplex table.</p>
+<p>Step 4: Identify the greatest negative entry in the bottom row the column of the element with the highest negative entry is called the pivot column</p>
+<p>Step 5: Divide the entries of the right-most column with the entries of the respective pivot column, excluding the entries of the bottommost row. Now the row containing the least entry is called the pivot row. The pivot element is obtained by the intersection of the pivot row and the pivot column.</p>
+<p>Step 6: Using matrix operation and with the help of the pivot element make all the entries in the pivot column to be zero.</p>
+<p>Step 7: Check for the non-negative entries in the bottommost row if there are no negative entries in the bottom row, end the process else start the process again from step 4.</p>
+<p>Step 8: The final simplex table so obtained gives the solution to our problem.</p>
+<p>Steps for the <strong>Graphical Method</strong> are:</p>
+<p>Step 1: First convert the inequations into normal equations.</p>
+<p>Step 2: Find the points at which equations cut the x-axis and y-axis. To find the point of intersection of the x-axis put y = 0 in the respective equation and find the point. Similarly for y-axis intersection points put x = 0 in the respective equation.</p>
+<p>Step 3: Draw the lines cutting the x-axis and y-axis.</p>
+<p>Step 4: The region will include an area region enclosed by two axes and all lines including the origin.</p>
+<p>Step 5: Find Z for each intersection point and thus maxima and minima.</p>
+<h4 id="what-is-backtracking" tabindex="-1"><a class="header-anchor" href="#what-is-backtracking"><span>What is Backtracking?</span></a></h4>
+<p>Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku.</p>
+<h4 id="what-is-a-greedy-algorithm" tabindex="-1"><a class="header-anchor" href="#what-is-a-greedy-algorithm"><span>What is a Greedy Algorithm?</span></a></h4>
+<p>Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.</p>
 <h3 id="interview-questions-for-c" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-c"><span>Interview questions for C++.</span></a></h3>
 <p><strong>Sources:</strong> <br>
 www.geeksforgeeks.org/cpp-interview-questions/ <br>
@@ -2767,681 +3444,7 @@ An example of application of condition variables are worker queues:</li>
 <span class="line">        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></span>
 <span class="line">    <span class="token punctuation">}</span></span>
 <span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="interview-questions-for-python" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-python"><span>Interview questions for Python.</span></a></h3>
-<p><strong>Sources:</strong><br>
-www.interviewbit.com/python-interview-questions/ <br>
-www.geeksforgeeks.org/python-interview-questions/ <br></p>
-<h4 id="what-is-python-what-are-the-benfits-of-using-it" tabindex="-1"><a class="header-anchor" href="#what-is-python-what-are-the-benfits-of-using-it"><span>What is Python? What are the benfits of using it?</span></a></h4>
-<p>Python is a high-level, interpreted, dynamically typed, general-purpose programming language. It can be used to build almost any type of application with the right tools/libraries. Python supports objects, modules, threads, exception-handling, and automatic memory management which help in modelling real-world problems and building applications to solve these problems.<br>
-Benefits of using Python:</p>
-<ul>
-<li>Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes readability and therefore reduces the cost of program maintenance. Moreover, the language is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.</li>
-<li>Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community of developers for Rapid Application Development and deployment.</li>
-</ul>
-<h4 id="explain-interpreted-programming-language" tabindex="-1"><a class="header-anchor" href="#explain-interpreted-programming-language"><span>Explain Interpreted Programming Language.</span></a></h4>
-<p>An interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.</p>
-<h4 id="what-is-a-dynamically-typed-language" tabindex="-1"><a class="header-anchor" href="#what-is-a-dynamically-typed-language"><span>What is a dynamically typed language?</span></a></h4>
-<p>Typing refers to type-checking in programming languages. In a strongly-typed language, such as Python, &quot;1&quot; + 2 will result in a type error since these languages don't allow for &quot;type-coercion&quot; (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output &quot;12&quot; as a result.<br>
-Type-checking can be done at two stages:</p>
-<ul>
-<li>Static - Data Types are checked before execution.</li>
-<li>Dynamic - Data Types are checked during execution.<br></li>
-</ul>
-<p>Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.</p>
-<h4 id="what-is-pep-8-and-why-is-it-important" tabindex="-1"><a class="header-anchor" href="#what-is-pep-8-and-why-is-it-important"><span>What is PEP 8 and why is it important?</span></a></h4>
-<p>PEP stands for <strong>Python Enhancement Proposal</strong>. A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes. PEP 8 is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.</p>
-<h4 id="what-is-scope-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-scope-in-python"><span>What is Scope in Python?</span></a></h4>
-<p>Every object in Python functions within a scope. A scope is a block of code where an object in Python remains relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have a scope defined for them where you could use their objects without any prefix. A few examples of scope created during code execution in Python are as follows:</p>
-<ul>
-<li>A <strong>Local Scope</strong> refers to the local objects available in the current function.</li>
-<li>A <strong>Global Scope</strong> refers to the objects available throughout the code execution since their inception.</li>
-<li>A <strong>Module-level Scope</strong> refers to the global objects of the current module accessible in the program.</li>
-<li>An <strong>Outermost Scope</strong> refers to all the built-in names callable in the program. The objects in this scope are searched last to find the name referenced.</li>
-</ul>
-<h4 id="what-is-the-difference-between-mutable-and-immutable-data-types-in-pyhon" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-mutable-and-immutable-data-types-in-pyhon"><span>What is the difference between Mutable and Immutable Data Types in Pyhon?</span></a></h4>
-<p>Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc. Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, Byte and all single value built-in types.</p>
-<h4 id="what-are-lists-and-tuples-what-is-the-key-difference-between-the-two" tabindex="-1"><a class="header-anchor" href="#what-are-lists-and-tuples-what-is-the-key-difference-between-the-two"><span>What are lists and tuples? What is the key difference between the two?</span></a></h4>
-<p>Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects stored in both sequences can have different data types. Lists are represented with square brackets ['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97). The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner.</p>
-<h4 id="what-are-the-common-built-in-data-types-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-the-common-built-in-data-types-in-python"><span>What are the common built-in data types in Python?</span></a></h4>
-<p>There are several built-in data types in Python. Although, Python doesn't require data types to be defined explicitly during variable declarations type errors are likely to occur if the knowledge of data types and their compatibility with each other are neglected. Python provides <code v-pre>type()</code> and <code v-pre>isinstance()</code> functions to check the type of these variables. These data types can be grouped into the following categories:</p>
-<ul>
-<li><strong>None Type:</strong> represents the null values in Python. Boolean equality operation can be performed using these NoneType objects.</li>
-<li><strong>Numeric Types:</strong> there are three distinct numeric types - <strong>integers</strong>, <strong>floating-point numbers</strong>, and <strong>complex numbers</strong>. Additionally, <strong>booleans</strong> are a sub-type of integers.</li>
-<li><strong>Sequence Types:</strong> there are four kinds of sequence data types: <strong>list</strong> (matable), <strong>tuple</strong> (immutable), <strong>range</strong> (immutable) and <strong>str</strong>(immutable).</li>
-<li><strong>Mapping Types:</strong> <strong>dict</strong> (dictionary) is mutable data type that stores key-value pairs. Implemented as a <strong>Hash Map</strong>.</li>
-<li><strong>Set Types:</strong> Currently, Python has two built-in types - <strong>set</strong> and <strong>frozenset</strong>. <strong>set</strong> type is mutable and supports methods like add() and remove(). <strong>frozenset</strong> type is immutable and can't be modified after creation.</li>
-<li><strong>Modules:</strong> is an additional built-in type supported by the Python Interpreter. It supports one special operation, i.e., attribute access: <code v-pre>mymod.myobj</code>, where <code v-pre>mymod</code> is a module and <code v-pre>myobj</code> references a name defined in m's symbol table. The module's symbol table resides in a very special attribute of the module <strong>dict</strong>, but direct assignment to this module is neither possible nor recommended.</li>
-<li><strong>Callable Types:</strong> Callable types are the types to which function call can be applied. They can be <strong>user-defined functions</strong>, <strong>instance methods</strong>, <strong>generator functions</strong> and some other built-in functions, methods and classes.</li>
-</ul>
-<h4 id="what-is-pass-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-pass-in-python"><span>What is <code v-pre>pass</code> in Python?</span></a></h4>
-<p>The <code v-pre>pass</code> keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may execute during runtime but has yet to be written.</p>
-<h4 id="how-are-arguments-passed-by-value-or-by-reference-in-python" tabindex="-1"><a class="header-anchor" href="#how-are-arguments-passed-by-value-or-by-reference-in-python"><span>How are arguments passed by value or by reference in Python?</span></a></h4>
-<p>Everything in Python is an object and all variables hold references to the objects. The reference values are according to the functions; as a result, you cannot change the value of the references. However, you can change the objects if it is mutable.</p>
-<h4 id="what-is-list-comprehension-give-an-example" tabindex="-1"><a class="header-anchor" href="#what-is-list-comprehension-give-an-example"><span>What is List Comprehension? Give an Example.</span></a></h4>
-<p>List comprehension is a syntax construction to ease the creation of a list based on existing iterable.<br>
-For Example:<br></p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">my_list <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h4 id="what-is-a-lambda-function" tabindex="-1"><a class="header-anchor" href="#what-is-a-lambda-function"><span>What is a lambda function?</span></a></h4>
-<p>A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement. <br>
-For Example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">a <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y <span class="token punctuation">:</span> x<span class="token operator">*</span>y</span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-is-the-difference-between-and-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-and-in-python"><span>What is the difference between / and // in Python?</span></a></h4>
-<p><code v-pre>/</code> represents precise division (result is a floating point number) whereas <code v-pre>//</code> represents floor division (result is an integer).<br>
-For Example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token number">5</span><span class="token operator">//</span><span class="token number">2</span> <span class="token operator">=</span> <span class="token number">2</span></span>
-<span class="line"><span class="token number">5</span><span class="token operator">/</span><span class="token number">2</span> <span class="token operator">=</span> <span class="token number">2.5</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-is-exceptional-handling-done-in-python" tabindex="-1"><a class="header-anchor" href="#how-is-exceptional-handling-done-in-python"><span>How is Exceptional handling done in Python?</span></a></h4>
-<p>There are 3 main keywords i.e. <code v-pre>try</code>, <code v-pre>except</code>, and <code v-pre>finally</code> which are used to catch exceptions and handle the recovering mechanism accordingly. <code v-pre>try</code> is the block of a code that is monitored for errors. Except block gets executed when an error occurs.<br>
-The beauty of the <code v-pre>final</code> block is to execute the code after trying for an error. This block gets executed irrespective of whether an error occurred or not. <code v-pre>final</code> block is used to do the required cleanup activities of objects/variables.</p>
-<h4 id="what-is-swapcase-function-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-swapcase-function-in-python"><span>What is swapcase function in Python?</span></a></h4>
-<p>It is a string’s function that converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. <br>
-For Example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">string <span class="token operator">=</span> <span class="token string">"PythonRules"</span></span>
-<span class="line">string<span class="token punctuation">.</span>swapcase<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">></span> <span class="token string">"pYTHONrULES"</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="can-we-pass-a-function-as-an-argument-in-python" tabindex="-1"><a class="header-anchor" href="#can-we-pass-a-function-as-an-argument-in-python"><span>Can we pass a function as an argument in Python?</span></a></h4>
-<p>Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments.</p>
-<h4 id="what-are-args-and-kwargs" tabindex="-1"><a class="header-anchor" href="#what-are-args-and-kwargs"><span>What are <code v-pre>*args</code> and <code v-pre>*kwargs</code>?</span></a></h4>
-<p>To pass a variable number of arguments to a function in Python, use the special syntax <code v-pre>*args</code> and <code v-pre>**kwargs</code> in the function specification. It is used to pass a variable-length, keyword-free argument list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations on it such as iterating over it and using higher-order operations like map and filter.</p>
-<h4 id="is-indentation-required-in-python" tabindex="-1"><a class="header-anchor" href="#is-indentation-required-in-python"><span>Is Indentation Required in Python?</span></a></h4>
-<p>Yes, indentation is required in Python. A Python interpreter can be informed that a group of statements belongs to a specific block of code by using Python indentation. Indentations make the code easy to read for developers in all programming languages but in Python, it is very important to indent the code in a specific order.</p>
-<h4 id="what-is-docstring-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-docstring-in-python"><span>What is docstring in Python?</span></a></h4>
-<p>Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods.</p>
-<ul>
-<li><strong>Declaring Docstrings:</strong> The docstrings are declared using ”’triple single quotes”’ or “””triple double quotes””” just below the class, method, or function declaration. All functions should have a docstring.</li>
-<li><strong>Accessing Docstrings:</strong> The docstrings can be accessed using the <code v-pre>__doc__</code> method of the object or using the help function.</li>
-</ul>
-<h4 id="what-is-a-break-continue-and-pass-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-a-break-continue-and-pass-in-python"><span>What is a <code v-pre>break</code>, <code v-pre>continue</code>, and <code v-pre>pass</code> in Python?</span></a></h4>
-<p>The <code v-pre>break</code> statement is used to terminate the loop or statement in which it is present. After that, the control will pass to the statements that are present after the break statement, if available.<br>
-<code v-pre>continue</code> is also a loop control statement just like the break statement. <code v-pre>continue</code> statement is opposite to that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the loop.<br>
-<code v-pre>pass</code> means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there.</p>
-<h4 id="how-do-you-floor-a-number-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-floor-a-number-in-python"><span>How do you floor a number in Python?</span></a></h4>
-<p>The Python math module includes a method that can be used to calculate the floor of a number.</p>
-<ul>
-<li><code v-pre>floor()</code> method in Python returns the floor of x i.e., the largest integer not greater than x.</li>
-<li>Also, The method <code v-pre>ceil(x)</code> in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x.</li>
-</ul>
-<h4 id="what-are-global-protected-and-private-attributes-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-global-protected-and-private-attributes-in-python"><span>What are global, protected and private attributes in Python?</span></a></h4>
-<ul>
-<li><strong>Global</strong> variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.</li>
-<li><strong>Protected</strong> attributes are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.</li>
-<li><strong>Private</strong> attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made.</li>
-</ul>
-<h4 id="what-is-the-use-of-self-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-the-use-of-self-in-python"><span>What is the use of <code v-pre>self</code> in Python?</span></a></h4>
-<p><code v-pre>self</code> is used to represent the instance of the class. With this keyword, you can access the attributes and methods of an object inside the class definition in Python.</p>
-<h4 id="what-is-init-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-init-in-python"><span>What is <code v-pre>__init__</code> in Python?</span></a></h4>
-<p><code v-pre>__init__</code> is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a <code v-pre>__init__</code> method associated with them. It helps in distinguishing methods and attributes of a class from local variables.</p>
-<h4 id="what-is-slicing-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-slicing-in-python"><span>What is slicing in Python?</span></a></h4>
-<ul>
-<li>As the name suggests, ‘slicing’ is taking parts of a container.</li>
-<li>Syntax for slicing is <code v-pre>[start : stop : step]</code></li>
-<li><code v-pre>start</code> is the starting index from where to slice a list or tuple</li>
-<li><code v-pre>stop</code> is the ending index or where to stop.</li>
-<li><code v-pre>step</code> is the number of steps to jump.</li>
-<li>Default value for start is 0, stop is number of items, step is 1.</li>
-<li>Slicing can be done on strings, arrays, lists, and tuples.</li>
-</ul>
-<h4 id="what-is-the-difference-between-python-arrays-and-lists" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-python-arrays-and-lists"><span>What is the difference between Python Arrays and Lists?</span></a></h4>
-<ul>
-<li><strong>Arrays</strong> in Python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.</li>
-<li><strong>Lists</strong> in Python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.<br>
-Example:</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> array</span>
-<span class="line">a <span class="token operator">=</span> array<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span></span>
-<span class="line"><span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span></span>
-<span class="line">    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">)</span>    <span class="token comment">#OUTPUT: 1 2 3</span></span>
-<span class="line">a <span class="token operator">=</span> array<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'string'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token comment">#OUTPUT: TypeError: an integer is required (got type str)</span></span>
-<span class="line">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'string'</span><span class="token punctuation">]</span></span>
-<span class="line"><span class="token keyword">for</span> i <span class="token keyword">in</span> a<span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">)</span>    <span class="token comment">#OUTPUT: 1 2 string</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-is-memory-managed-in-python" tabindex="-1"><a class="header-anchor" href="#how-is-memory-managed-in-python"><span>How is memory managed in Python?</span></a></h4>
-<ul>
-<li>Memory management in Python is handled by the Python Memory Manager. The memory allocated by the manager is in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being private, it is inaccessible to the programmer. Though, python does provide some core API functions to work upon the private heap space.</li>
-<li>Additionally, Python has an in-built garbage collection to recycle the unused memory for the private heap space.</li>
-</ul>
-<h4 id="what-are-python-namespaces-why-are-they-used" tabindex="-1"><a class="header-anchor" href="#what-are-python-namespaces-why-are-they-used"><span>What are Python namespaces? Why are they used?</span></a></h4>
-<p>A namespace in Python ensures that object names in a program are unique and can be used without any conflict. Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding 'object as value'. This allows for multiple namespaces to use the same name and map it to a separate object. A few examples of namespaces are as follows:</p>
-<ul>
-<li><strong>Local Namespace</strong> includes local names inside a function. The namespace is temporarily created for a function call and gets cleared when the function returns.</li>
-<li><strong>Global Namespace</strong> includes names from various imported packages/ modules that are being used in the current project. This namespace is created when the package is imported in the script and lasts until the execution of the script.</li>
-<li><strong>Built-in Namespace</strong> includes built-in functions of core Python and built-in names for various types of exceptions.</li>
-</ul>
-<p>The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.</p>
-<h4 id="what-are-decorators-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-decorators-in-python"><span>What are Decorators in Python?</span></a></h4>
-<p>Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. They are represented the <code v-pre>@decorator_name</code> in Python and are called in a bottom-up fashion. <br>
-For example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># decorator function to convert to lowercase</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">lowercase_decorator</span><span class="token punctuation">(</span>function<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       func <span class="token operator">=</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       string_lowercase <span class="token operator">=</span> func<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       <span class="token keyword">return</span> string_lowercase</span>
-<span class="line">   <span class="token keyword">return</span> wrapper</span>
-<span class="line"><span class="token comment"># decorator function to split words</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">splitter_decorator</span><span class="token punctuation">(</span>function<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       func <span class="token operator">=</span> function<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       string_split <span class="token operator">=</span> func<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       <span class="token keyword">return</span> string_split</span>
-<span class="line">   <span class="token keyword">return</span> wrapper</span>
-<span class="line"><span class="token decorator annotation punctuation">@splitter_decorator</span> <span class="token comment"># this is executed next</span></span>
-<span class="line"><span class="token decorator annotation punctuation">@lowercase_decorator</span> <span class="token comment"># this is executed first</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">return</span> <span class="token string">'Hello World'</span></span>
-<span class="line">hello<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment"># output => [ 'hello' , 'world' ]</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope.</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># decorator function to capitalize names</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">names_decorator</span><span class="token punctuation">(</span>function<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       arg1 <span class="token operator">=</span> arg1<span class="token punctuation">.</span>capitalize<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       arg2 <span class="token operator">=</span> arg2<span class="token punctuation">.</span>capitalize<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       string_hello <span class="token operator">=</span> function<span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span></span>
-<span class="line">       <span class="token keyword">return</span> string_hello</span>
-<span class="line">   <span class="token keyword">return</span> wrapper</span>
-<span class="line"><span class="token decorator annotation punctuation">@names_decorator</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">say_hello</span><span class="token punctuation">(</span>name1<span class="token punctuation">,</span> name2<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">return</span> <span class="token string">'Hello '</span> <span class="token operator">+</span> name1 <span class="token operator">+</span> <span class="token string">'! Hello '</span> <span class="token operator">+</span> name2 <span class="token operator">+</span> <span class="token string">'!'</span></span>
-<span class="line">say_hello<span class="token punctuation">(</span><span class="token string">'sara'</span><span class="token punctuation">,</span> <span class="token string">'ansh'</span><span class="token punctuation">)</span>   <span class="token comment"># output => 'Hello Sara! Hello Ansh!'</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-do-you-copy-an-object-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-copy-an-object-in-python"><span>How do you copy an object in Python?</span></a></h4>
-<p>In Python, the assignment statement (<code v-pre>=</code> operator) does not copy objects. Instead, it creates a binding between the existing object and the target variable name. To create copies of an object in Python, we need to use the copy module. Moreover, there are two ways of creating copies for the given object using the <code v-pre>copy</code> module:</p>
-<ul>
-<li><strong>Shallow Copy</strong> is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.</li>
-<li><strong>Deep Copy</strong> copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.<br>
-Examples:</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">from</span> copy <span class="token keyword">import</span> copy<span class="token punctuation">,</span> deepcopy</span>
-<span class="line">list_1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span></span>
-<span class="line"><span class="token comment">## shallow copy</span></span>
-<span class="line">list_2 <span class="token operator">=</span> copy<span class="token punctuation">(</span>list_1<span class="token punctuation">)</span> </span>
-<span class="line">list_2<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">7</span></span>
-<span class="line">list_2<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span></span>
-<span class="line">list_2    <span class="token comment"># output => [1, 2, [3, 5, 6], 7]</span></span>
-<span class="line">list_1    <span class="token comment"># output => [1, 2, [3, 5, 6], 4]</span></span>
-<span class="line"><span class="token comment">## deep copy</span></span>
-<span class="line">list_3 <span class="token operator">=</span> deepcopy<span class="token punctuation">(</span>list_1<span class="token punctuation">)</span></span>
-<span class="line">list_3<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">8</span></span>
-<span class="line">list_3<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span></span>
-<span class="line">list_3    <span class="token comment"># output => [1, 2, [3, 5, 6, 7], 8]</span></span>
-<span class="line">list_1    <span class="token comment"># output => [1, 2, [3, 5, 6], 4]</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-is-pickling-and-unpickling" tabindex="-1"><a class="header-anchor" href="#what-is-pickling-and-unpickling"><span>What is pickling and unpickling?</span></a></h4>
-<p>Python library <code v-pre>pickle</code> offers a feature - serialization out of the box. Serializing an object refers to transforming it into a format that can be stored, so as to be able to deserialize it, later on, to obtain the original object. Here, the pickle module comes into play.</p>
-<h4 id="what-are-generators-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-generators-in-python"><span>What are Generators in Python?</span></a></h4>
-<p>Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of ´´yield´´ keyword rather than ´´return`` to return a generator object.<br>
-Let's try and build a generator for fibonacci numbers:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment">## generate fibonacci numbers upto n</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   p<span class="token punctuation">,</span> q <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span></span>
-<span class="line">   <span class="token keyword">while</span><span class="token punctuation">(</span>p <span class="token operator">&lt;</span> n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">yield</span> p</span>
-<span class="line">       p<span class="token punctuation">,</span> q <span class="token operator">=</span> q<span class="token punctuation">,</span> p <span class="token operator">+</span> q</span>
-<span class="line">x <span class="token operator">=</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>    <span class="token comment"># create generator object </span></span>
-<span class="line"> </span>
-<span class="line"><span class="token comment">## iterating using __next__(), for Python2, use next()</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 0</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 1</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 1</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 2</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 3</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 5</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># output => 8</span></span>
-<span class="line">x<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment"># error</span></span>
-<span class="line"> </span>
-<span class="line"><span class="token comment">## iterating using loop</span></span>
-<span class="line"><span class="token keyword">for</span> i <span class="token keyword">in</span> fib<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>    <span class="token comment"># output => 0 1 1 2 3 5 8</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-is-the-difference-between-py-and-pyc-files" tabindex="-1"><a class="header-anchor" href="#what-is-the-difference-between-py-and-pyc-files"><span>What is the difference between .py and .pyc files?</span></a></h4>
-<ul>
-<li>.py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program. We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.</li>
-<li>Before executing a python program python interpreter checks for the compiled files. If the file is present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles it to .pyc file and then python virtual machine executes it.</li>
-<li>Having .pyc file saves you the compilation time.</li>
-</ul>
-<h4 id="how-python-is-interpreted" tabindex="-1"><a class="header-anchor" href="#how-python-is-interpreted"><span>How Python is interpreted?</span></a></h4>
-<ul>
-<li>Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation. Python is a bytecode(set of interpreter readable instructions) interpreted generally.</li>
-<li>Source code is a file with .py extension.</li>
-<li>Python compiles the source code to a set of instructions for a virtual machine. The Python interpreter is an implementation of that virtual machine. This intermediate format is called “bytecode”.</li>
-<li>.py source code is first compiled to give .pyc which is bytecode. This bytecode can be then interpreted by the official CPython or JIT(Just in Time compiler) compiled by PyPy.</li>
-</ul>
-<h4 id="what-are-iterators-in-python" tabindex="-1"><a class="header-anchor" href="#what-are-iterators-in-python"><span>What are iterators in Python?</span></a></h4>
-<ul>
-<li>An iterator is an object.</li>
-<li>It remembers its state i.e., where it is during iteration (see code below to see how)</li>
-<li><code v-pre>__iter__()</code> method initializes an iterator.</li>
-<li>It has a <code v-pre>__next__()</code> method which returns the next item in iteration and points to the next element. Upon reaching the end of iterable object <code v-pre>__next__()</code> must return StopIteration exception.</li>
-<li>It is also self-iterable.</li>
-<li>Iterators are objects with which we can iterate over iterable objects like lists, strings, etc.<br></li>
-</ul>
-<p>Example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">ArrayList</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> number_list<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>numbers <span class="token operator">=</span> number_list</span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__iter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token number">0</span></span>
-<span class="line">       <span class="token keyword">return</span> self</span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__next__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">if</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>pos <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>numbers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">           self<span class="token punctuation">.</span>pos <span class="token operator">+=</span> <span class="token number">1</span></span>
-<span class="line">           <span class="token keyword">return</span> self<span class="token punctuation">.</span>numbers<span class="token punctuation">[</span>self<span class="token punctuation">.</span>pos <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span></span>
-<span class="line">       <span class="token keyword">else</span><span class="token punctuation">:</span></span>
-<span class="line">           <span class="token keyword">raise</span> StopIteration</span>
-<span class="line">array_obj <span class="token operator">=</span> ArrayList<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span></span>
-<span class="line">it <span class="token operator">=</span> <span class="token builtin">iter</span><span class="token punctuation">(</span>array_obj<span class="token punctuation">)</span></span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#output: 2</span></span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#output: 3</span></span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>it<span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line"><span class="token comment">#Throws Exception</span></span>
-<span class="line"><span class="token comment">#Traceback (most recent call last):</span></span>
-<span class="line"><span class="token comment">#...</span></span>
-<span class="line"><span class="token comment">#StopIteration</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="what-are-negative-indexes-and-why-are-they-used" tabindex="-1"><a class="header-anchor" href="#what-are-negative-indexes-and-why-are-they-used"><span>What are negative indexes and why are they used?</span></a></h4>
-<ul>
-<li>Negative indexes are the indexes from the end of the list or tuple or string.</li>
-<li>Arr[-1] means the last element of array Arr[]. <br></li>
-</ul>
-<p>Example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span></span>
-<span class="line"><span class="token comment">#get the last element</span></span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#output 6</span></span>
-<span class="line"><span class="token comment">#get the second last element</span></span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#output 5</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="which-sorting-technique-is-used-by-sort-and-sorted-functions-of-python" tabindex="-1"><a class="header-anchor" href="#which-sorting-technique-is-used-by-sort-and-sorted-functions-of-python"><span>Which sorting technique is used by <code v-pre>sort()</code> and <code v-pre>sorted()</code> functions of python?</span></a></h4>
-<p>Python uses the TimSort algorithm for sorting. It’s a stable sorting whose worst case is O(N log N). It’s a hybrid sorting algorithm, derived from MergeSort and InsertionSort, designed to perform well on many kinds of real-world data.</p>
-<h4 id="how-do-you-create-a-class-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-create-a-class-in-python"><span>How do you create a class in Python?</span></a></h4>
-<p>To create a class in python, we use the keyword “class” as shown in the example below:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> emp_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>emp_name <span class="token operator">=</span> emp_name</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>To instantiate or create an object from the class created above, we do the following:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">emp_1<span class="token operator">=</span>Employee<span class="token punctuation">(</span><span class="token string">"Mr. Employee"</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>To access the name attribute, we just call the attribute using the dot operator as shown below:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>emp_1<span class="token punctuation">.</span>emp_name<span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>To create methods inside the class, we include the methods under the scope of the class as shown below:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> emp_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>emp_name <span class="token operator">=</span> emp_name</span>
-<span class="line">       </span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">introduce</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello I am "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>emp_name<span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>The <code v-pre>self</code> parameter has to be the first parameter of any method defined inside the class. The method of the class <code v-pre>Employee</code> can be accessed as shown below:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line">emp_1<span class="token punctuation">.</span>introduce<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h4 id="how-does-inheritance-work-in-python-explain-it-with-an-example" tabindex="-1"><a class="header-anchor" href="#how-does-inheritance-work-in-python-explain-it-with-an-example"><span>How does inheritance work in python? Explain it with an example.</span></a></h4>
-<p>Inheritance gives the power to a class to access all attributes and methods of another class. It aids in code reusability and helps the developer to maintain applications without redundant code. The class inheriting from another class is a child class or also called a derived class. The class from which a child class derives the members are called parent class or superclass.<br>
-Python supports different kinds of inheritance, they are:</p>
-<ul>
-<li><strong>Single Inheritance:</strong> Child class derives members of one parent class.</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Parent class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">ParentClass</span><span class="token punctuation">:</span></span>
-<span class="line">    <span class="token keyword">def</span> <span class="token function">par_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am parent class function"</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Child class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">ChildClass</span><span class="token punctuation">(</span>ParentClass<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">    <span class="token keyword">def</span> <span class="token function">child_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am child class function"</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Driver code</span></span>
-<span class="line">obj1 <span class="token operator">=</span> ChildClass<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj1<span class="token punctuation">.</span>par_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj1<span class="token punctuation">.</span>child_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li><strong>Multi-level Inheritance:</strong> The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Parent class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>a_name <span class="token operator">=</span> a_name</span>
-<span class="line">   </span>
-<span class="line"><span class="token comment"># Intermediate class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> b_name<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>b_name <span class="token operator">=</span> b_name</span>
-<span class="line">       <span class="token comment"># invoke constructor of class A</span></span>
-<span class="line">       A<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Child class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">C</span><span class="token punctuation">(</span>B<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>c_name<span class="token punctuation">,</span> b_name<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>c_name <span class="token operator">=</span> c_name</span>
-<span class="line">       <span class="token comment"># invoke constructor of class B</span></span>
-<span class="line">       B<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span> b_name<span class="token punctuation">,</span> a_name<span class="token punctuation">)</span></span>
-<span class="line">       </span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">display_names</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"A name : "</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>a_name<span class="token punctuation">)</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"B name : "</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>b_name<span class="token punctuation">)</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"C name : "</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>c_name<span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment">#  Driver code</span></span>
-<span class="line">obj1 <span class="token operator">=</span> C<span class="token punctuation">(</span><span class="token string">'child'</span><span class="token punctuation">,</span> <span class="token string">'intermediate'</span><span class="token punctuation">,</span> <span class="token string">'parent'</span><span class="token punctuation">)</span></span>
-<span class="line"><span class="token keyword">print</span><span class="token punctuation">(</span>obj1<span class="token punctuation">.</span>a_name<span class="token punctuation">)</span></span>
-<span class="line">obj1<span class="token punctuation">.</span>display_names<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li><strong>Multiple Inheritance:</strong> This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Parent class1</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent1</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">parent1_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hi I am first Parent"</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Parent class2</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent2</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">parent2_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hi I am second Parent"</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Child class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent1<span class="token punctuation">,</span> Parent2<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">child_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>parent1_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">       self<span class="token punctuation">.</span>parent2_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Driver's code</span></span>
-<span class="line">obj1 <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj1<span class="token punctuation">.</span>child_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li><strong>Hierarchical Inheritance:</strong> When a parent class is derived by more than one child class, it is called hierarchical inheritance.</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token comment"># Base class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span></span>
-<span class="line">     <span class="token keyword">def</span> <span class="token function">a_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am from the parent class."</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># 1st Derived class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">     <span class="token keyword">def</span> <span class="token function">b_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am from the first child."</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># 2nd Derived class</span></span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">C</span><span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">     <span class="token keyword">def</span> <span class="token function">c_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I am from the second child."</span><span class="token punctuation">)</span></span>
-<span class="line"> </span>
-<span class="line"><span class="token comment"># Driver's code</span></span>
-<span class="line">obj1 <span class="token operator">=</span> B<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj2 <span class="token operator">=</span> C<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj1<span class="token punctuation">.</span>a_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj1<span class="token punctuation">.</span>b_func<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">#child 1 method</span></span>
-<span class="line">obj2<span class="token punctuation">.</span>a_func<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">obj2<span class="token punctuation">.</span>c_func<span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token comment">#child 2 method</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="how-do-you-access-parent-members-in-the-child-class" tabindex="-1"><a class="header-anchor" href="#how-do-you-access-parent-members-in-the-child-class"><span>How do you access parent members in the child class?</span></a></h4>
-<p>Following are the ways using which you can access parent class members within a child class:</p>
-<ul>
-<li><strong>By using Parent class name:</strong> You can use the name of the parent class to access the attributes as shown in the example below:</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  </span>
-<span class="line">   <span class="token comment"># Constructor</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>name <span class="token operator">=</span> name    </span>
-<span class="line"> </span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
-<span class="line">   <span class="token comment"># Constructor</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       Parent<span class="token punctuation">.</span>name <span class="token operator">=</span> name</span>
-<span class="line">       self<span class="token punctuation">.</span>age <span class="token operator">=</span> age</span>
-<span class="line"> </span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">display</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       <span class="token keyword">print</span><span class="token punctuation">(</span>Parent<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">)</span></span>
-<span class="line"> </span>
-<span class="line"><span class="token comment"># Driver Code</span></span>
-<span class="line">obj <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token string">"Interviewbit"</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></span>
-<span class="line">obj<span class="token punctuation">.</span>display<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li><strong>By using <code v-pre>super()</code>:</strong> The parent class members can be accessed in child class using the <code v-pre>super</code> keyword.</li>
-</ul>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token comment"># Constructor</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">       self<span class="token punctuation">.</span>name <span class="token operator">=</span> name    </span>
-<span class="line"> </span>
-<span class="line"><span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">   <span class="token comment"># Constructor</span></span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>         </span>
-<span class="line">       <span class="token triple-quoted-string string">''' </span>
-<span class="line">       In Python 3.x, we can also use super().__init__(name)</span>
-<span class="line">       '''</span> </span>
-<span class="line">       <span class="token builtin">super</span><span class="token punctuation">(</span>Child<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">)</span></span>
-<span class="line">       self<span class="token punctuation">.</span>age <span class="token operator">=</span> age</span>
-<span class="line"> </span>
-<span class="line">   <span class="token keyword">def</span> <span class="token function">display</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">      <span class="token comment"># Note that Parent.name cant be used </span></span>
-<span class="line">      <span class="token comment"># here since super() is used in the constructor</span></span>
-<span class="line">      <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>age<span class="token punctuation">)</span></span>
-<span class="line">  </span>
-<span class="line"><span class="token comment"># Driver Code</span></span>
-<span class="line">obj <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token string">"Interviewbit"</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span></span>
-<span class="line">obj<span class="token punctuation">.</span>display<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="are-access-specifiers-used-in-python" tabindex="-1"><a class="header-anchor" href="#are-access-specifiers-used-in-python"><span>Are access specifiers used in python?</span></a></h4>
-<p>Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.</p>
-<h4 id="is-it-possible-to-call-parent-class-without-its-instance-creation" tabindex="-1"><a class="header-anchor" href="#is-it-possible-to-call-parent-class-without-its-instance-creation"><span>Is it possible to call parent class without its instance creation?</span></a></h4>
-<p>Yes, it is possible if the base class is instantiated by other child classes or if the base class is a static method.</p>
-<h4 id="how-is-an-empty-class-created-in-python" tabindex="-1"><a class="header-anchor" href="#how-is-an-empty-class-created-in-python"><span>How is an empty class created in python?</span></a></h4>
-<p>An empty class does not have any members defined in it. It is created by using the <code v-pre>pass</code> keyword (the pass command does nothing in python). We can create objects for this class outside the class.</p>
-<h4 id="what-is-polymorphism-in-python" tabindex="-1"><a class="header-anchor" href="#what-is-polymorphism-in-python"><span>What is Polymorphism in Python?</span></a></h4>
-<p>Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism.</p>
-<h4 id="differentiate-between-new-and-override-modifiers" tabindex="-1"><a class="header-anchor" href="#differentiate-between-new-and-override-modifiers"><span>Differentiate between new and override modifiers.</span></a></h4>
-<p>The <code v-pre>new</code> modifier is used to instruct the compiler to use the new implementation and not the base class function. The <code v-pre>override</code> modifier is useful for overriding a base class function inside the child class.</p>
-<h4 id="how-will-you-check-if-a-class-is-a-child-of-another-class" tabindex="-1"><a class="header-anchor" href="#how-will-you-check-if-a-class-is-a-child-of-another-class"><span>How will you check if a class is a child of another class?</span></a></h4>
-<p>This is done by using a method called <code v-pre>issubclass()</code> provided by python. The method tells us if any class is a child of another class by returning true or false accordingly.</p>
-<h4 id="define-encapsulation-in-python" tabindex="-1"><a class="header-anchor" href="#define-encapsulation-in-python"><span>Define encapsulation in Python?</span></a></h4>
-<p>Encapsulation means binding the code and the data together. A Python class is an example of encapsulation.</p>
-<h4 id="how-do-you-do-data-abstraction-in-python" tabindex="-1"><a class="header-anchor" href="#how-do-you-do-data-abstraction-in-python"><span>How do you do data abstraction in Python?</span></a></h4>
-<p>Data Abstraction is providing only the required details and hides the implementation from the world. It can be achieved in Python by using interfaces and abstract classes.</p>
-<h4 id="give-an-example-of-multithreading-with-threads-synchronization-in-python" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-multithreading-with-threads-synchronization-in-python"><span>Give an example of Multithreading with Threads Synchronization in Python.</span></a></h4>
-<p>The following code gives an example of threads synchronaization in Python:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"></span>
-<span class="line"><span class="token keyword">import</span> threading </span>
-<span class="line">  </span>
-<span class="line"><span class="token comment"># global variable x </span></span>
-<span class="line">x <span class="token operator">=</span> <span class="token number">0</span></span>
-<span class="line">  </span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
-<span class="line">    <span class="token triple-quoted-string string">""" </span>
-<span class="line">    function to increment global variable x </span>
-<span class="line">    """</span></span>
-<span class="line">    <span class="token keyword">global</span> x </span>
-<span class="line">    x <span class="token operator">+=</span> <span class="token number">1</span></span>
-<span class="line">  </span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">thread_task</span><span class="token punctuation">(</span>lock<span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
-<span class="line">    <span class="token triple-quoted-string string">""" </span>
-<span class="line">    task for thread </span>
-<span class="line">    calls increment function 100000 times. </span>
-<span class="line">    """</span></span>
-<span class="line">    <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100000</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
-<span class="line">        lock<span class="token punctuation">.</span>acquire<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">        increment<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">        lock<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">  </span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">main_task</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
-<span class="line">    <span class="token keyword">global</span> x </span>
-<span class="line">    <span class="token comment"># setting global variable x as 0 </span></span>
-<span class="line">    x <span class="token operator">=</span> <span class="token number">0</span></span>
-<span class="line">  </span>
-<span class="line">    <span class="token comment"># creating a lock </span></span>
-<span class="line">    lock <span class="token operator">=</span> threading<span class="token punctuation">.</span>Lock<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">  </span>
-<span class="line">    <span class="token comment"># creating threads </span></span>
-<span class="line">    t1 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>thread_task<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>lock<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </span>
-<span class="line">    t2 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>thread_task<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>lock<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </span>
-<span class="line">  </span>
-<span class="line">    <span class="token comment"># start threads </span></span>
-<span class="line">    t1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">    t2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">  </span>
-<span class="line">    <span class="token comment"># wait until threads finish their job </span></span>
-<span class="line">    t1<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">    t2<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">  </span>
-<span class="line"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span> </span>
-<span class="line">    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span> </span>
-<span class="line">        main_task<span class="token punctuation">(</span><span class="token punctuation">)</span> </span>
-<span class="line">        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Iteration {0}: x = {1}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> </span>
-<span class="line"></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Output:</strong><br>
-Iteration 0: x = 200000<br>
-Iteration 1: x = 200000<br>
-Iteration 2: x = 200000<br>
-Iteration 3: x = 200000<br>
-Iteration 4: x = 200000<br>
-Iteration 5: x = 200000<br>
-Iteration 6: x = 200000<br>
-Iteration 7: x = 200000<br>
-Iteration 8: x = 200000<br>
-Iteration 9: x = 200000<br></p>
-<h4 id="give-an-example-of-threads-synchronization-with-condition-variables" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-threads-synchronization-with-condition-variables"><span>Give an example of Threads Synchronization with Condition Variables.</span></a></h4>
-<p>Consider the following example:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> threading</span>
-<span class="line"><span class="token keyword">import</span> time</span>
-<span class="line"><span class="token keyword">import</span> logging</span>
-<span class="line"></span>
-<span class="line">logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>level<span class="token operator">=</span>logging<span class="token punctuation">.</span>DEBUG<span class="token punctuation">,</span></span>
-<span class="line">                    <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'(%(threadName)-9s) %(message)s'</span><span class="token punctuation">,</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">consumer</span><span class="token punctuation">(</span>cv<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">    logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Consumer thread started ...'</span><span class="token punctuation">)</span></span>
-<span class="line">    <span class="token keyword">with</span> cv<span class="token punctuation">:</span></span>
-<span class="line">    	logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Consumer waiting ...'</span><span class="token punctuation">)</span></span>
-<span class="line">        cv<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">        logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Consumer consumed the resource'</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">producer</span><span class="token punctuation">(</span>cv<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">    logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Producer thread started ...'</span><span class="token punctuation">)</span></span>
-<span class="line">    <span class="token keyword">with</span> cv<span class="token punctuation">:</span></span>
-<span class="line">        logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Making resource available'</span><span class="token punctuation">)</span></span>
-<span class="line">        logging<span class="token punctuation">.</span>debug<span class="token punctuation">(</span><span class="token string">'Notifying to all consumers'</span><span class="token punctuation">)</span></span>
-<span class="line">        cv<span class="token punctuation">.</span>notifyAll<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span></span>
-<span class="line">    condition <span class="token operator">=</span> threading<span class="token punctuation">.</span>Condition<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">    cs1 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'consumer1'</span><span class="token punctuation">,</span> target<span class="token operator">=</span>consumer<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>condition<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line">    cs2 <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'consumer2'</span><span class="token punctuation">,</span> target<span class="token operator">=</span>consumer<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>condition<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line">    pd <span class="token operator">=</span> threading<span class="token punctuation">.</span>Thread<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'producer'</span><span class="token punctuation">,</span> target<span class="token operator">=</span>producer<span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>condition<span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line">    cs1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span></span>
-<span class="line">    cs2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span></span>
-<span class="line">    pd<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Output:</strong><br>
-(consumer1) Consumer thread started ...<br>
-(consumer1) Consumer waiting ...<br>
-(consumer2) Consumer thread started ...<br>
-(consumer2) Consumer waiting ...<br>
-(producer ) Producer thread started ...<br>
-(producer ) Making resource available<br>
-(producer ) Notifying to all consumers<br>
-(consumer1) Consumer consumed the resource<br>
-(consumer2) Consumer consumed the resource<br></p>
-<h4 id="give-an-example-of-using-threadpoolexecuter-in-python" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-using-threadpoolexecuter-in-python"><span>Give an example of using ThreadPoolExecuter in Python.</span></a></h4>
-<p>Consider the following:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> concurrent<span class="token punctuation">.</span>futures</span>
-<span class="line"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request</span>
-<span class="line"></span>
-<span class="line">URLS <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'http://www.foxnews.com/'</span><span class="token punctuation">,</span></span>
-<span class="line">        <span class="token string">'http://www.cnn.com/'</span><span class="token punctuation">,</span></span>
-<span class="line">        <span class="token string">'http://europe.wsj.com/'</span><span class="token punctuation">,</span></span>
-<span class="line">        <span class="token string">'http://www.bbc.co.uk/'</span><span class="token punctuation">,</span></span>
-<span class="line">        <span class="token string">'http://nonexistant-subdomain.python.org/'</span><span class="token punctuation">]</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># Retrieve a single page and report the URL and contents</span></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">load_url</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">    <span class="token keyword">with</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span>url<span class="token punctuation">,</span> timeout<span class="token operator">=</span>timeout<span class="token punctuation">)</span> <span class="token keyword">as</span> conn<span class="token punctuation">:</span></span>
-<span class="line">        <span class="token keyword">return</span> conn<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token comment"># We can use a with statement to ensure threads are cleaned up promptly</span></span>
-<span class="line"><span class="token keyword">with</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>ThreadPoolExecutor<span class="token punctuation">(</span>max_workers<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token keyword">as</span> executor<span class="token punctuation">:</span></span>
-<span class="line">    <span class="token comment"># Start the load operations and mark each future with its URL</span></span>
-<span class="line">    future_to_url <span class="token operator">=</span> <span class="token punctuation">{</span>executor<span class="token punctuation">.</span>submit<span class="token punctuation">(</span>load_url<span class="token punctuation">,</span> url<span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">:</span> url <span class="token keyword">for</span> url <span class="token keyword">in</span> URLS<span class="token punctuation">}</span></span>
-<span class="line">    <span class="token keyword">for</span> future <span class="token keyword">in</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>as_completed<span class="token punctuation">(</span>future_to_url<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">        url <span class="token operator">=</span> future_to_url<span class="token punctuation">[</span>future<span class="token punctuation">]</span></span>
-<span class="line">        <span class="token keyword">try</span><span class="token punctuation">:</span></span>
-<span class="line">            data <span class="token operator">=</span> future<span class="token punctuation">.</span>result<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line">        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> exc<span class="token punctuation">:</span></span>
-<span class="line">            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%r generated an exception: %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>url<span class="token punctuation">,</span> exc<span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line">        <span class="token keyword">else</span><span class="token punctuation">:</span></span>
-<span class="line">            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%r page is %d bytes'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="give-an-example-of-using-processpoolexecuter" tabindex="-1"><a class="header-anchor" href="#give-an-example-of-using-processpoolexecuter"><span>Give an example of using ProcessPoolExecuter.</span></a></h4>
-<p>The following code describes such a use case:</p>
-<div class="language-python line-numbers-mode" data-highlighter="prismjs" data-ext="py"><pre v-pre><code class="language-python"><span class="line"><span class="token keyword">import</span> concurrent<span class="token punctuation">.</span>futures</span>
-<span class="line"><span class="token keyword">import</span> math</span>
-<span class="line"></span>
-<span class="line">PRIMES <span class="token operator">=</span> <span class="token punctuation">[</span></span>
-<span class="line">    <span class="token number">112272535095293</span><span class="token punctuation">,</span></span>
-<span class="line">    <span class="token number">112582705942171</span><span class="token punctuation">,</span></span>
-<span class="line">    <span class="token number">112272535095293</span><span class="token punctuation">,</span></span>
-<span class="line">    <span class="token number">115280095190773</span><span class="token punctuation">,</span></span>
-<span class="line">    <span class="token number">115797848077099</span><span class="token punctuation">,</span></span>
-<span class="line">    <span class="token number">1099726899285419</span><span class="token punctuation">]</span></span>
-<span class="line"></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">is_prime</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">    <span class="token keyword">if</span> n <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span></span>
-<span class="line">        <span class="token keyword">return</span> <span class="token boolean">False</span></span>
-<span class="line">    <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span></span>
-<span class="line">        <span class="token keyword">return</span> <span class="token boolean">True</span></span>
-<span class="line">    <span class="token keyword">if</span> n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span></span>
-<span class="line">        <span class="token keyword">return</span> <span class="token boolean">False</span></span>
-<span class="line"></span>
-<span class="line">    sqrt_n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line">    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> sqrt_n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">        <span class="token keyword">if</span> n <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span></span>
-<span class="line">            <span class="token keyword">return</span> <span class="token boolean">False</span></span>
-<span class="line">    <span class="token keyword">return</span> <span class="token boolean">True</span></span>
-<span class="line"></span>
-<span class="line"><span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">    <span class="token keyword">with</span> concurrent<span class="token punctuation">.</span>futures<span class="token punctuation">.</span>ProcessPoolExecutor<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> executor<span class="token punctuation">:</span></span>
-<span class="line">        <span class="token keyword">for</span> number<span class="token punctuation">,</span> prime <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>PRIMES<span class="token punctuation">,</span> executor<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>is_prime<span class="token punctuation">,</span> PRIMES<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></span>
-<span class="line">            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%d is prime: %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>number<span class="token punctuation">,</span> prime<span class="token punctuation">)</span><span class="token punctuation">)</span></span>
-<span class="line"></span>
-<span class="line"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span></span>
-<span class="line">    main<span class="token punctuation">(</span><span class="token punctuation">)</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="explain-the-difference-between-thread-and-process-in-python" tabindex="-1"><a class="header-anchor" href="#explain-the-difference-between-thread-and-process-in-python"><span>Explain the difference between Thread and Process in Python.</span></a></h4>
-<p>A <strong>Process</strong> is an instance of a program, e.g. a Python interpreter. They are independent from each other and do not share the same memory.<br>
-<strong>Key facts:</strong> - A new process is started independently from the first process - Takes advantage of multiple CPUs and cores - Separate memory space - Memory is not shared between processes - One GIL (Global interpreter lock) for each process, i.e. avoids GIL limitation - Great for CPU-bound processing - Child processes are interruptable/killable</p>
-<ul>
-<li>Starting a process is slower that starting a thread</li>
-<li>Larger memory footprint</li>
-<li>IPC (inter-process communication) is more complicated</li>
-</ul>
-<p>A <strong>Thread</strong> is an entity within a process that can be scheduled for execution (Also known as &quot;leightweight process&quot;). A Process can spawn multiple threads. The main difference is that all threads within a process share the same memory.<br>
-<strong>Key facts:</strong> - Multiple threads can be spawned within one process - Memory is shared between all threads - Starting a thread is faster than starting a process - Great for I/O-bound tasks - Leightweight - low memory footprint</p>
-<ul>
-<li>One GIL for all threads, i.e. threads are limited by GIL.</li>
-<li>Multithreading has no effect for CPU-bound tasks due to the GIL.</li>
-<li>Not interruptible/killable -&gt; be careful with memory leaks.</li>
-<li>Increased potential for race conditions.</li>
-</ul>
-<h4 id="what-is-the-python-global-interpreter-lock-gil" tabindex="-1"><a class="header-anchor" href="#what-is-the-python-global-interpreter-lock-gil"><span>What is the Python Global Interpreter Lock (GIL)?</span></a></h4>
-<p>Python Global Interpreter Lock (GIL) is a type of process lock which is used by python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. This means that in python only one thread will be executed at a time. The performance of the single-threaded process and the multi-threaded process will be the same in python and this is because of GIL in python. We can not achieve multithreading in python because we have global interpreter lock which restricts the threads and works as a single thread.</p>
-<h3 id="interview-questions-for-machine-learning" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-machine-learning"><span>Interview questions for Machine Learning.</span></a></h3>
-<h3 id="interview-questions-for-deep-learning" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-deep-learning"><span>Interview questions for Deep Learning.</span></a></h3>
-<h3 id="interview-questions-for-computer-vision" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-computer-vision"><span>Interview questions for Computer Vision.</span></a></h3>
-<h3 id="interview-questions-for-software-engineering-architecture-and-design" tabindex="-1"><a class="header-anchor" href="#interview-questions-for-software-engineering-architecture-and-design"><span>Interview questions for Software Engineering, Architecture and Design.</span></a></h3>
-</div></template>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
 
 
 

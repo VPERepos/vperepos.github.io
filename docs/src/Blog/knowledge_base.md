@@ -63,380 +63,20 @@ The intuitive definition of probability (classical/frequentist) says it's the ra
 #### What is the difference between probability and statistics?
 Probability tells you how to go from a population to a sample, and statistics tells you how to go from a sample to a population. So if one has a bin with red and blue balls and takes a number of balls from it, statistics estimates how many blue and red balls there could be in the bin. The probability estimates how likely it is that you take specific number of blue and red balls knowing the number of it in the bin. 
 
-#### Enlist and explain the formulas of calculating number of ways to sample a number of elements r taken with the number of choices n.
-There are <strong>permutations</strong>, which represent r samples taken with n choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.
-$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
+#### Enlist and explain the formulas of calculating number of ways to sample a number of elements 'r' taken with the number of choices 'n'.
+There are <strong>permutations</strong>, which represent 'r' samples taken with 'n' choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.
+* <strong> Permutations with replacement: </strong>
+$$P(n,r) = n^r$$
 
-### Interview questions for algorithms and data structures.
-**Sources:**<br>
-www.wikipedia.com <br>
-www.geeksforgeeks.org <br>
-www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
-www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
-www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm <br>
-www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
-www.vinayakd.com/articles/delete-n-ary-tree-node <br>
+* <strong> Permutations without replacement: </strong>
+$$P(n,r) = \frac{n!}{(n-r)!}$$
 
-#### What is a Data Structure?
-In computer science, a data structure is a **data organization**, and storage format that is usually chosen **for efficient access** to data.<br>
+* <strong> Combinations with replacement: </strong>
+$$C(n,r) = \frac{(n+r-1)!}{r!(n-1)!}$$
 
-#### Describe the types of Data Structures?
-* **Array** - an array is a number of elements in a specific order, typically all of the same type. Elements are accessed using an integer index to specify which element is required.<br>
-* **List** - a linked list is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays.<br>
-* **Record** - a record (also **called tuple** or **struct**) is an **aggregate data structure**. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. <br>
-* **Hash tables** -  also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions.<br>
-* **Graphs** - collections of nodes connected by edges, representing relationships between entities. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic.<br>
-* **Stacks and queues** - abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle.<br>
-* **Trees** - represent a hierarchical organization of elements. A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. **Binary trees** (particularly heaps), **AVL trees**, and **B-trees** are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data.
-* **Trie** - also known as a **prefix tree**, is a specialized tree data structure used for the efficient retrieval of strings. Tries store characters of a string as nodes, with each edge representing a character. They are particularly useful in text processing scenarios like autocomplete, spell-checking, and dictionary implementations. Tries enable fast searching and prefix-based operations on strings.<br>
+* <strong> Combinations without replacement: </strong>
+$$C(n,r) = \frac{n!}{r!(n-r)!}$$
 
-#### What is a Linear Data Structure? Name a few examples.
-A data structure is linear if all its elements or data items are arranged in a sequence or a linear order. The elements are stored in a **non-hierarchical way** so that each item has successors and predecessors except the first and last element in the list.
-Examples of linear data structures are **Array**, **Stack**, **Queue**, and **Linked List**.<br>
-
-#### How are the elements of a 2D Array stored in the memory.
-* **Row-Major Order**: In row-major ordering, the first row of a 2D array is entirely stored in memory, followed by the second row of the array, and so on until the final row.
-* **Column-Major Order**: In column-major ordering, the first column of the array is entirely saved in memory, followed by the second row of the array, and so on until the last column of the array is fully recorded in the memory.
-
-#### What are some use cases for Row-Major and Column-Major storing of 2D Arrays?
-**Row-Major** stored arrays are more efficient for row-wise access like in **Image Processing**. **Column-Major** stored arrays are more efficient for column-wise access like for **Matrix Multiplication**.<br>
-
-#### How can you possibly choose between Row-Major and Column-Major 2D Arrays storing implementations?
-By choosing a **programming language**. **Row-Major** is implemented in languages like C/C++ and **Column-Major** - in Fortran.
-
-#### What is a Linked List Data Structure?
-It’s a both **linear and non-linear Data Structure**, depending on application, or a sequence of data objects where **elements are not stored in adjacent memory locations**. The elements are linked using pointers to form a chain. Each element is a separate object, called a node.  Each node has two items: a data field and a reference to the next node. The entry point in a linked list is called the head. Where the list is empty, the head is a null reference and the last node has a reference to null. A linked list is a dynamic data structure, where the number of nodes is not fixed, and the list has the ability to grow and shrink on demand.
-It is applied in cases where:
-* We deal with an unknown number of objects or don’t know how many items are in the list
-* We need constant-time insertions/deletions from the list, as in real-time computing where time predictability is critical
-* Random access to any elements is not needed
-* The algorithm requires a data structure where objects need to be stored irrespective of their physical address in memory
-* We need to insert items in the middle of the list as in a priority queue
-<br>
-
-#### Are Linked Lists considered Linear or Non-linear Data Structures?
-Linked lists are considered both linear and non-linear data structures depending upon the application they are used for. When used for access strategies, it is considered as a linear data-structure. When used for data storage, it is considered a non-linear data structure.
-
-#### What are the advantages of a Linked List over an Array? In which scenarios do we use Linked List and when Array?
-Advantages of a linked list over an array are:
-* **Insertion and Deletion**<br>
-Insertion and deletion of nodes is an easier process, as we only update the address present in the next pointer of a node. It’s expensive to do the same in an array as the room has to be created for the new elements and existing elements must be shifted.<br>
-* **Dynamic Data Structure**<br>
-As a linked list is a dynamic data structure, there is no need to give an initial size as it can grow and shrink at runtime by allocating and deallocating memory. However, the size is limited in an array as the number of elements is statically stored in the main memory.<br>
-* **No wastage of Memory**<br>
-As the size of a linked list can increase or decrease depending on the demands of the program, and memory is allocated only when required, there is no memory wasted. In the case of an array, there is memory wastage. For instance, if we declare an array of size 10 and store only five elements in it, then the space for five elements is wasted.<br>
-* **Implementation**<br>
-Data structures like stack and queues are more easily implemented using a linked list than an array.<br>
-* **Some scenarios where we use linked list over array are**:
-    * When we do not know the upper limit on the number of elements in advance
-    * When there are a large number of add or remove operations
-    * When there are no large number of random access to elements
-    * When we want to insert items in the middle of the list, such as when implementing a priority queue<br>
-
-* **Some scenarios in which we use array over the linked list are**:
-    * When we need to index or randomly access elements
-    * When we know the number of elements in the array beforehand, so we can allocate the correct amount of memory
-    * When we need speed when iterating through all the elements in the sequence
-    * When memory is a concern; filled arrays use less memory than linked lists, as each element in the array is the data but each linked list node requires the data as well as one or more pointers to the other elements in the linked list
-<br>
-
-#### What is a Doubly-Linked List?
-It is a complex type (double-ended LL) of a linked list in which a node has two links, one that connects to the next node in the sequence and another that connects to the previous node. This allows traversal across the data elements in both directions.<br>
-
-#### What are Dynamic Data Structures? Name a few.
-They are collections of data in memory that expand and contract to grow or shrink in size as a program runs. This enables the programmer to control exactly how much memory is to be utilized. Examples are the **dynamic array**, **linked list**, **stack**, **queue**, and **heap**.<br>
-
-#### What is a Stack?
-A stack is an abstract data type that specifies a linear data structure, as in a real physical stack or piles where you can only take the top item off the stack in order to remove things. Thus, insertion (push) and deletion (pop) of items take place only at one end called top of the stack, with a particular order: LIFO (Last In First Out) or FILO (First In Last Out).
-
-#### Where are Stacks used?
-* Expression, evaluation, or conversion of evaluating prefix, postfix, and infix expressions
-* Syntax parsing
-* String reversal
-* Parenthesis checking
-* Backtracking
-
-#### What are the operations that can be performed on a Stack?
-A stack may perform three fundamental operations:
-* PUSH: The push action inserts a new element into the stack. The new feature is placed at the top of the stack. 
-* POP: The pop operation is performed to remove the stack's topmost element.
-* PEEK: A peek action returns the value of the stack's topmost element without removing it from the stack.
-
-#### What is a queue Data Structure?
-A queue is an abstract data type that specifies a linear data structure or an ordered list,  using the First In First Out (FIFO) operation to access elements. Insert operations can be performed only at one end called REAR and delete operations can be performed only at the other end called FRONT.
-
-#### List some applications of the Queue Data Structure.
-To prioritize jobs as in the following scenarios:
-* As waiting lists for a single shared resource (like printer, CPU, call center systems).
-* In the asynchronous transfer of data (file IO, sockets).
-
-#### What is a Dequeue?
-It is a double-ended queue, or a data structure, where the elements can be inserted or deleted at both ends (FRONT and REAR).
-
-#### What operations can be performed on Queues?
-* enqueue() adds an element to the end of the queue
-* dequeue() removes an element from the front of the queue
-* init() is used for initializing the queue
-* isEmpty() tests for whether or not the queue is empty
-* The front is used to get the value of the first data item but does not remove it
-* The rear is used to get the last item from a queue
-
-#### Define the Graph Data Structure.
-It is a type of non-linear data structure that consists of vertices or nodes connected by edges or arcs to enable storage or retrieval of data. Edges may be directed or undirected.
-
-#### What are the applications of Graph Data Structures?
-* Transport grids where stations are represented as vertices and routes as the edges of the graph
-* Utility graphs of power or water, where vertices are connection points and edge the wires or pipes connecting them
-* Social network graphs to determine the flow of information and hotspots (edges and vertices)
-* Neural networks where vertices represent neurons and edge the synapses between them
-
-#### List the types of Trees?
-* **The General Tree** <br>
-A tree is referred to as a generic tree if its hierarchy is not constrained. In the General Tree, each node can have an endless number of offspring, and all other trees are subsets of the tree.<br>
-
-* **The Binary Tree** <br>
-The binary tree is a type of tree in which each parent has at least two offspring. The children are referred to as the left and right youngsters. This tree is more popular than most others. When specific limitations and features are given to a Binary tree, various trees such as AVL tree, BST (Binary Search Tree), RBT tree, and so on are also utilized. <br>
-
-* **Binary Search Tree** <br>
-Binary Search Tree (BST) is a binary tree extension that includes numerous optional constraints. In BST, a node's left child value should be less than or equal to the parent value, while the right child value should always be higher than the parent's value.<br>
-
-* **The AVL Tree** <br>
-The AVL tree is a self-balancing binary search tree (automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions). The term AVL is given in honor of the inventors Adelson-Velshi and Landis. This was the first tree to achieve dynamic equilibrium. Each node in the AVL tree is assigned a balancing factor based on whether the tree is balanced or not. The node kids have a maximum height of one AVL vine. Search, insert, delete operations have O(log n) complexity.<br>
-
-* **Red and Black Tree** <br>
-Red-black trees are another type of auto-balancing tree. The red-black term is derived from the qualities of the red-black tree, which has either red or black painted on each node. It helps to keep the forest in balance. Even though this tree is not perfectly balanced, the searching process takes just O(log n) time. <br>
-
-* **The N-ary Tree** <br>
-In this sort of tree with a node, N is the maximum number of children. A binary tree is a two-year tree since each binary tree node has no more than two offsprings. A full N-ary tree is one in which the children of each node are either 0 or N. <br>
-
-* **Octree** <br>
-An octree is a tree data structure in which each internal node has exactly eight children. Octrees are most often used to partition a three-dimensional space by recursively subdividing it into eight octants.
-
-* **Heap** <br>
-A heap is a tree-based data structure that satisfies the heap property: in a max heap, for any given node C, if P is a parent node of C, then the key (the value) of P is greater than or equal to the key of C. In a min heap, the key of P is less than or equal to the key of C.
-
-#### How is a Node Height in the Tree Data Structure determined?
-The height of a node is the number of edges from that node to the leaf node (the lowermost node in the hierarchy).
-
-#### How is a Node Depth in the Tree Data Structure determined?
-The depth of a node is the number of edges it takes from the root (the uppermost node in the hierarchy) node to that particular node.
-
-#### What is a Node Degree in the Tree Data Structure?
-The total number of branches coming out of a node is considered to be the degree of that node.
-
-#### What is a Forest in relation with the Tree Data Structure?
-A collection of disconnected trees is called a forest. If you cut the root of a tree, the disjoint trees hence formed make up a forest. 
-
-#### How is a Balanced Binary Tree determined?
-A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
-
-#### What is a Self-balancing Binary Tree?
-Self-Balancing Binary Search Trees are height-balanced binary search trees that automatically keep the height as small as possible when insertion and deletion operations are performed on the tree. Most prominent examples are AVL Trees and Red-Black Trees.
-
-#### What is a B-Tree Data Structure?
-A B-tree is a sort of self-balancing search tree whereby each node could have more than two children and hold multiple keys.
-
-#### Explain what Jagged Array is?
-It is an array whose elements themselves are arrays and may be of different dimensions and sizes.
-
-#### What is an Algorithm?
-An algorithm is a step by step method of solving a problem or manipulating data. It defines a set of instructions to be executed in a certain order to get the desired output.
-
-#### What is an asymptotic analysis of an algorithm?
-Asymptotic analysis is the technique of determining an algorithm's running time in mathematical units to determine the program's limits, also known as "run-time performance." The purpose is to identify the best case, worst case, and average-case times for completing a particular activity.
-
-#### What are Asymptotic Notations?
-Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.
-
-#### What are the common algorithmic runtimes in big O notation?
-* **Constant** - O(1) (Insertion in a linked list)
-* **Logarithmic** - O(log(N)) (Binary Search)
-* **Linear** - O(N) (Linear Search)
-* **Polynomial** - O(N^b) (QuickSort with O(N*log(N)))
-* **Exponential** - O(b^N) (Fibonacci series (each element is a sum of previous two) without Dynamic Programming, (O(N) with dynamic programming))
-* **Factorial** - O(N!) (Generation of all possible permutations of N objects)
-
-#### What are basic operations on Arrays?
-* **Traversing** - looping through each element in the array and processing each element one at a time.<br>
-* **Insertion** - the process of adding new elements into an existing array. This can be done by providing an index for where the insertion should occur and then shifting other elements in the array to make space for the insertion.<br>
-* **Deletion** - the opposite of insertion and involves removing elements from an existing array. After deleting an element, all other elements in the array must be shifted to fill any gaps left from deletion.
-* **Searching** - process of identifying an element from within an array by comparing it to your desired value until you find a match. 
-* **Sorting** - process of arranging elements of an array in either ascending or descending order.
-
-#### What are the basic types of searching? Describe their worst case asymptotic behaviour.
-* **Linear Search** - compares each element one after another until a match is found, or all elements have been searched. It has O(n) time complexity, because in worst case the searched element is the last one, or there is no such elements and you go through whole array.
-* **Binary Search** - can be done in sorted arrays by comparing the middle element with the target and if they are not equal, the half where the target cannot lie is elemenated. The time complexity is O(log2(N)), because with each step you divide the number of elements N by 2, like N/2, N/4, N/8... until you reach 1. So N/2^k = 1 and thus k = log2(N).
-
-#### What are some common array sorting algorithms?
-* **PermutationSort** - most ineffective sorting algorithm. It works by generating permutations of an array and checking if it is in the right sorted order. The worst case time complexity is O(?) undefined, since it has no upper bound and could run forever.
-* **BubbleSort** - simple and easy to understand sorting algorithm. Consists of two loops. In the case of sorting in ascending order, the inner loop goes over elements and if an element is bigger than the next one, they are swapped. The outer loop repeats the procedure. The time complexity is O(N^2). Still too slow for real life problems.
-* **QuickSort** - the fastest sorting algorithm based on divide and conquer principle. The key process in **QuickSort** is a **Partition**. The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot. Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array. The time complexity is O(N*log(N)).
-* **InsertionSort** - is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output. Insertion sort is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. Then, you pick a card from the unsorted group and put it in the right place in the sorted group. It has the worst-case time-complexity of O(N^2).
-* **HeapSort** - is a comparison-based sorting technique based on **Binary Heap** data structure.
-    * Build a heap from the given input array.
-    * Repeat the following steps until the heap contains only one element:
-        * Swap the root element of the heap (which is the largest element) with the last element of the heap.
-        * Remove the last element of the heap (which is now in the correct position).
-        * Heapify the remaining elements of the heap in top-down order.
-    * The sorted array is obtained by reversing the order of the elements in the input array.
-
-#### Name the main properties of the basic operations on linked lists.
-* **Traversing** - this operation has a time complexity of O(N), the same as for arrays. But one can not access elemnts of a linked list by direct indexing.
-* **Insertion** - this operation has a constant time complexity in contrast to arrays, where the worst case time complexity of the operation is O(N). It needs only to modify pointers in the chain at the place of insertion.
-* **Deletion** - the mechanism is the same as for **Insertion**.
-* **Search** - the same as for an Array in the case of an unsorted list, the worst case time complexity of searching an element is O(N). Binary search can be done only for sorted lists.
-* **Sort** - the same algorithms as for Arrays can be applied for linked lists with the time complexity depending on the chosen algorithm.
-
-#### How can one detect loops in a Linked Lists, name a few approaches?
-* **Floyd's Loop Detection Algorithm** - uses two pointers running over a linked list with different velocities, like first goes over each element, the second jumps over one element. If there are loops in the linked list, the two pointers will be equal at some point in the loop. Otherwise, the both reach the last element in the list. 
-* **Using Hashing** - traverse the linked list and save the calculated hash of each node's adress. If the current node's hash points to one of the previously calculated hashes, then the list has loops. If the last element is reached without pointing to the previous hashes, then there are no loops.
-
-#### Give some examples of basic Hash Functions that can be used in Hash Table Data Structure?
-* **Division** - a modulus function that returns the division remainder is used in this case. A key value is divided by the table length and the remainder is used as an index in the table.
-* **Mid Square** - in this case the key value is squared and the middle N digits are extracted as a hash value.
-* **Digit Folding** - divide the key value into a number of parts, where each part has the same number of digits, except for the last one. Addition of the parts gives a hash number.
-* **Multiplication** - choose a constant value between 0 and 1. Multiply it with the key value. Extract the fractional part of the multiplication product. Multiply it by the hash table length and take the floor of the result. This produces the hash.
-
-#### How can one possibly avoid Hash Collisions in Hash Tables?
-One could solve the problem of hash collisions by for example **Linear Probing**. If the calculated index in a hash table is already in use, one just searches for the next empty cell in the table.
-
-#### What are the basic operations on Hash Tables?
-* **Search** - compute the hash of a passed key and locate the value by hash code as an array index. If the element is not found use linear probing to get the element ahead.
-* **Insert** - compute the hash code of a passed key. Use cash code as an index in the array. If the cell is not empty use linear probing to get to the next empty cell.
-* **Delete** - the same as for previous operations hash code is used as an array index. If the cell is empty use linear probing to get to the element ahead. Once the lement is found store a dummy element there.
-
-#### What is a Bipartite Graph?
-A bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets U and V, that is, every edge connects a vertex in U to one in V . Vertex sets U and V are usually called the parts of the graph. Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles.
-
-#### What is a Weighted Graph?
-A graph whose vertices or edges have been assigned weights. A vertex-weighted graph has weights on its vertices and an edge-weighted graph has weights on its edges.
-
-#### What is a Directed Graph?
-A directed graph (or digraph) is a graph that is made up of a set of vertices connected by directed edges, often called arcs.
-
-#### What is a Transpose of a Directed Graph?
-Transpose of a directed graph G is another directed graph on the same set of vertices with all of the edges reversed compared to the orientation of the corresponding edges in G.
-
-#### What is a Strongly Connected Graph?
-A directed graph is called strongly connected if there is a path from each vertex in the graph to every other vertex.
-
-#### What is a Minimum Spanning Tree of a Graph?
-A minimum spanning tree (MST) is defined as a spanning tree that has the minimum weight among all the possible spanning trees. A **Spanning Tree** is a subset of the edges of the graph that forms a tree (acyclic) where every node of the graph is a part of the tree.
-
-#### Name the ways of representing and storing a Graph Data Structure.
-* **Adjacency Matrix** - in this method a graph is represented in the form of a 2D matrix, where rows and columns denote vertices. And the values in the cells describe reletionships (edges) between vertices.
-* **Adjacency List** - here a Graph is represented as a collection of linked lists. There is an array of pointers for all vertices. Each pointer shows connections to all other vertices in a chain that have edges to the reference vertice.
-When a Graph has a lot of edges, then it is better to represent it in the form of Adjacency Matrix.<br>
-
-| | | |
-|:---|:---|:---|
-|<strong>Action</strong>|<strong>Adjacency Matrix</strong>|<strong>Adjacency List</strong>|
-|Adding Edge| O(1) | O(1) |
-|Removing Edge| O(1) | O(N) |
-|Initializing| O(N*N) | O(N) |
-
-#### What are the basic operations on Graphs?
-* **Insertion of Nodes/Edges** in the graph.
-* **Deletion of Nodes/Edges** in the graph.
-* **Searching on Graphs** – Search an entity in the graph.
-* **Traversal of Graphs** – Traversing all the nodes in the graph.
-
-#### List the ways of Traversing a Graph.
-* **Breadth-First-Search** - is a graph traversal algorithm that explores all the vertices in a graph at the current depth before moving on to the vertices at the next depth level. It starts at a specified vertex and visits all its neighbors before moving on to the next level of neighbors. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.
-* **Depth-First-Search** - the algorithm starts selecting some arbitrary node as the root node and explores as far as possible along each branch before backtracking. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.
-
-#### List the main applications of Breadth-First-Search.
-* **Shortest Path Finding** - Breadth-First-Search can be used to find the shortest path between two nodes in an unweighted graph. By keeping track of the parent of each node during the traversal, the shortest path can be reconstructed.
-* **Cycle Detection** - Breadth-First-Search can be used to detect cycles in a graph. If a node is visited twice during the traversal, it indicates the presence of a cycle.
-* **Connected Components** - Breadth-First-Search can be used to identify connected components in a graph. Each connected component is a set of nodes that can be reached from each other.
-* **Topological Sorting** - BFS can be used to perform topological sorting on a directed acyclic graph (DAG). Topological sorting arranges the nodes in a linear order such that for any edge (u, v), u appears before v in the order.
-
-#### List the main applications of Depth-First-Search.
-* **Detecting Cycle in a Graph** - A graph has a cycle if and only if we see a back edge during DFS. So we can run DFS for the graph and check for back edges.
-* **Path Finding** - Depth-First-Search can be used to find a path between any two vertices. Choose one vertex es a start. Use stack in order to save the path between starting and current vertex. As son as destination vertex is reached, return the path.
-* **Topological Sorting** - the same like for Breadth-First-Search, it is used mainly for jobs scheduling from the given dependencies among jobs. 
-* **Testing if a Graph is Bipartite** - when we first discover a new vertex, color it opposite its parents, and for each other edge, check it doesn’t link two vertices of the same color. The first vertex in any connected component can be red or black.
-* **Finding Strongly Connected Components in a Graph** - for example brute-force checking if the definition of a strongly connected component fits the vertices of a graph.
-* **Backtracking** - Depth-first search can be used in backtracking algorithms.
-
-#### What are the basic operations on Trees Data Structures?
-* **Traversal** - a hierarchical data structure like a tree can have different ways of traversal. Simplifying to a **Binary Tree**, one can distinguish between three types of traversal:
-    1. **In-order** - it starts with visiting all the nodes in the left subtree. Then visits the root node. And finally, all the nodes in the right subtree are visited.
-    2. **Pre-order** - first the root node is visited. Then all the nodes in the left subtree. And finally visits all the nodes in the right subtree.
-    3. **Post-order** - starts with the nodes in the left subtree. Visits the nodes in the right subtree. And then visits the root node.
-    4. **Level-order** - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.
-* **Insertion** - insertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.
-* **Search** - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.
-* **Deletion** - during deletion there are 4 options to look at, the node either:
-    1. Is a leaf node (has no children).
-    2. Has only one child, which then will take place of the deleted one.
-    3. Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.
-    4. Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.
-
-#### Explain the mechanism of Self-Balancing in AVL Trees.
-First the **Balance Factor** of all nodes is calculated as a difference between the height of the left branch and the height of the right branch. If the balance factor is -1,0 or 1 then the tree is balanced, otherwise left and right rotations of the nodes must be done in order to shorten the height of branches with single nodes. During rotations the fundamental property of binary trees must be satisfied that the right child node is bigger than the parent and the left one is smaller. After rotations balance factors are calculated again and if they are -1,0 or 1 a new element can be inserted. Otherwise rotations are conducted further until balanced state is achieved.
-
-#### Explain the mechanism of Self-Balancing in Red-Black Trees.
-The fundamental rules of Red-Black Trees are:<br>
-    1. Every node has a color either red or black.<br>
-    2. The root of the tree is always black.<br>
-    3. There are no two adjacent red nodes (A red node cannot have a red parent or red child).<br>
-    4. Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.<br>
-    5. Every leaf (e.i. NULL node) must be colored BLACK.<br>
-After insertion two basic operations are used in order to ensure the balance: **Rotation and Recolouring**. First, an element is inserted like in general binary trees and coloured red. One tries first the recolouring during balancing and if it does not work, rotations are conducted. If the new node (**child**) appears to be the root it is recoloured in black (see properties). Check the colour of the parent (**father**) node. If it is black then left the colour of the child node as red. If the father is also red, check the colour of its opposite node (**uncle**) on the same level. If the color of this node is also red then change both father and uncle nodes to black and the **grandfather** (parent node of father and uncle) to red if its not the root node, otherwise do not change the grandfathers color. Repeat the procedure for grandfather upwards. But if the uncle's color is black then rotations in 4 possible ways are conducted untill one can recolour the new arrangement of the nodes.  
-
-#### What is Recursion?
-Recursion is defined as a process which calls itself directly or indirectly and the corresponding function is called a recursive function. As an example calculation of Fibonacci series can be formulated in the form of Recursion, like F(n) = F(n-1) + F(n-2), for n >= 2.
-
-#### What is Dynamic Programming?
-Dynamic Programming is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems. 
-
-#### What is Linear Programming?
-Linear programming is the technique used for optimizing a particular scenario. Using linear programming provides us with the best possible outcome in a given situation. It uses all the available resources in a manner such that they produce the optimum result. Problems like Transportation, manufacturing and diet can be solved by this approach. <br>
-A linear programming problem consits of **Decision Variables**, **Objective Function**, **Constraints** and **Non-negative Restrictions**.
-Decision variables are the variables x, and y, which decide the output of the linear programming problem and represent the final solution. 
-The objective function, generally represented by Z, is the linear function that needs to be optimized according to the given condition to get the final solution. The restrictions imposed on decision variables that limit their values are called constraints.
-Now, the general formula of a linear programming problem is:<br>
-Objective Function: Z = ax + by <br>
-Constraints: cx + dy ≥ e, px + qy ≤ r <br>
-Non-Negative restrictions: x ≥ 0, y ≥ 0 <br>
-The methods of solving linear programming problems are **Simplex** and **Graphical**.
-
-Steps for the **Simplex Method** are:
-
-Step 1: Formulate the linear programming problems based on the given constraints.
-
-Step 2: Convert all the given inequalities to equations or equalities of the linear programming problems by adding the slack variable to each inequality where ever required.
-
-Step 3: Construct the initial simplex table. By representing each constraint equation in a row and writing the objective function at the bottom row. The table so obtained is called the Simplex table.
-
-Step 4: Identify the greatest negative entry in the bottom row the column of the element with the highest negative entry is called the pivot column
-
-Step 5: Divide the entries of the right-most column with the entries of the respective pivot column, excluding the entries of the bottommost row. Now the row containing the least entry is called the pivot row. The pivot element is obtained by the intersection of the pivot row and the pivot column.
-
-Step 6: Using matrix operation and with the help of the pivot element make all the entries in the pivot column to be zero.
-
-Step 7: Check for the non-negative entries in the bottommost row if there are no negative entries in the bottom row, end the process else start the process again from step 4.
-
-Step 8: The final simplex table so obtained gives the solution to our problem.
-
-Steps for the **Graphical Method** are:
-
-Step 1: First convert the inequations into normal equations.
-
-Step 2: Find the points at which equations cut the x-axis and y-axis. To find the point of intersection of the x-axis put y = 0 in the respective equation and find the point. Similarly for y-axis intersection points put x = 0 in the respective equation.
-
-Step 3: Draw the lines cutting the x-axis and y-axis.
-
-Step 4: The region will include an area region enclosed by two axes and all lines including the origin. 
-
-Step 5: Find Z for each intersection point and thus maxima and minima.
-
-#### What is Backtracking?
-Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku.
-
-#### What is a Greedy Algorithm?
-Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.
 
 ### Interview questions for Databases.
 **Sources:** <br>
@@ -930,6 +570,1086 @@ BASE Properties aim to handle large volumes of data and enable scalability and f
 
 #### Can Normalization be used in a NoSQL Database?
 Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields.
+
+### Interview questions for Python.
+**Sources:**<br>
+www.interviewbit.com/python-interview-questions/ <br>
+www.geeksforgeeks.org/python-interview-questions/ <br>
+
+#### What is Python? What are the benfits of using it?
+Python is a high-level, interpreted, dynamically typed, general-purpose programming language. It can be used to build almost any type of application with the right tools/libraries. Python supports objects, modules, threads, exception-handling, and automatic memory management which help in modelling real-world problems and building applications to solve these problems.<br>
+Benefits of using Python:
+* Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes readability and therefore reduces the cost of program maintenance. Moreover, the language is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.
+* Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community of developers for Rapid Application Development and deployment.
+
+#### Explain Interpreted Programming Language.
+An interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.
+
+#### What is a dynamically typed language?
+Typing refers to type-checking in programming languages. In a strongly-typed language, such as Python, "1" + 2 will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output "12" as a result.<br>
+Type-checking can be done at two stages:
+* Static - Data Types are checked before execution.
+* Dynamic - Data Types are checked during execution.<br>
+
+Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.
+
+#### What is PEP 8 and why is it important?
+PEP stands for **Python Enhancement Proposal**. A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes. PEP 8 is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.
+
+#### What is Scope in Python?
+Every object in Python functions within a scope. A scope is a block of code where an object in Python remains relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have a scope defined for them where you could use their objects without any prefix. A few examples of scope created during code execution in Python are as follows:
+* A **Local Scope** refers to the local objects available in the current function.
+* A **Global Scope** refers to the objects available throughout the code execution since their inception.
+* A **Module-level Scope** refers to the global objects of the current module accessible in the program.
+* An **Outermost Scope** refers to all the built-in names callable in the program. The objects in this scope are searched last to find the name referenced.
+
+#### What is the difference between Mutable and Immutable Data Types in Pyhon?
+Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc. Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, Byte and all single value built-in types.
+
+#### What are lists and tuples? What is the key difference between the two?
+Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects stored in both sequences can have different data types. Lists are represented with square brackets ['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97). The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner.
+
+#### What are the common built-in data types in Python?
+There are several built-in data types in Python. Although, Python doesn't require data types to be defined explicitly during variable declarations type errors are likely to occur if the knowledge of data types and their compatibility with each other are neglected. Python provides ``type()`` and ``isinstance()`` functions to check the type of these variables. These data types can be grouped into the following categories:
+* **None Type:** represents the null values in Python. Boolean equality operation can be performed using these NoneType objects.
+* **Numeric Types:** there are three distinct numeric types - **integers**, **floating-point numbers**, and **complex numbers**. Additionally, **booleans** are a sub-type of integers.
+* **Sequence Types:** there are four kinds of sequence data types: **list** (matable), **tuple** (immutable), **range** (immutable) and **str**(immutable).
+* **Mapping Types:** **dict** (dictionary) is mutable data type that stores key-value pairs. Implemented as a **Hash Map**.
+* **Set Types:** Currently, Python has two built-in types - **set** and **frozenset**. **set** type is mutable and supports methods like add() and remove(). **frozenset** type is immutable and can't be modified after creation.
+* **Modules:** is an additional built-in type supported by the Python Interpreter. It supports one special operation, i.e., attribute access: ``mymod.myobj``, where ``mymod`` is a module and ``myobj`` references a name defined in m's symbol table. The module's symbol table resides in a very special attribute of the module __dict__, but direct assignment to this module is neither possible nor recommended.
+* **Callable Types:** Callable types are the types to which function call can be applied. They can be **user-defined functions**, **instance methods**, **generator functions** and some other built-in functions, methods and classes.
+ 
+#### What is ``pass`` in Python?
+The ``pass`` keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may execute during runtime but has yet to be written.
+
+#### How are arguments passed by value or by reference in Python?
+Everything in Python is an object and all variables hold references to the objects. The reference values are according to the functions; as a result, you cannot change the value of the references. However, you can change the objects if it is mutable.
+
+#### What is List Comprehension? Give an Example.
+List comprehension is a syntax construction to ease the creation of a list based on existing iterable.<br>
+For Example:<br>
+```python
+my_list = [i for i in range(1, 10)]
+```
+
+#### What is a lambda function?
+A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement. <br>
+For Example:
+```python
+a = lambda x, y : x*y
+print(a(7, 19))
+```
+
+#### What is the difference between / and // in Python?
+``/`` represents precise division (result is a floating point number) whereas ``//`` represents floor division (result is an integer).<br>
+For Example:
+```python
+5//2 = 2
+5/2 = 2.5
+```
+
+#### How is Exceptional handling done in Python?
+There are 3 main keywords i.e. ``try``, ``except``, and ``finally`` which are used to catch exceptions and handle the recovering mechanism accordingly. ``try`` is the block of a code that is monitored for errors. Except block gets executed when an error occurs.<br>
+The beauty of the ``final`` block is to execute the code after trying for an error. This block gets executed irrespective of whether an error occurred or not. ``final`` block is used to do the required cleanup activities of objects/variables.
+
+#### What is swapcase function in Python?
+It is a string’s function that converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. <br> 
+For Example:
+```python
+string = "PythonRules"
+string.swapcase() ---> "pYTHONrULES"
+```
+
+#### Can we pass a function as an argument in Python?
+Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments.
+
+#### What are ``*args`` and ``*kwargs``?
+To pass a variable number of arguments to a function in Python, use the special syntax ``*args`` and ``**kwargs`` in the function specification. It is used to pass a variable-length, keyword-free argument list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations on it such as iterating over it and using higher-order operations like map and filter.
+
+#### Is Indentation Required in Python?
+Yes, indentation is required in Python. A Python interpreter can be informed that a group of statements belongs to a specific block of code by using Python indentation. Indentations make the code easy to read for developers in all programming languages but in Python, it is very important to indent the code in a specific order.
+
+#### What is docstring in Python?
+Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods.
+* **Declaring Docstrings:** The docstrings are declared using ”’triple single quotes”’ or “””triple double quotes””” just below the class, method, or function declaration. All functions should have a docstring.
+* **Accessing Docstrings:** The docstrings can be accessed using the ``__doc__`` method of the object or using the help function.
+
+#### What is a ``break``, ``continue``, and ``pass`` in Python? 
+The ``break`` statement is used to terminate the loop or statement in which it is present. After that, the control will pass to the statements that are present after the break statement, if available.<br>
+``continue`` is also a loop control statement just like the break statement. ``continue`` statement is opposite to that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the loop.<br>
+``pass`` means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there.
+
+#### How do you floor a number in Python?
+The Python math module includes a method that can be used to calculate the floor of a number.
+* ``floor()`` method in Python returns the floor of x i.e., the largest integer not greater than x. 
+* Also, The method ``ceil(x)`` in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x.
+
+#### What are global, protected and private attributes in Python?
+* **Global** variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
+* **Protected** attributes are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
+* **Private** attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made.
+
+#### What is the use of ``self`` in Python?
+``self`` is used to represent the instance of the class. With this keyword, you can access the attributes and methods of an object inside the class definition in Python.
+
+#### What is ``__init__`` in Python?
+``__init__`` is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a ``__init__`` method associated with them. It helps in distinguishing methods and attributes of a class from local variables.
+
+#### What is slicing in Python?
+* As the name suggests, ‘slicing’ is taking parts of a container.
+* Syntax for slicing is ``[start : stop : step]``
+* ``start`` is the starting index from where to slice a list or tuple
+* ``stop`` is the ending index or where to stop.
+* ``step`` is the number of steps to jump.
+* Default value for start is 0, stop is number of items, step is 1.
+* Slicing can be done on strings, arrays, lists, and tuples.
+
+#### What is the difference between Python Arrays and Lists?
+* **Arrays** in Python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.
+* **Lists** in Python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.<br>
+Example:
+```python
+import array
+a = array.array('i', [1, 2, 3])
+for i in a:
+    print(i, end=' ')    #OUTPUT: 1 2 3
+a = array.array('i', [1, 2, 'string'])    #OUTPUT: TypeError: an integer is required (got type str)
+a = [1, 2, 'string']
+for i in a:
+   print(i, end=' ')    #OUTPUT: 1 2 string
+```
+
+#### How is memory managed in Python?
+* Memory management in Python is handled by the Python Memory Manager. The memory allocated by the manager is in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being private, it is inaccessible to the programmer. Though, python does provide some core API functions to work upon the private heap space.
+* Additionally, Python has an in-built garbage collection to recycle the unused memory for the private heap space.
+
+#### What are Python namespaces? Why are they used?
+A namespace in Python ensures that object names in a program are unique and can be used without any conflict. Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding 'object as value'. This allows for multiple namespaces to use the same name and map it to a separate object. A few examples of namespaces are as follows:
+* **Local Namespace** includes local names inside a function. The namespace is temporarily created for a function call and gets cleared when the function returns.
+* **Global Namespace** includes names from various imported packages/ modules that are being used in the current project. This namespace is created when the package is imported in the script and lasts until the execution of the script.
+* **Built-in Namespace** includes built-in functions of core Python and built-in names for various types of exceptions.
+
+The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.
+
+#### What are Decorators in Python?
+Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. They are represented the ``@decorator_name`` in Python and are called in a bottom-up fashion. <br>
+For example:
+```python
+# decorator function to convert to lowercase
+def lowercase_decorator(function):
+   def wrapper():
+       func = function()
+       string_lowercase = func.lower()
+       return string_lowercase
+   return wrapper
+# decorator function to split words
+def splitter_decorator(function):
+   def wrapper():
+       func = function()
+       string_split = func.split()
+       return string_split
+   return wrapper
+@splitter_decorator # this is executed next
+@lowercase_decorator # this is executed first
+def hello():
+   return 'Hello World'
+hello()   # output => [ 'hello' , 'world' ]
+```
+The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope.
+```python
+# decorator function to capitalize names
+def names_decorator(function):
+   def wrapper(arg1, arg2):
+       arg1 = arg1.capitalize()
+       arg2 = arg2.capitalize()
+       string_hello = function(arg1, arg2)
+       return string_hello
+   return wrapper
+@names_decorator
+def say_hello(name1, name2):
+   return 'Hello ' + name1 + '! Hello ' + name2 + '!'
+say_hello('sara', 'ansh')   # output => 'Hello Sara! Hello Ansh!'
+```
+#### How do you copy an object in Python?
+In Python, the assignment statement (``=`` operator) does not copy objects. Instead, it creates a binding between the existing object and the target variable name. To create copies of an object in Python, we need to use the copy module. Moreover, there are two ways of creating copies for the given object using the ``copy`` module:
+* **Shallow Copy** is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.
+* **Deep Copy** copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.<br>
+Examples:
+```python
+from copy import copy, deepcopy
+list_1 = [1, 2, [3, 5], 4]
+## shallow copy
+list_2 = copy(list_1) 
+list_2[3] = 7
+list_2[2].append(6)
+list_2    # output => [1, 2, [3, 5, 6], 7]
+list_1    # output => [1, 2, [3, 5, 6], 4]
+## deep copy
+list_3 = deepcopy(list_1)
+list_3[3] = 8
+list_3[2].append(7)
+list_3    # output => [1, 2, [3, 5, 6, 7], 8]
+list_1    # output => [1, 2, [3, 5, 6], 4]
+```
+
+#### What is pickling and unpickling?
+Python library ``pickle`` offers a feature - serialization out of the box. Serializing an object refers to transforming it into a format that can be stored, so as to be able to deserialize it, later on, to obtain the original object. Here, the pickle module comes into play.
+
+#### What are Generators in Python?
+Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of ´´yield´´ keyword rather than ´´return`` to return a generator object.<br>
+Let's try and build a generator for fibonacci numbers:
+```python
+## generate fibonacci numbers upto n
+def fib(n):
+   p, q = 0, 1
+   while(p < n):
+       yield p
+       p, q = q, p + q
+x = fib(10)    # create generator object 
+ 
+## iterating using __next__(), for Python2, use next()
+x.__next__()    # output => 0
+x.__next__()    # output => 1
+x.__next__()    # output => 1
+x.__next__()    # output => 2
+x.__next__()    # output => 3
+x.__next__()    # output => 5
+x.__next__()    # output => 8
+x.__next__()    # error
+ 
+## iterating using loop
+for i in fib(10):
+   print(i)    # output => 0 1 1 2 3 5 8
+```
+
+#### What is the difference between .py and .pyc files?
+* .py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program. We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.
+* Before executing a python program python interpreter checks for the compiled files. If the file is present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles it to .pyc file and then python virtual machine executes it.
+* Having .pyc file saves you the compilation time.
+
+#### How Python is interpreted?
+* Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation. Python is a bytecode(set of interpreter readable instructions) interpreted generally.
+* Source code is a file with .py extension.
+* Python compiles the source code to a set of instructions for a virtual machine. The Python interpreter is an implementation of that virtual machine. This intermediate format is called “bytecode”.
+* .py source code is first compiled to give .pyc which is bytecode. This bytecode can be then interpreted by the official CPython or JIT(Just in Time compiler) compiled by PyPy.
+
+#### What are iterators in Python?
+* An iterator is an object.
+* It remembers its state i.e., where it is during iteration (see code below to see how)
+* ``__iter__()`` method initializes an iterator.
+* It has a ``__next__()`` method which returns the next item in iteration and points to the next element. Upon reaching the end of iterable object ``__next__()`` must return StopIteration exception.
+* It is also self-iterable.
+* Iterators are objects with which we can iterate over iterable objects like lists, strings, etc.<br>
+
+Example:
+```python
+class ArrayList:
+   def __init__(self, number_list):
+       self.numbers = number_list
+   def __iter__(self):
+       self.pos = 0
+       return self
+   def __next__(self):
+       if(self.pos < len(self.numbers)):
+           self.pos += 1
+           return self.numbers[self.pos - 1]
+       else:
+           raise StopIteration
+array_obj = ArrayList([1, 2, 3])
+it = iter(array_obj)
+print(next(it)) #output: 2
+print(next(it)) #output: 3
+print(next(it))
+#Throws Exception
+#Traceback (most recent call last):
+#...
+#StopIteration
+```
+
+#### What are negative indexes and why are they used?
+* Negative indexes are the indexes from the end of the list or tuple or string.
+* Arr[-1] means the last element of array Arr[]. <br>
+
+Example:
+```python
+arr = [1, 2, 3, 4, 5, 6]
+#get the last element
+print(arr[-1]) #output 6
+#get the second last element
+print(arr[-2]) #output 5
+```
+
+#### Which sorting technique is used by ``sort()`` and ``sorted()`` functions of python?
+Python uses the TimSort algorithm for sorting. It’s a stable sorting whose worst case is O(N log N). It’s a hybrid sorting algorithm, derived from MergeSort and InsertionSort, designed to perform well on many kinds of real-world data.
+
+#### How do you create a class in Python?
+To create a class in python, we use the keyword “class” as shown in the example below:
+```python
+class Employee:
+   def __init__(self, emp_name):
+       self.emp_name = emp_name
+```
+To instantiate or create an object from the class created above, we do the following:
+```python
+emp_1=Employee("Mr. Employee")
+```
+To access the name attribute, we just call the attribute using the dot operator as shown below:
+```python
+print(emp_1.emp_name)
+```
+To create methods inside the class, we include the methods under the scope of the class as shown below:
+```python
+class Employee:
+   def __init__(self, emp_name):
+       self.emp_name = emp_name
+       
+   def introduce(self):
+       print("Hello I am " + self.emp_name)
+```
+The ``self`` parameter has to be the first parameter of any method defined inside the class. The method of the class ``Employee`` can be accessed as shown below:
+```python
+emp_1.introduce()
+```
+
+#### How does inheritance work in python? Explain it with an example.
+Inheritance gives the power to a class to access all attributes and methods of another class. It aids in code reusability and helps the developer to maintain applications without redundant code. The class inheriting from another class is a child class or also called a derived class. The class from which a child class derives the members are called parent class or superclass.<br>
+Python supports different kinds of inheritance, they are:
+* **Single Inheritance:** Child class derives members of one parent class.
+```python
+# Parent class
+class ParentClass:
+    def par_func(self):
+         print("I am parent class function")
+
+# Child class
+class ChildClass(ParentClass):
+    def child_func(self):
+         print("I am child class function")
+
+# Driver code
+obj1 = ChildClass()
+obj1.par_func()
+obj1.child_func()
+```
+* **Multi-level Inheritance:** The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.
+```python
+# Parent class
+class A:
+   def __init__(self, a_name):
+       self.a_name = a_name
+   
+# Intermediate class
+class B(A):
+   def __init__(self, b_name, a_name):
+       self.b_name = b_name
+       # invoke constructor of class A
+       A.__init__(self, a_name)
+
+# Child class
+class C(B):
+   def __init__(self,c_name, b_name, a_name):
+       self.c_name = c_name
+       # invoke constructor of class B
+       B.__init__(self, b_name, a_name)
+       
+   def display_names(self):
+       print("A name : ", self.a_name)
+       print("B name : ", self.b_name)
+       print("C name : ", self.c_name)
+
+#  Driver code
+obj1 = C('child', 'intermediate', 'parent')
+print(obj1.a_name)
+obj1.display_names()
+```
+* **Multiple Inheritance:** This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.
+```python
+# Parent class1
+class Parent1:
+   def parent1_func(self):
+       print("Hi I am first Parent")
+
+# Parent class2
+class Parent2:
+   def parent2_func(self):
+       print("Hi I am second Parent")
+
+# Child class
+class Child(Parent1, Parent2):
+   def child_func(self):
+       self.parent1_func()
+       self.parent2_func()
+
+# Driver's code
+obj1 = Child()
+obj1.child_func()
+```
+* **Hierarchical Inheritance:** When a parent class is derived by more than one child class, it is called hierarchical inheritance.
+```python
+# Base class
+class A:
+     def a_func(self):
+         print("I am from the parent class.")
+
+# 1st Derived class
+class B(A):
+     def b_func(self):
+         print("I am from the first child.")
+
+# 2nd Derived class
+class C(A):
+     def c_func(self):
+         print("I am from the second child.")
+ 
+# Driver's code
+obj1 = B()
+obj2 = C()
+obj1.a_func()
+obj1.b_func()    #child 1 method
+obj2.a_func()
+obj2.c_func()    #child 2 method
+```
+
+#### How do you access parent members in the child class?
+Following are the ways using which you can access parent class members within a child class:
+* **By using Parent class name:** You can use the name of the parent class to access the attributes as shown in the example below:
+```python
+class Parent(object):  
+   # Constructor
+   def __init__(self, name):
+       self.name = name    
+ 
+class Child(Parent): 
+   # Constructor
+   def __init__(self, name, age):
+       Parent.name = name
+       self.age = age
+ 
+   def display(self):
+       print(Parent.name, self.age)
+ 
+# Driver Code
+obj = Child("Interviewbit", 6)
+obj.display()
+```
+* **By using ``super()``:** The parent class members can be accessed in child class using the ``super`` keyword.
+```python
+class Parent(object):
+   # Constructor
+   def __init__(self, name):
+       self.name = name    
+ 
+class Child(Parent):
+   # Constructor
+   def __init__(self, name, age):         
+       ''' 
+       In Python 3.x, we can also use super().__init__(name)
+       ''' 
+       super(Child, self).__init__(name)
+       self.age = age
+ 
+   def display(self):
+      # Note that Parent.name cant be used 
+      # here since super() is used in the constructor
+      print(self.name, self.age)
+  
+# Driver Code
+obj = Child("Interviewbit", 6)
+obj.display()
+```
+
+#### Are access specifiers used in python?
+Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.
+
+#### Is it possible to call parent class without its instance creation?
+Yes, it is possible if the base class is instantiated by other child classes or if the base class is a static method.
+
+#### How is an empty class created in python?
+An empty class does not have any members defined in it. It is created by using the ``pass`` keyword (the pass command does nothing in python). We can create objects for this class outside the class.
+
+#### What is Polymorphism in Python?
+Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism.
+
+#### Differentiate between new and override modifiers.
+The ``new`` modifier is used to instruct the compiler to use the new implementation and not the base class function. The ``override`` modifier is useful for overriding a base class function inside the child class.
+
+#### How will you check if a class is a child of another class?
+This is done by using a method called ``issubclass()`` provided by python. The method tells us if any class is a child of another class by returning true or false accordingly. 
+
+#### Define encapsulation in Python?
+Encapsulation means binding the code and the data together. A Python class is an example of encapsulation.
+
+#### How do you do data abstraction in Python?
+Data Abstraction is providing only the required details and hides the implementation from the world. It can be achieved in Python by using interfaces and abstract classes.
+
+#### Give an example of Multithreading with Threads Synchronization in Python.
+The following code gives an example of threads synchronaization in Python:
+```python
+
+import threading 
+  
+# global variable x 
+x = 0
+  
+def increment(): 
+    """ 
+    function to increment global variable x 
+    """
+    global x 
+    x += 1
+  
+def thread_task(lock): 
+    """ 
+    task for thread 
+    calls increment function 100000 times. 
+    """
+    for _ in range(100000): 
+        lock.acquire() 
+        increment() 
+        lock.release() 
+  
+def main_task(): 
+    global x 
+    # setting global variable x as 0 
+    x = 0
+  
+    # creating a lock 
+    lock = threading.Lock() 
+  
+    # creating threads 
+    t1 = threading.Thread(target=thread_task, args=(lock,)) 
+    t2 = threading.Thread(target=thread_task, args=(lock,)) 
+  
+    # start threads 
+    t1.start() 
+    t2.start() 
+  
+    # wait until threads finish their job 
+    t1.join() 
+    t2.join() 
+  
+if __name__ == "__main__": 
+    for i in range(10): 
+        main_task() 
+        print("Iteration {0}: x = {1}".format(i,x)) 
+
+```
+**Output:**<br>
+Iteration 0: x = 200000<br>
+Iteration 1: x = 200000<br>
+Iteration 2: x = 200000<br>
+Iteration 3: x = 200000<br>
+Iteration 4: x = 200000<br>
+Iteration 5: x = 200000<br>
+Iteration 6: x = 200000<br>
+Iteration 7: x = 200000<br>
+Iteration 8: x = 200000<br>
+Iteration 9: x = 200000<br>
+
+#### Give an example of Threads Synchronization with Condition Variables.
+Consider the following example:
+```python
+import threading
+import time
+import logging
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='(%(threadName)-9s) %(message)s',)
+
+def consumer(cv):
+    logging.debug('Consumer thread started ...')
+    with cv:
+    	logging.debug('Consumer waiting ...')
+        cv.wait()
+        logging.debug('Consumer consumed the resource')
+
+def producer(cv):
+    logging.debug('Producer thread started ...')
+    with cv:
+        logging.debug('Making resource available')
+        logging.debug('Notifying to all consumers')
+        cv.notifyAll()
+
+if __name__ == '__main__':
+    condition = threading.Condition()
+    cs1 = threading.Thread(name='consumer1', target=consumer, args=(condition,))
+    cs2 = threading.Thread(name='consumer2', target=consumer, args=(condition,))
+    pd = threading.Thread(name='producer', target=producer, args=(condition,))
+
+    cs1.start()
+    time.sleep(2)
+    cs2.start()
+    time.sleep(2)
+    pd.start()
+```
+**Output:**<br>
+(consumer1) Consumer thread started ...<br>
+(consumer1) Consumer waiting ...<br>
+(consumer2) Consumer thread started ...<br>
+(consumer2) Consumer waiting ...<br>
+(producer ) Producer thread started ...<br>
+(producer ) Making resource available<br>
+(producer ) Notifying to all consumers<br>
+(consumer1) Consumer consumed the resource<br>
+(consumer2) Consumer consumed the resource<br>
+
+#### Give an example of using ThreadPoolExecuter in Python.
+Consider the following:
+```python
+import concurrent.futures
+import urllib.request
+
+URLS = ['http://www.foxnews.com/',
+        'http://www.cnn.com/',
+        'http://europe.wsj.com/',
+        'http://www.bbc.co.uk/',
+        'http://nonexistant-subdomain.python.org/']
+
+# Retrieve a single page and report the URL and contents
+def load_url(url, timeout):
+    with urllib.request.urlopen(url, timeout=timeout) as conn:
+        return conn.read()
+
+# We can use a with statement to ensure threads are cleaned up promptly
+with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    # Start the load operations and mark each future with its URL
+    future_to_url = {executor.submit(load_url, url, 60): url for url in URLS}
+    for future in concurrent.futures.as_completed(future_to_url):
+        url = future_to_url[future]
+        try:
+            data = future.result()
+        except Exception as exc:
+            print('%r generated an exception: %s' % (url, exc))
+        else:
+            print('%r page is %d bytes' % (url, len(data)))
+```
+
+#### Give an example of using ProcessPoolExecuter.
+The following code describes such a use case:
+```python
+import concurrent.futures
+import math
+
+PRIMES = [
+    112272535095293,
+    112582705942171,
+    112272535095293,
+    115280095190773,
+    115797848077099,
+    1099726899285419]
+
+def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+
+    sqrt_n = int(math.floor(math.sqrt(n)))
+    for i in range(3, sqrt_n + 1, 2):
+        if n % i == 0:
+            return False
+    return True
+
+def main():
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        for number, prime in zip(PRIMES, executor.map(is_prime, PRIMES)):
+            print('%d is prime: %s' % (number, prime))
+
+if __name__ == '__main__':
+    main()
+```
+
+#### Explain the difference between Thread and Process in Python.
+A **Process** is an instance of a program, e.g. a Python interpreter. They are independent from each other and do not share the same memory.<br>
+**Key facts:** - A new process is started independently from the first process - Takes advantage of multiple CPUs and cores - Separate memory space - Memory is not shared between processes - One GIL (Global interpreter lock) for each process, i.e. avoids GIL limitation - Great for CPU-bound processing - Child processes are interruptable/killable
+* Starting a process is slower that starting a thread
+* Larger memory footprint
+* IPC (inter-process communication) is more complicated
+
+A **Thread** is an entity within a process that can be scheduled for execution (Also known as "leightweight process"). A Process can spawn multiple threads. The main difference is that all threads within a process share the same memory.<br>
+**Key facts:** - Multiple threads can be spawned within one process - Memory is shared between all threads - Starting a thread is faster than starting a process - Great for I/O-bound tasks - Leightweight - low memory footprint
+* One GIL for all threads, i.e. threads are limited by GIL.
+* Multithreading has no effect for CPU-bound tasks due to the GIL.
+* Not interruptible/killable -> be careful with memory leaks.
+* Increased potential for race conditions.
+
+#### What is the Python Global Interpreter Lock (GIL)?
+Python Global Interpreter Lock (GIL) is a type of process lock which is used by python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. This means that in python only one thread will be executed at a time. The performance of the single-threaded process and the multi-threaded process will be the same in python and this is because of GIL in python. We can not achieve multithreading in python because we have global interpreter lock which restricts the threads and works as a single thread.
+
+
+### Interview questions for algorithms and data structures.
+**Sources:**<br>
+www.wikipedia.com <br>
+www.geeksforgeeks.org <br>
+www.simplilearn.com/data-structure-interview-questions-and-answers-article <br>
+www.herovired.com/learning-hub/blogs/arrays-in-data-structure/#basic-operations <br>
+www.tutorialspoint.com/data_structures_algorithms/hash_data_structure.htm <br>
+www.masaischool.com/blog/tree-data-structure-types-operations-applications/ <br>
+www.vinayakd.com/articles/delete-n-ary-tree-node <br>
+
+#### What is a Data Structure?
+In computer science, a data structure is a **data organization**, and storage format that is usually chosen **for efficient access** to data.<br>
+
+#### Describe the types of Data Structures?
+* **Array** - an array is a number of elements in a specific order, typically all of the same type. Elements are accessed using an integer index to specify which element is required.<br>
+* **List** - a linked list is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays.<br>
+* **Record** - a record (also **called tuple** or **struct**) is an **aggregate data structure**. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. <br>
+* **Hash tables** -  also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions.<br>
+* **Graphs** - collections of nodes connected by edges, representing relationships between entities. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic.<br>
+* **Stacks and queues** - abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle.<br>
+* **Trees** - represent a hierarchical organization of elements. A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. **Binary trees** (particularly heaps), **AVL trees**, and **B-trees** are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data.
+* **Trie** - also known as a **prefix tree**, is a specialized tree data structure used for the efficient retrieval of strings. Tries store characters of a string as nodes, with each edge representing a character. They are particularly useful in text processing scenarios like autocomplete, spell-checking, and dictionary implementations. Tries enable fast searching and prefix-based operations on strings.<br>
+
+#### What is a Linear Data Structure? Name a few examples.
+A data structure is linear if all its elements or data items are arranged in a sequence or a linear order. The elements are stored in a **non-hierarchical way** so that each item has successors and predecessors except the first and last element in the list.
+Examples of linear data structures are **Array**, **Stack**, **Queue**, and **Linked List**.<br>
+
+#### How are the elements of a 2D Array stored in the memory.
+* **Row-Major Order**: In row-major ordering, the first row of a 2D array is entirely stored in memory, followed by the second row of the array, and so on until the final row.
+* **Column-Major Order**: In column-major ordering, the first column of the array is entirely saved in memory, followed by the second row of the array, and so on until the last column of the array is fully recorded in the memory.
+
+#### What are some use cases for Row-Major and Column-Major storing of 2D Arrays?
+**Row-Major** stored arrays are more efficient for row-wise access like in **Image Processing**. **Column-Major** stored arrays are more efficient for column-wise access like for **Matrix Multiplication**.<br>
+
+#### How can you possibly choose between Row-Major and Column-Major 2D Arrays storing implementations?
+By choosing a **programming language**. **Row-Major** is implemented in languages like C/C++ and **Column-Major** - in Fortran.
+
+#### What is a Linked List Data Structure?
+It’s a both **linear and non-linear Data Structure**, depending on application, or a sequence of data objects where **elements are not stored in adjacent memory locations**. The elements are linked using pointers to form a chain. Each element is a separate object, called a node.  Each node has two items: a data field and a reference to the next node. The entry point in a linked list is called the head. Where the list is empty, the head is a null reference and the last node has a reference to null. A linked list is a dynamic data structure, where the number of nodes is not fixed, and the list has the ability to grow and shrink on demand.
+It is applied in cases where:
+* We deal with an unknown number of objects or don’t know how many items are in the list
+* We need constant-time insertions/deletions from the list, as in real-time computing where time predictability is critical
+* Random access to any elements is not needed
+* The algorithm requires a data structure where objects need to be stored irrespective of their physical address in memory
+* We need to insert items in the middle of the list as in a priority queue
+<br>
+
+#### Are Linked Lists considered Linear or Non-linear Data Structures?
+Linked lists are considered both linear and non-linear data structures depending upon the application they are used for. When used for access strategies, it is considered as a linear data-structure. When used for data storage, it is considered a non-linear data structure.
+
+#### What are the advantages of a Linked List over an Array? In which scenarios do we use Linked List and when Array?
+Advantages of a linked list over an array are:
+* **Insertion and Deletion**<br>
+Insertion and deletion of nodes is an easier process, as we only update the address present in the next pointer of a node. It’s expensive to do the same in an array as the room has to be created for the new elements and existing elements must be shifted.<br>
+* **Dynamic Data Structure**<br>
+As a linked list is a dynamic data structure, there is no need to give an initial size as it can grow and shrink at runtime by allocating and deallocating memory. However, the size is limited in an array as the number of elements is statically stored in the main memory.<br>
+* **No wastage of Memory**<br>
+As the size of a linked list can increase or decrease depending on the demands of the program, and memory is allocated only when required, there is no memory wasted. In the case of an array, there is memory wastage. For instance, if we declare an array of size 10 and store only five elements in it, then the space for five elements is wasted.<br>
+* **Implementation**<br>
+Data structures like stack and queues are more easily implemented using a linked list than an array.<br>
+* **Some scenarios where we use linked list over array are**:
+    * When we do not know the upper limit on the number of elements in advance
+    * When there are a large number of add or remove operations
+    * When there are no large number of random access to elements
+    * When we want to insert items in the middle of the list, such as when implementing a priority queue<br>
+
+* **Some scenarios in which we use array over the linked list are**:
+    * When we need to index or randomly access elements
+    * When we know the number of elements in the array beforehand, so we can allocate the correct amount of memory
+    * When we need speed when iterating through all the elements in the sequence
+    * When memory is a concern; filled arrays use less memory than linked lists, as each element in the array is the data but each linked list node requires the data as well as one or more pointers to the other elements in the linked list
+<br>
+
+#### What is a Doubly-Linked List?
+It is a complex type (double-ended LL) of a linked list in which a node has two links, one that connects to the next node in the sequence and another that connects to the previous node. This allows traversal across the data elements in both directions.<br>
+
+#### What are Dynamic Data Structures? Name a few.
+They are collections of data in memory that expand and contract to grow or shrink in size as a program runs. This enables the programmer to control exactly how much memory is to be utilized. Examples are the **dynamic array**, **linked list**, **stack**, **queue**, and **heap**.<br>
+
+#### What is a Stack?
+A stack is an abstract data type that specifies a linear data structure, as in a real physical stack or piles where you can only take the top item off the stack in order to remove things. Thus, insertion (push) and deletion (pop) of items take place only at one end called top of the stack, with a particular order: LIFO (Last In First Out) or FILO (First In Last Out).
+
+#### Where are Stacks used?
+* Expression, evaluation, or conversion of evaluating prefix, postfix, and infix expressions
+* Syntax parsing
+* String reversal
+* Parenthesis checking
+* Backtracking
+
+#### What are the operations that can be performed on a Stack?
+A stack may perform three fundamental operations:
+* PUSH: The push action inserts a new element into the stack. The new feature is placed at the top of the stack. 
+* POP: The pop operation is performed to remove the stack's topmost element.
+* PEEK: A peek action returns the value of the stack's topmost element without removing it from the stack.
+
+#### What is a queue Data Structure?
+A queue is an abstract data type that specifies a linear data structure or an ordered list,  using the First In First Out (FIFO) operation to access elements. Insert operations can be performed only at one end called REAR and delete operations can be performed only at the other end called FRONT.
+
+#### List some applications of the Queue Data Structure.
+To prioritize jobs as in the following scenarios:
+* As waiting lists for a single shared resource (like printer, CPU, call center systems).
+* In the asynchronous transfer of data (file IO, sockets).
+
+#### What is a Dequeue?
+It is a double-ended queue, or a data structure, where the elements can be inserted or deleted at both ends (FRONT and REAR).
+
+#### What operations can be performed on Queues?
+* enqueue() adds an element to the end of the queue
+* dequeue() removes an element from the front of the queue
+* init() is used for initializing the queue
+* isEmpty() tests for whether or not the queue is empty
+* The front is used to get the value of the first data item but does not remove it
+* The rear is used to get the last item from a queue
+
+#### Define the Graph Data Structure.
+It is a type of non-linear data structure that consists of vertices or nodes connected by edges or arcs to enable storage or retrieval of data. Edges may be directed or undirected.
+
+#### What are the applications of Graph Data Structures?
+* Transport grids where stations are represented as vertices and routes as the edges of the graph
+* Utility graphs of power or water, where vertices are connection points and edge the wires or pipes connecting them
+* Social network graphs to determine the flow of information and hotspots (edges and vertices)
+* Neural networks where vertices represent neurons and edge the synapses between them
+
+#### List the types of Trees?
+* **The General Tree** <br>
+A tree is referred to as a generic tree if its hierarchy is not constrained. In the General Tree, each node can have an endless number of offspring, and all other trees are subsets of the tree.<br>
+
+* **The Binary Tree** <br>
+The binary tree is a type of tree in which each parent has at least two offspring. The children are referred to as the left and right youngsters. This tree is more popular than most others. When specific limitations and features are given to a Binary tree, various trees such as AVL tree, BST (Binary Search Tree), RBT tree, and so on are also utilized. <br>
+
+* **Binary Search Tree** <br>
+Binary Search Tree (BST) is a binary tree extension that includes numerous optional constraints. In BST, a node's left child value should be less than or equal to the parent value, while the right child value should always be higher than the parent's value.<br>
+
+* **The AVL Tree** <br>
+The AVL tree is a self-balancing binary search tree (automatically keeps its height (maximal number of levels below the root) small in the face of arbitrary item insertions and deletions). The term AVL is given in honor of the inventors Adelson-Velshi and Landis. This was the first tree to achieve dynamic equilibrium. Each node in the AVL tree is assigned a balancing factor based on whether the tree is balanced or not. The node kids have a maximum height of one AVL vine. Search, insert, delete operations have O(log n) complexity.<br>
+
+* **Red and Black Tree** <br>
+Red-black trees are another type of auto-balancing tree. The red-black term is derived from the qualities of the red-black tree, which has either red or black painted on each node. It helps to keep the forest in balance. Even though this tree is not perfectly balanced, the searching process takes just O(log n) time. <br>
+
+* **The N-ary Tree** <br>
+In this sort of tree with a node, N is the maximum number of children. A binary tree is a two-year tree since each binary tree node has no more than two offsprings. A full N-ary tree is one in which the children of each node are either 0 or N. <br>
+
+* **Octree** <br>
+An octree is a tree data structure in which each internal node has exactly eight children. Octrees are most often used to partition a three-dimensional space by recursively subdividing it into eight octants.
+
+* **Heap** <br>
+A heap is a tree-based data structure that satisfies the heap property: in a max heap, for any given node C, if P is a parent node of C, then the key (the value) of P is greater than or equal to the key of C. In a min heap, the key of P is less than or equal to the key of C.
+
+#### How is a Node Height in the Tree Data Structure determined?
+The height of a node is the number of edges from that node to the leaf node (the lowermost node in the hierarchy).
+
+#### How is a Node Depth in the Tree Data Structure determined?
+The depth of a node is the number of edges it takes from the root (the uppermost node in the hierarchy) node to that particular node.
+
+#### What is a Node Degree in the Tree Data Structure?
+The total number of branches coming out of a node is considered to be the degree of that node.
+
+#### What is a Forest in relation with the Tree Data Structure?
+A collection of disconnected trees is called a forest. If you cut the root of a tree, the disjoint trees hence formed make up a forest. 
+
+#### How is a Balanced Binary Tree determined?
+A balanced binary tree, also referred to as a height-balanced binary tree, is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
+
+#### What is a Self-balancing Binary Tree?
+Self-Balancing Binary Search Trees are height-balanced binary search trees that automatically keep the height as small as possible when insertion and deletion operations are performed on the tree. Most prominent examples are AVL Trees and Red-Black Trees.
+
+#### What is a B-Tree Data Structure?
+A B-tree is a sort of self-balancing search tree whereby each node could have more than two children and hold multiple keys.
+
+#### Explain what Jagged Array is?
+It is an array whose elements themselves are arrays and may be of different dimensions and sizes.
+
+#### What is an Algorithm?
+An algorithm is a step by step method of solving a problem or manipulating data. It defines a set of instructions to be executed in a certain order to get the desired output.
+
+#### What is an asymptotic analysis of an algorithm?
+Asymptotic analysis is the technique of determining an algorithm's running time in mathematical units to determine the program's limits, also known as "run-time performance." The purpose is to identify the best case, worst case, and average-case times for completing a particular activity.
+
+#### What are Asymptotic Notations?
+Asymptotic Notation represents an algorithm's running time - how long an algorithm takes with a given input, n. Big O, big Theta, and big Omega are the three distinct notations. When the running time is the same in all circumstances, big-Theta is used, big-O for the worst-case running time, and big-Omega for the best case running time.
+
+#### What are the common algorithmic runtimes in big O notation?
+* **Constant** - O(1) (Insertion in a linked list)
+* **Logarithmic** - O(log(N)) (Binary Search)
+* **Linear** - O(N) (Linear Search)
+* **Polynomial** - O(N^b) (QuickSort with O(N*log(N)))
+* **Exponential** - O(b^N) (Fibonacci series (each element is a sum of previous two) without Dynamic Programming, (O(N) with dynamic programming))
+* **Factorial** - O(N!) (Generation of all possible permutations of N objects)
+
+#### What are basic operations on Arrays?
+* **Traversing** - looping through each element in the array and processing each element one at a time.<br>
+* **Insertion** - the process of adding new elements into an existing array. This can be done by providing an index for where the insertion should occur and then shifting other elements in the array to make space for the insertion.<br>
+* **Deletion** - the opposite of insertion and involves removing elements from an existing array. After deleting an element, all other elements in the array must be shifted to fill any gaps left from deletion.
+* **Searching** - process of identifying an element from within an array by comparing it to your desired value until you find a match. 
+* **Sorting** - process of arranging elements of an array in either ascending or descending order.
+
+#### What are the basic types of searching? Describe their worst case asymptotic behaviour.
+* **Linear Search** - compares each element one after another until a match is found, or all elements have been searched. It has O(n) time complexity, because in worst case the searched element is the last one, or there is no such elements and you go through whole array.
+* **Binary Search** - can be done in sorted arrays by comparing the middle element with the target and if they are not equal, the half where the target cannot lie is elemenated. The time complexity is O(log2(N)), because with each step you divide the number of elements N by 2, like N/2, N/4, N/8... until you reach 1. So N/2^k = 1 and thus k = log2(N).
+
+#### What are some common array sorting algorithms?
+* **PermutationSort** - most ineffective sorting algorithm. It works by generating permutations of an array and checking if it is in the right sorted order. The worst case time complexity is O(?) undefined, since it has no upper bound and could run forever.
+* **BubbleSort** - simple and easy to understand sorting algorithm. Consists of two loops. In the case of sorting in ascending order, the inner loop goes over elements and if an element is bigger than the next one, they are swapped. The outer loop repeats the procedure. The time complexity is O(N^2). Still too slow for real life problems.
+* **QuickSort** - the fastest sorting algorithm based on divide and conquer principle. The key process in **QuickSort** is a **Partition**. The target of partitions is to place the pivot (any element can be chosen to be a pivot) at its correct position in the sorted array and put all smaller elements to the left of the pivot, and all greater elements to the right of the pivot. Partition is done recursively on each side of the pivot after the pivot is placed in its correct position and this finally sorts the array. The time complexity is O(N*log(N)).
+* **InsertionSort** - is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is a stable sorting algorithm, meaning that elements with equal values maintain their relative order in the sorted output. Insertion sort is like sorting playing cards in your hands. You split the cards into two groups: the sorted cards and the unsorted cards. Then, you pick a card from the unsorted group and put it in the right place in the sorted group. It has the worst-case time-complexity of O(N^2).
+* **HeapSort** - is a comparison-based sorting technique based on **Binary Heap** data structure.
+    * Build a heap from the given input array.
+    * Repeat the following steps until the heap contains only one element:
+        * Swap the root element of the heap (which is the largest element) with the last element of the heap.
+        * Remove the last element of the heap (which is now in the correct position).
+        * Heapify the remaining elements of the heap in top-down order.
+    * The sorted array is obtained by reversing the order of the elements in the input array.
+
+#### Name the main properties of the basic operations on linked lists.
+* **Traversing** - this operation has a time complexity of O(N), the same as for arrays. But one can not access elemnts of a linked list by direct indexing.
+* **Insertion** - this operation has a constant time complexity in contrast to arrays, where the worst case time complexity of the operation is O(N). It needs only to modify pointers in the chain at the place of insertion.
+* **Deletion** - the mechanism is the same as for **Insertion**.
+* **Search** - the same as for an Array in the case of an unsorted list, the worst case time complexity of searching an element is O(N). Binary search can be done only for sorted lists.
+* **Sort** - the same algorithms as for Arrays can be applied for linked lists with the time complexity depending on the chosen algorithm.
+
+#### How can one detect loops in a Linked Lists, name a few approaches?
+* **Floyd's Loop Detection Algorithm** - uses two pointers running over a linked list with different velocities, like first goes over each element, the second jumps over one element. If there are loops in the linked list, the two pointers will be equal at some point in the loop. Otherwise, the both reach the last element in the list. 
+* **Using Hashing** - traverse the linked list and save the calculated hash of each node's adress. If the current node's hash points to one of the previously calculated hashes, then the list has loops. If the last element is reached without pointing to the previous hashes, then there are no loops.
+
+#### Give some examples of basic Hash Functions that can be used in Hash Table Data Structure?
+* **Division** - a modulus function that returns the division remainder is used in this case. A key value is divided by the table length and the remainder is used as an index in the table.
+* **Mid Square** - in this case the key value is squared and the middle N digits are extracted as a hash value.
+* **Digit Folding** - divide the key value into a number of parts, where each part has the same number of digits, except for the last one. Addition of the parts gives a hash number.
+* **Multiplication** - choose a constant value between 0 and 1. Multiply it with the key value. Extract the fractional part of the multiplication product. Multiply it by the hash table length and take the floor of the result. This produces the hash.
+
+#### How can one possibly avoid Hash Collisions in Hash Tables?
+One could solve the problem of hash collisions by for example **Linear Probing**. If the calculated index in a hash table is already in use, one just searches for the next empty cell in the table.
+
+#### What are the basic operations on Hash Tables?
+* **Search** - compute the hash of a passed key and locate the value by hash code as an array index. If the element is not found use linear probing to get the element ahead.
+* **Insert** - compute the hash code of a passed key. Use cash code as an index in the array. If the cell is not empty use linear probing to get to the next empty cell.
+* **Delete** - the same as for previous operations hash code is used as an array index. If the cell is empty use linear probing to get to the element ahead. Once the lement is found store a dummy element there.
+
+#### What is a Bipartite Graph?
+A bipartite graph (or bigraph) is a graph whose vertices can be divided into two disjoint and independent sets U and V, that is, every edge connects a vertex in U to one in V . Vertex sets U and V are usually called the parts of the graph. Equivalently, a bipartite graph is a graph that does not contain any odd-length cycles.
+
+#### What is a Weighted Graph?
+A graph whose vertices or edges have been assigned weights. A vertex-weighted graph has weights on its vertices and an edge-weighted graph has weights on its edges.
+
+#### What is a Directed Graph?
+A directed graph (or digraph) is a graph that is made up of a set of vertices connected by directed edges, often called arcs.
+
+#### What is a Transpose of a Directed Graph?
+Transpose of a directed graph G is another directed graph on the same set of vertices with all of the edges reversed compared to the orientation of the corresponding edges in G.
+
+#### What is a Strongly Connected Graph?
+A directed graph is called strongly connected if there is a path from each vertex in the graph to every other vertex.
+
+#### What is a Minimum Spanning Tree of a Graph?
+A minimum spanning tree (MST) is defined as a spanning tree that has the minimum weight among all the possible spanning trees. A **Spanning Tree** is a subset of the edges of the graph that forms a tree (acyclic) where every node of the graph is a part of the tree.
+
+#### Name the ways of representing and storing a Graph Data Structure.
+* **Adjacency Matrix** - in this method a graph is represented in the form of a 2D matrix, where rows and columns denote vertices. And the values in the cells describe reletionships (edges) between vertices.
+* **Adjacency List** - here a Graph is represented as a collection of linked lists. There is an array of pointers for all vertices. Each pointer shows connections to all other vertices in a chain that have edges to the reference vertice.
+When a Graph has a lot of edges, then it is better to represent it in the form of Adjacency Matrix.<br>
+
+| | | |
+|:---|:---|:---|
+|<strong>Action</strong>|<strong>Adjacency Matrix</strong>|<strong>Adjacency List</strong>|
+|Adding Edge| O(1) | O(1) |
+|Removing Edge| O(1) | O(N) |
+|Initializing| O(N*N) | O(N) |
+
+#### What are the basic operations on Graphs?
+* **Insertion of Nodes/Edges** in the graph.
+* **Deletion of Nodes/Edges** in the graph.
+* **Searching on Graphs** – Search an entity in the graph.
+* **Traversal of Graphs** – Traversing all the nodes in the graph.
+
+#### List the ways of Traversing a Graph.
+* **Breadth-First-Search** - is a graph traversal algorithm that explores all the vertices in a graph at the current depth before moving on to the vertices at the next depth level. It starts at a specified vertex and visits all its neighbors before moving on to the next level of neighbors. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.
+* **Depth-First-Search** - the algorithm starts selecting some arbitrary node as the root node and explores as far as possible along each branch before backtracking. To avoid processing a node more than once, we divide the vertices into two categories: Visited and Not visited. It has time complexity of O(V+E), where V is a number of vertices and E - of edges.
+
+#### List the main applications of Breadth-First-Search.
+* **Shortest Path Finding** - Breadth-First-Search can be used to find the shortest path between two nodes in an unweighted graph. By keeping track of the parent of each node during the traversal, the shortest path can be reconstructed.
+* **Cycle Detection** - Breadth-First-Search can be used to detect cycles in a graph. If a node is visited twice during the traversal, it indicates the presence of a cycle.
+* **Connected Components** - Breadth-First-Search can be used to identify connected components in a graph. Each connected component is a set of nodes that can be reached from each other.
+* **Topological Sorting** - BFS can be used to perform topological sorting on a directed acyclic graph (DAG). Topological sorting arranges the nodes in a linear order such that for any edge (u, v), u appears before v in the order.
+
+#### List the main applications of Depth-First-Search.
+* **Detecting Cycle in a Graph** - A graph has a cycle if and only if we see a back edge during DFS. So we can run DFS for the graph and check for back edges.
+* **Path Finding** - Depth-First-Search can be used to find a path between any two vertices. Choose one vertex es a start. Use stack in order to save the path between starting and current vertex. As son as destination vertex is reached, return the path.
+* **Topological Sorting** - the same like for Breadth-First-Search, it is used mainly for jobs scheduling from the given dependencies among jobs. 
+* **Testing if a Graph is Bipartite** - when we first discover a new vertex, color it opposite its parents, and for each other edge, check it doesn’t link two vertices of the same color. The first vertex in any connected component can be red or black.
+* **Finding Strongly Connected Components in a Graph** - for example brute-force checking if the definition of a strongly connected component fits the vertices of a graph.
+* **Backtracking** - Depth-first search can be used in backtracking algorithms.
+
+#### What are the basic operations on Trees Data Structures?
+* **Traversal** - a hierarchical data structure like a tree can have different ways of traversal. Simplifying to a **Binary Tree**, one can distinguish between three types of traversal:
+    1. **In-order** - it starts with visiting all the nodes in the left subtree. Then visits the root node. And finally, all the nodes in the right subtree are visited.
+    2. **Pre-order** - first the root node is visited. Then all the nodes in the left subtree. And finally visits all the nodes in the right subtree.
+    3. **Post-order** - starts with the nodes in the left subtree. Visits the nodes in the right subtree. And then visits the root node.
+    4. **Level-order** - defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level.
+* **Insertion** - insertion can be done in general at the leftmost, rightmost or the first vacant position found during traversal.
+* **Search** - is conducted in the form of a Binary Search for Binary Trees. For General Trees a Depth-First-Search like in the case of Graphs can be used. The search is implemented as a recursive function.
+* **Deletion** - during deletion there are 4 options to look at, the node either:
+    1. Is a leaf node (has no children).
+    2. Has only one child, which then will take place of the deleted one.
+    3. Has more than 1 child and we want to promote them all. The root of the deleted node will become the root of all children nodes of the deleted one.
+    4. Has more than 1 child and we want to promote only one of them. Thus only one node takes the place of the deleted one and becomes root for the rest of the children nodes.
+
+#### Explain the mechanism of Self-Balancing in AVL Trees.
+First the **Balance Factor** of all nodes is calculated as a difference between the height of the left branch and the height of the right branch. If the balance factor is -1,0 or 1 then the tree is balanced, otherwise left and right rotations of the nodes must be done in order to shorten the height of branches with single nodes. During rotations the fundamental property of binary trees must be satisfied that the right child node is bigger than the parent and the left one is smaller. After rotations balance factors are calculated again and if they are -1,0 or 1 a new element can be inserted. Otherwise rotations are conducted further until balanced state is achieved.
+
+#### Explain the mechanism of Self-Balancing in Red-Black Trees.
+The fundamental rules of Red-Black Trees are:<br>
+    1. Every node has a color either red or black.<br>
+    2. The root of the tree is always black.<br>
+    3. There are no two adjacent red nodes (A red node cannot have a red parent or red child).<br>
+    4. Every path from a node (including root) to any of its descendants NULL nodes has the same number of black nodes.<br>
+    5. Every leaf (e.i. NULL node) must be colored BLACK.<br>
+After insertion two basic operations are used in order to ensure the balance: **Rotation and Recolouring**. First, an element is inserted like in general binary trees and coloured red. One tries first the recolouring during balancing and if it does not work, rotations are conducted. If the new node (**child**) appears to be the root it is recoloured in black (see properties). Check the colour of the parent (**father**) node. If it is black then left the colour of the child node as red. If the father is also red, check the colour of its opposite node (**uncle**) on the same level. If the color of this node is also red then change both father and uncle nodes to black and the **grandfather** (parent node of father and uncle) to red if its not the root node, otherwise do not change the grandfathers color. Repeat the procedure for grandfather upwards. But if the uncle's color is black then rotations in 4 possible ways are conducted untill one can recolour the new arrangement of the nodes.  
+
+#### What is Recursion?
+Recursion is defined as a process which calls itself directly or indirectly and the corresponding function is called a recursive function. As an example calculation of Fibonacci series can be formulated in the form of Recursion, like F(n) = F(n-1) + F(n-2), for n >= 2.
+
+#### What is Dynamic Programming?
+Dynamic Programming is a method used in mathematics and computer science to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems. 
+
+#### What is Linear Programming?
+Linear programming is the technique used for optimizing a particular scenario. Using linear programming provides us with the best possible outcome in a given situation. It uses all the available resources in a manner such that they produce the optimum result. Problems like Transportation, manufacturing and diet can be solved by this approach. <br>
+A linear programming problem consits of **Decision Variables**, **Objective Function**, **Constraints** and **Non-negative Restrictions**.
+Decision variables are the variables x, and y, which decide the output of the linear programming problem and represent the final solution. 
+The objective function, generally represented by Z, is the linear function that needs to be optimized according to the given condition to get the final solution. The restrictions imposed on decision variables that limit their values are called constraints.
+Now, the general formula of a linear programming problem is:<br>
+Objective Function: Z = ax + by <br>
+Constraints: cx + dy ≥ e, px + qy ≤ r <br>
+Non-Negative restrictions: x ≥ 0, y ≥ 0 <br>
+The methods of solving linear programming problems are **Simplex** and **Graphical**.
+
+Steps for the **Simplex Method** are:
+
+Step 1: Formulate the linear programming problems based on the given constraints.
+
+Step 2: Convert all the given inequalities to equations or equalities of the linear programming problems by adding the slack variable to each inequality where ever required.
+
+Step 3: Construct the initial simplex table. By representing each constraint equation in a row and writing the objective function at the bottom row. The table so obtained is called the Simplex table.
+
+Step 4: Identify the greatest negative entry in the bottom row the column of the element with the highest negative entry is called the pivot column
+
+Step 5: Divide the entries of the right-most column with the entries of the respective pivot column, excluding the entries of the bottommost row. Now the row containing the least entry is called the pivot row. The pivot element is obtained by the intersection of the pivot row and the pivot column.
+
+Step 6: Using matrix operation and with the help of the pivot element make all the entries in the pivot column to be zero.
+
+Step 7: Check for the non-negative entries in the bottommost row if there are no negative entries in the bottom row, end the process else start the process again from step 4.
+
+Step 8: The final simplex table so obtained gives the solution to our problem.
+
+Steps for the **Graphical Method** are:
+
+Step 1: First convert the inequations into normal equations.
+
+Step 2: Find the points at which equations cut the x-axis and y-axis. To find the point of intersection of the x-axis put y = 0 in the respective equation and find the point. Similarly for y-axis intersection points put x = 0 in the respective equation.
+
+Step 3: Draw the lines cutting the x-axis and y-axis.
+
+Step 4: The region will include an area region enclosed by two axes and all lines including the origin. 
+
+Step 5: Find Z for each intersection point and thus maxima and minima.
+
+#### What is Backtracking?
+Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku.
+
+#### What is a Greedy Algorithm?
+Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.
+
 
 ### Interview questions for C++.
 **Sources:** <br>
@@ -2312,714 +3032,3 @@ A possible Use Case for Futures and Promises would be passing of data between th
     }
 ```
 
-### Interview questions for Python.
-**Sources:**<br>
-www.interviewbit.com/python-interview-questions/ <br>
-www.geeksforgeeks.org/python-interview-questions/ <br>
-
-#### What is Python? What are the benfits of using it?
-Python is a high-level, interpreted, dynamically typed, general-purpose programming language. It can be used to build almost any type of application with the right tools/libraries. Python supports objects, modules, threads, exception-handling, and automatic memory management which help in modelling real-world problems and building applications to solve these problems.<br>
-Benefits of using Python:
-* Python is a general-purpose programming language that has a simple, easy-to-learn syntax that emphasizes readability and therefore reduces the cost of program maintenance. Moreover, the language is capable of scripting, is completely open-source, and supports third-party packages encouraging modularity and code reuse.
-* Its high-level data structures, combined with dynamic typing and dynamic binding, attract a huge community of developers for Rapid Application Development and deployment.
-
-#### Explain Interpreted Programming Language.
-An interpreted language executes its statements line by line. Languages such as Python, Javascript, R, PHP, and Ruby are prime examples of Interpreted languages. Programs written in an interpreted language runs directly from the source code, with no intermediary compilation step.
-
-#### What is a dynamically typed language?
-Typing refers to type-checking in programming languages. In a strongly-typed language, such as Python, "1" + 2 will result in a type error since these languages don't allow for "type-coercion" (implicit conversion of data types). On the other hand, a weakly-typed language, such as Javascript, will simply output "12" as a result.<br>
-Type-checking can be done at two stages:
-* Static - Data Types are checked before execution.
-* Dynamic - Data Types are checked during execution.<br>
-
-Python is an interpreted language, executes each statement line by line and thus type-checking is done on the fly, during execution. Hence, Python is a Dynamically Typed Language.
-
-#### What is PEP 8 and why is it important?
-PEP stands for **Python Enhancement Proposal**. A PEP is an official design document providing information to the Python community, or describing a new feature for Python or its processes. PEP 8 is especially important since it documents the style guidelines for Python Code. Apparently contributing to the Python open-source community requires you to follow these style guidelines sincerely and strictly.
-
-#### What is Scope in Python?
-Every object in Python functions within a scope. A scope is a block of code where an object in Python remains relevant. Namespaces uniquely identify all the objects inside a program. However, these namespaces also have a scope defined for them where you could use their objects without any prefix. A few examples of scope created during code execution in Python are as follows:
-* A **Local Scope** refers to the local objects available in the current function.
-* A **Global Scope** refers to the objects available throughout the code execution since their inception.
-* A **Module-level Scope** refers to the global objects of the current module accessible in the program.
-* An **Outermost Scope** refers to all the built-in names callable in the program. The objects in this scope are searched last to find the name referenced.
-
-#### What is the difference between Mutable and Immutable Data Types in Pyhon?
-Mutable data types can be edited i.e., they can change at runtime. Eg – List, Dictionary, etc. Immutable data types can not be edited i.e., they can not change at runtime. Eg – String, Tuple, Byte and all single value built-in types.
-
-#### What are lists and tuples? What is the key difference between the two?
-Lists and Tuples are both sequence data types that can store a collection of objects in Python. The objects stored in both sequences can have different data types. Lists are represented with square brackets ['sara', 6, 0.19], while tuples are represented with parantheses ('ansh', 5, 0.97). The key difference between the two is that while lists are mutable, tuples on the other hand are immutable objects. This means that lists can be modified, appended or sliced on the go but tuples remain constant and cannot be modified in any manner.
-
-#### What are the common built-in data types in Python?
-There are several built-in data types in Python. Although, Python doesn't require data types to be defined explicitly during variable declarations type errors are likely to occur if the knowledge of data types and their compatibility with each other are neglected. Python provides ``type()`` and ``isinstance()`` functions to check the type of these variables. These data types can be grouped into the following categories:
-* **None Type:** represents the null values in Python. Boolean equality operation can be performed using these NoneType objects.
-* **Numeric Types:** there are three distinct numeric types - **integers**, **floating-point numbers**, and **complex numbers**. Additionally, **booleans** are a sub-type of integers.
-* **Sequence Types:** there are four kinds of sequence data types: **list** (matable), **tuple** (immutable), **range** (immutable) and **str**(immutable).
-* **Mapping Types:** **dict** (dictionary) is mutable data type that stores key-value pairs. Implemented as a **Hash Map**.
-* **Set Types:** Currently, Python has two built-in types - **set** and **frozenset**. **set** type is mutable and supports methods like add() and remove(). **frozenset** type is immutable and can't be modified after creation.
-* **Modules:** is an additional built-in type supported by the Python Interpreter. It supports one special operation, i.e., attribute access: ``mymod.myobj``, where ``mymod`` is a module and ``myobj`` references a name defined in m's symbol table. The module's symbol table resides in a very special attribute of the module __dict__, but direct assignment to this module is neither possible nor recommended.
-* **Callable Types:** Callable types are the types to which function call can be applied. They can be **user-defined functions**, **instance methods**, **generator functions** and some other built-in functions, methods and classes.
- 
-#### What is ``pass`` in Python?
-The ``pass`` keyword represents a null operation in Python. It is generally used for the purpose of filling up empty blocks of code which may execute during runtime but has yet to be written.
-
-#### How are arguments passed by value or by reference in Python?
-Everything in Python is an object and all variables hold references to the objects. The reference values are according to the functions; as a result, you cannot change the value of the references. However, you can change the objects if it is mutable.
-
-#### What is List Comprehension? Give an Example.
-List comprehension is a syntax construction to ease the creation of a list based on existing iterable.<br>
-For Example:<br>
-```python
-my_list = [i for i in range(1, 10)]
-```
-
-#### What is a lambda function?
-A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement. <br>
-For Example:
-```python
-a = lambda x, y : x*y
-print(a(7, 19))
-```
-
-#### What is the difference between / and // in Python?
-``/`` represents precise division (result is a floating point number) whereas ``//`` represents floor division (result is an integer).<br>
-For Example:
-```python
-5//2 = 2
-5/2 = 2.5
-```
-
-#### How is Exceptional handling done in Python?
-There are 3 main keywords i.e. ``try``, ``except``, and ``finally`` which are used to catch exceptions and handle the recovering mechanism accordingly. ``try`` is the block of a code that is monitored for errors. Except block gets executed when an error occurs.<br>
-The beauty of the ``final`` block is to execute the code after trying for an error. This block gets executed irrespective of whether an error occurred or not. ``final`` block is used to do the required cleanup activities of objects/variables.
-
-#### What is swapcase function in Python?
-It is a string’s function that converts all uppercase characters into lowercase and vice versa. It is used to alter the existing case of the string. This method creates a copy of the string which contains all the characters in the swap case. <br> 
-For Example:
-```python
-string = "PythonRules"
-string.swapcase() ---> "pYTHONrULES"
-```
-
-#### Can we pass a function as an argument in Python?
-Yes, Several arguments can be passed to a function, including objects, variables (of the same or distinct data types), and functions. Functions can be passed as parameters to other functions because they are objects. Higher-order functions are functions that can take other functions as arguments.
-
-#### What are ``*args`` and ``*kwargs``?
-To pass a variable number of arguments to a function in Python, use the special syntax ``*args`` and ``**kwargs`` in the function specification. It is used to pass a variable-length, keyword-free argument list. By using the *, the variable we associate with the * becomes iterable, allowing you to do operations on it such as iterating over it and using higher-order operations like map and filter.
-
-#### Is Indentation Required in Python?
-Yes, indentation is required in Python. A Python interpreter can be informed that a group of statements belongs to a specific block of code by using Python indentation. Indentations make the code easy to read for developers in all programming languages but in Python, it is very important to indent the code in a specific order.
-
-#### What is docstring in Python?
-Python documentation strings (or docstrings) provide a convenient way of associating documentation with Python modules, functions, classes, and methods.
-* **Declaring Docstrings:** The docstrings are declared using ”’triple single quotes”’ or “””triple double quotes””” just below the class, method, or function declaration. All functions should have a docstring.
-* **Accessing Docstrings:** The docstrings can be accessed using the ``__doc__`` method of the object or using the help function.
-
-#### What is a ``break``, ``continue``, and ``pass`` in Python? 
-The ``break`` statement is used to terminate the loop or statement in which it is present. After that, the control will pass to the statements that are present after the break statement, if available.<br>
-``continue`` is also a loop control statement just like the break statement. ``continue`` statement is opposite to that of the break statement, instead of terminating the loop, it forces to execute the next iteration of the loop.<br>
-``pass`` means performing no operation or in other words, it is a placeholder in the compound statement, where there should be a blank left and nothing has to be written there.
-
-#### How do you floor a number in Python?
-The Python math module includes a method that can be used to calculate the floor of a number.
-* ``floor()`` method in Python returns the floor of x i.e., the largest integer not greater than x. 
-* Also, The method ``ceil(x)`` in Python returns a ceiling value of x i.e., the smallest integer greater than or equal to x.
-
-#### What are global, protected and private attributes in Python?
-* **Global** variables are public variables that are defined in the global scope. To use the variable in the global scope inside a function, we use the global keyword.
-* **Protected** attributes are attributes defined with an underscore prefixed to their identifier eg. _sara. They can still be accessed and modified from outside the class they are defined in but a responsible developer should refrain from doing so.
-* **Private** attributes are attributes with double underscore prefixed to their identifier eg. __ansh. They cannot be accessed or modified from the outside directly and will result in an AttributeError if such an attempt is made.
-
-#### What is the use of ``self`` in Python?
-``self`` is used to represent the instance of the class. With this keyword, you can access the attributes and methods of an object inside the class definition in Python.
-
-#### What is ``__init__`` in Python?
-``__init__`` is a contructor method in Python and is automatically called to allocate memory when a new object/instance is created. All classes have a ``__init__`` method associated with them. It helps in distinguishing methods and attributes of a class from local variables.
-
-#### What is slicing in Python?
-* As the name suggests, ‘slicing’ is taking parts of a container.
-* Syntax for slicing is ``[start : stop : step]``
-* ``start`` is the starting index from where to slice a list or tuple
-* ``stop`` is the ending index or where to stop.
-* ``step`` is the number of steps to jump.
-* Default value for start is 0, stop is number of items, step is 1.
-* Slicing can be done on strings, arrays, lists, and tuples.
-
-#### What is the difference between Python Arrays and Lists?
-* **Arrays** in Python can only contain elements of same data types i.e., data type of array should be homogeneous. It is a thin wrapper around C language arrays and consumes far less memory than lists.
-* **Lists** in Python can contain elements of different data types i.e., data type of lists can be heterogeneous. It has the disadvantage of consuming large memory.<br>
-Example:
-```python
-import array
-a = array.array('i', [1, 2, 3])
-for i in a:
-    print(i, end=' ')    #OUTPUT: 1 2 3
-a = array.array('i', [1, 2, 'string'])    #OUTPUT: TypeError: an integer is required (got type str)
-a = [1, 2, 'string']
-for i in a:
-   print(i, end=' ')    #OUTPUT: 1 2 string
-```
-
-#### How is memory managed in Python?
-* Memory management in Python is handled by the Python Memory Manager. The memory allocated by the manager is in form of a private heap space dedicated to Python. All Python objects are stored in this heap and being private, it is inaccessible to the programmer. Though, python does provide some core API functions to work upon the private heap space.
-* Additionally, Python has an in-built garbage collection to recycle the unused memory for the private heap space.
-
-#### What are Python namespaces? Why are they used?
-A namespace in Python ensures that object names in a program are unique and can be used without any conflict. Python implements these namespaces as dictionaries with 'name as key' mapped to a corresponding 'object as value'. This allows for multiple namespaces to use the same name and map it to a separate object. A few examples of namespaces are as follows:
-* **Local Namespace** includes local names inside a function. The namespace is temporarily created for a function call and gets cleared when the function returns.
-* **Global Namespace** includes names from various imported packages/ modules that are being used in the current project. This namespace is created when the package is imported in the script and lasts until the execution of the script.
-* **Built-in Namespace** includes built-in functions of core Python and built-in names for various types of exceptions.
-
-The lifecycle of a namespace depends upon the scope of objects they are mapped to. If the scope of an object ends, the lifecycle of that namespace comes to an end. Hence, it isn't possible to access inner namespace objects from an outer namespace.
-
-#### What are Decorators in Python?
-Decorators in Python are essentially functions that add functionality to an existing function in Python without changing the structure of the function itself. They are represented the ``@decorator_name`` in Python and are called in a bottom-up fashion. <br>
-For example:
-```python
-# decorator function to convert to lowercase
-def lowercase_decorator(function):
-   def wrapper():
-       func = function()
-       string_lowercase = func.lower()
-       return string_lowercase
-   return wrapper
-# decorator function to split words
-def splitter_decorator(function):
-   def wrapper():
-       func = function()
-       string_split = func.split()
-       return string_split
-   return wrapper
-@splitter_decorator # this is executed next
-@lowercase_decorator # this is executed first
-def hello():
-   return 'Hello World'
-hello()   # output => [ 'hello' , 'world' ]
-```
-The beauty of the decorators lies in the fact that besides adding functionality to the output of the method, they can even accept arguments for functions and can further modify those arguments before passing it to the function itself. The inner nested function, i.e. 'wrapper' function, plays a significant role here. It is implemented to enforce encapsulation and thus, keep itself hidden from the global scope.
-```python
-# decorator function to capitalize names
-def names_decorator(function):
-   def wrapper(arg1, arg2):
-       arg1 = arg1.capitalize()
-       arg2 = arg2.capitalize()
-       string_hello = function(arg1, arg2)
-       return string_hello
-   return wrapper
-@names_decorator
-def say_hello(name1, name2):
-   return 'Hello ' + name1 + '! Hello ' + name2 + '!'
-say_hello('sara', 'ansh')   # output => 'Hello Sara! Hello Ansh!'
-```
-#### How do you copy an object in Python?
-In Python, the assignment statement (``=`` operator) does not copy objects. Instead, it creates a binding between the existing object and the target variable name. To create copies of an object in Python, we need to use the copy module. Moreover, there are two ways of creating copies for the given object using the ``copy`` module:
-* **Shallow Copy** is a bit-wise copy of an object. The copied object created has an exact copy of the values in the original object. If either of the values is a reference to other objects, just the reference addresses for the same are copied.
-* **Deep Copy** copies all values recursively from source to target object, i.e. it even duplicates the objects referenced by the source object.<br>
-Examples:
-```python
-from copy import copy, deepcopy
-list_1 = [1, 2, [3, 5], 4]
-## shallow copy
-list_2 = copy(list_1) 
-list_2[3] = 7
-list_2[2].append(6)
-list_2    # output => [1, 2, [3, 5, 6], 7]
-list_1    # output => [1, 2, [3, 5, 6], 4]
-## deep copy
-list_3 = deepcopy(list_1)
-list_3[3] = 8
-list_3[2].append(7)
-list_3    # output => [1, 2, [3, 5, 6, 7], 8]
-list_1    # output => [1, 2, [3, 5, 6], 4]
-```
-
-#### What is pickling and unpickling?
-Python library ``pickle`` offers a feature - serialization out of the box. Serializing an object refers to transforming it into a format that can be stored, so as to be able to deserialize it, later on, to obtain the original object. Here, the pickle module comes into play.
-
-#### What are Generators in Python?
-Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of ´´yield´´ keyword rather than ´´return`` to return a generator object.<br>
-Let's try and build a generator for fibonacci numbers:
-```python
-## generate fibonacci numbers upto n
-def fib(n):
-   p, q = 0, 1
-   while(p < n):
-       yield p
-       p, q = q, p + q
-x = fib(10)    # create generator object 
- 
-## iterating using __next__(), for Python2, use next()
-x.__next__()    # output => 0
-x.__next__()    # output => 1
-x.__next__()    # output => 1
-x.__next__()    # output => 2
-x.__next__()    # output => 3
-x.__next__()    # output => 5
-x.__next__()    # output => 8
-x.__next__()    # error
- 
-## iterating using loop
-for i in fib(10):
-   print(i)    # output => 0 1 1 2 3 5 8
-```
-
-#### What is the difference between .py and .pyc files?
-* .py files contain the source code of a program. Whereas, .pyc file contains the bytecode of your program. We get bytecode after compilation of .py file (source code). .pyc files are not created for all the files that you run. It is only created for the files that you import.
-* Before executing a python program python interpreter checks for the compiled files. If the file is present, the virtual machine executes it. If not found, it checks for .py file. If found, compiles it to .pyc file and then python virtual machine executes it.
-* Having .pyc file saves you the compilation time.
-
-#### How Python is interpreted?
-* Python as a language is not interpreted or compiled. Interpreted or compiled is the property of the implementation. Python is a bytecode(set of interpreter readable instructions) interpreted generally.
-* Source code is a file with .py extension.
-* Python compiles the source code to a set of instructions for a virtual machine. The Python interpreter is an implementation of that virtual machine. This intermediate format is called “bytecode”.
-* .py source code is first compiled to give .pyc which is bytecode. This bytecode can be then interpreted by the official CPython or JIT(Just in Time compiler) compiled by PyPy.
-
-#### What are iterators in Python?
-* An iterator is an object.
-* It remembers its state i.e., where it is during iteration (see code below to see how)
-* ``__iter__()`` method initializes an iterator.
-* It has a ``__next__()`` method which returns the next item in iteration and points to the next element. Upon reaching the end of iterable object ``__next__()`` must return StopIteration exception.
-* It is also self-iterable.
-* Iterators are objects with which we can iterate over iterable objects like lists, strings, etc.<br>
-
-Example:
-```python
-class ArrayList:
-   def __init__(self, number_list):
-       self.numbers = number_list
-   def __iter__(self):
-       self.pos = 0
-       return self
-   def __next__(self):
-       if(self.pos < len(self.numbers)):
-           self.pos += 1
-           return self.numbers[self.pos - 1]
-       else:
-           raise StopIteration
-array_obj = ArrayList([1, 2, 3])
-it = iter(array_obj)
-print(next(it)) #output: 2
-print(next(it)) #output: 3
-print(next(it))
-#Throws Exception
-#Traceback (most recent call last):
-#...
-#StopIteration
-```
-
-#### What are negative indexes and why are they used?
-* Negative indexes are the indexes from the end of the list or tuple or string.
-* Arr[-1] means the last element of array Arr[]. <br>
-
-Example:
-```python
-arr = [1, 2, 3, 4, 5, 6]
-#get the last element
-print(arr[-1]) #output 6
-#get the second last element
-print(arr[-2]) #output 5
-```
-
-#### Which sorting technique is used by ``sort()`` and ``sorted()`` functions of python?
-Python uses the TimSort algorithm for sorting. It’s a stable sorting whose worst case is O(N log N). It’s a hybrid sorting algorithm, derived from MergeSort and InsertionSort, designed to perform well on many kinds of real-world data.
-
-#### How do you create a class in Python?
-To create a class in python, we use the keyword “class” as shown in the example below:
-```python
-class Employee:
-   def __init__(self, emp_name):
-       self.emp_name = emp_name
-```
-To instantiate or create an object from the class created above, we do the following:
-```python
-emp_1=Employee("Mr. Employee")
-```
-To access the name attribute, we just call the attribute using the dot operator as shown below:
-```python
-print(emp_1.emp_name)
-```
-To create methods inside the class, we include the methods under the scope of the class as shown below:
-```python
-class Employee:
-   def __init__(self, emp_name):
-       self.emp_name = emp_name
-       
-   def introduce(self):
-       print("Hello I am " + self.emp_name)
-```
-The ``self`` parameter has to be the first parameter of any method defined inside the class. The method of the class ``Employee`` can be accessed as shown below:
-```python
-emp_1.introduce()
-```
-
-#### How does inheritance work in python? Explain it with an example.
-Inheritance gives the power to a class to access all attributes and methods of another class. It aids in code reusability and helps the developer to maintain applications without redundant code. The class inheriting from another class is a child class or also called a derived class. The class from which a child class derives the members are called parent class or superclass.<br>
-Python supports different kinds of inheritance, they are:
-* **Single Inheritance:** Child class derives members of one parent class.
-```python
-# Parent class
-class ParentClass:
-    def par_func(self):
-         print("I am parent class function")
-
-# Child class
-class ChildClass(ParentClass):
-    def child_func(self):
-         print("I am child class function")
-
-# Driver code
-obj1 = ChildClass()
-obj1.par_func()
-obj1.child_func()
-```
-* **Multi-level Inheritance:** The members of the parent class, A, are inherited by child class which is then inherited by another child class, B. The features of the base class and the derived class are further inherited into the new derived class, C. Here, A is the grandfather class of class C.
-```python
-# Parent class
-class A:
-   def __init__(self, a_name):
-       self.a_name = a_name
-   
-# Intermediate class
-class B(A):
-   def __init__(self, b_name, a_name):
-       self.b_name = b_name
-       # invoke constructor of class A
-       A.__init__(self, a_name)
-
-# Child class
-class C(B):
-   def __init__(self,c_name, b_name, a_name):
-       self.c_name = c_name
-       # invoke constructor of class B
-       B.__init__(self, b_name, a_name)
-       
-   def display_names(self):
-       print("A name : ", self.a_name)
-       print("B name : ", self.b_name)
-       print("C name : ", self.c_name)
-
-#  Driver code
-obj1 = C('child', 'intermediate', 'parent')
-print(obj1.a_name)
-obj1.display_names()
-```
-* **Multiple Inheritance:** This is achieved when one child class derives members from more than one parent class. All features of parent classes are inherited in the child class.
-```python
-# Parent class1
-class Parent1:
-   def parent1_func(self):
-       print("Hi I am first Parent")
-
-# Parent class2
-class Parent2:
-   def parent2_func(self):
-       print("Hi I am second Parent")
-
-# Child class
-class Child(Parent1, Parent2):
-   def child_func(self):
-       self.parent1_func()
-       self.parent2_func()
-
-# Driver's code
-obj1 = Child()
-obj1.child_func()
-```
-* **Hierarchical Inheritance:** When a parent class is derived by more than one child class, it is called hierarchical inheritance.
-```python
-# Base class
-class A:
-     def a_func(self):
-         print("I am from the parent class.")
-
-# 1st Derived class
-class B(A):
-     def b_func(self):
-         print("I am from the first child.")
-
-# 2nd Derived class
-class C(A):
-     def c_func(self):
-         print("I am from the second child.")
- 
-# Driver's code
-obj1 = B()
-obj2 = C()
-obj1.a_func()
-obj1.b_func()    #child 1 method
-obj2.a_func()
-obj2.c_func()    #child 2 method
-```
-
-#### How do you access parent members in the child class?
-Following are the ways using which you can access parent class members within a child class:
-* **By using Parent class name:** You can use the name of the parent class to access the attributes as shown in the example below:
-```python
-class Parent(object):  
-   # Constructor
-   def __init__(self, name):
-       self.name = name    
- 
-class Child(Parent): 
-   # Constructor
-   def __init__(self, name, age):
-       Parent.name = name
-       self.age = age
- 
-   def display(self):
-       print(Parent.name, self.age)
- 
-# Driver Code
-obj = Child("Interviewbit", 6)
-obj.display()
-```
-* **By using ``super()``:** The parent class members can be accessed in child class using the ``super`` keyword.
-```python
-class Parent(object):
-   # Constructor
-   def __init__(self, name):
-       self.name = name    
- 
-class Child(Parent):
-   # Constructor
-   def __init__(self, name, age):         
-       ''' 
-       In Python 3.x, we can also use super().__init__(name)
-       ''' 
-       super(Child, self).__init__(name)
-       self.age = age
- 
-   def display(self):
-      # Note that Parent.name cant be used 
-      # here since super() is used in the constructor
-      print(self.name, self.age)
-  
-# Driver Code
-obj = Child("Interviewbit", 6)
-obj.display()
-```
-
-#### Are access specifiers used in python?
-Python does not make use of access specifiers specifically like private, public, protected, etc. However, it does not derive this from any variables. It has the concept of imitating the behaviour of variables by making use of a single (protected) or double underscore (private) as prefixed to the variable names. By default, the variables without prefixed underscores are public.
-
-#### Is it possible to call parent class without its instance creation?
-Yes, it is possible if the base class is instantiated by other child classes or if the base class is a static method.
-
-#### How is an empty class created in python?
-An empty class does not have any members defined in it. It is created by using the ``pass`` keyword (the pass command does nothing in python). We can create objects for this class outside the class.
-
-#### What is Polymorphism in Python?
-Polymorphism means the ability to take multiple forms. So, for instance, if the parent class has a method named ABC then the child class also can have a method with the same name ABC having its own parameters and variables. Python allows polymorphism.
-
-#### Differentiate between new and override modifiers.
-The ``new`` modifier is used to instruct the compiler to use the new implementation and not the base class function. The ``override`` modifier is useful for overriding a base class function inside the child class.
-
-#### How will you check if a class is a child of another class?
-This is done by using a method called ``issubclass()`` provided by python. The method tells us if any class is a child of another class by returning true or false accordingly. 
-
-#### Define encapsulation in Python?
-Encapsulation means binding the code and the data together. A Python class is an example of encapsulation.
-
-#### How do you do data abstraction in Python?
-Data Abstraction is providing only the required details and hides the implementation from the world. It can be achieved in Python by using interfaces and abstract classes.
-
-#### Give an example of Multithreading with Threads Synchronization in Python.
-The following code gives an example of threads synchronaization in Python:
-```python
-
-import threading 
-  
-# global variable x 
-x = 0
-  
-def increment(): 
-    """ 
-    function to increment global variable x 
-    """
-    global x 
-    x += 1
-  
-def thread_task(lock): 
-    """ 
-    task for thread 
-    calls increment function 100000 times. 
-    """
-    for _ in range(100000): 
-        lock.acquire() 
-        increment() 
-        lock.release() 
-  
-def main_task(): 
-    global x 
-    # setting global variable x as 0 
-    x = 0
-  
-    # creating a lock 
-    lock = threading.Lock() 
-  
-    # creating threads 
-    t1 = threading.Thread(target=thread_task, args=(lock,)) 
-    t2 = threading.Thread(target=thread_task, args=(lock,)) 
-  
-    # start threads 
-    t1.start() 
-    t2.start() 
-  
-    # wait until threads finish their job 
-    t1.join() 
-    t2.join() 
-  
-if __name__ == "__main__": 
-    for i in range(10): 
-        main_task() 
-        print("Iteration {0}: x = {1}".format(i,x)) 
-
-```
-**Output:**<br>
-Iteration 0: x = 200000<br>
-Iteration 1: x = 200000<br>
-Iteration 2: x = 200000<br>
-Iteration 3: x = 200000<br>
-Iteration 4: x = 200000<br>
-Iteration 5: x = 200000<br>
-Iteration 6: x = 200000<br>
-Iteration 7: x = 200000<br>
-Iteration 8: x = 200000<br>
-Iteration 9: x = 200000<br>
-
-#### Give an example of Threads Synchronization with Condition Variables.
-Consider the following example:
-```python
-import threading
-import time
-import logging
-
-logging.basicConfig(level=logging.DEBUG,
-                    format='(%(threadName)-9s) %(message)s',)
-
-def consumer(cv):
-    logging.debug('Consumer thread started ...')
-    with cv:
-    	logging.debug('Consumer waiting ...')
-        cv.wait()
-        logging.debug('Consumer consumed the resource')
-
-def producer(cv):
-    logging.debug('Producer thread started ...')
-    with cv:
-        logging.debug('Making resource available')
-        logging.debug('Notifying to all consumers')
-        cv.notifyAll()
-
-if __name__ == '__main__':
-    condition = threading.Condition()
-    cs1 = threading.Thread(name='consumer1', target=consumer, args=(condition,))
-    cs2 = threading.Thread(name='consumer2', target=consumer, args=(condition,))
-    pd = threading.Thread(name='producer', target=producer, args=(condition,))
-
-    cs1.start()
-    time.sleep(2)
-    cs2.start()
-    time.sleep(2)
-    pd.start()
-```
-**Output:**<br>
-(consumer1) Consumer thread started ...<br>
-(consumer1) Consumer waiting ...<br>
-(consumer2) Consumer thread started ...<br>
-(consumer2) Consumer waiting ...<br>
-(producer ) Producer thread started ...<br>
-(producer ) Making resource available<br>
-(producer ) Notifying to all consumers<br>
-(consumer1) Consumer consumed the resource<br>
-(consumer2) Consumer consumed the resource<br>
-
-#### Give an example of using ThreadPoolExecuter in Python.
-Consider the following:
-```python
-import concurrent.futures
-import urllib.request
-
-URLS = ['http://www.foxnews.com/',
-        'http://www.cnn.com/',
-        'http://europe.wsj.com/',
-        'http://www.bbc.co.uk/',
-        'http://nonexistant-subdomain.python.org/']
-
-# Retrieve a single page and report the URL and contents
-def load_url(url, timeout):
-    with urllib.request.urlopen(url, timeout=timeout) as conn:
-        return conn.read()
-
-# We can use a with statement to ensure threads are cleaned up promptly
-with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
-    # Start the load operations and mark each future with its URL
-    future_to_url = {executor.submit(load_url, url, 60): url for url in URLS}
-    for future in concurrent.futures.as_completed(future_to_url):
-        url = future_to_url[future]
-        try:
-            data = future.result()
-        except Exception as exc:
-            print('%r generated an exception: %s' % (url, exc))
-        else:
-            print('%r page is %d bytes' % (url, len(data)))
-```
-
-#### Give an example of using ProcessPoolExecuter.
-The following code describes such a use case:
-```python
-import concurrent.futures
-import math
-
-PRIMES = [
-    112272535095293,
-    112582705942171,
-    112272535095293,
-    115280095190773,
-    115797848077099,
-    1099726899285419]
-
-def is_prime(n):
-    if n < 2:
-        return False
-    if n == 2:
-        return True
-    if n % 2 == 0:
-        return False
-
-    sqrt_n = int(math.floor(math.sqrt(n)))
-    for i in range(3, sqrt_n + 1, 2):
-        if n % i == 0:
-            return False
-    return True
-
-def main():
-    with concurrent.futures.ProcessPoolExecutor() as executor:
-        for number, prime in zip(PRIMES, executor.map(is_prime, PRIMES)):
-            print('%d is prime: %s' % (number, prime))
-
-if __name__ == '__main__':
-    main()
-```
-
-#### Explain the difference between Thread and Process in Python.
-A **Process** is an instance of a program, e.g. a Python interpreter. They are independent from each other and do not share the same memory.<br>
-**Key facts:** - A new process is started independently from the first process - Takes advantage of multiple CPUs and cores - Separate memory space - Memory is not shared between processes - One GIL (Global interpreter lock) for each process, i.e. avoids GIL limitation - Great for CPU-bound processing - Child processes are interruptable/killable
-* Starting a process is slower that starting a thread
-* Larger memory footprint
-* IPC (inter-process communication) is more complicated
-
-A **Thread** is an entity within a process that can be scheduled for execution (Also known as "leightweight process"). A Process can spawn multiple threads. The main difference is that all threads within a process share the same memory.<br>
-**Key facts:** - Multiple threads can be spawned within one process - Memory is shared between all threads - Starting a thread is faster than starting a process - Great for I/O-bound tasks - Leightweight - low memory footprint
-* One GIL for all threads, i.e. threads are limited by GIL.
-* Multithreading has no effect for CPU-bound tasks due to the GIL.
-* Not interruptible/killable -> be careful with memory leaks.
-* Increased potential for race conditions.
-
-#### What is the Python Global Interpreter Lock (GIL)?
-Python Global Interpreter Lock (GIL) is a type of process lock which is used by python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. This means that in python only one thread will be executed at a time. The performance of the single-threaded process and the multi-threaded process will be the same in python and this is because of GIL in python. We can not achieve multithreading in python because we have global interpreter lock which restricts the threads and works as a single thread.
-
-### Interview questions for Machine Learning.
-### Interview questions for Deep Learning.
-### Interview questions for Computer Vision.
-### Interview questions for Software Engineering, Architecture and Design.
