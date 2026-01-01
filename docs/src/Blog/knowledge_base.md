@@ -51,7 +51,8 @@ content:   counter(h6counter) ".";
 # Knowledge Base
 
 ## Possible interview questions.
-
+---
+---
 ### Interview questions for probability and statistics.
 
 #### Can you give an intuitive definition of probability of an event?
@@ -164,9 +165,9 @@ $$
 The prior probability of an event is the initial belief about the event before observing any new evidence. It’s what is known or assumed before seeing data. The prior probability is defined by $P(A)$.
 The posterior probability is the updated belief about an event after observing evidence. It is defined by conditional probability $P(A|B)$.
 
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
+---
+---
+---
 
 ### Interview questions for Databases.
 **Sources:** <br>
@@ -661,10 +662,9 @@ BASE Properties aim to handle large volumes of data and enable scalability and f
 #### Can Normalization be used in a NoSQL Database?
 Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields.
 
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-
+---
+---
+---
 
 ### Interview questions for Python.
 **Sources:**<br>
@@ -1374,10 +1374,9 @@ A **Thread** is an entity within a process that can be scheduled for execution (
 Python Global Interpreter Lock (GIL) is a type of process lock which is used by python whenever it deals with processes. Generally, Python only uses only one thread to execute the set of written statements. This means that in python only one thread will be executed at a time. The performance of the single-threaded process and the multi-threaded process will be the same in python and this is because of GIL in python. We can not achieve multithreading in python because we have global interpreter lock which restricts the threads and works as a single thread.
 
 
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-
+---
+---
+---
 
 ### Interview questions for algorithms and data structures.
 **Sources:**<br>
@@ -1750,9 +1749,9 @@ Backtracking is a problem-solving algorithmic technique that involves finding a 
 #### What is a Greedy Algorithm?
 Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.
 
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
+---
+---
+---
 
 
 ### Interview questions for C++.
@@ -3136,8 +3135,8 @@ A possible Use Case for Futures and Promises would be passing of data between th
     }
 ```
 
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
-<strong>_______________________________________________________________________________________________________________</strong>
+---
+---
+---
 
 
