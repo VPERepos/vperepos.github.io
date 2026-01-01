@@ -27,7 +27,7 @@ Hamburg, Germany</p>
 Business analytics, forecasting models, data-driven decision support.</p>
 </li>
 <li>
-<p><strong>Over 15 years of experience in industry:</strong> projects in machine learning, modeling, and data analytics
+<p><strong>Over 15 years of experience in industry:</strong> projects in algorithmics, general programming, machine learning, modeling, and data analytics
 (e.g. Krüss GmbH, LPKF Laser &amp; Electronics SE, AICON 3D Systems, Vitronic)</p>
 </li>
 </ul>
@@ -76,7 +76,7 @@ Hamburg, Deutschland</p>
 <h3 id="berufliche-erfahrung-auswahl" tabindex="-1"><a class="header-anchor" href="#berufliche-erfahrung-auswahl"><span>Berufliche Erfahrung (Auswahl)</span></a></h3>
 <p><strong>Seit 03/2026 – Freiberuflicher Data Scientist </strong>, Hamburg
 Business Analytics, Prognosemodelle, datengetriebene Entscheidungsunterstützung</p>
-<p><strong>Über 15 Jahre Industrieerfahrung </strong> in Projekten aus den Bereichen Machine Learning, Modellierung und Datenanalyse
+<p><strong>Über 15 Jahre Industrieerfahrung </strong> in Projekten aus den Bereichen von Algorithmenentwicklung, Programmieren, Machine Learning, Modellierung und Datenanalyse
 (u. a. Krüss GmbH, LPKF Laser &amp; Electronics SE, AICON 3D Systems, Vitronic)</p>
 <h3 id="akademischer-hintergrund" tabindex="-1"><a class="header-anchor" href="#akademischer-hintergrund"><span>Akademischer Hintergrund</span></a></h3>
 <ul>

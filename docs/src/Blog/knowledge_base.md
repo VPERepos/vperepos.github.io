@@ -77,6 +77,92 @@ $$C(n,r) = \frac{(n+r-1)!}{r!(n-1)!}$$
 * <strong> Combinations without replacement: </strong>
 $$C(n,r) = \frac{n!}{r!(n-r)!}$$
 
+#### How is probability generally defined in terms of sets?
+Let $S$ be a sample space, $A \subseteq S$ - an event or a subset from the sample space, then probability $P(A)$ is a function defined between 0 and 1 describing how likely it is for the event to come. Probability function must sutisfy following rules:
+* $P(\emptyset) = 0$, $P(S) = 1$ and $P(A) \geq 0$
+* For disjoint events $A \subset S$ and $B \subset S$, the probability of an overlapping event is a sum of the probabilities of the separate events:
+$$ P(A \cup B) = P(A) + P(B)$$
+
+#### How to express a possible outcome or element of a sample space in terms of sets?
+Let $s$ be a possible outcome or an element of a sample space $S$:
+$$ s \in S $$
+
+#### What are the differences between "element of", "subset" and "proper subset"?
+* $\subset$ - "subset" means every element of a set is also in another set and these sets may be equal, e.g.:
+$$ \{1,2\} \subseteq \{1,2,3,4\} $$
+$$ \{1,2,3,4\} \subseteq \{1,2,3,4\} $$
+
+* $\subseteq$ - "proper subset" means every element of a set is also in another set, but they are not equal, e.g.:
+$$ \{1,2\} \subset \{1,2,3,4\} $$
+$$ \{1,2,3,\} \subset \{1,2,3,4\} $$
+
+* $\in$ - "element of" means an object is an element of a set, e.g.:
+$$ 3 \in \{1,2,3,4\}$$
+ A set can also be an element of another set, but only as a single element and not as a combination or permutation of another single elements, e.g:
+$$ \{1,2\} \in \{\{1,2\},1,2,3,4\} $$
+
+#### What is the difference between union and intersection of two sets?
+* $A \cup B$ - union, means that elements are in A, or in B, or in both sets, e.g.:
+$$ A=\{1,2,3\},B=\{3,4,5\}$$
+$$ A\cup B=\{1,2,3,4,5\}$$
+
+* $A \cap B$ - intersection, means that elements are in A and B, e.g.:
+$$ A=\{1,2,3\},B=\{3,4,5\}$$
+$$ A\cap B = \{3\}$$
+
+#### What is the probability of the union of two non-disjoint event sets?
+Addition rule of probability, or inclusion exclusion formula:
+$$ P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
+
+#### How to calculate a probability that an event won't happen, knowing its probability to happen?
+Because the probability of a sample space is 1 and if we know the probability of an event to happen, we can calculate the needed probability as follows:
+$$ P(A^c) = 1 - P(A) $$
+
+#### What is conditional probability of two events and how it is calculated? Give a simple example.
+The conditional probability of an event A given event B is written as:
+$$ P(A|B) $$
+and is defined by:
+$$P(A|B) = \frac{P(A \cap B)}{P(B)},$$
+where $P(B) > 0$.
+
+Imagine a sample space S as a big rectangle (all possible outcomes). 
+* Let's draw set B as a circle inside S, meaning all outcomes where event B happens.
+* Let's draw set A as another circle, meaning all outcomes where A happens.
+* The intersection of the circles $A \cap B$ represents outcomes where both A and B happen.
+
+Now, if one knows that B has happened, the subsets are restricted to B. One ignores everything outside B and wants to know how much of B is also in A, which is the overlap of two events and rerpesents conditional probability.
+
+Let's consider 100 students:
+* 40 are in club A
+* 50 are in club B
+* 20 are in both A and B
+
+Then, the probability that a student from club A is also in club B:
+$$
+P(A∣B)=\frac{P(A \cap B)}{P(B)}=\frac{\frac{20}{100}}{\frac{50}{100}}=\frac{20}{50}=0.4
+$$
+
+#### What is Bayes' rule?
+Bayes' rule describes connection between conditional probabilities of two events:
+$$
+P(A|B) = \frac{P(A)P(B|A)}{P(B)}
+$$
+Which follows from the definition of the probability of the intersection of two events:
+$$
+P(A \cap B) = P(B)P(A|B) = P(A)P(B|A)
+$$
+Which in turn follows from the definition of conditional probability.
+
+#### Define the law of total probability.
+The law of total probability allows to compute the probability of an event A by breaking the sample space into disjoint cases (events that do not overlap) that together cover all possibilities.
+If $\{B_1, B_2, ..., B_n\}$ is a partition of the sample space S (disjoint events that sum to the whole space, $B_1 \cup ... \cup B_n=S$), then:
+$$
+P(A) = \sum_{i=1}^{n}P(A|B_i)P(B_i)
+$$
+
+#### What is the difference between prior and posterior probabilities?
+The prior probability of an event is the initial belief about the event before observing any new evidence. It’s what is known or assumed before seeing data. The prior probability is defined by $P(A)$.
+The posterior probability is the updated belief about an event after observing evidence. It is defined by conditional probability $P(A|B)$.
 
 ### Interview questions for Databases.
 **Sources:** <br>
