@@ -52,7 +52,7 @@ content:   counter(h6counter) ".";
 
 ## Possible interview questions.
 
-### Interview questions for probability theory.
+### Interview questions for probability and statistics.
 
 #### Can you give an intuitive definition of probability of an event?
 Intuitively, probability is the measure of how likely an event is to happen, a value between 0 (impossible) and 1 (certain), often expressed as a fraction or percentage, representing the proportion of times an outcome occurs over many repetitions of an experiment, like a coin landing on heads roughly half the time in many flips.

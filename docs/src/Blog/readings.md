@@ -3,8 +3,27 @@ sidebarDepth: 2
 ---
 
 # Readings
-In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely. 
-## Computer Vision and Machine Learning
+In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely.
+## Data Science
+### Introduction to Probability
+<img src="../../Pictures/IntroductionToProbability.jpg" alt="Image" width="300"/>
+
+### Computer Age Statistical Inference
+<img src="../../Pictures/ComputerAgeStatisticalInference.jpg" alt="Image" width="300"/>
+
+### Becoming a Data Head
+<img src="../../Pictures/BecomingADataHead.jpg" alt="Image" width="300"/>
+
+### Hands-On Machine Learning With Scikit-Learn and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems
+<img src="../../Pictures/HandsOnMachineLearning.jpg" alt="Image" width="300"/>
+
+### Reinforcement Learning, second edition: An Introduction
+<img src="../../Pictures/ReinforcementLearning.jpg" alt="Image" width="300"/>
+
+### Machine Learning and Data Science Blueprints for Finance: From Building Trading Strategies to Robo-advisors using Python
+<img src="../../Pictures/ML_Blueprints.jpg" alt="Image" width="300"/>
+
+## Computer Vision
 ### Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications (English Edition)
 <img src="../../Pictures/ModernComputerVisionWithPytorch.jpg" alt="Image" width="300"/>
 
@@ -19,15 +38,6 @@ In this section I present some selected books, that I read during the last years
 
 ### Programming Computer Vision with Python: Tools and algorithms for analyzing images
 <img src="../../Pictures/ComputerVisionWithPython.jpg" alt="Image" width="300"/>
-
-### Hands-On Machine Learning With Scikit-Learn and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems
-<img src="../../Pictures/HandsOnMachineLearning.jpg" alt="Image" width="300"/>
-
-### Reinforcement Learning, second edition: An Introduction
-<img src="../../Pictures/ReinforcementLearning.jpg" alt="Image" width="300"/>
-
-### Machine Learning and Data Science Blueprints for Finance: From Building Trading Strategies to Robo-advisors using Python
-<img src="../../Pictures/ML_Blueprints.jpg" alt="Image" width="300"/>
 
 ## Computer Science
 

@@ -1,6 +1,19 @@
 <template><div><h1 id="readings" tabindex="-1"><a class="header-anchor" href="#readings"><span>Readings</span></a></h1>
 <p>In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely.</p>
-<h2 id="computer-vision-and-machine-learning" tabindex="-1"><a class="header-anchor" href="#computer-vision-and-machine-learning"><span>Computer Vision and Machine Learning</span></a></h2>
+<h2 id="data-science" tabindex="-1"><a class="header-anchor" href="#data-science"><span>Data Science</span></a></h2>
+<h3 id="introduction-to-probability" tabindex="-1"><a class="header-anchor" href="#introduction-to-probability"><span>Introduction to Probability</span></a></h3>
+<img src="@source/../Pictures/IntroductionToProbability.jpg" alt="Image" width="300"/>
+<h3 id="computer-age-statistical-inference" tabindex="-1"><a class="header-anchor" href="#computer-age-statistical-inference"><span>Computer Age Statistical Inference</span></a></h3>
+<img src="@source/../Pictures/ComputerAgeStatisticalInference.jpg" alt="Image" width="300"/>
+<h3 id="becoming-a-data-head" tabindex="-1"><a class="header-anchor" href="#becoming-a-data-head"><span>Becoming a Data Head</span></a></h3>
+<img src="@source/../Pictures/BecomingADataHead.jpg" alt="Image" width="300"/>
+<h3 id="hands-on-machine-learning-with-scikit-learn-and-tensorflow-concepts-tools-and-techniques-to-build-intelligent-systems" tabindex="-1"><a class="header-anchor" href="#hands-on-machine-learning-with-scikit-learn-and-tensorflow-concepts-tools-and-techniques-to-build-intelligent-systems"><span>Hands-On Machine Learning With Scikit-Learn and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems</span></a></h3>
+<img src="@source/../Pictures/HandsOnMachineLearning.jpg" alt="Image" width="300"/>
+<h3 id="reinforcement-learning-second-edition-an-introduction" tabindex="-1"><a class="header-anchor" href="#reinforcement-learning-second-edition-an-introduction"><span>Reinforcement Learning, second edition: An Introduction</span></a></h3>
+<img src="@source/../Pictures/ReinforcementLearning.jpg" alt="Image" width="300"/>
+<h3 id="machine-learning-and-data-science-blueprints-for-finance-from-building-trading-strategies-to-robo-advisors-using-python" tabindex="-1"><a class="header-anchor" href="#machine-learning-and-data-science-blueprints-for-finance-from-building-trading-strategies-to-robo-advisors-using-python"><span>Machine Learning and Data Science Blueprints for Finance: From Building Trading Strategies to Robo-advisors using Python</span></a></h3>
+<img src="@source/../Pictures/ML_Blueprints.jpg" alt="Image" width="300"/>
+<h2 id="computer-vision" tabindex="-1"><a class="header-anchor" href="#computer-vision"><span>Computer Vision</span></a></h2>
 <h3 id="modern-computer-vision-with-pytorch-explore-deep-learning-concepts-and-implement-over-50-real-world-image-applications-english-edition" tabindex="-1"><a class="header-anchor" href="#modern-computer-vision-with-pytorch-explore-deep-learning-concepts-and-implement-over-50-real-world-image-applications-english-edition"><span>Modern Computer Vision with PyTorch: Explore deep learning concepts and implement over 50 real-world image applications (English Edition)</span></a></h3>
 <img src="@source/../Pictures/ModernComputerVisionWithPytorch.jpg" alt="Image" width="300"/>
 <h3 id="computer-vision-principles-algorithms-applications-learning" tabindex="-1"><a class="header-anchor" href="#computer-vision-principles-algorithms-applications-learning"><span>Computer Vision: Principles, Algorithms, Applications, Learning</span></a></h3>
@@ -11,12 +24,6 @@
 <img src="@source/../Pictures/ComputerVisionWithTensorflowAndKeras.jpg" alt="Image" width="300"/>
 <h3 id="programming-computer-vision-with-python-tools-and-algorithms-for-analyzing-images" tabindex="-1"><a class="header-anchor" href="#programming-computer-vision-with-python-tools-and-algorithms-for-analyzing-images"><span>Programming Computer Vision with Python: Tools and algorithms for analyzing images</span></a></h3>
 <img src="@source/../Pictures/ComputerVisionWithPython.jpg" alt="Image" width="300"/>
-<h3 id="hands-on-machine-learning-with-scikit-learn-and-tensorflow-concepts-tools-and-techniques-to-build-intelligent-systems" tabindex="-1"><a class="header-anchor" href="#hands-on-machine-learning-with-scikit-learn-and-tensorflow-concepts-tools-and-techniques-to-build-intelligent-systems"><span>Hands-On Machine Learning With Scikit-Learn and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems</span></a></h3>
-<img src="@source/../Pictures/HandsOnMachineLearning.jpg" alt="Image" width="300"/>
-<h3 id="reinforcement-learning-second-edition-an-introduction" tabindex="-1"><a class="header-anchor" href="#reinforcement-learning-second-edition-an-introduction"><span>Reinforcement Learning, second edition: An Introduction</span></a></h3>
-<img src="@source/../Pictures/ReinforcementLearning.jpg" alt="Image" width="300"/>
-<h3 id="machine-learning-and-data-science-blueprints-for-finance-from-building-trading-strategies-to-robo-advisors-using-python" tabindex="-1"><a class="header-anchor" href="#machine-learning-and-data-science-blueprints-for-finance-from-building-trading-strategies-to-robo-advisors-using-python"><span>Machine Learning and Data Science Blueprints for Finance: From Building Trading Strategies to Robo-advisors using Python</span></a></h3>
-<img src="@source/../Pictures/ML_Blueprints.jpg" alt="Image" width="300"/>
 <h2 id="computer-science" tabindex="-1"><a class="header-anchor" href="#computer-science"><span>Computer Science</span></a></h2>
 <h3 id="the-algorithm-design-manual" tabindex="-1"><a class="header-anchor" href="#the-algorithm-design-manual"><span>The algorithm design manual</span></a></h3>
 <img src="@source/../Pictures/AlgorithmsDesign.jpg" alt="Image" width="300"/>
