@@ -40,7 +40,7 @@ Freelance data scientist specialized in <strong>predictive business data analyti
 - <strong> Since 03/2026 – Freelance Data Scientist</strong>, Hamburg <br/>
 Business analytics, forecasting models, data-driven decision support.
 
-- <strong>Over 15 years of experience in industry:</strong> projects in machine learning, modeling, and data analytics
+- <strong>Over 15 years of experience in industry:</strong> projects in algorithmics, general programming, machine learning, modeling, and data analytics
 (e.g. Krüss GmbH, LPKF Laser & Electronics SE, AICON 3D Systems, Vitronic)
 
 ### Academic Background
@@ -85,7 +85,7 @@ Freiberuflicher Data Scientist mit Spezialisierung auf <strong>prädiktive Busin
 <strong>Seit 03/2026 – Freiberuflicher Data Scientist </strong>, Hamburg
 Business Analytics, Prognosemodelle, datengetriebene Entscheidungsunterstützung
 
-<strong>Über 15 Jahre Industrieerfahrung </strong> in Projekten aus den Bereichen Machine Learning, Modellierung und Datenanalyse
+<strong>Über 15 Jahre Industrieerfahrung </strong> in Projekten aus den Bereichen von Algorithmenentwicklung, Programmieren, Machine Learning, Modellierung und Datenanalyse
 (u. a. Krüss GmbH, LPKF Laser & Electronics SE, AICON 3D Systems, Vitronic)
 
 ### Akademischer Hintergrund
