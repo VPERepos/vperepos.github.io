@@ -1,3 +1,16 @@
 import comp from "C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Resume/index.html.vue"
 const data = JSON.parse("{\"path\":\"/Resume/\",\"title\":\"Curriculum Vitae\",\"lang\":\"en-US\",\"frontmatter\":{\"sidebarDepth\":2,\"description\":\"Curriculum Vitae English version Vladimir Petukhov, Dr.-Ing. Business Data Scientist | Predictive Analytics & Forecasting Hamburg, Germany Profile Freelance data scientist speci...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Curriculum Vitae\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":\\\"2026-01-01T13:41:52.000Z\\\",\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Dr. Vladimir Petukhov\\\"}]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://vperepos.github.io/Resume/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Dr. Vladimir Petukhov\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Curriculum Vitae\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Curriculum Vitae English version Vladimir Petukhov, Dr.-Ing. Business Data Scientist | Predictive Analytics & Forecasting Hamburg, Germany Profile Freelance data scientist speci...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"en-US\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2026-01-01T13:41:52.000Z\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2026-01-01T13:41:52.000Z\"}]]},\"git\":{\"updatedTime\":1767274912000,\"contributors\":[{\"name\":\"Vladimir Petukhov\",\"username\":\"\",\"email\":\"v.petukhov@mail.de\",\"commits\":3}],\"changelog\":[{\"hash\":\"12047832bd3289b74101b67b9e5ac15e081581d3\",\"time\":1767274912000,\"email\":\"v.petukhov@mail.de\",\"author\":\"Vladimir Petukhov\",\"message\":\"backup 4: questions for probability (CV corrections)\"},{\"hash\":\"00e7e5c1dca2dbd1a7ca8381f9ef8ed2e320199a\",\"time\":1767202059000,\"email\":\"v.petukhov@mail.de\",\"author\":\"Vladimir Petukhov\",\"message\":\"migrated to vuepress 2\"},{\"hash\":\"0b1b33559df802af3d993e140b0127033fe2f2e5\",\"time\":1766679732000,\"email\":\"v.petukhov@mail.de\",\"author\":\"Vladimir Petukhov\",\"message\":\"Initial commit\"}]},\"filePathRelative\":\"Resume/README.md\",\"autoDesc\":true}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
