@@ -1,14 +1,1 @@
 export const themeData = JSON.parse("{\"navbar\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"Services\",\"link\":\"/Services/\"},{\"text\":\"Contact\",\"link\":\"/Contact/\"},{\"text\":\"CV\",\"link\":\"/Resume/\"},{\"text\":\"Blog\",\"link\":\"/Blog/\"},{\"text\":\"Github\",\"link\":\"https://github.com/vperepos\"}],\"sidebar\":{\"/Blog/\":[\"/Blog/state-machine-design-pattern\",\"/Blog/task-queue-design-pattern\",\"/Blog/cpp-performance-cache-study\",\"/Blog/java-vector-field-widget\",\"/Blog/knowledge_base\",\"/Blog/readings\"],\"/Contact/\":[\"/Contact/index\"],\"/index/\":[\"/index\"],\"/Resume/\":[\"/Resume/index\"],\"/Services/\":[\"/Services/index\"]},\"sidebarDepth\":2,\"locales\":{\"/\":{\"selectLanguageName\":\"English\"}},\"colorMode\":\"auto\",\"colorModeSwitch\":true,\"logo\":null,\"repo\":null,\"selectLanguageText\":\"Languages\",\"selectLanguageAriaLabel\":\"Select language\",\"editLink\":true,\"editLinkText\":\"Edit this page\",\"lastUpdated\":true,\"contributors\":true,\"contributorsText\":\"Contributors\",\"notFound\":[\"There's nothing here.\",\"How did we get here?\",\"That's a Four-Oh-Four.\",\"Looks like we've got some broken links.\"],\"backToHome\":\"Take me home\",\"openInNewWindow\":\"open in new window\",\"toggleColorMode\":\"toggle color mode\",\"toggleSidebar\":\"toggle sidebar\"}")
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateThemeData) {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ themeData }) => {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  })
-}
