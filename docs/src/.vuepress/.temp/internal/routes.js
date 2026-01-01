@@ -10,7 +10,24 @@ export const routes = Object.fromEntries([
   ["/Blog/state-machine-design-pattern.html", { loader: () => import(/* webpackChunkName: "Blog_state-machine-design-pattern.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Blog/state-machine-design-pattern.html.js"), meta: {"title":"State Machine Design Pattern in Modern C++"} }],
   ["/Blog/task-queue-design-pattern.html", { loader: () => import(/* webpackChunkName: "Blog_task-queue-design-pattern.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Blog/task-queue-design-pattern.html.js"), meta: {"title":"Task Queue Design Pattern in Modern C++"} }],
   ["/Contact/", { loader: () => import(/* webpackChunkName: "Contact_index.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Contact/index.html.js"), meta: {"title":"Contact"} }],
-  ["/Resume/", { loader: () => import(/* webpackChunkName: "Resume_index.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Resume/index.html.js"), meta: {"title":"Curriculum Vitae"} }],
   ["/Services/", { loader: () => import(/* webpackChunkName: "Services_index.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Services/index.html.js"), meta: {"title":"Services"} }],
+  ["/Resume/", { loader: () => import(/* webpackChunkName: "Resume_index.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/Resume/index.html.js"), meta: {"title":"Curriculum Vitae"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"C:/WORKSPACE/Personal/Softwareentwicklung/VpeFreelancerPage/vperepos.github.io/docs/src/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}
