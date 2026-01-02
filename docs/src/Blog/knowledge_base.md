@@ -51,8 +51,9 @@ content:   counter(h6counter) ".";
 # Knowledge Base
 
 ## Possible interview questions.
+
 ---
----
+
 ### Interview questions for probability and statistics.
 
 #### Can you give an intuitive definition of probability of an event?
@@ -158,14 +159,84 @@ Which in turn follows from the definition of conditional probability.
 The law of total probability allows to compute the probability of an event A by breaking the sample space into disjoint cases (events that do not overlap) that together cover all possibilities.
 If $\{B_1, B_2, ..., B_n\}$ is a partition of the sample space S (disjoint events that sum to the whole space, $B_1 \cup ... \cup B_n=S$), then:
 $$
-P(A) = \sum_{i=1}^{n}P(A|B_i)P(B_i)
+P(A) = \sum_{i=1}^{n}P(A|B_i)P(B_i).
 $$
 
 #### What is the difference between prior and posterior probabilities?
 The prior probability of an event is the initial belief about the event before observing any new evidence. It’s what is known or assumed before seeing data. The prior probability is defined by $P(A)$.
 The posterior probability is the updated belief about an event after observing evidence. It is defined by conditional probability $P(A|B)$.
 
----
+#### When are two events independent?
+Two events are independent when the probability of their intersection is equal to the multiplication of their prior probabilities:
+$$
+P(A \cap B) = P(A)P(B).
+$$
+
+Which is equivalent to the following:
+$$
+P(A|B)=P(A).
+$$
+
+#### How is independence of many events defined?
+Infintely many events are said to be independent if any finite subset of them is independent. It means that the probabilities of the intersections of the finite subsets is defined by multiplication of their prior probabilities (pairs, triplets, quadruplets and so on).
+
+#### What is conditional independence?
+Events A and B are conditionally independent given E if the following is true:
+$$
+P(A \cap B|E) = P(A|E)P(B|E).
+$$
+
+#### Give a definition of random variables.
+A random variable is a function that assigns a numerical value to any possible outcome from a sample space of an experiment, e.g. an experiment with two coin tosses:
+
+Sample space is $S= \{ HH, HT, TH, TT\}$, now define $X(HH)=2$ , $X(HT)=1$, $X(TH)=1$ and $X(TT)=0$, where variable $X$ represents number of heads in a series of two coin tosses. 
+
+#### What is a distribution of a random variable?
+Distribution of a random variable specifies the probability of all events associated with it. 
+
+#### Name two main types of random variables.
+There are two main types of random variables discrete and continuous.
+
+#### Give a formal definition of a discrete random variable.
+A random variable X is discrete if there exists a finite or countable set $\{x_1, x_2, x_3,... \} \subset \mathbf{R}$ such that $P(X=x_i)>0$ for each $i$ and $\sum P(X=x_i)=1$.
+
+#### What is support of a discrete random variable?
+It is a finite or countable set of values, where the probability of a variable taking these values is bigger then zero.
+
+#### What is probability mass function of a discrete random variable?
+The probability mass function of a discrete random variable X is a function $p_X(x)=P(X=x)$ that gives probability of the variable to take value $x$ from its support. 
+
+#### Give a formal definition of the Bernoulli distribution.
+A random variable $X$ is said to follow a Bernoulli distribution with parameter $p$, where $0 \le p \le 1$, if probability mass function (PMF) is $P(X=x)=p^x(1-p)^{1-x}$, for $x \in \{0,1\}$. Here $X=1$ represents success with probability $p$ and $X=0$ represents failure with probability $1-p$. A Bernoulli distribution models a single binary experiment with success probability $p$.
+
+#### What is an indicator random variable?
+An indicator random variable is a function that takes value 1 when a given event occurs and 0 otherwise. It is a Bernoulli-distributed random variable with parameter equal to the probability of the event.
+
+#### What is Bernoulli trial?
+A Bernoulli trial is a single random experiment with exactly two possible outcomes, usually called success and failure, where the probability of success is fixed.
+
+#### Give a formal definition of Binomial distribution.
+A random variable $X$ is said to follow a Binomial distribution with parameters $n \in N$ and $p \in [0,1]$ if it represents the number of successes in $n$ independent Bernoulli trials, each with success probability $p$. It is denoted by $X \sim Binomial(n,p)$. A Binomial distribution models the number of successes in a fixed number of independent Bernoulli trials with the same success probability. The PMF of the Binomial distribution is defined as:
+$$
+P(X=k)=
+\begin{pmatrix}
+n \\
+k
+\end{pmatrix}
+p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k},
+$$
+for $k=0,1,2,...,n$. The first part of the PMF represents the number of combinations for $k$ successes out of $n$ trials.
+
+It is important to understand why a combination without repetition is used here and not a permutation without repetition. Let's consider 2 successes out of 3 trials (S1 - means success at the position 1): <br/>
+
+Combinations: (S1,S2,F3), (S1,F2,S3), (F1,S2,S3) - in total 3 combinations.<br/>
+
+Permutations: (S1,S2,F3), (S2,S1,F3), (S1,F2,S3), (S3,F2,S1), (F1,S2,S3), (F1,S3,S2) - in total 6 permutations.<br/>
+
+But in the case of Binomial distribution we can not use each single success again and it does not matter in which order it is, we only need to count possible combinations of position of sucesses. <br/>
+
+
+
 ---
 ---
 
@@ -662,7 +733,6 @@ BASE Properties aim to handle large volumes of data and enable scalability and f
 #### Can Normalization be used in a NoSQL Database?
 Yes, normalization can be used by a NoSQL database. One of the famous NoSQL named Cassandra (key-value database) is based on normalization to finding stored data. It creates a series of tables related to the different fields.
 
----
 ---
 ---
 
@@ -1376,7 +1446,6 @@ Python Global Interpreter Lock (GIL) is a type of process lock which is used by 
 
 ---
 ---
----
 
 ### Interview questions for algorithms and data structures.
 **Sources:**<br>
@@ -1749,7 +1818,6 @@ Backtracking is a problem-solving algorithmic technique that involves finding a 
 #### What is a Greedy Algorithm?
 Greedy Algorithm is defined as a method for solving optimization problems by taking decisions that result in the most evident and immediate benefit irrespective of the final outcome. It works for cases where minimization or maximization leads to the required solution.
 
----
 ---
 ---
 
@@ -3135,7 +3203,6 @@ A possible Use Case for Futures and Promises would be passing of data between th
     }
 ```
 
----
 ---
 ---
 
