@@ -235,6 +235,41 @@ Permutations: (S1,S2,F3), (S2,S1,F3), (S1,F2,S3), (S3,F2,S1), (F1,S2,S3), (F1,S3
 
 But in the case of Binomial distribution we can not use each single success again and it does not matter in which order it is, we only need to count possible combinations of position of sucesses. <br/>
 
+Here is the visualization of some Binomial distributions:
+
+<img src="../../Pictures/BinomialDistributionPlots.png" alt="Image" width="500" style="display:block; margin:auto;" />
+
+#### Give a formal definition of Hypergeometric distribution.
+A discrete random variable $X$ has a Hypergeometric distribution if it counts the number of successes in a sample of size $n$ drawn without replacement from a finite population of size $N$ containing exactly $K$ successes. It is denoted by $X \sim HGeom(N,K,n)$, where $N$ is the total population size, $K$ is the total number of sucesses in the population, $n$ - number of draws and $X$ - number of sucesses in the sample. 
+
+The PMF of the Hypergeometric distribution for $k = 0,1,2, ...,min(K,n)$ is defined by:
+$$
+P(X=k)=
+\frac{
+\begin{pmatrix}
+K \\
+k
+\end{pmatrix}
+\begin{pmatrix}
+N-K \\
+n-k
+\end{pmatrix}
+}
+{
+    \begin{pmatrix}
+N \\
+n
+\end{pmatrix}
+},
+$$
+
+where:
+* $\begin{pmatrix} K \\ k \end{pmatrix}$ - number of ways to choose $k$ sucesses out of available $K$ successes.
+* $\begin{pmatrix} N-K \\ n-k \end{pmatrix}$ - number of ways to choose remaining $n-k$ failures out of $N-K$ available.
+* $\begin{pmatrix} N \\ n \end{pmatrix}$ - number of total ways to choose $n$ elements out of $N$ available.
+
+Here are plots of some Hypergeometric distributions:
+<img src="../../Pictures/HypergeometricDistributionPlots.png" alt="Image" width="500" style="display:block; margin:auto;" />
 
 
 ---
