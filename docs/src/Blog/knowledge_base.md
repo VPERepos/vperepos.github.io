@@ -97,11 +97,11 @@ Let $s$ be a possible outcome or an element of a sample space $S$:
 $$ s \in S $$
 
 #### What are the differences between "element of", "subset" and "proper subset"?
-* $\subset$ - "subset" means every element of a set is also in another set and these sets may be equal, e.g.:
+* $\subseteq$ - "subset" means every element of a set is also in another set and these sets may be equal, e.g.:
 $$ \{1,2\} \subseteq \{1,2,3,4\} $$
 $$ \{1,2,3,4\} \subseteq \{1,2,3,4\} $$
 
-* $\subseteq$ - "proper subset" means every element of a set is also in another set, but they are not equal, e.g.:
+* $\subset$ - "proper subset" means every element of a set is also in another set, but they are not equal, e.g.:
 $$ \{1,2\} \subset \{1,2,3,4\} $$
 $$ \{1,2,3,\} \subset \{1,2,3,4\} $$
 
