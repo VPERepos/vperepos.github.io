@@ -272,6 +272,13 @@ where:
 Here are plots of some Hypergeometric distributions:
 <img src="../../Pictures/HypergeometricDistributionPlots.png" alt="Image" width="500" style="display:block; margin:auto;" />
 
+#### Give a formal definition of a discrete uniform distribution.
+A discrete random variable $X$ is said to have a discrete uniform distribution over a finite set of $n$ values $\{x_1,x_2,...,x_n\}$ if each value is equally likely.
+$$
+P(X=x_i) = \frac{1}{n},
+$$
+for $i = 1,2,...,n$.
+
 
 ---
 ---
