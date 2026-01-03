@@ -67,16 +67,20 @@ Probability tells you how to go from a population to a sample, and statistics te
 
 #### Enlist and explain the formulas of calculating number of ways to sample a number of elements 'r' taken with the number of choices 'n'.
 There are <strong>permutations</strong>, which represent 'r' samples taken with 'n' choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.
-* <strong> Permutations with replacement: </strong>
-$$P(n,r) = n^r$$
+* <strong> Permutations with replacement: </strong> <br/>
+How to order r samples with n options for each sample, like for example how many outcomes throwing r = 6 dies with n = 6 faces).
+$$P(n,r) = n^r$$ 
 
-* <strong> Permutations without replacement: </strong>
-$$P(n,r) = \frac{n!}{(n-r)!}$$
+* <strong> Permutations without replacement: </strong> <br/>
+How to order r samples with n options for each sample, but each sample can not be repeated (how many ways to take r = 5 cards out of a deck with n = 52 distinct cards).
+$$P(n,r) = \frac{n!}{(n-r)!}$$ 
 
-* <strong> Combinations with replacement: </strong>
-$$C(n,r) = \frac{(n+r-1)!}{r!(n-1)!}$$
+* <strong> Combinations with replacement: </strong> <br/>
+Choose r samples out of n elements, where order of elements does not matter, but samples can repeat (choosing 2 ice-cream scoops out of 3 flavors, but scoops can be of the same flavor ).
+$$C(n,r) = \frac{(n+r-1)!}{r!(n-1)!}$$ 
 
-* <strong> Combinations without replacement: </strong>
+* <strong> Combinations without replacement: </strong> <br/>
+Choose r samples out of n elements, where order of positions does not matter and samples can not repeat (like choose r = 3 persons from a group of n = 5 people, a person can not be chosen twice).
 $$C(n,r) = \frac{n!}{r!(n-r)!}$$
 
 #### How is probability generally defined in terms of sets?
@@ -225,15 +229,7 @@ k
 \end{pmatrix}
 p^k(1-p)^{n-k} = \frac{n!}{k!(n-k)!}p^k(1-p)^{n-k},
 $$
-for $k=0,1,2,...,n$. The first part of the PMF represents the number of combinations for $k$ successes out of $n$ trials.
-
-It is important to understand why a combination without repetition is used here and not a permutation without repetition. Let's consider 2 successes out of 3 trials (S1 - means success at the position 1): <br/>
-
-Combinations: (S1,S2,F3), (S1,F2,S3), (F1,S2,S3) - in total 3 combinations.<br/>
-
-Permutations: (S1,S2,F3), (S2,S1,F3), (S1,F2,S3), (S3,F2,S1), (F1,S2,S3), (F1,S3,S2) - in total 6 permutations.<br/>
-
-But in the case of Binomial distribution we can not use each single success again and it does not matter in which order it is, we only need to count possible combinations of position of sucesses. <br/>
+for $k=0,1,2,...,n$. The first part of the PMF represents the number of combinations for $k$ successes out of $n$ trials and we are not interested in the order of the sucesses.
 
 Here is the visualization of some Binomial distributions:
 

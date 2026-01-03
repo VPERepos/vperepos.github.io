@@ -2,8 +2,10 @@
 home: true
 heroImage: /Titelbild.jpg
 tagline: 'Freelance data scientist specializing in business analytics, predictive modeling and time-series analysis.'
-actionText: Contact me →
-actionLink: /Contact/
+actions:
+  - text: Contact me →
+    link: /Contact/
+    type: primary
 features:
 - title: Predictive Business Analytics
   details: Transform business and operational data into actionable forecasts and insights to support planning, risk management, and decision-making.
