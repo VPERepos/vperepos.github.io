@@ -67,20 +67,25 @@ Probability tells you how to go from a population to a sample, and statistics te
 
 #### Enlist and explain the formulas of calculating number of ways to sample a number of elements 'r' taken with the number of choices 'n'.
 There are <strong>permutations</strong>, which represent 'r' samples taken with 'n' choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.
+
+* <strong> Number of possible permutations to arrange $n$ distinct objects: </strong> <br/>
+Consider 5 balls of different colors, how many ways are there to put it on a table near each other on a line?
+$$P(n) = n!$$
+
 * <strong> Permutations with replacement: </strong> <br/>
-How to order r samples with n options for each sample, like for example how many outcomes throwing r = 6 dies with n = 6 faces).
+How to order r distinct, independent objects with n options for each object (how many outcomes are there throwing r = 6 dies with n = 6 faces).
 $$P(n,r) = n^r$$ 
 
 * <strong> Permutations without replacement: </strong> <br/>
-How to order r samples with n options for each sample, but each sample can not be repeated (how many ways to take r = 5 cards out of a deck with n = 52 distinct cards).
+How to order r samples out of n distinct objects (how many ways are there to take r = 5 cards out of a deck with n = 52 distinct cards).
 $$P(n,r) = \frac{n!}{(n-r)!}$$ 
 
 * <strong> Combinations with replacement: </strong> <br/>
-Choose r samples out of n elements, where order of elements does not matter, but samples can repeat (choosing 2 ice-cream scoops out of 3 flavors, but scoops can be of the same flavor ).
+Choose r distinct objects with n options, where order of the objects does not matter, but options of the objects can repeat (choosing 2 ice-cream scoops out of 3 flavors, but scoops can be of the same flavor ).
 $$C(n,r) = \frac{(n+r-1)!}{r!(n-1)!}$$ 
 
 * <strong> Combinations without replacement: </strong> <br/>
-Choose r samples out of n elements, where order of positions does not matter and samples can not repeat (like choose r = 3 persons from a group of n = 5 people, a person can not be chosen twice).
+Choose r samples out of n available (like choose r = 3 persons from a group of n = 5 people, a person can not be chosen twice).
 $$C(n,r) = \frac{n!}{r!(n-r)!}$$
 
 #### How is probability generally defined in terms of sets?
