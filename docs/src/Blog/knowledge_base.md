@@ -65,9 +65,7 @@ The intuitive definition of probability (classical/frequentist) says it's the ra
 #### What is the difference between probability and statistics?
 Probability tells you how to go from a population to a sample, and statistics tells you how to go from a sample to a population. So if one has a bin with red and blue balls and takes a number of balls from it, statistics estimates how many blue and red balls there could be in the bin. The probability estimates how likely it is that you take specific number of blue and red balls knowing the number of it in the bin. 
 
-#### Enlist and explain the formulas of calculating number of ways to sample a number of elements 'r' taken with the number of choices 'n'.
-There are <strong>permutations</strong>, which represent 'r' samples taken with 'n' choices for each element, where <strong>order does matter</strong> and <strong>combinations</strong> - where <strong>order does not matter</strong>. E.g. if we have numbers 1,2,3,4 and order does matter, the sequences like 1,3,2,4 and 2,3,4,1 are counted as different samples. If order does not matter there is only one sample for 4 numbers out of 4. There is also possibility to sample <strong>with and without replacement (repetitions)</strong>, e.g. if we have 52 cards and want to count possible samples of 5 cards without replacement, we take next sample out of 52 - 5 and the next one 47 - 5. With replacement we take every sample from the initial 52 cards.
-
+#### Enlist and explain the most important combinatoric formulas.
 * <strong> Number of possible permutations to arrange $n$ distinct objects: </strong> <br/>
 Consider 5 balls of different colors, how many ways are there to put it on a table near each other on a line?
 $$P(n) = n!$$
