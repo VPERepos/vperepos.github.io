@@ -270,6 +270,18 @@ where:
 Here are plots of some Hypergeometric distributions:
 <img src="../../Pictures/HypergeometricDistributionPlots.png" alt="Image" width="500" style="display:block; margin:auto;" />
 
+#### Is there connection between Binomial and Hypergeometric distributions?
+The binomial can actually be seen as a limit or approximation of the hypergeometric under certain conditions.
+| | |
+|:---|:---|
+|<strong>Binomial</strong>|<strong>Hypergeometric</strong>|
+| Independent trials | Dependent draws |
+| Sampling with replacement | Sampling without replacement |
+| Infinite or very large population | Finite population |
+|Constant success probability $p$ | Changing success probability |
+
+When the population is very large compared to the sample size, sampling without replacement behaves almost like sampling with replacement.
+
 #### Give a formal definition of a discrete uniform distribution.
 A discrete random variable $X$ is said to have a discrete uniform distribution over a finite set of $n$ values $\{x_1,x_2,...,x_n\}$ if each value is equally likely.
 $$
@@ -277,6 +289,82 @@ P(X=x_i) = \frac{1}{n},
 $$
 for $i = 1,2,...,n$.
 
+#### What is Cumulative Distribution Function (CDF)?
+For a random variable $X$ the CDF is a function $F_X(x) = P(X \le x)$, for all $x \in R$.
+
+#### Enlist and explain key properties of a CDF.
+
+* **Non-decreasing:** 
+If $x_1 \le x_2$, then
+$$
+F_X(x_1) \le F_X(x_2).
+$$
+
+
+* **Right-continuous:** at the points of jumps CDF is continuous from the right part.
+$$
+F_X(a) = \lim\limits_{x \to a^+}F_X(x)
+$$
+* **Convergent to 0 and 1 in the limits:** 
+$$
+\lim\limits_{x \to -\infty}F_X(x) = 0
+$$
+$$
+\lim\limits_{x \to \infty}F_X(x) = 1
+$$
+* **Probability recovery:**
+$$
+P(a < X \le b) = F_X(b) - F_X(a)
+$$
+#### How are PMF and CDF of a discrete random variable related?
+The relation between PMF and CDF of a discrete random variable can be described as:
+$$
+F_X(x) = \sum_{t \le x}p_X(t).
+$$
+Here are the plots of PMF and CDF for $X \sim Bin(4, 1/2)$:
+<img src="../../Pictures/PMFvsCDFOfBinomial.png" alt="Image" width="800" style="display:block; margin:auto;" />
+
+#### Give a formal definition of a function of random variables.
+A function of a random variable $X$ is a new random variable $Y$, defined by applying deterministic function $g: R \rightarrow R$ to $X$:
+$$
+Y = g(X).
+$$
+And formally for any outcome $s \in S$:
+$$
+Y(s) = g(X(s)).
+$$
+
+#### How to calculate PMF of a function of a random variable?
+For a discrete random variable $X$ an $Y = g(X)$, the PMF of $Y$ is given by:
+$$
+p_Y(y) = P(Y=y) = \sum_{x \in g^{-1}(\{y\})}P(X=x) = \sum_{x:g(x) = y}p_X(x)
+$$
+Here probabilities of all values of $X$ that map to the same $y$ are summed.
+For example lets consider a square function of a die roll:
+* $X$ is die roll outcome with PMF $p_X(k) = 1/6$, for $k=1,2,...,6$
+* $Y=X^2$ values are 1,4,9,16,25,36
+* The PMF of $Y$ can be calculated as:
+$$
+p_Y(y) = P(Y=y) = P(x = \sqrt{y}) = 1/6
+$$
+
+#### Define when two random variables are independent.
+Two random variables $X$ and $Y$ are independent if:
+$$
+P(X \le x, Y \le y) = P(X \le x)P(Y \le y)
+$$
+
+#### What is the distribution of the sum of two independent variables with binomial distributions?
+If $X \sim Bin(n,p)$ and $Y \sim Bin(m,p)$ and they are independent, then:
+$$
+X+Y \sim Bin(n+m,p)
+$$
+
+#### Give a definition of conditional independence of two random variables given a third random variable.
+Random variables $X$ and $Y$ are conditionally independent given a random variable $Z$ for all $x,y \in R$ and $z$ in support of $Z$ if:
+$$
+P(X \le x, Y \le y| Z = z) = P(X \le x| Z = z)P(Y \le y| Z = z).
+$$
 
 ---
 ---
