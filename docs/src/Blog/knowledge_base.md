@@ -366,6 +366,56 @@ $$
 P(X \le x, Y \le y| Z = z) = P(X \le x| Z = z)P(Y \le y| Z = z).
 $$
 
+#### What is expectation of a discrete random variable?
+Expectation or mean value of a discrete random variable is defined as a weighted average:
+$$
+E(X) = \sum_{x}xP(X=x).
+$$
+
+#### How do expectations of two random variables with the same distribution relate to each other?
+Expectations of two random variables with the same distribution are equal.
+
+#### How is the expectation of a sum of two random variables or a product of a constant and a random variable defined?
+Due to linearity of expectations, these values for any random variables $X$ and $Y$ and a constatnt $c$  are defined as:
+$$
+E(X+Y) = E(X) + E(Y)
+$$
+and
+$$
+E(cX) = cE(X).
+$$
+
+#### How is monotonicity of expectation is defined?
+For two random variables for which the enaquality $X \ge Y$ is true with probability 1, the expectation relation is as follows: $E(X) \ge E(Y)$, where equality holds only if $X=Y$ with probability 1.
+
+#### What is Geometric distribution of a discrete random variable?
+Let $(X_1, X_2, ...)$ be a sequence of independent and equaly distributed Bernoulli trials with 
+$$
+P(X_i = 1) = p, \quad P(X_i = 0) = 1 - p, \quad 0 < p \le 1.
+$$
+Define the random variable 
+$$
+X=min\{n \ge 1: X_n = 1\}.
+$$
+Then $X$ is said to have a geometric distribution with parameter $p$, denoted by:
+$$
+X \sim Geom(p).
+$$
+The variable $X$ counts the number of trials until first success which occurs with a probability $p$ for each trial. The PMF of geometric distribution is defined for $k = 1,2,...$ by:
+$$
+P(X=k)=(1-p)^{k-1}p.
+$$
+The geometric distribution is memoryless:
+$$
+P(X > m + n|X > m) = P(X > n).
+$$
+The expectation for this distribution is:
+$$
+E(X) = \frac{1}{p}.
+$$
+Here are some plots of Geometric distributions for different probabilities:
+<img src="../../Pictures/GeometricDistributionPlots.png" alt="Image" width="500" style="display:block; margin:auto;" />
+
 ---
 ---
 
