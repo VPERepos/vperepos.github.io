@@ -416,6 +416,45 @@ $$
 Here are some plots of Geometric distributions for different probabilities:
 <img src="../../Pictures/GeometricDistributionPlots.png" alt="Image" width="500" style="display:block; margin:auto;" />
 
+#### Give a formal definition of the Cumulative Distribution Function of Geometric distribution.
+The CDF of a discrete random variable $X$ with $Geom(p)$ distribution is defined for $k=1,2,3,...$ by:
+$$
+F_X(k)=P(X \le k)=1-(1-p)^{k}
+$$
+Here is a plot of PMF versus CDF of Geometric distribution:
+<img src="../../Pictures/PMFvsCDFOfGeometric.png" alt="Image" width="800" style="display:block; margin:auto;" />
+
+#### How is the Negative Binomial distribution is defined?
+If a random variable $X$ counts the number of trials to get $r$-th success in a series of independent Bernoulli trials, then the variable has the Negative Binomial distribution, which is denoted by:
+$$
+X \sim NBin(r,p),
+$$ 
+where $p$ is the probability of success.
+
+#### How does PMF of the Negative Binomial distribution look like?
+For $k=r, r+1, r+2,...$ the PMF of the Negative Binomial Distribution is defined by:
+$$
+P(X = k)= 
+\begin{pmatrix}
+k - 1 \\
+r - 1
+\end{pmatrix}
+p^r(1-p)^{k-r}.
+$$
+
+#### How is the Expectation of the Negative Binomial distribution defined?
+The expectation of a random variable with the Negative Binomial distribution is defined by:
+$$
+E(X) = \frac{r}{p}.
+$$
+
+#### What are the main properties of indicator variables?
+* $(I_A)^k = I_A$ for any positive integer $k$
+* $I_{A^c} = 1 - I_A$
+* $I_{A \cap B} = I_AI_B$
+* $I_{A \cup B} = I_A + I_B - I_AI_B$
+
+
 ---
 ---
 
