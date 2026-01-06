@@ -424,7 +424,7 @@ $$
 Here is a plot of PMF versus CDF of Geometric distribution:
 <img src="../../Pictures/PMFvsCDFOfGeometric.png" alt="Image" width="800" style="display:block; margin:auto;" />
 
-#### How is the Negative Binomial distribution is defined?
+#### How is the Negative Binomial distribution defined?
 If a random variable $X$ counts the number of trials to get $r$-th success in a series of independent Bernoulli trials, then the variable has the Negative Binomial distribution, which is denoted by:
 $$
 X \sim NBin(r,p),
