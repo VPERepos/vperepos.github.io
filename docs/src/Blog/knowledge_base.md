@@ -454,6 +454,107 @@ $$
 * $I_{A \cap B} = I_AI_B$
 * $I_{A \cup B} = I_A + I_B - I_AI_B$
 
+#### How is the Fundamental Bridge between probability and expection defined?
+The probability of an event $A$ is the expected value of its indicator variable:
+$$
+P(A) = E(T_A).
+$$
+
+#### Give the formal definition of the Low of Unconcious Statistician (LOTUS).
+If $X$ is a discrete random variable and $g$ is a function of real numbers, then:
+$$
+E(g(X)) = \sum_{x}g(x)P(X=x).
+$$
+
+#### Define the Variance of a discrete random variable.
+The variance of a discrete random variable $X$ is given by:
+$$
+Var(X) = E((X - E(X))^2).
+$$
+Or an equivalent formula:
+$$
+Var(X) = E(X^2) - (E(X))^2,
+$$
+where 
+$$
+E(X^2) = \sum_{x}x^2p_X(x),
+$$
+with $p_X(x)$ be the PMF of $X$.
+
+#### What are the main properties of Variance?
+* <strong>Non-negativity:</strong><br>
+$Var(X) \ge 0$.
+
+* <strong>Translation invariance:</strong><br>
+$Var(X+c) = Var(X)$, for any constant $c$.
+
+* <strong> Scaling property: </strong><br>
+$Var(cX) = c^2Var(X)$, for any constant $c$.
+
+* <strong>Additivity for independent random variables $X$ and $Y$:</strong><br>
+$Var(X+Y) = Var(X)+Var(Y).$
+
+#### Give the formula of the variance of a discrete random variable with Binomial distribution.
+If $X \sim Bin(n,p)$, then the variance of such variable is given by:
+$$
+Var(X) = np(1-p).
+$$
+
+#### Give the formula of the variance of a discrete random variable with Hypergeometric distribution.
+If $X \sim Hypergeometric(N,K,n)$, then the variance of such variable is given by:
+$$
+Var(X) = n \frac{K}{N}\left( 1 - \frac{K}{N} \right)\frac{N -n}{N-1}.
+$$
+
+#### Give the formula of the variance of a discrete random variable with Negative Binomial distribution.
+If $X \sim NegBin(r,p)$, then the variance of such variable is given by:
+$$
+Var(X) = \frac{r(1-p)}{p^2}.
+$$
+
+#### Give the formula of the variance of a discrete random variable with Geometric distribution.
+If $X \sim Geom(p)$, then the variance of such variable is given by:
+$$
+Var(X) = \frac{(1-p)}{p^2}.
+$$
+
+#### Give a formal definition and interpretation of Poisson distribution.
+Let $\lambda > 0$ be a fixed real number. A discrete random variable $X$ is said to have a Poisson distribution with parameter $\lambda$, denoted: 
+$$
+X \sim Poisson(\lambda),
+$$
+if its PMF is defined as:
+$$
+p_X(k) = P(X=k) = \frac{\lambda^{k}e^{-\lambda}}{k!}, \quad k=0,1,2,.... 
+$$
+The Poisson distribution models the number of occurrences of events in:
+* a fixed interval of time, area, volume, or space,
+* when events occur independently,
+* at a constant average rate $\lambda$,<br>
+
+and cannot occur simultaneously.<br>
+<strong>Examples:</strong>
+* Number of emails arriving in one hour.
+* Number of radioactive decays per second.
+* Number of customers entering a store in a day.
+
+Here are the plots of PMF and CDF of $X \sim Poisson(2)$:
+<img src="../../Pictures/PMFvsCDFOfPoisson.png" alt="Image" width="800" style="display:block; margin:auto;" />
+
+#### How is the expectation of Poisson distribution is defined?
+If $X \sim Poisson(\lambda)$, then its expectation is given by:
+$$
+E(X) = \lambda.
+$$
+
+#### How is the variance of Poisson distribution is defined?
+If $X \sim Poisson(\lambda)$, then its variance is given by:
+$$
+Var(X) = \lambda.
+$$
+
+
+
 
 ---
 ---
