@@ -553,7 +553,16 @@ $$
 Var(X) = \lambda.
 $$
 
+#### How is the sum of two independent  Poissons defined?
+If $X \sim Poisson(\lambda_1)$ and $Y \sim Poisson(\lambda_2)$ and $X$ independent of $Y$ then:
+$$
+X+Y \sim Poisson(\lambda_1 + \lambda_2).
+$$
 
+#### How is the conditional distribution of a variable with Poisson distribution given a sum with another independent variable with Poisson defined?
+If $X \sim Poisson(\lambda_1)$ and $Y \sim Poisson(\lambda_2)$ and $X$ independent of $Y$, then the conditional distribution of $X$ given $X+Y=n$ is $Bin(n, \lambda_1/(\lambda_1 + \lambda_2))$.
+
+#### How are Binomial and Poisson distributions related?
 
 
 ---
