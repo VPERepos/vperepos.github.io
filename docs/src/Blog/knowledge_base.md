@@ -563,7 +563,67 @@ $$
 If $X \sim Poisson(\lambda_1)$ and $Y \sim Poisson(\lambda_2)$ and $X$ independent of $Y$, then the conditional distribution of $X$ given $X+Y=n$ is $Bin(n, \lambda_1/(\lambda_1 + \lambda_2))$.
 
 #### How are Binomial and Poisson distributions related?
+If $X \sim Bin(n,p)$ with $n \to \infty$ and $p \to 0$ such that $\lambda = np$ remains finite, then $X$ can be approximated by $Poisson(\lambda)$.
 
+#### Give a formal definition of a continuous random variable in terms of distribution.
+A random variable has a continuous distribution if its CDF is differentiable. The function is allowed to be continuous but not differentiable at the end points as long as it differentiable at the rest of the points.
+
+#### What is the main difference between discrete and continuous variables in terms of probability?
+For a continuous random variable the probability $P(X=x)=0$ in contrast to a discrete random variable. One can only define probability of a continuous random variable to fall into some range of values.
+
+#### What is the Probability Density Function of a continuous random variable?
+The probability density function (PDF) $f$ of a continuous random variable $X$ is defined by derivative of the CDF of this variable. The support of the variable is the set of all $x$, where $f(x) > 0$. The CDF $f(x)$ itself is not a probability and it must be integrated for a range of values in order to calculate probability that a corresponding random variable falls into this range.
+
+#### How to calculate CDF from PDF of a continuous random variable?
+The CDF of a continuous random variable can be calculated from PDF as follows:
+$$
+F(x) = \int_{-\infty}^{x}f(t)dt.
+$$
+
+#### Which criteria must be sutisfied by a function to be a valid PDF?
+In order to be a valid PDF a function must be:
+* Non-negative: 
+$$
+f(x) \ge 0
+$$
+* Integrate to 1:
+$$
+\int_{-\infty}^{\infty}f(x)dx = 1.
+$$
+
+#### How is the expectation of a continuous random variable defined?
+The expectation, or mean value of a continuous random variable is defined as follows:
+$$
+E(X) = \int_{-\infty}^{\infty}xf(x)dx.
+$$
+It can be thought of as a balancing point of a continuous distribution. The expectation in this case has also the property of linearity as for discrete variables.
+
+#### Define the Low of the Unconcious Statistician (LOTUS) for continuous random variables.
+If $X$ is a continuous random variable and $g$ is a function of real numbers, then:
+$$
+E(g(X))=\int_{-\infty}^{\infty}g(x)f(x)dx.
+$$
+
+#### Give a formal definition of the Continuous Uniform distribution.
+A continuous random variable has a Uniform distribution $X \sim Uniform(a,b)$ on the interval $[a,b]$, where $a < b$, if its PDF is
+$$
+f(x)=\Biggl\{
+\begin{matrix}
+\frac{1}{(b - a)}, \quad x\in [a,b] \\
+0, \quad x\notin [a,b] 
+\end{matrix}
+$$
+The CDF of the Uniform distribution is defined as:
+$$
+F(x)=\Biggl\{
+\begin{matrix}
+0, \quad \quad \quad x \le a \\
+\frac{(x - a))}{(b - a)}, \quad a < x < b \\
+1, \quad \quad \quad x \ge b 
+\end{matrix}
+$$
+Here are the plots of PDF and CDF of $X \sim Uniform(0,1)$:
+<img src="../../Pictures/PDFvsCDFforUniform.png" alt="Image" width="800" style="display:block; margin:auto;" />
 
 ---
 ---
