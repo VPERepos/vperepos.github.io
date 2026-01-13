@@ -625,6 +625,76 @@ $$
 Here are the plots of PDF and CDF of $X \sim Uniform(0,1)$:
 <img src="../../Pictures/PDFvsCDFforUniform.png" alt="Image" width="800" style="display:block; margin:auto;" />
 
+#### How is the Expectation of the continuous Uniform distribution defined?
+The expectation of a random variable $X \sim Uniform(a,b)$ is defined as follows:
+$$
+E(X)=\frac{a + b}{2}.
+$$
+
+#### How is Variance of the continuous Uniform distribution defined?
+The variance of a random variable $X \sim Uniform(a,b)$ is defined as follows:
+$$
+E(X)=\frac{(b - a)^2}{12}.
+$$
+
+#### Give a formal definition of the Standard Normal Distribution.
+A continuous random variable $X$ is said to have the standard normal distribution $X \sim N(0,1)$ if its PDF is
+$$
+f_X(x) = \frac{1}{\sqrt{2\pi}}e^{-x^2/2}, \quad x \in R.
+$$
+
+#### How does the CDF of the Standard Normal distribution is defined?
+The CDF of the standard normal distribution is defined as:
+$$
+F_X(x) = P(X \le x) = \int_{- \infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-t^2/2}dt.
+$$
+Here are the plots of PDF and CDF of the standard normal distribution:
+<img src="../../Pictures/PDFvsCDFforStandardNormal.png" alt="Image" width="800" style="display:block; margin:auto;" />
+
+#### Give the values of the expectation and variance of the Standard Normal Distribution.
+The expectation of the standard normal distribution is $E(X)=0$ and the variance is $Var(X)=1$.
+
+#### Give the formal definition of the Normal Distribution.
+A continuous random variable $X$ is said to have a normal distribution with parameters mean $\mu \in R$ and variance $\sigma^2 > 0$, denoted by $X \sim N(\mu, \sigma^2)$, if its PDF is
+$$
+f_X(x) = \frac{1}{\sqrt{2\pi \sigma^2}}exp\left(\frac{-(x - \mu)^2}{2\sigma^2}\right), \quad x \in R.
+$$
+
+#### How is the CDF of the Normal distribution is defined?
+The CDF of the normal distribution is defined as:
+$$
+F_X(x) = P(X \le x) = \int_{- \infty}^{x}\frac{1}{\sqrt{2\pi \sigma^2}}exp\left(\frac{-(t - \mu)^2}{2\sigma^2}\right)dt.
+$$
+
+#### Give a formal definition of the Exponential distribution.
+A continuous random variable $X$ is said to have an exponential distribution with a rate parameter $\lambda > 0$, denoted by $X \sim Exp(\lambda)$, if its PDF is
+$$
+f_X(x) = \lambda e^{-\lambda x}, \quad x \ge 0. 
+$$
+The exponential distribution models the waiting time until the first event in a process where events occur continuously and independently at a constant average rate.
+
+#### How is the CDF of the Exponential distribution defined?
+The CDF of the exponential distribution is defined as
+$$
+F_X(x) = P(X \le x) =1 - e^{-\lambda x}, \quad x \ge 0. 
+$$
+Here are the plots of PDF and CDF of the exponential distribution:
+<img src="../../Pictures/PDFvsCDFforExponential.png" alt="Image" width="800" style="display:block; margin:auto;" />
+
+#### How does Expectation of the Exponential distribution look like?
+The expectation of the exponential distribution is defined as:
+$$
+E(X) = \frac{1}{\lambda}.
+$$
+
+#### How does Variance of the Exponential distribution look like?
+The variance of the exponential distribution is defined as:
+$$
+E(X) = \frac{1}{\lambda^2}.
+$$
+
+
+
 ---
 ---
 
