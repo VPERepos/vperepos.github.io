@@ -693,7 +693,39 @@ $$
 E(X) = \frac{1}{\lambda^2}.
 $$
 
+#### What does memoryless property of a continuous distribution mean?
+A continuous variable $X$ with support $[0,\infty)$ is said to be memoryless, if for all $s,t \ge 0$,
+$$
+P(X > s + t|X > s) = P(X > t).
+$$
+The future does not depend on the past.
 
+#### Which distribution does a memoryless continuous variable have?
+If $X$ is a positive continuous random variable with memoryless property, then it has an exponential distribution.
+
+#### Give a formal definition of a Poisson process.
+A process of events occuring in continuous time is called a Poisson process with the rate $\lambda$, if two conditions hold:
+* The number of occurances that take place in an interval of length $t$ is a random variable with $Pois(\lambda)$ distribution.
+* The number of occurances in disjoint intervals are independent of each other.
+
+#### How are interarrival times in a Poisson process defined?
+An interarrival time $T_n$ in a Poisson process is the waiting time between the $(n - 1)$-st and $n$-th event. E.g. $T_1$ is the time until the first event, $T_2$ - is the time between the first and the second event, etc. The interarrival times in a Poisson process have Exponentioal distribution and are independent of each other. The average waiting time is $1/\lambda$.
+
+#### Give a formal definition of the Mean value of a distribution.
+The mean value, or the center of mass of a distribution is defined by the expectation of the distribution (weighted average).
+
+#### Give a formal definition of the Median value of a distribution.
+Let $X$ be a real valued random variable. A real number $m \in R$ is called median of distribution of $X$ if
+$$
+P(X \le m) \ge \frac{1}{2}
+$$
+and
+$$
+P(X \ge m) \ge \frac{1}{2}.
+$$
+
+#### Give a formal definition of the Mode value of a distribution.
+For any real valued random variable $X$, a real number $m \in R$ is called mode value if it maximizes the PMF in a discrete case, $P(X=m) \ge P(X=x)$ and the PDF for continuous variable, $f_X(m) \ge f_X(x)$ for all $x$.  
 
 ---
 ---
