@@ -725,7 +725,180 @@ P(X \ge m) \ge \frac{1}{2}.
 $$
 
 #### Give a formal definition of the Mode value of a distribution.
-For any real valued random variable $X$, a real number $m \in R$ is called mode value if it maximizes the PMF in a discrete case, $P(X=m) \ge P(X=x)$ and the PDF for continuous variable, $f_X(m) \ge f_X(x)$ for all $x$.  
+For any real valued random variable $X$, a real number $m \in R$ is called mode value if it maximizes the PMF in a discrete case, $P(X=m) \ge P(X=x)$ and the PDF for continuous variable, $f_X(m) \ge f_X(x)$ for all $x$. 
+
+#### What is the Skewness of a distribution.
+The Skewness of a real-valued random variable $X$ with mean value $\mu$ and standard deviation $\sigma$ is the third standardized moment of a distribution, which is defined as:
+$$
+Skew(X) = E\left[\left(\frac{X - \mu}{\sigma}\right)^3\right].
+$$
+
+#### Which summary values are more appropriate for symmetric and non-symmetric distributions.
+For non-symetric distributions mean and standard deviation values are missleading and median and interquartile range should (IQR) be used for skewed distributions. For a distribution with several peaks (multimodal distribution) mode value and intermodal spread (standard deviation within a peak) should be used.
+
+#### Give a formal definition of interquartile range (IQR).
+Let $X$ be a real-valued random variable with CDF $F_X$.
+Define:
+* the first quartile (lower quartile):
+$$
+Q_1 = inf\{x \in R:F_X(x) \ge 0.25\},
+$$
+* the third quartile (upper quartile):
+$$
+Q_3 = inf\{x \in R:F_X(x) \ge 0.75\}.
+$$
+The interquartile range is defined as:
+$$
+IQR(X) = Q_3 - Q_1.
+$$
+
+#### Give a formal definition of the Kurtosis of a distribution.
+The Kurtosis of a real-valued random variable $X$ with mean value $\mu$ and standard deviation $\sigma$ is the fourth standardized moment of a distribution, which is defined as:
+$$
+Kurt(X) = E\left[\left(\frac{X - \mu}{\sigma}\right)^4\right] - 3.
+$$
+Kurtosis measures the weight of the tails and the frequency of extreme deviations relative to a normal distribution. High Kurtosis (heavy tails) implies more frequent outliers and thus higher probability of extreme events. Lower Kurtosis means that the data are more evenly spread and thus there are fewer extreme values.
+
+#### Give a formal definition and interpretation of a Moment Generating Function.
+Let $X$ be a real-valued random variable. The Moment Generating Function (MGF) is:
+$$
+M_X(t)=E(e^{tX}),
+$$
+defined for all real numbers $t$ in an open interval containing $0$ for which the expectation exists (is finite). The MGF generates moments of a distribution by differentiation:
+$$
+E(X^n)=M_X^{(n)}(0).
+$$
+E.g. mean value can be calculated from the MGF by first derivative. The MGF can be used to define the sum of two independent random variables as:
+$$
+M_{X+Y}(t) = M_{X}(t)M_{Y}(t).
+$$
+If the MGF exists in a neighborhood of $0$, it uniquely determines the distribution of $X$.<br>
+Example:<br>
+For X~Bern(p), the MGF is: $M(t) = E(e^{tX}) = pe^t+q$.
+
+#### Give a formal definition of joint CDF of two discrete random variables.
+The joint CDf of two discrete random variables $X$ and $Y$ is the function $F_{X,Y}(x,y)$ given by:
+$$
+F_{X,Y} = P(X \le x, Y \le y).
+$$
+For $n$ variables the joint CDF is defined analogously.
+
+#### Give a formal definition of joint PMF of two discrete random variables.
+The joint PMF of two discrete random variables $X$ and $Y$ is the function $p_{X,Y}(x,y)$ given by:
+$$
+p_{X,Y}(x,y) = P(X=x,Y=y).
+$$
+For $n$ variables the joint PMF is defined analogously. In order the function $p_{X,Y}(x,y)$ to be valid the following must be true:
+$$
+\sum_{x}\sum_{y}P(X=x,Y=y)=1.
+$$
+
+#### What is the marginal PMF of two discrete random variables?
+For two discrete random variables $X$ and $Y$ the marginal PMF of $X$ is:
+$$
+P(X=x)=\sum_{y}P(X=x,Y=y).
+$$
+
+#### How is the conditional PMF of two discrete random variables defined?
+For two discrete random variables $X$ and $Y$ the conditional distribution PMF of $Y$ given $X=x$ is 
+$$
+P(Y=y|X=x)=\frac{P(X=x,Y=y)}{P(X=x)}.
+$$
+It is seen as a function of $y$ for fixed $x$.
+
+#### How is the joint PDF of two continuous random variables defined?
+If two random variables $X$ and $Y$ are continuous with joint CDF $F_{X,Y}(x,y)$, their joint PDF is the derivative of the joint CDF with respect to $x$ and $y$:
+$$
+f_{X,Y}(x,y)=\frac{\partial^2}{\partial x \partial y}F_{X,Y}(x,y).
+$$
+In order the joint PDF to be valid it is required it to be positive and integrate to 1.
+
+#### How is the marginal PDF of two continuous random variables defined?
+For two continuous random variables $X$ and $Y$ with joint PDF $f_{X,Y}(x,y)$, the marginal PDF of X is:
+$$
+f_{X}(x)=\int_{-\infty}^{\infty}f_{X,Y}(x,y)dy.
+$$
+
+#### How is the conditional PDF of two continuous random variables defined?
+For two continuous variables $X$ and $Y$ with joint PDF $f_{X,Y}(x,y)$ the conditional PDF of $Y$ given $X=x$ is
+$$
+f_{Y|X}(y|x)=\frac{f_{X,Y}(x,y)}{f_{X}(x)},
+$$
+for all $x$ with $f_{X}(x) > 0$.
+
+#### How is the 2D LOTUS defined?
+Let $g$ be a function from $R^2$ to $R$. If $X$ and $Y$ are discrete then the expectation of this function is:
+$$
+E(g(X,Y))=\sum_{x}\sum_{y}g(x,y)P(X=x,Y=y).
+$$
+For continuous case the expectation of the function is defined as follows:
+$$
+E(g(X,Y))=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}g(x,y)f_{X,Y}(x,y)dxdy.
+$$
+
+#### Give a formal definition of the Covariance between two random variables.
+The covariance between two random variables $X$ and $Y$ is:
+$$
+Cov(X,Y) = E(XY)-E(X)E(Y).
+$$
+The two variables with zero covariance are independent and thus uncorrelated.
+
+#### Emlist the main properties of Covariance.
+* $Cov(X,X)=Var(X)$.
+* $Cov(X,Y)=Cov(Y,X)$.
+* $Cov(X,c) = 0$, for any constant $c$
+* $Cov(aX,Y) = aCov(X,Y)$, for any constant $a$.
+* $Cov(X+Y,Z) = Cov(X,Z) + Cov(Y,Z)$.
+* $Cov(X + Y, Z + W) = Cov(X, Z) + Cov(X, W) + Cov(Y, Z) + Cov(Y, W)$.
+* $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$. For $X_1,...,X_n$: $Var(X_1+...+X_n)=Var(X_1)+...+Var(X_n)+2\sum_{i<j}^{}Cov(X_i,X_j)$.
+
+#### How is Correlation between two random variables defined?
+The correlation between two random variables $X$ and $Y$ is defined as:
+$$
+Corr(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.
+$$
+Correlation is defined between $-1$ and $1$.
+
+#### Give a formal definition of Multinomial distribution.
+Let $n \in N$ be the number of independent trials and let
+$$
+\mathbf{p} = (p_1,p_2,...,p_k)
+$$
+be a probability vector, such that
+$$
+p_i \ge 0, \quad \sum_{i=1}^{k}p_i=1.
+$$
+A random vector
+$$
+\mathbf{X}=(X_1,X_2,...,X_k)
+$$
+is said to have Multinomial distribution with parameters $n$ and $\mathbf{p}$, written
+$$
+\mathbf{X} \sim Multinomial(n, \mathbf{p}),
+$$
+if $X_i$ is a number of outcomes of category $i$ in $n$ independent trials, where each trial results in one of the categories $k$ with probabilities $p_1,p_2,...,p_k$.
+
+#### How is the joint PMF of Multinomial distribution is defined?
+For non-negative integers $x_1,x_2,...,x_k$, such that:
+$$
+x_1+x_2+...x_n = n
+$$
+the joint PMF is
+$$
+P(X_1=x_1,...,X_k=x_k)=\frac{n!}{x_1!x_2!...x_k!}\prod_{i=1}^{k}p_{i}^{x_i}
+$$
+
+#### Define multinomial conditioning.
+If $\mathbf{X} \sim Multinomial(n, \mathbf{p})$ then
+$$
+(X_2,...,X_k)|X_1=n_1 \sim Multinomial(n - n_1; p_{2}^{'},...,p_{k}^{'}),
+$$
+where $p_{j}^{'} = p_{j}/(p_2+...+p_k)$.
+
+#### Define Covariance for Multinomial distribution.
+Let $\mathbf{X} \sim Multinomial(n, \mathbf{p})$, then for $i \ne j$, $Cov(X_i,X_j)=-np_ip_j$.
+
+#### Give a formal definition of the Multivariate Normal distribution.
 
 ---
 ---
