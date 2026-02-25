@@ -899,6 +899,132 @@ where $p_{j}^{'} = p_{j}/(p_2+...+p_k)$.
 Let $\mathbf{X} \sim Multinomial(n, \mathbf{p})$, then for $i \ne j$, $Cov(X_i,X_j)=-np_ip_j$.
 
 #### Give a formal definition of the Multivariate Normal distribution.
+A vector of rundom variables $X=(X_1,X_2,...,X_n)$ is said to have multivariate normal distribution if every linear combination of its components has a Normal distribution.
+
+#### How is the joint PDF of the Multivariate Normal distribution defined?
+Let $X=(X_1,X_2,...,X_n)$ be an n-dimensional rundom vector with mean vector $\bm{\mu}$ $\in R^n$ and covariance matrix $\bm{\Sigma}$ $\in R^{n \times n}$, then $X$ is said to have Multivariate Normal distribution if its joint PDF is defined as:
+$$
+f_{\mathbf{X}}(\mathbf{x}) = \frac{1}{(2 \pi)^{n/2} |\bm{\Sigma}|^{1/2}  }exp\left[-\frac{1}{2}(\bm{\mathbf{x} - \mu})^T \bm{\Sigma} ^{-1}(\bm{\mathbf{x} - \mu})\right], \mathbf{x} \in R^{n},
+$$
+where:
+* $|\bm{\Sigma}|$ is the determinant of the covariance matrix
+* $\bm{\Sigma}$ is symmetric and positive definite.
+
+#### How is the joint Moment Generating Function defined?
+Let $X=(X_1,X_2,...,X_n)$ be an n-dimensional rundom vector. The joint moment generating function of $X$ is the function:
+$$
+M_{\mathbf{X}}(\mathbf{t})=E\left[e^{\mathbf{t}^T \mathbf{X}}\right], t = (t_1,t_2,...,t_n) \in R^n
+$$
+if the expectation exists in a neighborhood of $\mathbf{t = 0}$. </br>
+* Here $\mathbf{t}^T \mathbf{X} = t_1X_1 + t_2X_2 + ....+ t_nX_n$.
+
+#### Give a formal definition of the Beta Distribution.
+Let $X$ be a continuous random variable defined on the interval $[0,1]$. It is that $X$ has a Beta bistribution with parameters $a > 0$ and $b > 0$, written
+$$
+X \sim Beta(a,b),
+$$
+if its PDF is defined as:
+$$
+f_X(x,a,b) = \frac{1}{Beta(a,b)}x^{a-1}(1-x)^{b-1}, \quad 0 \leq x \leq 1,
+$$
+where $B(a,b)$ is the Beta function, defined as
+$$
+B(a,b)=\int^{1}_{0}t^{a-1}(1-t)^{b-1}dt.
+$$
+
+#### Give a short interpretation of Beta Distribution.
+1. **Shape flexibility:**
+    * Beta distribution is bounded between 0 and 1
+    * Its shape depends on $a$ and $b$ values:
+        * $a=b=1$ - $Uniform(0,1)$
+        * $a>1$, $b>1$ - bell-shaped
+        * $a<1$, $b<1$ - U-shaped
+        * $a>1$, $b<1$ - skewed right
+        * $a<1$, $b>1$ - skewed left
+2. **Probability Interpretation:** </br>
+    Often used to model random proportions, e.g., fraction of successes in Bayesian inference.
+
+#### Give definitions for mean, variance and mode values of the Beta distribution.
+* **Mean:**
+$$
+E(X)=\frac{a}{a+b}
+$$
+
+* **Variance:**
+$$
+Var(X) = \frac{ab}{(a+b)^2(a+b+1)}
+$$
+
+* **Mode (if $a,b > 1$):**
+$$
+Mode(X)=\frac{a-1}{a+b-2}
+$$
+
+#### Give some examples of usage of Beta distribution.
+* Bayesian posterior for a Bernoulli parameter p (Beta prior).
+* Modeling proportions, probabilities, or rates between 0 and 1.
+* Random variables constrained in a finite interval.
+
+#### Give a formal definition of the Gamma Distribution.
+Let $X$ be a continuous random variable with support $(0, \infty)$. One says $X$ has a Gamma distribution with shape parameter $a > 0$ and rate parameter $\lambda > 0$, written
+$$
+X \sim Gamma(a,\lambda),
+$$
+if its PDF is defined as
+$$
+f_X(x,a,\lambda) = \frac{\lambda^{a}}{\Gamma(a)}x^{a-1}e^{-\lambda x}, \quad x > 0,
+$$
+where $\Gamma(a)$ is the Gamma function defined as
+$$
+\Gamma(a) = \int^{\infty}_{0}t^{a-1}e^{-t}dt.
+$$
+
+#### Give a short interpretation of the Gamma distribution.
+1. **Waiting time:**<br>
+If events occur according to a Poisson process with rate $\lambda$, then $X$ is the time until $a$-th event and has Gamma distribution $Gamma(a,\lambda)$. 
+
+2. **Sum of exponential variables:**<br>
+If $X_1,X_2,...,X_a$ are independent, identically distributed variables and $a \in N$, then
+$$
+X = \sum^{a}_{i=1}X_i \sim Gamma(a, \lambda)
+$$
+
+#### Give definitions for mean, variance and mode values of the Gamma distribution.
+* **Mean:**
+$$
+E(X)=\frac{a}{\lambda}
+$$
+
+* **Variance:**
+$$
+Var(X) = \frac{a}{\lambda^2}
+$$
+
+* **Mode (if $a > 1$):**
+$$
+Mode(X)=\frac{a-1}{\lambda}
+$$
+
+#### How are Beta and Gamma distributions connected?
+The Beta distribution can be constructed from Gamma distributions. Let $X \sim Gamma(a,\lambda)$ and $Y \sim Gamma(b,\lambda)$ be two independent random variables with the same rate $\lambda > 0$. Define
+$$
+U = \frac{X}{X +Y}.
+$$
+Then:
+$$
+U \sim Beta(a,b)
+$$
+and 
+$$
+X+Y \sim Gamma(a+b,\lambda).
+$$
+Moreover, $U$ is independent of $X+Y$. And the normalization constant of the Beta distribution can be defined as
+$$
+B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}.
+$$
+
+#### 
+
 
 ---
 ---
