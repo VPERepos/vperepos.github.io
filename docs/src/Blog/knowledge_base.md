@@ -1023,7 +1023,52 @@ $$
 B(a,b)=\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}.
 $$
 
-#### 
+#### Give a formal definition of a Conditional Expectation given an event.
+Let $A$ be an event with non-zero probability. If $X$ is a random variable then conditional Expectation in a discrete case is defined as
+$$
+E(X|A)=\sum_{x}xP(X=x|A).
+$$
+And for continuous case
+$$
+E(X|A)=\int^{\infty}_{-\infty}xf(x|A)dx,
+$$
+where the conditional PDF is defined as follows:
+$$
+f(x|A)=\frac{P(A|X=x)f(x)}{P(A)}.
+$$
+
+#### How is the Low of Total Expectation defined?
+Let $A_1,A_2,...,A_n$ be partition of events with non-zero probability from a sample space. Let $X$ be a random variable with support in this sample space. Then
+$$
+E(X)=\sum^{n}_{i=1}E(X|A_i)P(A_i)
+$$
+is a total expectation of variable $X$.
+
+#### Give a definition of Conditional Expectation given a random variable.
+If we have a function $g(x)=E(Y|X=x)$, then the conditional expectation of $Y$ given $X$, denoted $E(Y|X)$ is defined as a random variable $g(X)$. It means if $X$ takes the value of $x$ then $E(Y|X)$ becomes $g(x)$.
+
+#### Enlist the properties of Conditional Expectation.
+* If $X$ and $Y$ are independent, then $E(Y|X)=E(Y)$.
+* For any function $h$, $E(h(X)Y|X) = h(X)E(Y|X)$.
+* Linearity: $E(Y_1+Y_2|X)=E(Y_1|X)+E(Y_2|X)$ and $E(cY|X)=cE(Y|X)$ for any constant $c$.
+* Adam's low: $E(E(X|Y))=E(Y)$.
+* The random variable $Y - E(Y|X)$ is uncorrelated with $h(X)$ for any function $h$.
+
+#### Define the Conditional Variance.
+The conditional variance of $Y$ given $X$ is 
+$$
+Var(Y|X)=E((Y - E(Y|X))^2|X),
+$$
+which is equivalent to
+$$
+Var(Y|X)=E(Y^2|X) - (E(Y|X))^2.
+$$
+
+#### Give a definition of the low of the total variance (Eve's low).
+The low of the total variance is defined by the following formula:
+$$
+Var(Y)=E(Var(Y|X))+Var(E(Y|X)).
+$$
 
 
 ---
