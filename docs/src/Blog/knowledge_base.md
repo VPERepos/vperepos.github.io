@@ -1064,11 +1064,97 @@ $$
 Var(Y|X)=E(Y^2|X) - (E(Y|X))^2.
 $$
 
-#### Give a definition of the low of the total variance (Eve's low).
-The low of the total variance is defined by the following formula:
+#### Give a definition of the law of the total variance (Eve's law).
+The law of the total variance is defined by the following formula:
 $$
 Var(Y)=E(Var(Y|X))+Var(E(Y|X)).
 $$
+
+#### Give a definition of Couchy-Schwarz inequality for marginal bound on a joint expectation.
+For any random variables $X$ and $Y$ with finite variances the following inequality is true:
+$$
+|E(XY)| \leq \sqrt{E(X^2)E(Y^2)}.
+$$
+
+#### Give a definition for Jensen's inequality for convexity.
+Let $X$ be a random variable with existing finite expectation value. If a function $f$ is convex, then
+$$
+f(E(X)) \leq E(f(X)).
+$$
+Equality holds here only if:
+* all $x_i$ are equal, or
+* $f$ is linear on a convex hull of $\{x_1,x_2,...,x_n\}$
+
+#### Give a definition for Markov's bound on tail probabilities. 
+For any random variable $X$ and a constant $a>0$,
+$$
+P(|X| \geq a) \leq \frac{E|X|}{a}
+$$
+If $X$ frequently takes large values (i.e. large tail probability), then its expected value must also be large.
+
+#### Give a definition for Chebyshev's bound on tail probabilities.
+Let a random variable $X$ have mean $\mu$ and variance $\sigma^2$, then for any positive non-zero constant $a$
+$$
+P(|X-\mu| \geq a) \leq \frac{\sigma^2}{a^2}.
+$$
+
+#### Give a definition for Chernoff's bound on tail probabilities.
+For any variable $X$ and constants $a>0$ and $t>0$,
+$$
+P(X \geq a) \leq \frac{E(e^{tX})}{e^{ta}}
+$$
+
+#### Give a formal definition of the Weak Law of Large Numbers.
+Let $X_1,X_2,...,X_n$ be independent and identically distributed random variables with sample mean $E(\bar{X}_n) = \mu$ and sample variance $Var(\bar{X}_n) < \infty$. Then for all $\epsilon > 0$
+$$
+\lim_{n\to\infty}P(|\bar{X}_n - \mu| > \epsilon) \to 0
+$$
+
+#### Give a formal definition of the Strong Law of Large Numbers.
+Let $X_1,X_2,...,X_n$ be independent and identically distributed random variables with sample mean $E(\bar{X}_n) = \mu$ and sample variance $Var(\bar{X}_n) < \infty$. Then for sample mean
+$$
+P(\bar{X}_n \to \mu) = 1
+$$
+
+#### Give a formal definition of the Central Limit Theorem.
+Let $X_1,X_2,...,X_n$ be independent and identically distributed random variables with sample mean $E(\bar{X}_n) = \mu$ and sample variance $Var(\bar{X}_n) < \infty$. Then with $n \to \infty$
+$$
+\sqrt{n} \left(\frac{\bar{X}_n - \mu}{\sigma} \right) \to N(0,1),
+$$
+where $N(0,1)$ is the Standard Normal distribution.
+
+#### Give a formal definition of the Chi-Square distribution.
+Let $Z_1,Z_2,...,Z_n$ be independent standard normal random variables, i.e. $Z_i \sim N(0,1)$. The random variable
+$$
+X = \sum^{n}_{i=1}Z^{2}_{i}
+$$
+is said to have a Chi-Square distribution with $n$ degrees of freedom, denoted as $\chi^2_{n}$. For $n > 0$ it has the following PDF:
+$$
+f_X(x)=\frac{1}{2^{n/2}\Gamma(n/2)}x^{\frac{n}{2} - 1}e^{-x/2}, \quad x \geq 0
+$$
+and for $x<0$ the function is zero. The Chi-square distribution is a special case of the Gamma distribution $\chi^2_{n} \equiv Gamma(n/2,2)$.
+
+#### Give a formal definition of the Student-t distribution.
+Let $Z \sim N(0,1)$ be a standard normal random variable, $U \sim \chi^2_{\nu}$ a chi-square distributed random variable with $\nu > 0$ degrees of freedom and both are independent. Then the random variable 
+$$
+T = \frac{Z}{\sqrt{U/\nu}} 
+$$
+is said to follow a Student-t distribution with $\nu$ degrees of freedom, denoted by
+$$
+T \sim t_{\nu}.
+$$
+The PDF of Student-t distribution for $\nu > 0$ is defined as
+$$
+f_T(t) = \frac{\Gamma(\frac{\nu + 1}{2})}{\sqrt{\nu \pi}\Gamma(\frac{\nu}{2})}\left(1 + \frac{t^2}{\nu} \right)^{-\frac{\nu + 1}{2}}, \quad t \in R
+$$
+The key properties of the Student-t distribution are as follows:
+* **Support:** $t \in (-\infty, \infty)$.
+* **Symmetry:** symmetric about 0.
+* **Mean:** $E(T) = 0$ for $\nu > 1$.
+* **Variance:** $Var(T)=\nu / (\nu - 2)$ for $\nu > 2$ and $\infty$ for $1 < \nu \leq 2$.
+* **Heavy tails:** heavier tails than the normal distribution.
+* **Limit:** $t_{\nu} \to N(0,1)$ as $\nu \to \infty$.
+
 
 
 ---
