@@ -1155,7 +1155,57 @@ The key properties of the Student-t distribution are as follows:
 * **Heavy tails:** heavier tails than the normal distribution.
 * **Limit:** $t_{\nu} \to N(0,1)$ as $\nu \to \infty$.
 
+#### Give a formal definition of a Markov chain.
+A sequence of random variables $X_0,X_1,...,X_n$ taking values from a state space $\{1,2,...,M\}$ is called Markov chain, if for all positive non-zero values of $n$ the following is true:
+$$
+P(X_{n+1}=j|X_n=i,X_{n-1}=i_{n-1},...,X_0=i_0)=P(X_{n+1}=j|X_n=i).
+$$
+The quantity $P(X_{n+1}=j|X_n=i)$ is called transition probability from the state $i$ to $j$.
 
+#### Give a definition of the Transition Martrix of a Markov Chain.
+Let $X_0,X_1,...,X_n$ be a Markov chain with a state space $\{1,2,...,M\}$ and let $q_{ij}=P(X_{n+1}=j|X_n=i)$ be the transition probability from the state $i$ to $j$. The $M \times M$ matrix $Q = (q_{ij})$ is called the transition matrix of the chain.
+
+#### Give a formal defintion of $n$-step transition probability.
+The $n$-step transition probability from the state $i$ to $j$ is the probability of being in the state $j$ after exactly $n$ transitions after being at $i$. It is denoted by $q^{(n)}_{ij}$:
+$$
+q^{(n)}_{ij} = P(X_n=j|X_0=i).
+$$
+Note that 
+$$
+q^{(2)}_{ij}=\sum_{k}q_{ik}q_{kj},
+$$
+since the transitions $q_{ik}$ and $q_{kj}$ are independent due to Markov chain property.
+
+#### What are recurrent and transient states in Markov chains?
+State $i$ of a Markov chain is recurrent if starting from $i$ the probability of the chain returning to the state again is 1. Otherwise the state is transient, which means there is a positive probability of chain never returning to that state. Number of returns to a transient state has a Geometric distribution.
+
+#### How are irreducible and reducible Markov chains defined?
+A Markov chain with a transition matrix $Q$ called irreducible if for any two states $i$ and $j$ there is a positive probability of getting from state $i$ to $j$ in a finitie number of steps. It means that for any two states $i$ and $j$ the entry $Q^n$ of the transition matrix is positive. The Markov chain that is not irreducible is called reducible. In an irreducible Markov chain with finite state space all states are recurrent.
+
+#### How is a period of a state in a Markov chain defined?
+The period of a state i is defined as a great common divisor of all possible return times back to the state $i$. If the period of a state $i$ is 1 the state is called aperiodic, which happens for states with self loops. In an irreducible Markov chain all states have the same period.
+
+#### What is stationary distribution of a Markov chain?
+Consider a Markov chain with finite or countable state space $S$ and transition matrix $Q=(q_{ij})$. A probability distribution $s=(s_i)_{i \in S}$ is called stationary if
+$$
+s_j = \sum_{i \in S}s_i q_{ij}
+$$
+for all $j \in S$, with normalization condition
+$$
+\sum_{i \in S}s_i = 1, \quad s_i \geq 0.
+$$
+The main properties of the stationary distribution are:
+* Stationary distribution is marginal, not conditional.
+* For any irreducible Markov chain, there exists a unique stationary distribution.
+* For an irreducible, aperiodic Markov chain with stationary distribution $s$ the transition matrix converges with $n \to \infty$ to a matrix where each row is $s$ .
+* For an irreducible Markov chain with stationary distribution $s$, the value of $s_i$ is a reciprocal of an expected time to return to the state $i$.
+
+#### What is reversibility of a Markov chain.
+Let $Q = (q_{ij})$ be the transition matrix of a Markov chain. Let there be $s=(s_1,...,s_M)$ with $s_i \geq 0$ and $\sum s_i = 1$ such that 
+$$
+s_iq_{ij} = s_jq_{ji},
+$$
+for all $i$ and $j$, then this equation is called reversibility condition and the Markov chain is called reversible. If the condition satisfies, then $s$ is the stationary distribution. If each column of the transition matrix sums to 1, then the Uniform distribution over all states is a stationary distribution of this Markov chain.
 
 ---
 ---
