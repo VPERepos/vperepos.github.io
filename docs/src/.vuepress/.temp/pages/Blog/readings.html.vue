@@ -1,10 +1,10 @@
 <template><div><h1 id="readings" tabindex="-1"><a class="header-anchor" href="#readings"><span>Readings</span></a></h1>
 <p>In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely.</p>
 <h2 id="data-science" tabindex="-1"><a class="header-anchor" href="#data-science"><span>Data Science</span></a></h2>
+<h3 id="statistical-inference" tabindex="-1"><a class="header-anchor" href="#statistical-inference"><span>Statistical Inference</span></a></h3>
+<img src="@source/../Pictures/StatisticalInference.png" alt="Image" width="300"/>
 <h3 id="introduction-to-probability" tabindex="-1"><a class="header-anchor" href="#introduction-to-probability"><span>Introduction to Probability</span></a></h3>
 <img src="@source/../Pictures/IntroductionToProbability.jpg" alt="Image" width="300"/>
-<h3 id="computer-age-statistical-inference" tabindex="-1"><a class="header-anchor" href="#computer-age-statistical-inference"><span>Computer Age Statistical Inference</span></a></h3>
-<img src="@source/../Pictures/ComputerAgeStatisticalInference.jpg" alt="Image" width="300"/>
 <h3 id="becoming-a-data-head" tabindex="-1"><a class="header-anchor" href="#becoming-a-data-head"><span>Becoming a Data Head</span></a></h3>
 <img src="@source/../Pictures/BecomingADataHead.jpg" alt="Image" width="300"/>
 <h3 id="hands-on-machine-learning-with-scikit-learn-and-tensorflow-concepts-tools-and-techniques-to-build-intelligent-systems" tabindex="-1"><a class="header-anchor" href="#hands-on-machine-learning-with-scikit-learn-and-tensorflow-concepts-tools-and-techniques-to-build-intelligent-systems"><span>Hands-On Machine Learning With Scikit-Learn and Tensorflow: Concepts, Tools, and Techniques to Build Intelligent Systems</span></a></h3>

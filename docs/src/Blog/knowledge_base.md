@@ -1207,6 +1207,151 @@ s_iq_{ij} = s_jq_{ji},
 $$
 for all $i$ and $j$, then this equation is called reversibility condition and the Markov chain is called reversible. If the condition satisfies, then $s$ is the stationary distribution. If each column of the transition matrix sums to 1, then the Uniform distribution over all states is a stationary distribution of this Markov chain.
 
+#### What problem does a Markov Chain Monte-Carlo Simulation solve?
+Suppose you want to sample from a target distribution $\pi(x)$.<br/>
+Example situations:
+* A complicated posterior distribution in Bayesian inference.
+* A high-dimensional distribution where normalization is unknown.<br/>
+
+Often the distribution can only be computed up to a constant:
+$$
+\pi(x) \propto f(x).
+$$
+If direct sampling is hard a Monte-Carlo simulation can create a Markov's chain whose long-run distribution equals $\pi(x)$. Some MCMC algorithms are **Metropolis-Hastings** and **Gibbs sampling**.
+
+#### Explain Metropolis-Hastings MCMC algorithm.
+The core idea of the Metropolis-Hastings MCMC algorithm is:
+* Start from a current state $x_t$
+* Propose a new candidate state $x'$
+* Accept or reject the candidate based on a probability rule.
+
+Over time, the chain produces samples approximating the target distribution.<br/>
+The algorithm steps are as follows:<br/>
+1. Choose a starting point $x_t$.
+2. Draw a new candidate state $x'$ from a proposed distribution $q$:
+    $$
+    x' \sim q(x'|x_t).
+    $$
+    Common examples of proposed distribution:<br/>
+    * Normal $N(x_t,\sigma^{2})$
+    * Uniform around the current value
+3. Compute acceptance probability:
+    $$
+    \alpha = min \left(1,\frac{\pi(x')q(x_t | x')}{\pi(x_t)q(x' | x_t)}\right)
+    $$
+4. Sample from a $Bernoulli(\alpha)$ and if the result is success accept the proposed state $x'$ else stay in the actual state $x_t$.
+5. Repeat many times.
+
+After a burn-in period, the samples approximate the target distribution. The core strength of this method is that **you do not need to know the normalization constant of the target distribution** in order to conduct the simulation.
+
+#### Explain the Gibbs sampling MCMC algorithm.
+The Gibbs sampling algorithm is a special case of MCMC methods used to generate samples from a joint probability distribution when direct sampling is difficult but sampling from conditional distributions is easy. It is closely related to the Metropolis–Hastings algorithm, but it simplifies the acceptance step by always accepting proposals.<br/>
+Suppose you want samples from a joint distribution:
+$$
+p(x_1​,x_2​,...,x_d​)
+$$
+Direct sampling might be hard, but you can sample from each conditional distribution:
+$$
+p(x_1​∣x_2​,x_3,...,x_d​)
+$$
+$$
+p(x_2​∣x_1​,x_3,...,x_d​)
+$$
+$$
+...
+$$
+$$
+p(x_d​∣x_1​,x_2,...,x_{d-1}​)
+$$
+Gibbs sampling generates samples by cycling through variables and sampling each one conditioned on the others.<br/>
+The algorithm steps are as follows:
+1. Choose a starting point:
+$$
+(x^{(0)}_1, x^{(0)}_2,..., x^{(0)}_d)
+$$
+2. Make sequential conditional sampling at iteration $t$:
+$$
+x^{(t)}_1 \sim p(x_1|x^{(t-1)}_2, x^{(t-1)}_3,...,x^{(t-1)}_d)
+$$
+$$
+x^{(t)}_2 \sim p(x_2|x^{(t)}_1, x^{(t-1)}_3,...,x^{(t-1)}_d)
+$$
+$$
+...
+$$
+$$
+x^{(t)}_d \sim p(x_d|x^{(t)}_1, x^{(t)}_2,...,x^{(t)}_{d-1})
+$$
+After one full cycle you obtain the next sample vector.
+
+#### Give a definition of Poisson processes in one dimension.
+A Poisson process in one dimension is a stochastic process that models random points occurring along a line (usually time) where events happen independently and at a constant average rate $\lambda$. The number of arrivals in a constant time $t$ has $Pois(\lambda t)$ distribution. The numbers of arrivals in disjoint time intervals are independent.
+
+#### Explain the conditioning property of one-dimensional Poisson processes.
+Let $N(t)$ be a Poisson process with rate $\lambda$. Suppose we condition on:
+$$
+N(t) = n,
+$$
+meaning exactly $n$ events occured in the time interval $[0,t]$. Now take a smaller interval $[0,s]$ with $0 < s < t$.<br/>
+Then:
+$$
+N(s)|N(t)=n \sim Binomial(n, \frac{s}{t}).
+$$
+In a Poisson process with the rate $\lambda$ conditional on $N(t)=n$ the joint distribution of the arival times $T_1,T_2,...,T_n$ is the same as the joint distribution of the order statistics of $n$ independent and equally distributed with $Unif(0,t)$ random variables.
+
+#### Explain the superposition property of one-dimensional Poisson processes.
+Suppose we have $k$ independent Poisson processes:
+$$
+N_1(t),N_2(t),...,N_k(t)
+$$
+with rates:
+$$
+\lambda_1, \lambda_2,...,\lambda_k.
+$$
+If we define a new process by adding the event counts:
+$$
+N(t) = N_1(t)+N_2(t)+...+N_k(t),
+$$
+then the rate of this process is the following sum:
+$$
+\lambda = \lambda_1 + \lambda_2+...+\lambda_k.
+$$
+Think of events coming from multiple independent sources:
+
+* phone calls from different departments
+
+* photons from different emitters
+
+* customers arriving through different doors
+
+If each source produces events randomly at rate $\lambda_i$, then the combined stream of events is still random with rate equal to the sum of the rates.
+
+#### Explain the thinning property of one-dimensional Poisson processes.
+Let $N(t)$ be a Poisson process with rate $\lambda$. Suppose that each event is independently kept with probability $p$ and removed with probability $1-p$. Define a new counting process $N_1(t)$ as a number of kept events. Then $N_1(t)$ is itself a Poisson process with rate $\lambda_1 = p\lambda$. Similarly, the removed events form another process $N_2(t)$ with rate $\lambda_2 = (1-p)\lambda$ and the two processes $N_1(t)$ and $N_2(t)$ are independent Poisson processes.
+
+#### Give a definition of two-dimensional Poisson processes.
+Let $N(A)$ denote the number of points in a region $A \subset R^2$. A point process on the plane is a two-dimensional Poisson process with intensity $\lambda > 0$ if it satisfies:
+1. Poisson distribution of counts:<br/>
+    For any bounded region $A$,
+    $$
+    N(A) \sim Poisson(\lambda |A|),
+    $$
+    where
+    * $|A|$ is the area of the region
+    * $\lambda$ is the average number of points per unit area.
+
+2. Independent counts in disjoint regions:<br/>
+    If $A_1,A_2,...,A_k$ are disjoint regions in the plane, then
+    $$
+    N(A_1),N(A_2),...,N(A_k)
+    $$
+    are independent random variables.
+
+Such properties of one-dimensional Poisson processes as conditioning, superposition and thinning are also valid for two-dimansional Poesson processes.
+
+
+
+
 ---
 ---
 

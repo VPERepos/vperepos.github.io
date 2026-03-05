@@ -5,11 +5,12 @@ sidebarDepth: 2
 # Readings
 In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely.
 ## Data Science
+
+### Statistical Inference
+<img src="../../Pictures/StatisticalInference.png" alt="Image" width="300"/>
+
 ### Introduction to Probability
 <img src="../../Pictures/IntroductionToProbability.jpg" alt="Image" width="300"/>
-
-### Computer Age Statistical Inference
-<img src="../../Pictures/ComputerAgeStatisticalInference.jpg" alt="Image" width="300"/>
 
 ### Becoming a Data Head
 <img src="../../Pictures/BecomingADataHead.jpg" alt="Image" width="300"/>
