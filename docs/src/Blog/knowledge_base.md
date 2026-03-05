@@ -1349,8 +1349,186 @@ Let $N(A)$ denote the number of points in a region $A \subset R^2$. A point proc
 
 Such properties of one-dimensional Poisson processes as conditioning, superposition and thinning are also valid for two-dimansional Poesson processes.
 
+#### What is data reduction of a distribution in statistical inference?
+In statistical inference, data reduction of a distribution refers to the process of summarizing the information contained in a full dataset in a smaller, simpler form that still retains all the relevant information for estimating the parameters of interest. Essentially, it’s about compressing the data without losing information needed for inference.<br/>
+Let $X = (X_1,X_2,...,X_n)$ be a sample from a distribution with parameter $\theta$ and $T(X)$ a function of the data. Data reduction is the process of replacing the full dataset $X$ with a statistic $T(X)$ such that inference about $\theta$ can be based on $T(X)$ instead of the full $X$.<br/>
+**Example:**<br/>
+Let $X_1,X_2,...,X_n \sim Poisson(\lambda)$, then the statistic
+$$
+T(X)=\sum^{n}_{i=1}X_i
+$$
+contains all information about $\lambda$, so you can do inference using only the sum instead of all $X_n$.
 
+#### How is sufficient statistic defined?
+A statistic $T(X)$ containing all information about parameter $\theta$ is called sufficient if the conditional distribution of the sample $X$ given the value $T(X)$ does not depend on $\theta$. E.g. the summation statistic for a Poisson sample is sufficient, because it is a smallest summary of the sample containing all information about the parameter $\lambda$.
 
+#### Explain what minimal sufficient statistic is.
+In statistical inference, a minimal sufficient statistic is the most compressed statistic that still contains all the information about a parameter in the sample. It represents the maximum possible data reduction without losing any information relevant to the parameter.<br/>
+Let $X = (X_1,X_2,...,X_n)$ be a sample from a distribution with parameter $\theta$. A statistic $T(X)$ is minimal sufficient for $\theta$ if it is sufficient, and for any other sufficient statistic $S(X)$, it can be written as a function of $S(X)$, e.g. **sample mean and variance of a normal distribution**.
+
+#### Explain what ancillary statistic is.
+An ancillary statistic is a statistic whose probability distribution does not depend on the unknown parameter of the model. So it contains no information about the parameter, even though it is computed from the data.<br/>
+Let $X = (X_1,X_2,...,X_n)$ be a sample from a distribution with parameter $\theta$.Let $X = (X_1,X_2,...,X_n)$ be a sample from a distribution with parameter $\theta$. A statistic $A(X)$ is ancillary if its distribution is independent of $\theta$.<br/>
+Formally:
+$$
+P(A(X) \leq a)
+$$
+does not depend on $\theta$.<br/>
+**Example:**<br/>
+Suppose there are two random variables with normal distribution
+$$
+X_1,X_2 \sim N(\mu,\sigma^2).
+$$
+Consider the statistic
+$$
+A = X_1 - X_2.
+$$
+If we standardize by variance
+$$
+\frac{X_1 - X_2}{\sigma},
+$$
+its distribution is $N(0,2)$ and its independent of $\mu$.
+
+#### Explain what complete statistic is.
+Let $X = (X_1,X_2,...,X_n)$ be a sample from a distribution with parameter $\theta$. $T(X)$ is complete if a function $g$ satisfies $E_{\theta}[g(T)] = 0$ for all $\theta$ only if $g(T) = 0$ with probability 1. If the expected value of a function of $T$ is zero for every parameter value, then the function must be identically zero. There are no non-trivial unbiased functions of $T$ that vanish for all parameters. Completeness means that the statistic contains no hidden redundancy. If you try to construct a function of the statistic whose expected value is always zero, the only possibility is the trivial function. So the statistic is informationally tight: it does not allow cancellation of information across parameter values.
+
+#### What is the likelihood function in statistical inference?
+The likelihood function describes how plausible different parameter values are given the observed data. Suppose $X_1,X_2,...,X_n$ is a random sample from a distribution with parameter $\theta$ and probability density (or mass) function $f(x|\theta)$. After observing the data
+$$
+x_1,x_2,...,x_n,
+$$
+the likelihood function is defined as
+$$
+L(\theta) = f(x_1,x_2,...,x_n|\theta).
+$$
+If the observations are independent, this becomes
+$$
+L(\theta) = \prod^{n}_{i=1}f(x_i|\theta).
+$$
+* In probability theory: the parameter $\theta$ is fixed and data are random.
+* In likelihood: the data are fixed, and the function of the parameter $\theta$ is viewed.<br/>
+
+So the likelihood measures how well each parameter value explains the observed data.<br/>
+
+**Example:**<br/>
+Suppose
+$$
+X_1,X_2,...,X_n \sim N(\mu, \sigma^2)
+$$
+with known variance. 
+
+The density function is
+$$
+f(x_i|\mu) = \frac{1}{\sqrt{2\pi \sigma^2}}e^{\frac{(x_i - \mu)^2}{2\sigma^2}}.
+$$
+The likelihood function is
+$$
+L(\mu) = \prod^{n}_{i=1}\frac{1}{\sqrt{2\pi \sigma^2}}e^{\frac{(x_i - \mu)^2}{2\sigma^2}}.
+$$
+This function tells us which values of $\mu$ make the observed data most likely.
+
+#### Explain the principle of equivariance in statistical inference.
+Let $\theta$ be a parameter and $T(X)$ an estimator of $\theta$ based on a sample $X$. Suppose we apply a transformation $g(*)$ to the parameter, giving a new parameter
+$$
+\phi = g(\theta).
+$$
+The principle of equivariance states that the estimator of the transformed parameter $g(\theta)$ should be the same transformation applied to the estimator of $\theta$. So if $T(X)$ is an estimator of $\theta$ then the estimator of $g(\theta)$ should be $g(T(X))$.
+
+#### What is a point estimator in statistical inference?
+A point estimator is a statistic used to estimate an unknown parameter of a population by a single numerical value based on sample data. <br/>
+Let
+$$
+X_1,X_2,...,X_n
+$$
+be a random sample from a population with parameter $\theta$. A point estimator of $\theta$ is a function of the sample observations:
+$$
+\hat{\theta} = T(X_1,X_2,...,X_n).
+$$
+The value obtained from the sample is called the point estimate.
+
+**Example:**<br/>
+If we want to estimate the population mean $\mu$, the sample mean
+$$
+\bar{X} = \frac{1}{n}\sum^{n}_{i=1}X_i
+$$
+is a point estimator of $\mu$.
+
+#### Explain method of moments (MOM) for point estimation.
+This method equates sample moments with population moments.<br/>
+Steps:
+* Compute population moments in terms of parameters.
+* Replace them with sample moments.
+* Solve for the parameter.
+
+**Example:**<br/>
+If $E(X) = \theta$,
+then estimator is
+$$
+\hat{\theta} = \bar{X}.
+$$
+
+#### Explain Maximum Likelihood point estimator (MLE).
+This method chooses the parameter value that maximizes the likelihood function.
+
+If the likelihood function is
+$$
+L(\theta) = f(x_1,x_2,...,x_n|\theta),
+$$
+then the estimator is the value $\hat{\theta}$ that maximizes $L(\theta)$.
+
+**Example:**<br/>
+For a normal distribution
+$$
+\hat{\mu}_{MLE} = \bar{X}.
+$$
+
+#### Explain Bayes point estimator.
+In Bayesian inference, the parameter $\theta$ is treated as a random variable with a prior distribution $\pi(\theta)$.
+After observing data $x$, we compute the posterior distribution:
+$$
+\pi(\theta|x) = \frac{f(x|\theta)\pi(\theta)}{\int f(x|\theta)\pi(\theta) d\theta},
+$$
+where:<br/>
+* $f(x|\theta)$ is likelihood
+* $\pi(\theta)$ is prior distribution
+* $\pi(\theta|x)$ is posterior distribution <br/>
+
+The Bayes estimator is the value $\hat{\theta}_B$ that minimizes the expected posterior loss.<br/>
+Let
+* $L(\theta,a)$ be a loss function
+* $a$ be estimator decision<br/>
+
+The Bayes estimator is
+$$
+\hat{\theta}_B(x) = arg \underset{a}{min}E[L(\theta,a)|x]
+$$
+which means choose the estimate that minimizes the expected loss under the posterior distribution.
+
+Different loss functions lead to different estimators.
+* **Squared Error Loss:**
+    $$
+    L(\theta,a)=(\theta−a)^2
+    $$
+    The Bayes estimator becomes the posterior mean:
+    $$
+    \hat{\theta}_B = E[\theta,x] 
+    $$
+* **Absolute Error Loss:**
+    $$
+    L(\theta,a)=|\theta−a|
+    $$
+    The Bayes estimator becomes the posterior median.
+* **0–1 Loss:**
+    $$
+    L(\theta,a)=
+    \begin{cases}
+    0, & \text{if } \theta=a \\
+    1, & \text{if } \theta \neq a
+    \end{cases}
+    $$
+    The Bayes estimator becomes the posterior mode, also called the MAP estimator (Maximum A Posteriori).
+
+#### Explain principal difference of classical and Bayesian statistical inference.
 
 ---
 ---
