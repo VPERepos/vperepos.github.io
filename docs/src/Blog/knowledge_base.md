@@ -1528,7 +1528,609 @@ Different loss functions lead to different estimators.
     $$
     The Bayes estimator becomes the posterior mode, also called the MAP estimator (Maximum A Posteriori).
 
-#### Explain principal difference of classical and Bayesian statistical inference.
+#### Explain principal difference between classical and Bayesian statistical inference.
+The main difference between classical and Bayesian approaches in Statistical Inference concerns how the unknown parameter is treated.
+
+In classical (frequentist) inference, the parameter is considered a fixed but unknown constant, and probability describes the randomness of the sample data. Inference is based only on the likelihood derived from the observed data.
+
+In Bayesian Statistics, the parameter is treated as a random variable with a prior distribution representing prior knowledge. Using Bayes' Theorem, the prior is updated with the observed data to obtain the posterior distribution, which is then used for estimation and inference.
+
+#### Enlist methods of evaluating the point estimators.
+**1. Classical Properties**<br/>
+
+* **Unbiasedness** - the estimators expected value equals the true parameter:
+    $$
+    E(\hat{\theta}) = \theta
+    $$
+    Which means there is no systematic over- or underestimation.
+* **Consistency** – the estimator converges to the true parameter as sample size increases:
+    $$
+    \hat{\theta}_n \xrightarrow{\text{P}} \theta, \quad n \to \infty
+    $$
+* **Efficiency** – among unbiased estimators, the one with smaller variance is more efficient. Often compared to the Cramér–Rao lower bound.
+* **Mean Squared Error (MSE)** – combines bias and variance to measure error:
+    $$
+    MSE(\hat{\theta}) = E[(\hat{\theta} - \theta)^2] = Var(\hat{\theta}) + (Bias)^2
+    $$
+* **Sufficiency** – an estimator based on a sufficient statistic uses all information in the sample about the parameter.
+* **Robustness** – the estimator’s performance is stable under deviations from model assumptions or in presence of outliers.
+
+**2. Loss-Function and Risk-Based Evaluation**<br/>
+
+* **Loss function** $L(\hat{\theta},\theta)$ measures the penalty for estimating $\theta$ by $\hat{\theta}$. <br/>
+    **Examples:**
+    * Squared error: $(\hat{\theta} - \theta)^2$
+    * Absolute error: $|\hat{\theta} - \theta|$
+    * 0–1 loss: 0 if correct, 1 if incorrect
+* **Risk function** evaluates the expected loss:
+    $$
+    R(\hat{\theta}, \theta)=E_{\theta}[L(\hat{\theta},\theta)]
+    $$
+* **Optimality:** an estimator is optimal if it minimizes the risk for the chosen loss function:
+    $$
+    \hat{\theta}^{*} = \operatorname*{arg\,\min}_{\hat{\theta}} R(\hat{\theta}, \theta)
+    $$
+
+**Example (Bayesian context):**
+* Squared error → posterior mean
+* Absolute error → posterior median
+* 0–1 loss → posterior mode (MAP)
+
+#### Give a definition of what is hypothesis and its testing in inference statistics.
+In Statistical Inference, a **hypothesis** is a statement or assumption about a population parameter that we want to evaluate based on sample data.
+* Null hypothesis ($H_0$): the default assumption, usually representing no effect or no difference.
+* Alternative hypothesis ($H_1$): represents the claim we want to test, usually indicating an effect or difference.
+
+**Hypothesis testing** is the procedure of using sample data to decide whether to reject $H_0$ in favor of $H_1$ or not. It involves:
+* Formulating hypotheses $H_0$ and $H_1$.
+* Selecting a test statistic that summarizes the evidence from the data.
+* Determining the sampling distribution of the test statistic under $H_0$.
+* Computing the p-value or critical region to assess evidence against $H_0$.
+* Making a decision:
+    * Reject $H_0$ if evidence is strong.
+    * Fail to reject $H_0$ if evidence is insufficient.
+
+Hypothesis testing does not prove $H_1$ true, it only evaluates whether data provide enough evidence to reject $H_0$. Decisions are made with a predefined significance level ($\alpha$), controlling the probability of rejecting true $H_0$.
+
+#### Explain Critical Region / Rejection Region Method for Hypothesis testing.
+In the frequentist framework, the Critical Region (or Rejection Region) Method is a way to perform hypothesis testing by defining a region of the sample space where, if the observed value of the test statistic falls inside, we reject the null hypothesis $H_0$.
+* The test statistic summarizes the sample data in a way that is sensitive to deviations from $H_0$
+* The critical region is determined using a significance level $\alpha$, which is the maximum probability of rejecting true $H_0$.
+
+**Steps:**
+* Formulate $H_0$ and $H_1$.
+* Choose a test statistic suitable for the hypothesis and data type.
+* Determine the sampling distribution of the statistic under $H_0$.
+* Define the critical value(s) based on the significance level $\alpha$.
+* Compare the observed statistic to the critical value:
+    * If inside the critical region - reject $H_0$.
+    * If outside - fail to reject $H_0$.
+
+**Most common test statistics are:**<br/>
+* Z-test (Population Mean, $\sigma$ known).
+* t-test (Population Mean, $\sigma$ unknown).
+* Chi-Square Test (Variance or Goodness-of-Fit).
+* F-test (Comparing Two Variances).
+* Likelihood Ratio Test (General Parametric Models).
+* Non-Parametric / Rank-Based Tests.
+
+#### Explain the Z-test statistic for hypothesis testing.
+A Z-test is a parametric hypothesis test used to determine whether a sample mean is significantly different from a hypothesized population mean. It is based on the standard normal distribution ($Z \sim N(0,1)$), when the population variance is known or when the sample size is large ($n\geq 30$) due to the Central Limit Theorem.
+
+**One-sample Z-test statistic:**
+$$
+Z=\frac{\bar{X} - \mu_{0}}{\sigma/\sqrt{n}}
+$$
+Where:
+* $\bar{X}$ - sample mean.
+* $\mu_{0}$ - hypothesized population mean.
+* $\sigma$ - population standard deviation (known).
+* $n$ - sample size.
+**Two-sample Z-test compares the means of two independent populations with known variances:**
+$$
+Z=\frac{\bar{X}_1 - \bar{X}_1}{\sqrt{\sigma^{2}_{1}/n_{1} - \sigma^{2}_{2}/n_{2}}}
+$$
+
+**When to Use a Z-Test:**
+* Population variance is known.
+* The sample is large.
+* Data are continuous and approximately normally distributed (small samples).
+* Testing means (one-sample or two-sample).
+
+**Example:**<br/>
+A factory claims that its light bulbs last $1200$ hours on average. A quality control engineer takes a sample of $50$ bulbs and finds:
+* Sample mean: $\bar{X} = 1170$ hours.
+* Known population standard deviation: $\sigma = 80$ hours.
+Test at $5%$ significance level ($\alpha = 0.005$) whether the mean lifetime is less than $1200$ hours.
+
+**Step 1: Define Hypotheses**
+* Null hyposethis: $\mu=1200$.
+* Alternative hypothesis: $\mu < 1200$.
+
+**Step 2: Choose Test Statistic**
+* One-sample Z-test:
+$$
+Z=\frac{\bar{X} - \mu_{0}}{\sigma/\sqrt{n}}
+$$
+
+**Step 3: Compute the Test Statistic**
+$$
+Z=\frac{1170 - 1200}{80\sqrt{50}} \approx -2.65
+$$
+
+**Step 4: Determine Critical Value / Rejection Region**
+* Significance level: $\alpha=0.05$ (one-tailed, left).
+* Critical Z-value: $Z_{0.05} = -1.645$ ($P(Z < Z_{0.05}) = 0.05$, the value of $Z_{0.05}$ is taken from the normal distribution).
+* Rejection region: $Z \leq -1.645$.
+
+**Step 5: Make a Decision**
+* Observed $Z=−2.65<−1.645$ falls in the rejection region.
+* Decision: **Reject** $H_0$.
+
+**Step 6: Conclusion**<br/>
+At 5% significance level, there is sufficient evidence to conclude that the mean lifetime of the bulbs is less than 1200 hours.
+
+#### Explain the t-test statistic for hypothesis testing.
+A t-test is a statistical test used to determine whether a sample mean is significantly different from a hypothesized population mean when the population standard deviation is unknown.
+* It uses the Student’s t-distribution, which accounts for extra variability due to estimating $\sigma$ from the sample.
+* The shape of the t-distribution depends on the degrees of freedom (df = n – 1).
+* As the sample size $n$ increases, the t-distribution approaches the standard normal distribution.
+
+**One-sample t-test statistic:**
+$$
+t=\frac{\bar{X} - \mu_{0}}{s/\sqrt{n}}
+$$
+where:
+* $\bar{X}$ - sample mean.
+* $\mu_{0}$ - hypothesized population mean.
+* $s$ - sample standard deviation.
+* $n$ - sample size.
+
+**Two-sample t-test (independent samples):**
+$$
+t=\frac{\bar{X}_1 - \bar{X}_1}{\sqrt{s^{2}_{1}/n_{1} - s^{2}_{2}/n_{2}}}
+$$
+
+**When to Use a t-Test:**
+* Population variance is unknown.
+* The sample is small.
+* Data are approximately normally distributed.
+* Testing means (one-sample or two-sample).
+
+**Example:**
+A nutritionist claims that the average sodium content in a certain brand of soup is 500 mg per serving. A random sample of 15 soups has:
+* Sample mean: $\bar{X} = 520$ mg
+* Sample standard deviation: $s = 25$ mg
+Test at 5% significance level ($\alpha=0.05$) whether the average sodium content differs from 500 mg.
+
+**Step 1: State Hypotheses**
+* Null hyposethis: $\mu = 500$ mg
+* Alternative hypothesis: $\mu \neq 500$ mg
+
+**Step 2: Choose Test Statistic**
+* One-sample t-test is appropriate since $\sigma$ is unknown and $n = 15 < 30$.
+
+**Step 3: Compute the Test Statistic**
+$$
+t=\frac{520 - 500}{25/\sqrt{15}} \approx 3.10
+$$
+Degrees of freedom: $df = n - 1 = 14$
+
+**Step 4: Determine Critical Value / Rejection Region**
+* Two-tailed test at $\alpha = 0.05$, which means splitting $\alpha/2 = 0.025$ in each tail.
+* From t-table: $t_{0.025,14} \approx 2.145$
+* Rejection region: $|t| > 2.145$
+
+**Step 5: Make a Decision**
+* Observed $t \approx 3.10 > 2.145$ falls in the rejection region.
+* **Decision:** reject $H_0$.
+
+**Step 6: Conclusion**<br/>
+At 5% significance level, there is sufficient evidence that the average sodium content differs from 500 mg.
+
+#### Explain the Chi-Square test statistic for hypothesis testing.
+A Chi-Square test ($\chi^2$ test) is a non-negative test statistic used to evaluate hypotheses about:
+* Variances of a normally distributed population.
+* Goodness-of-fit: whether observed frequencies match expected frequencies.
+* Independence or association in contingency tables.<br/>
+
+The test statistic follows a Chi-Square distribution with degrees of freedom depending on the test type.
+
+**When to Use a Chi-Square Test**<br/>
+* Population variance test:
+    * You want to test $H_0$: $\sigma^2 = \sigma^{2}_{0}$ for a normal population.
+* Goodness-of-fit test:
+    * Data are categorical, and you want to compare observed versus expected frequencies.
+* Test of independence / association:
+    * You have a contingency table (e.g., row × column categories) and want to see if variables are independent.
+* Assumptions:
+    * Data are independent observations
+    * For variance tests: population is normal
+    * For categorical tests: expected frequency per category ideally ≥ 5
+
+**1. Chi-Square Test for Population Variance.**<br/>
+Test Statistic:
+$$
+\chi^2 = \frac{(n-1)s^2}{\sigma^2_{0}} \sim \chi^2_{n-1} \quad under \quad H_0 
+$$
+Where:
+* $n$ - sample size
+* $s^2$ - sample variance
+* $\sigma^2_{0}$ - hypothesized population variance
+* degrees of freedom: $df = n-1$
+
+**Decision:** reject $H_0$ if the statistic falls outside the critical values from $\chi^2$ table.
+
+**Example: Variance test**<br/>
+A machine claims to fill bottles with variance in volume of $4$ $ml^2$. A sample of $10$ bottles gives sample variance $s^2 = 7$ $ml^2$. Test at 5% significance level if variance is different.  
+
+**Step 1: Hypotheses**
+$$
+H_0: \sigma^2 = 4, \quad H_1: \sigma^2 \neq 4
+$$
+
+**Step 2: Test Statistic**
+$$
+\chi^2 = \frac{(n-1)s^2}{\sigma^2_{0}} \sim \chi^2_{n-1} = \frac{(10-1)7}{4}=15.75
+$$
+* degrees of freedom: $df=10-1=9$
+
+**Step 3: Critical Values (two-tailed, $\alpha=0.05$)**
+* Left: $\chi^2_{0.025,9} \approx 2.70$
+* Right: $\chi^2_{0.975,9} \approx 19.02$
+* Rejection region: $\chi^2 < 2.70$, or $\chi^2 > 19.02$
+
+**Step 4: Decision**
+* Observed $\chi^2 = 15.75$ does not fall in the rejection region.
+* Decision: fail to reject $H_0$
+
+**Conclusion:** No sufficient evidence to say variance differs from 4 $ml^2$.
+
+**2. Chi-Square Test for Goodness-of-Fit**<br/>
+**Test Statistic:**
+$$
+\chi^2 = \sum^{k}_{i=1}\frac{(O_i - E_i)^2}{E_i} \sim \chi^2_{k-1} \quad under H_0
+$$
+Where:
+* $O_i$ - observed frequency for category $i$
+* $E_i$ - expected frequency for category $i$
+* $k$ - number of categories.
+
+**Degrees of freedom:** $df=k-1-m$, where $m$ is the number of estimated parameters of the samples distribution.
+
+**Example:**<br/>
+A die is rolled 60 times, yielding counts:
+|Face|1|2|3|4|5|6|
+|:----|:----:|:----:|:----:|:----:|:----:|:----:|
+|Observed|8|10|9|11|12|10|
+
+Test at $\alpha = 0.05$ if die is fair.
+
+**Step 1: Hypotheses**<br/>
+$H_0$ - die is fair, $H_1$ - die is not fair.<br/>
+Expected frequency: $E_i = 60/6 = 10$ for all faces.
+
+**Step 2: Test Statistic**
+$$
+\chi^2 = \sum^{6}_{i=1}\frac{(O_i - E_i)^2}{E_i} = \frac{(8-10)^2}{10} + \frac{(10-10)^2}{10}+... = 1
+$$
+
+**Step 3: Degrees of Freedom**
+* $df=k-1-m=6-1-0=5$ ($m=0$ because all faces are equally likely and there is no parameters to estimate).
+* Critical value ($\alpha=0.05$, two-tailed is not needed for chi-squared, thus right tail test ):
+$$
+\chi^2_{0.95,5} \approx 11.07
+$$
+
+**Step 4: Decision**
+* Observed $\chi^2 = 1 < 11.07$, thus fail to reject $H_0$.
+
+**Conclusion:** no evidance to suggest that the die is unfair.
+
+**3. Chi-Square Test for Independence (Contingency Table)**<br/>
+**Test Statistic:**
+$$
+\chi^2 = \sum_{i,j}\frac{(O_{ij} - E_{ij})^2}{E_{ij}}, \quad E_{ij}=\frac{(row\, total)(column\, total)}{grand\, total}
+$$
+* degrees of freedom: df = (number of rows – 1) × (number of columns – 1)
+* **Decision:** Reject $H_0$ if $\chi^2 > \chi^{2}_{\alpha,df}$
+
+The Chi-Square Test for Independence is used in Statistical Inference to determine whether two categorical variables are statistically independent or whether there is an association between them.
+
+It is based on comparing:
+* Observed frequencies (actual counts in the data)
+* Expected frequencies (counts we would expect if the variables were independent)
+
+If the observed counts differ greatly from the expected counts, the variables are likely not independent.
+
+**Example:**<br/>
+Suppose we want to test whether gender is independent of preference for a product.
+
+A survey of 100 people gives:
+
+||like product|dislike product|total|
+|:---:|:---:|:---:|:---:|
+|Male|30|20|50|
+|Female|10|40|50|
+|Total|40|60|100|
+
+**Step 1: Hypotheses**<br/>
+$H_0$: Gender and preference are independent.<br/>
+$H_1$: They are dependent
+
+**Step 2: Compute Expected Frequencies:**<br/>
+Using
+$$
+E_{ij}=\frac{(row\, total)(column\, total)}{grand\, total}
+$$
+Male like:
+$$
+E_{11} = \frac{50 \times 40}{100} = 20
+$$
+Male dislike:
+$$
+E_{12} = \frac{50 \times 60}{100} = 30
+$$
+Female like:
+$$
+E_{21} = \frac{50 \times 40}{100} = 20
+$$
+Female dislike:
+$$
+E_{22} = \frac{50 \times 60}{100} = 30
+$$
+Expected table:
+||like|dislike|
+|:---:|:---:|:---:|
+|Male|20|30|
+|Female|20|30|
+
+**Step 3: Compute $\chi^2$ statistic**
+$$
+\chi^2 = \frac{(30 - 20)^2}{20} + \frac{(20 - 30)^2}{30} + \frac{(10 - 20)^2}{20} + \frac{(40 - 30)^2}{30} \approx 16.66
+$$
+
+**Step 4: Degrees of Freedom**
+$$
+df=(2-1)(2-1)=1
+$$
+
+**Step 5: Critical Value**<br/>
+At $\alpha=0.05$ 
+$$
+\chi^2_{0.95,1} \approx 3.84
+$$
+
+**Step 6: Decision**<br/>
+$$
+16.66 > 3.84
+$$
+Therefore we reject the null hypethesis.
+
+**Conclusion**<br/>
+There is significant evidence that gender and product preference are associated (not independent).
+
+#### Explain the F-test statistic for comparing two variances.
+The F-test is used in Statistical Inference to determine whether two populations have the same variance. It compares the variability of two independent samples. The test statistic follows the F-distribution, introduced by Ronald A. Fisher, which is the distribution of the ratio of two independent scaled chi-square random variables.<br/>
+The F-test answers questions such as:
+* Do two production machines produce items with the same variability?
+* Are two measurement methods equally precise?
+* Do two populations have equal variances?
+
+This test is also the basis for analysis of variance (ANOVA).
+
+**Hypotheses:**<br/>
+For two populations:
+$$
+H_0: \sigma^2_1 = \sigma^2_2
+$$
+$$
+H_1: \sigma^2_1 \neq \sigma^2_2
+$$
+where $\sigma^2_1$ and $\sigma^2_2$ are population variances.
+
+**Test Statistic**
+
+The F statistic is
+$$
+F=\frac{s^2_1}{s^2_2}
+$$
+where
+* $s^2_1$ - sample variance of sample 1.
+* $s^2_2$ - sample variance of sample 2.
+
+Usually the larger variance is placed in the numerator so that $F \geq 1$.
+
+**Distribution**<br/>
+
+Under $H_0$:
+$$
+F \sim F(n_1 - 1, n_2 -1)
+$$
+where
+* $n_1$ and $n_2$ are sample sizes
+* degrees of freedom:
+    * $df_1 = n_1 - 1$ 
+    * $df_2 = n_2 - 1$ 
+
+**Assumptions**<br/>
+The F-test requires:
+* Independent samples
+* Normally distributed populations
+* Random sampling
+
+**Example:**<br/>
+Suppose two machines produce metal rods, and we want to check if their variability in length is the same.
+
+Samples:
+|Machine|Sample size|Sample variance|
+|:---:|:---:|:---:|
+|A|10|25|
+|B|12|10|
+
+**Step 1: Hypotheses**
+$$
+H_0: \sigma^2_1 = \sigma^2_2
+$$
+$$
+H_1: \sigma^2_1 \neq \sigma^2_2
+$$
+
+**Step 2: Test Statistic**
+
+Place the larger variance in the numerator:
+$$
+F = \frac{25}{10} = 2.5
+$$
+
+**Step 3: Degrees of Freedom**
+$$
+df_1 = 10 - 1 = 9
+$$
+$$
+df_2 = 12 - 1 = 11
+$$
+So
+$$
+F \sim F(9,11)
+$$
+
+**Step 4: Critical Value**
+
+At significance level $\alpha = 0.05$ (right tail):
+$$
+F_{0.95,9,11} \approx 2.90
+$$
+
+**Step 5: Decision**
+$$
+2.5 < 2.90
+$$
+Therefore do not reject the null hypothesis.
+
+**Conclusion**<br/>
+
+There is no sufficient evidence that the two machines have different variances.
+
+#### Explain Likelihood Ratio Test (LRT) for General Parametric Models.
+The Likelihood Ratio Test (LRT) is a general method in Statistical Inference for testing hypotheses about parameters in parametric statistical models.
+
+The main idea is to compare:
+* the maximum likelihood under the null hypothesis
+* the maximum likelihood without restrictions
+
+If the unrestricted model explains the data much better, the null hypothesis is rejected.
+
+Let
+* $L(\theta)$ be likelihood function of parameter $\theta$
+* $\Theta$ - the full parameter space
+* $\Theta_0$ - parameter values allowed under $H_0$
+
+The likelihood ratio statistic is
+$$
+\Lambda = \frac{\sup_{\theta \in \Theta_0}L(\theta)}{\sup_{\theta \in \Theta}L(\theta)}
+$$
+Where:
+* numerator = maximum likelihood assuming $H_0$
+* denominator = maximum likelihood in the full model
+
+Thus
+$$
+0 \leq \Lambda \leq 1
+$$
+Small values of $\Lambda$ indicate evidence against $H_0$.
+
+**Test Statistic**
+
+Usually we use
+$$
+T = -2 \ln(\Lambda) 
+$$
+A fundamental result (Wilks’ theorem) states that, for large samples:
+$$
+-2 \ln(\Lambda) \sim \chi^2(k)
+$$
+where $k = dim(\Theta) - dima(\Theta_0)$ is the difference in number of parameters between models.
+
+**Decision Rule**
+
+Reject $H_0$ if
+$$
+-2 \ln(\Lambda) > \chi^2_{\alpha, k}
+$$
+
+**Example:**<br/>
+Suppose we observe data from a normal distribution:
+$$
+X_1,X_2,...,X_n \sim N(\mu,1)
+$$
+Assume variance is known and is equal 1.
+
+We want to test
+$$
+H_0: \mu=0
+$$
+$$
+H_0: \mu \neq 0
+$$
+
+Sample data:
+$$
+n = 10, \quad \bar{X} = 1
+$$
+
+**Step 1: Likelihood Function**<br/>
+For normal data with variance 1:
+$$
+L(\mu) = \prod^{i=1}_{n}\frac{1}{\sqrt{2\pi}}e^{\left( -\frac{(x_i - \mu)^2}{2}\right)}
+$$
+The maximum likelihood estimator is
+$$
+\hat{\mu} = \bar{X}
+$$
+
+**Step 2: Maximum Likelihoods**<br/>
+Under the full model:
+$$
+\mu=\hat{\mu}=1
+$$
+Under the null hypothesis:
+$$
+\mu = 0
+$$
+
+**Step 3: Compute Statistic**
+$$
+-2 \ln(\Lambda) = n(\bar{X} - \mu_0)^2=10(1-0)^2=10
+$$
+
+**Step 4: Distribution**<br/>
+Number of restricted parameters:
+$$
+k=1
+$$
+So
+$$
+-2 \ln(\Lambda) \sim \chi^2(1)
+$$
+Critical value at $\alpha = 0.05$:
+$$
+\chi^2_{0.95,1}=3.84
+$$
+
+**Step 5: Decision**
+$$
+10 > 3.84
+$$
+Therefore reject $H_0$
+
+**Conclusion**<br/>
+There is significant evidence that the mean is different from 0.
+
+#### Explain Non-Parametric / Rank-Based Tests.
+
+#### Explain Bayesian methods for hypothesis testing.
+
 
 ---
 ---
