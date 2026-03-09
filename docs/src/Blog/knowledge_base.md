@@ -2128,8 +2128,454 @@ Therefore reject $H_0$
 There is significant evidence that the mean is different from 0.
 
 #### Explain Non-Parametric / Rank-Based Tests.
+Non-parametric (rank-based) tests are hypothesis tests that do not assume a specific parametric distribution for the population (e.g., normal distribution). Instead of relying on the raw values, they typically use ranks of the data.
 
-#### Explain Bayesian methods for hypothesis testing.
+They are especially useful when:
+
+* The distribution is unknown or not normal
+
+* Sample sizes are small
+
+* The data are ordinal (ranked) rather than numerical
+
+* The data contain outliers that would distort parametric tests
+
+Non-parametric tests are often considered distribution-free alternatives to parametric tests such as the Z-test, t-test, or ANOVA.
+
+Instead of using the raw data values $x_i$, we:<br/>
+1. Sort the observaions
+2. Replace values with ranks
+
+**Example:**
+|Value|Rank|
+|:---:|:---:|
+|3|1|
+|5|2|
+|8|3|
+|10|4|
+
+Statistical tests are then performed on ranks rather than values. This makes the tests robust to distributional assumptions.
+
+#### Explain p-value method for Hypotheses testing.
+The p-value method is a common procedure in Statistical Inference for deciding whether to reject or not reject a null hypothesis based on observed data. Instead of comparing the test statistic directly with a critical value, we compute the probability of observing a result at least as extreme as the one obtained, assuming the null hypothesis is true.
+
+The $p$-value is:<br/>
+$p=P($observing a test statistic as extreme or more extreme than the observed one $| H_0$ is true $)$.
+
+Thus it measures how incompatible the data are with the null hypothesis.
+* Small $p$-value: strong evidence against $H_0$.
+* Large $p$-value: data are consistent with $H_0$.
+
+Let $\alpha$ be the significance level (common 0.05).
+
+Then the decision rule:
+* If $p \leq \alpha$ - reject $H_0$.
+* If $p > \alpha$ - do not reject $H_0$.
+
+**Example: Z-Test** <br/>
+Suppose a company claims the average battery life is 50 hours.
+
+Sample data:
+* sample mean $\bar{x} = 47$
+* population standard deviation $\sigma = 6$
+* sample size $n=36$.
+
+Test:
+$$
+H_0 \, : \, \mu=50
+$$
+$$
+H_1 \, : \, \mu \neq 50
+$$
+Significance level:
+$$
+\alpha = 0.05
+$$
+
+**Step 1: Compute Test Statistic**<br/>
+$$
+Z=\frac{\bar{x}-\mu_0}{\sigma / \sqrt{n}}
+$$
+$$
+Z=\frac{47-50}{6 / \sqrt{36}}=-3
+$$
+
+**Step 2: Compute p-Value**<br/>
+For a two-sided test:<br/>
+$$
+p=2P(Z \leq -3)
+$$
+From the standard normal distribution:
+$$
+P(Z \leq -3) \approx 0.00135
+$$
+So
+$$
+p=2(0.00135)=0.0027
+$$
+
+**Step 3: Decision**
+$$
+p=0.0027 < 0.05
+$$
+Therefore reject $H_0$.
+
+#### What are Union Intersection and Intersection Union tests?
+In Statistical Inference, Union–Intersection (UI) and Intersection–Union (IU) tests are general frameworks used when hypotheses involve multiple parameters or multiple conditions. They describe how a global hypothesis test can be constructed from several simpler tests.
+
+**1. Union–Intersection Test (UIT)**
+**Idea:**<br/>
+The null hypothesis is an intersection of several conditions, while the alternative is their union.
+$$
+H_0=\bigcap^{k}_{i=1}H_{0i}
+$$
+$$
+H_1=\bigcup^{k}_{i=1}H_{1i}
+$$
+Interpretation:
+* $H_0$: all conditions hold simultaniously.
+* $H_1$: at least one condition is violated.
+
+Decision Rule<br/>
+Reject $H_0$ if any of the individual tests rejects its corresponding $H_{0i}$
+
+**2. Intersection–Union Test (IUT)**<br/>
+**Idea:**<br/>
+Here the hypotheses are reversed. The null hypothesis is a union, and the alternative is an intersection.
+$$
+H_0=\bigcup^{k}_{i=1}H_{0i}
+$$
+$$
+H_1=\bigcap^{k}_{i=1}H_{1i}
+$$
+Interpretation:
+* $H_0$: at least one condition holds.
+* $H_1$: all conditions must hold simultaniously.
+
+Decision Rule<br/>
+Reject $H_0$ only if all individual tests reject.
+
+#### Explain Analysis of Variance (ANOVA) method.
+ANOVA (Analysis of Variance) is a statistical method used to test whether the means of several populations are equal. It extends the idea of the two-sample t-test to more than two groups. ANOVA tests whether differences among sample means are statistically significant or simply due to random variation. Typical question is if several groups have the same population mean. It can be interpreted as a Union–Intersection Test (UIT).
+
+Example applications:
+* Comparing effectiveness of different drugs
+* Comparing teaching methods
+* Comparing production processes
+
+**Hypotheses:**<br/>
+Suppose we have $k$ groups with means:
+$$
+\mu_1,\mu_2,...,\mu_k
+$$
+Hypotheses:<br/>
+$H_0$: $\mu_1=\mu_2=...=\mu_k$<br/>
+$H_1$: at least one differs
+
+ANOVA analyzes two sources of variability in the data:
+
+1. Between-group variability: variation between the group means
+2. Within-group variability: variation inside each group
+
+If group means are truly equal, these two types of variation should be similar.
+
+If the between-group variation is much larger, the means are likely different.
+
+Let
+* $x_{ij}$ be the observation $j$ in group $i$.
+* $\bar{x}_i$ - mean of group $i$.
+* $\bar{x}$ - overall mean.
+
+Toatl variability:
+$$
+SST=\sum^{k}_{i=1}\sum^{n_i}_{j=1}(x_{ij} - \bar{x})^2
+$$
+This splits into:
+$$
+SST = SSB + SSW
+$$
+where
+
+**Between-group variation**
+$$
+SSB=\sum^{k}_{i=1}n_i(\bar{x}_i - \bar{x})^2
+$$
+
+**Within group variation**
+$$
+SSW=\sum^{k}_{i=1}\sum^{n_i}_{j=1}(x_{ij} - \bar{x}_i)^2
+$$
+
+We divide sums of squares by their degrees of freedom.<br/>
+**Between groups:**
+$$
+MSB=\frac{SSB}{k-1}
+$$
+**Within groups:**
+$$
+MSW=\frac{SSW}{N-k}
+$$
+where
+* k - number of groups
+* N - total number of observations
+
+The ANOVA statistic is represented by F-statistic:
+$$
+F=\frac{MSB}{MSW}
+$$
+Under the null hypothesis:
+$$
+F \sim F(k-1,N-k)
+$$
+A large F value suggests the group means are different.
+
+#### Explain Bayesian method for hypothesis testing.
+In Bayesian hypothesis testing, hypotheses are treated as probabilistic models, and inference is based on updating beliefs using Bayes’ theorem. This approach belongs to Bayesian Statistics. Unlike classical testing, where hypotheses are rejected or not rejected, Bayesian methods evaluate how probable each hypothesis is after observing the data.
+
+Suppose we have two competing hypotheses:
+$$
+H_0 \, : \, \theta \in \Theta_0
+$$
+$$
+H_1 \, : \, \theta \in \Theta_1
+$$
+Bayesian analysis assigns prior probabilities to the hypotheses:
+$$
+P(H_0), \, P(H_1)
+$$
+After observing data $x$, we compute posterior probabilities:
+$$
+P(H_0|x), \, P(H_1|x)
+$$
+using Bayes’ theorem:
+$$
+P(H_i|x)=\frac{P(x|H_i)P(H_i)}{P(x)}
+$$
+where:<br/>
+$P(x|H_i)$ - likelihood under $H_i$.
+
+The central tool in Bayesian hypothesis testing is the Bayes factor.
+$$
+BF = \frac{P(x|H_0)}{P(x|H_1)}
+$$
+It measures how much the data support one hypothesis over the other.
+
+Bayesian testing often compares posterior odds:
+$$
+\frac{P(H_0|x)}{P(H_1|x)}=BF\frac{P(H_0)}{P(H_1)}
+$$
+**Example:**
+Suppose we test whether a coin is fair.
+
+Hypothesises:
+$$
+H_0 \, : \, p=0.5
+$$
+$$
+H_1 \, : \, p \neq 0.5
+$$
+We flip the coin 10 times and observe 8 heads.
+
+**Likelihood under $H_0$**
+$$
+P(x|H_0)=\begin{pmatrix} 10 \\ 8 \end{pmatrix}(0.5)^{10}=45×0.000976 \approx 0.044
+$$
+
+**Likelihood under $H_1$**
+For $H_1$ we assume a prior distribution for $p$.<br/>
+For example:
+$$
+p \sim Uniform(0,1)
+$$
+Then the likelihood is obtained by integrating over all possible $p$:
+$$
+P(x|H_1)=\int^{1}_{0}\begin{pmatrix} 10 \\ 8 \end{pmatrix}p^8(1-p)^2dp = \frac{1}{11} \approx 0.091
+$$
+
+**Bayes Factor**
+$$
+BF = \frac{0.044}{0.091} \approx 0.48
+$$
+Since
+$$
+BF < 1
+$$
+the data favor $H_1$ (the coin may not be fair).
+
+**Decision rule:**<br/>
+Instead of fixed rejection regions, Bayesian testing uses:
+* Posterior probability comparison
+
+or
+
+* Bayes factor thresholds
+
+**Example rule:<br/>**
+Reject $H_0$ if:
+$$
+BF < \frac{1}{10}
+$$
+
+#### Enlist and explain main methods of evaluation of hypothesis tests.
+**1. Type I Error Probability (Significance Level)<br/>**
+A Type I error occurs when we reject the null hypothesis $H_0$ even though it is true.
+$$
+\alpha = P(Reject \, H_0 | H_0 \, is \, true)
+$$
+* $\alpha$ is called significance level
+* common values are between 0.01 and 0.05
+
+A good test should control the probability of Type I error.
+
+**2. Type II Error Probability**<br/>
+A Type II error occurs when we fail to reject $H_0$ even though it is false.
+$$
+\beta = P(Do \, not \, reject \, H_0 | H_1 \, is \, true)
+$$
+
+A good test should minimize this probability.
+
+**3. Power of the Test**<br/>
+The power of a test is the probability of correctly rejecting the null hypothesis when it is false.
+$$
+Power = 1 - \beta
+$$
+Thus
+$$
+Power = P(Reject \, H_0 | H_1 \, is \, true)
+$$
+
+A test with higher power is better because it detects real effects more reliably.
+
+**4. Power Function**<br/>
+The power function describes the probability of rejecting $H_0$ for every possible parameter value.
+$$
+\pi(\theta) = P(Reject \, H_0 | \theta)
+$$
+Properties:
+* Under $H_0$: $\pi(\theta) \leq \alpha$
+* Under $H_1$: $\pi(\theta)$ should be as large as possible
+
+**5. Most Powerful Test**<br/>
+A test is most powerful if it has the largest power among all tests with the same significance level $\alpha$. 
+
+**6. Uniformly Most Powerful Test (UMP)**<br/>
+A test is uniformly most powerful if it has the highest power for all parameter values in the alternative hypothesis.
+
+**7. Consistency of a Test**<br/>
+A test is consistent if its power approaches 1 as the sample size increases when the alternative hypothesis is true.
+$$
+\lim_{n \to \infty} Power \to 1
+$$
+
+Thus with large samples, the test will almost surely detect the false null hypothesis.
+
+#### What are the interval estimators in statistical inference?
+Interval estimators (confidence intervals) provide a range of plausible values for an unknown parameter rather than a single estimate.
+
+Several methods exist for constructing interval estimators.<br/>
+1. Pivot (Pivotal Quantity) Method.
+2. Test Inversion Method.
+3. Likelihood-Based Method.
+4. Asymptotic (Normal Approximation) Method.
+5. Bayesian Credible Intervals.
+6. Bootstrap Method.
+
+#### Explain and give a simple example for Pivot (Pivotal Quantity) Method.
+The Pivot Method is one of the classical approaches to constructing confidence intervals in Statistical Inference. It is based on a pivotal quantity, which is a function of the sample and the parameter whose probability distribution does not depend on the unknown parameter.
+
+**Definition of a Pivot**<br/>
+A pivotal quantity $T(X,\theta)$ satisfies:
+$$
+Distribution \, of \, T(X, \theta) \, does \, not\, depend \, on \, \theta
+$$
+This allows us to use known distributions to find intervals for $\theta$.
+
+**Steps to Construct an Interval Using a Pivot**<br/>
+* Identify a pivotal qunatity $T(X, \theta)$.
+* Find its distribution, usually standard (Normal, t, $\chi^2$, etc).
+* Solve the probability statement for $\theta$:
+$$
+P(a \leq T(X, \theta) \leq b)=1-\alpha
+$$
+to get the confidence interval.
+
+**Example:**<br/>
+Suppose we have:
+$$
+X_1,...,X_n \sim N(\mu,\sigma^2)
+$$
+where $\sigma$ is a known value.<br/>
+We want a 95% confidence interval for $\mu$.
+
+**Step 1: Identify pivot:**<br/>
+The natural pivot is the standardized sample mean:
+$$
+Z=\frac{\bar{X} - \mu}{\sigma \sqrt{n}} \sim N(0,1)
+$$
+* $Z$ is standadrd normal.
+* its distrubution does not depend on $\mu$.
+
+**Step 2: Use Probability Statement**<br/>
+For 95% confidence:
+$$
+P(-z_{0.975} \leq Z \leq z_{0.975}) = 0.95
+$$
+where $z_{0.975} \approx 1.96$.
+
+**Step 3: Solve for $\mu$**<br/>
+$$
+-1.96 \leq \frac{\bar{X} - \mu}{\sigma \sqrt{n}} \leq 1.96
+$$ 
+Multiply both sides by $\sigma / \sqrt{n}$ and solve:
+$$
+\bar{X} - 1.96\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X} + 1.96\frac{\sigma}{\sqrt{n}}
+$$
+This is the 95% confidence interval for $\mu$.
+
+#### Explain Test Inversion method for finding confidence intervals.
+The Test Inversion Method is a classical approach in Statistical Inference for constructing confidence intervals by inverting a family of hypothesis tests. Instead of directly finding a formula for the interval, you identify all parameter values that would not be rejected by a suitable hypothesis test.<br/>
+**Idea:**<br/>
+1. Consider a parameter $\theta$.
+2. For each candidate value $\theta_{0}$ perform a hypothesis test:
+$$
+H_0: \, \theta = \theta_0 \quad vs \quad H_1: \, \theta \neq \theta_0
+$$
+3. Collect all $\theta_0$ for which $H_0$ was not rejected.<br/>
+This set of $\theta_0$ forms the confidence interval.
+$$
+CI = \{ \theta_0: \, H_0 \, is \, not \, rejected \, at \, level \, \alpha \}
+$$
+**Steps:**<br/>
+1. Choose a test statistic $T(X,\theta_0)$ fro testing $H_0 : \theta = \theta_0$.
+2. Determine the rejection region based on the chosen significance level $\alpha$.
+3. Invert the test: find all $\theta$ such that $T(X,\theta_0)$ does not fall in the rejection region.
+4. The resulting set of $\theta_0$ values is the $(1-\alpha)$ confidence interval.
+
+#### Explain Likelihood-Based Method for Interval Estimation.
+The Likelihood-Based Method constructs confidence intervals using the likelihood function of the parameter. It is widely used in Statistical Inference and is closely related to maximum likelihood estimation (MLE) and likelihood ratio tests. 
+
+Parameter values that produce likelihoods close to the maximum likelihood are considered plausible values for the parameter.
+
+To construct an interval, we compare the likelihood at $\theta$ with the maximum likelihood.<br/>
+Likelihood ratio:
+$$
+\lambda(\theta) = \frac{L(\theta)}{L(\hat{\theta})}
+$$
+Values of $\theta$ for which this ratio is not too small are included in the confidence interval.
+
+A common form for likelihood ratio confidence interval is
+$$
+2(l(\hat{\theta}) - l(\theta)) \leq \chi^{2}_{1-\alpha,1}
+$$
+where
+* $l(\theta) = log(L(\theta))$ is the log likelihood.
+* $\hat{\theta}$ is the MLE.
+* $\chi^{2}_{1-\alpha,1}$ is the chi-square critical value with 1 degree of freedom.
+
+This set of $\theta$ values forms the confidence interval.
+
+#### Explain Asymptotic (Normal Approximation) Method for Interval Estimation.
 
 
 ---
