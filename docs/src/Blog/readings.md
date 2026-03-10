@@ -6,7 +6,7 @@ sidebarDepth: 2
 In this section I present some selected books, that I read during the last years. These readings cover most of the topics related to my work. In some of the books I selected only some chapters, but the most of them were read completely.
 ## Data Science
 
-### SQL for Data Scientists
+### Python for Datascience with PostgreSQL 18
 <img src="../../Pictures/SQL.png" alt="Image" width="300"/>
 
 ### Statistical Inference
