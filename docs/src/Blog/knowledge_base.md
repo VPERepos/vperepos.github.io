@@ -2576,7 +2576,184 @@ where
 This set of $\theta$ values forms the confidence interval.
 
 #### Explain Asymptotic (Normal Approximation) Method for Interval Estimation.
+The Asymptotic Method constructs confidence intervals using the fact that many estimators become approximately normally distributed for large sample sizes. This method is widely used in Statistical Inference. The word asymptotic means that the result becomes accurate as the sample size $n$ becomes large.
 
+**Key Idea:**<br/>
+For many estimators $\hat{\theta}$:
+$$
+\hat{\theta} \approx N(\theta, Var(\hat{\theta})) \quad when \quad n \to \infty
+$$
+More precisely:<br/>
+$$
+\frac{\hat{\theta} - \theta}{\sqrt{Var(\hat{\theta})}} \approx N(0,1)
+$$
+This allows us to construct a confidence interval using the standard normal distribution.
+
+**General formula for the interval:**<br/>
+Using the standard normal quantile $z_{\alpha / 2}$:
+$$
+\hat{\theta} \pm z_{\alpha / 2}\sqrt{Var(\hat{\theta})}
+$$
+where
+* $\hat{\theta}$ is estimator
+* $Var(\hat{\theta})$ - variance of the estimator
+
+If the variance is unknown, we replace it with an estimate.
+
+#### Explain Bootstrap Method for Interval Estimation.
+The Bootstrap Method is a computational technique used to estimate confidence intervals when the sampling distribution of an estimator is difficult to derive analytically. It is widely used in Statistical Inference. The idea is to approximate the sampling distribution of an estimator by resampling from the observed data.<br/>
+
+**Basic Idea:**<br/>
+Normally, to understand the distribution of an estimator $\hat{\theta}$, we would repeatedly sample from the population. In practice, we only have one sample. Bootstrap solves this by treating the observed sample as an approximation of the population and repeatedly sampling from it. Thus we simulate many new datasets from the original data.<br/>
+
+**Bootstrap procedure:**<br/>
+Suppose we have a sample:
+$$
+x_1,x_2,...,x_k
+$$
+and an estimator $\hat{\theta}$.
+* Draw a bootstrap sample of size $n < k$ from the original data with replacement.
+* Compute the estimator for this sample $\hat{\theta}^{(1)}$
+* Repeat this process many times (e.g., 1000 or 10000 samples).
+
+This produces a set of bootstrap estimates:
+$$
+\hat{\theta}^{(1)}, \hat{\theta}^{(2)},...,\hat{\theta}^{(n)}
+$$
+which approximate the sampling distribution of $\hat{\theta}$.<br/>
+
+**Constructing a confidence interval:**<br/>
+A simple method is the percentile bootstrap interval. Sort the bootstrap estimates and take empirical quantiles:
+$$
+CI=[\hat{\theta}_{\alpha / 2}, \hat{\theta}_{1 - \alpha / 2}]
+$$
+For a 95% confidence interval:
+* lower bound $\to$ 2.5th percentile (position of the value in the order statistic is $0.025 \times n$)
+* upper bound $\to$ 97.5th percentile (position of the value in the order statistic is $0.975 \times n$).
+
+#### Explain Bayesian Credible Intervals estimation.
+In Bayesian Statistics, an interval estimator is called a credible interval. It represents a range of parameter values that contains a specified posterior probability given the observed data. Unlike classical confidence intervals, credible intervals are derived from the posterior distribution of the parameter.
+
+**Definition**<br/>
+Let $\theta$ be be an unknown parameter and let $p(\theta | x)$ be the posterior distribution given data $x$. A $(1-\alpha)$ credible interval $[a,b]$ satisfies
+$$
+P(a \leq \theta \leq b | x)=1-\alpha
+$$
+Given the observed data, the probability that the parameter lies in the interval is $1-\alpha$.<br/>
+
+**How it is constructed**<br/>
+**1. Choose a prior distribution.**<br/>
+Specify a prior for the parameter:
+$$
+p(\theta)
+$$
+
+**Step 2: Compute the Posterior Distribution.**<br/>
+Using Bayes’ theorem:
+$$
+p(\theta|x)=\frac{p(x|\theta)p(\theta)}{p(x)}
+$$
+where
+* $p(x|\theta)$ is likelihood
+* $p(\theta)$ - prior
+
+**Step 3: Find an Interval Containing $1-\alpha$ Posterior Probability.**<br/>
+Select values $a$ and $b$ such that
+$$
+\int^{b}_{a}p(\theta|x)d\theta=1-\alpha
+$$
+
+**Types of credible intervals**
+* **Equal-Tailed Credible Interval**<br/>
+    The probability outside the interval is split equally:
+    $$
+    P(\theta < a|x)=\alpha / 2
+    $$
+    $$
+    P(\theta > b|x)=\alpha / 2
+    $$
+    Thus:
+    $$
+    a \, = \, posterior \, (\alpha / 2)-quantile
+    $$
+    $$
+    b \, = \, posterior \, (1 - \alpha / 2)-quantile
+    $$
+    This is the most common type.
+* **Highest Posterior Density (HPD) Interval**<br/>
+    The HPD interval contains the values of $\theta$ with the highest posterior density.
+
+    Properties:
+    * Contains probability $(1-\alpha)$
+    * Shortest possible credible interval<br/>
+
+    Condition:
+    $$
+    p(\theta|x) \geq c
+    $$
+    for some constant $c$.
+
+#### What are the methods of evaluating interval estimators?
+In Statistical Inference, interval estimators (confidence intervals) are evaluated by how well they capture the true parameter and how precise they are. The main evaluation criteria are the following.<br/>
+
+**1. Coverage Probability (Confidence Level)**<br/>
+The coverage probability is the probability that the interval estimator contains the true parameter value. <br/>
+If the interval estimator is $I(X)=[L(X,U(X)]$, then the covarage probability is
+$$
+P_{\theta}(L(X) \leq \theta \leq U(X))
+$$
+A good estimator should satisfy:
+$$
+P_{\theta}(L(X) \leq \theta \leq U(X)) \geq 1 - \alpha
+$$
+for all possible values of $\theta$.
+
+This is the most important property of a confidence interval.
+
+**2. Expected Length of the Interval**<br/>
+The length of the interval is
+$$
+U(X)-L(X)
+$$
+Since the interval depends on the sample, we consider its expected length:
+$$
+E_{\theta}[U(X)-L(X)]
+$$
+A shorter interval is preferred because it gives a more precise estimate of the parameter.<br/>
+Thus we want:
+* high coverage probability
+* small expected length
+
+However, there is a trade-off: increasing coverage usually increases the interval length.
+
+**3. Uniform Coverage**<br/>
+A desirable property is that the coverage probability holds for every value of the parameter:
+$$
+P_{\theta}(L(X) \leq \theta \leq U(X)) \geq 1 - \alpha
+$$
+for all $\theta$.
+
+If coverage varies with $\theta$, the interval may be unreliable for some parameter values.
+
+**4. Unbiasedness of the Interval**<br/>
+An interval estimator is sometimes evaluated by whether it is balanced around the parameter.
+
+Formally, we may require
+$$
+P(\theta < L(X)) = P(\theta > U(X))
+$$
+This means the probability that the interval misses the parameter on the left and right sides is equal.
+
+This leads to equal-tailed intervals.
+
+**5. Optimal Intervals (Shortest Length)**<br/>
+Among all intervals with the same coverage probability, we often prefer the one with minimal expected length.
+
+Example:
+* Shortest confidence interval
+* Highest posterior density (HPD) interval in Bayesian inference
+
+These intervals provide the most precise estimation.
 
 ---
 ---
